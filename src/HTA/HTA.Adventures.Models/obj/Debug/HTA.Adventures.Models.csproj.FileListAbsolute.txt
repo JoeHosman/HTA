@@ -1,0 +1,5 @@
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\HTA.Adventures.Models.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\HTA.Adventures.Models.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\ResolveAssemblyReference.cache
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.pdb
