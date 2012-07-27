@@ -1,0 +1,10 @@
+﻿Code version: 6.1.1000.82
+Assembly name Nest, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null mvid {3f7dfc83-5463-46f5-83f5-991c154a16cb}
+* ref mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {fcb9dac8-ae3a-4886-93b0-f4cd5b0db0be}
+* ref Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed
+  mvid {32a3c784-c6b5-450a-8df6-0ffa1ae2c3d2}
+* ref System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {c08d55d3-6463-439d-b112-60f6502ec141}
+* ref System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mvid {0467f5c0-e463-4b2c-acc5-f718cb71f056}
