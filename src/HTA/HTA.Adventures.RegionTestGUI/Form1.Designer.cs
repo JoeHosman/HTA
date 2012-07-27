@@ -37,6 +37,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtLat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtLatSearch = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLonSearch = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtMilesSearch = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAddLocation
@@ -113,11 +120,76 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Lat";
             // 
+            // txtLatSearch
+            // 
+            this.txtLatSearch.Location = new System.Drawing.Point(67, 169);
+            this.txtLatSearch.Name = "txtLatSearch";
+            this.txtLatSearch.Size = new System.Drawing.Size(45, 20);
+            this.txtLatSearch.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 172);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Lat";
+            // 
+            // txtLonSearch
+            // 
+            this.txtLonSearch.Location = new System.Drawing.Point(67, 143);
+            this.txtLonSearch.Name = "txtLonSearch";
+            this.txtLonSearch.Size = new System.Drawing.Size(45, 20);
+            this.txtLonSearch.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 146);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Lon";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(12, 227);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(100, 23);
+            this.btnSearch.TabIndex = 9;
+            this.btnSearch.Text = "Search Locations";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtMilesSearch
+            // 
+            this.txtMilesSearch.Location = new System.Drawing.Point(67, 195);
+            this.txtMilesSearch.Name = "txtMilesSearch";
+            this.txtMilesSearch.Size = new System.Drawing.Size(45, 20);
+            this.txtMilesSearch.TabIndex = 15;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(16, 198);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Miles";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(269, 281);
+            this.Controls.Add(this.txtMilesSearch);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtLatSearch);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtLonSearch);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtLat);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtLon);
@@ -145,6 +217,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLat;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtLatSearch;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLonSearch;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtMilesSearch;
+        private System.Windows.Forms.Label label7;
     }
 }
 

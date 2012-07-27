@@ -37,5 +37,31 @@ namespace HTA.Adventures.RegionTestGUI
 
             MessageBox.Show("added: " + location.Id);
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            double lat = 0.0;
+            double.TryParse(txtLatSearch.Text, out lat);
+            double lon = 0.0;
+            double.TryParse(txtLonSearch.Text, out lon);
+            Geo geoLocation = new Geo { Location = new Location() { Lat = lat, Lon = lon } };
+
+            int range = 5;
+            int.TryParse(txtMilesSearch.Text, out range);
+            GeoRange geoRange = new GeoRange() { Range = range };
+            var locations = _adventureLocationRepository.GetNearBy(geoLocation, geoRange);
+
+            StringBuilder sb = new StringBuilder();
+            int c = 0;
+            foreach (var adventureLocation in locations)
+            {
+                sb.AppendFormat("{0}. {1} [Lon:{2}, lat:{3}]", c++, adventureLocation.Name, adventureLocation.Geo.Location.Lon, adventureLocation.Geo.Location.Lat);
+                sb.AppendLine();
+            }
+
+            MessageBox.Show(sb.ToString());
+        }
     }
+
+
 }
