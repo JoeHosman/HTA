@@ -14,21 +14,20 @@ namespace HTA.Adventures.Models
         void Add(AdventureLocation location);
     }
 
-    public class AdventureLocationRepository    : IAdventureLocationRepository
+    public class AdventureLocationRepository : IAdventureLocationRepository
     {
         static readonly MongoRepository<AdventureLocation> MongoAdventureLocationRepository = new MongoRepository<AdventureLocation>();
         public void Add(AdventureLocation location)
         {
-           
-
             MongoAdventureLocationRepository.Add(location);
 
             var setting = new ConnectionSettings("office.mtctickets.com", 9200);
             var client = new ElasticClient(setting);
 
-          var result =  client.Index(location, "pins", "region", location.Id);
+            var result = client.Index(location, "pins", "region", location.Id);
 
-            string data = JsonConvert.SerializeObject( location);
+            //it was extra testing
+            //string data = JsonConvert.SerializeObject(location);
         }
     }
 }
