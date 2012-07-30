@@ -4,4 +4,5 @@
   <Module PersistentId="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB" ModuleId="HTA.Adventures.RegionTestGUI" />
   <Module PersistentId="Nest, Version=0.9.2.0, Culture=neutral, PublicKeyToken=null" ModuleId="Nest" />
   <Module PersistentId="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" ModuleId="Newtonsoft.Json" />
+  <Module PersistentId="6845016B-4A50-4FBB-89E3-6D4BF32A7346" ModuleId="HTA.Adventures.API.WebService" />
 </Modules>
