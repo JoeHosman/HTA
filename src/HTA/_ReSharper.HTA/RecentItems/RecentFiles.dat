@@ -3,29 +3,18 @@
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegionInfomationBrief.cs" caret="742" fromTop="17" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.Designer.cs" caret="9312" fromTop="32" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:App.config" caret="220" fromTop="6" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="571" fromTop="13" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Program.cs" caret="505" fromTop="15" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="2310" fromTop="28" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1525" fromTop="15" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1596" fromTop="27" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1868" fromTop="34" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="995" fromTop="21" />
+    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1464" fromTop="19" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:PageBase.cs" caret="0" fromTop="0" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3473" fromTop="20" />
   </RecentFiles>
   <RecentEdits>
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1564" fromTop="22" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.Designer.cs" caret="9758" fromTop="35" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.Designer.cs" caret="9312" fromTop="32" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:App.config" caret="170" fromTop="4" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1260" fromTop="20" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1089" fromTop="17" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="646" fromTop="9" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="487" fromTop="5" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="998" fromTop="15" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="349" fromTop="11" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1564" fromTop="16" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1466" fromTop="25" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1342" fromTop="20" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1228" fromTop="16" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="896" fromTop="14" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1248" fromTop="16" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="688" fromTop="8" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1314" fromTop="25" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1334" fromTop="25" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1818" fromTop="24" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="2334" fromTop="19" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="373" fromTop="14" />
@@ -39,5 +28,19 @@
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1389" fromTop="15" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="2310" fromTop="28" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1732" fromTop="18" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="5872" fromTop="39" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="3481" fromTop="31" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2091" fromTop="17" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2091" fromTop="17" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2216" fromTop="19" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3049" fromTop="35" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="1887" fromTop="22" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1543" fromTop="26" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3007" fromTop="27" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3195" fromTop="26" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="1226" fromTop="6" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3623" fromTop="25" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="995" fromTop="21" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3602" fromTop="26" />
   </RecentEdits>
 </RecentFiles>

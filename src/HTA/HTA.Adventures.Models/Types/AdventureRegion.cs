@@ -39,6 +39,7 @@ namespace HTA.Adventures.Models.Types
 
     }
     [ElasticType(Name = "region", IdProperty = "id")]
+    [DataContract]
     public partial class AdventureLocation : Entity
     {
         [ElasticProperty(Name = "geo")]

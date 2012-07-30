@@ -2,6 +2,8 @@ using System;
 using System.Linq;
 using System.Configuration;
 using System.Collections.Generic;
+using HTA.Adventures.Models.Types;
+using Nest;
 using ServiceStack.Configuration;
 using ServiceStack.OrmLite;
 using ServiceStack.OrmLite.SqlServer;
@@ -37,6 +39,7 @@ namespace HTA.Adventures.API.WebService
 
     public class NearByLocationsSearch
     {
+        public List<AdventureLocation> Result { get; set; }
         public string LatLon { get; set; }
         public double Lat { get; set; }
         public double Lon { get; set; }
@@ -73,13 +76,14 @@ namespace HTA.Adventures.API.WebService
             Request = request;
         }
 
-        public string Result { get; set; }
+        public int Result { get; set; }
         public ResponseStatus ResponseStatus { get; set; }
 
     }
 
     public class NearByLocationSearch : RestServiceBase<NearByLocationsSearch>
     {
+
         public override object OnGet(NearByLocationsSearch request)
         {
             if(!string.IsNullOrEmpty(request.LatLon))
@@ -89,9 +93,31 @@ namespace HTA.Adventures.API.WebService
                 request.Lon = values[1];
             }
 
-            string DefaultRangeSetting   = "15mi";
+            var setting = new ConnectionSettings("office.mtctickets.com", 9200);
+            setting.SetDefaultIndex("pins");
+            var client = new ElasticClient(setting);
+
+            string DefaultRangeSetting = "15mi";
             request.ValidateRange(DefaultRangeSetting);
-            return new NearBySearchResponse(request) { Result = string.Format("[{0},{1}]", request.Lat, request.Lon) };
+
+            var results = client.Search<AdventureLocation>(s => s
+                .From(0)
+                .Size(10)
+                .Filter(f => f
+                .GeoDistance("geo.location", filter => filter
+                .Location(request.Lat, request.Lon)
+                .Distance(request.Range)))
+                .Index("pins")
+                .Type("region")
+               );
+
+            var response = new NearBySearchResponse(request);
+
+            response.Result = results.Documents.ToList().Count;
+
+
+
+            return response;
         }
     }
 
