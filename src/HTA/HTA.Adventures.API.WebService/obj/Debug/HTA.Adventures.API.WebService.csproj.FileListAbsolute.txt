@@ -84,3 +84,5 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\ResolveAssemblyReference.cache
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.API.WebService.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.API.WebService.pdb
+D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.dll
+D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.pdb

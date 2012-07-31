@@ -32,3 +32,6 @@ D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\Newtonsoft.Json.xml
 D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\ResolveAssemblyReference.cache
 D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.dll
 D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.pdb
+D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.dll
+D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.pdb
+D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.xml

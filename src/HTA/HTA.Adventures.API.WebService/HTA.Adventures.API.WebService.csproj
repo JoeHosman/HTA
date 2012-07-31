@@ -116,6 +116,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HTA.Adventures.API.ServiceInterface\HTA.Adventures.API.ServiceInterface.csproj">
+      <Project>{1EEDEE88-3BC8-4344-95DE-148CBB7677FA}</Project>
+      <Name>HTA.Adventures.API.ServiceInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HTA.Adventures.Models\HTA.Adventures.Models.csproj">
       <Project>{DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE}</Project>
       <Name>HTA.Adventures.Models</Name>

@@ -1,16 +1,7 @@
-using System;
 using System.Linq;
-using System.Configuration;
 using System.Collections.Generic;
-using HTA.Adventures.Models.Types;
-using Nest;
-using ServiceStack.Configuration;
-using ServiceStack.OrmLite;
-using ServiceStack.OrmLite.SqlServer;
 using ServiceStack.ServiceInterface;
-using ServiceStack.ServiceInterface.Auth;
 using ServiceStack.ServiceInterface.ServiceModel;
-using ServiceStack.WebHost.Endpoints;
 
 namespace HTA.Adventures.API.WebService
 {
@@ -36,92 +27,6 @@ namespace HTA.Adventures.API.WebService
         }
     }
 
-
-    public class NearBySearch
-    {
-        public List<AdventureLocation> Result { get; set; }
-        public string LatLon { get; set; }
-        public double Lat { get; set; }
-        public double Lon { get; set; }
-        public string Range { get; set; }
-        public string Name { get; set; }
-
-        public double[] SplitLatLon()
-        {
-
-            var split = LatLon.Split(',');
-            double[] output = new double[split.Count()];
-            for(int i = 0; i < split.Count(); i++)
-            {
-                output[i] = double.Parse(split[i]);
-            }
-            return output;
-        }
-
-        public void ValidateRange(string defaultRange)
-        {
-            if(string.IsNullOrEmpty(Range) || (!Range.EndsWith("mi") && !Range.EndsWith("km")))
-            {
-                Range = defaultRange;
-            }
-        }
-    }
-
-    public class NearByAdventureLocations : NearBySearch
-    {
-    }
-
-    public class NearBySearchResponse : IHasResponseStatus
-    {
-        public NearBySearch Request { get; set; }
-
-        public NearBySearchResponse(NearBySearch request)
-        {
-            Request = request;
-        }
-
-        public List<AdventureLocation> Result { get; set; }
-        public ResponseStatus ResponseStatus { get; set; }
-
-    }
-
-    public class NearByLocationSearch : RestServiceBase<NearByAdventureLocations>
-    {
-
-        public override object OnGet(NearByAdventureLocations request)
-        {
-            if(!string.IsNullOrEmpty(request.LatLon))
-            {
-                var values = request.SplitLatLon();
-                request.Lat = values[0];
-                request.Lon = values[1];
-            }
-
-            var setting = new ConnectionSettings("office.mtctickets.com", 9200);
-            setting.SetDefaultIndex("pins");
-            var client = new ElasticClient(setting);
-
-            string DefaultRangeSetting = "15mi";
-            request.ValidateRange(DefaultRangeSetting);
-
-            var results = client.Search<AdventureLocation>(s => s
-                .From(0)
-                .Size(10)
-                .Filter(f => f
-                .GeoDistance("geo.location", filter => filter
-                .Location(request.Lat, request.Lon)
-                .Distance(request.Range)))
-                .Index("pins")
-                .Type("region")
-               );
-
-            var response = new NearBySearchResponse(request) {Result = results.Documents.ToList()};
-            
-
-
-            return response;
-        }
-    }
 
     //REST DTO
     public class Todo
