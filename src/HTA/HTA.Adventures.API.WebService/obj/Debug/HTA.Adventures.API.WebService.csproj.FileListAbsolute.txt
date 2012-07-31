@@ -86,3 +86,5 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.AP
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.API.WebService.pdb
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.dll
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.pdb

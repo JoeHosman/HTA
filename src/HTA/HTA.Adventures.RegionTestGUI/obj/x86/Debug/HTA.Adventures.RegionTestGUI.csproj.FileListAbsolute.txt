@@ -47,3 +47,6 @@ D:\dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\GenerateResour
 D:\dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.dll
 D:\dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.pdb
 D:\dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.xml

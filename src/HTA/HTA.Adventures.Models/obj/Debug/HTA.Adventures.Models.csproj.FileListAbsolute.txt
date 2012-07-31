@@ -35,3 +35,6 @@ D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.pdb
 D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.dll
 D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.pdb
 D:\dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.xml

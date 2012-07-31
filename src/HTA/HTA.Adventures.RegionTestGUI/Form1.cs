@@ -31,7 +31,7 @@ namespace HTA.Adventures.RegionTestGUI
             Geo geoLocation = new Geo { Location = new Location() { Lat = lat, Lon = lon } };
             string name = txtName.Text;
             string address = txtAddress.Text;
-            var location = new AdventureLocation(geoLocation, name, address);
+            var location = new AdventureLocation(geoLocation, name, address, textBox1.Text);
 
             _adventureLocationRepository.Add(location);
 

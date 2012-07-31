@@ -44,6 +44,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtMilesSearch = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnAddLocation
@@ -178,11 +179,19 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Miles";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(157, 79);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(269, 281);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtMilesSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtLatSearch);
@@ -224,6 +233,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtMilesSearch;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

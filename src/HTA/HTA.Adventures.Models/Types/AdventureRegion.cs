@@ -54,11 +54,17 @@ namespace HTA.Adventures.Models.Types
         [DataMember]
         public string Address { get; set; }
 
-        public AdventureLocation(Geo location, string name, string address)
+        [ElasticProperty(Name = "picture")]
+        [DataMember]
+        public string Picture { get; set; }
+
+
+        public AdventureLocation(Geo location, string name, string address, string picture)
         {
             Geo = location;
             this.Name = name;
             this.Address = address;
+            Picture = picture;
         }
     }
 }
