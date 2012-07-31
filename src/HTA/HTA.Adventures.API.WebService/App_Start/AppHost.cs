@@ -39,7 +39,7 @@ namespace HTA.Adventures.API.WebService.App_Start
               .Add<Hello>("/hello/{Name*}")
               .Add<Todo>("/todos")
               .Add<Todo>("/todos/{Id}")
-              .Add<NearByLocationsSearch>("/adventure/locations/{LatLon}");
+              .Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
 
             //Uncomment to change the default ServiceStack configuration
             //SetConfig(new EndpointHostConfig {

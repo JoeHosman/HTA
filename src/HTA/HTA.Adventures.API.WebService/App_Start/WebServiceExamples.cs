@@ -37,7 +37,7 @@ namespace HTA.Adventures.API.WebService
     }
 
 
-    public class NearByLocationsSearch
+    public class NearBySearch
     {
         public List<AdventureLocation> Result { get; set; }
         public string LatLon { get; set; }
@@ -67,11 +67,15 @@ namespace HTA.Adventures.API.WebService
         }
     }
 
+    public class NearByAdventureLocations : NearBySearch
+    {
+    }
+
     public class NearBySearchResponse : IHasResponseStatus
     {
-        public NearByLocationsSearch Request { get; set; }
+        public NearBySearch Request { get; set; }
 
-        public NearBySearchResponse(NearByLocationsSearch request)
+        public NearBySearchResponse(NearBySearch request)
         {
             Request = request;
         }
@@ -81,10 +85,10 @@ namespace HTA.Adventures.API.WebService
 
     }
 
-    public class NearByLocationSearch : RestServiceBase<NearByLocationsSearch>
+    public class NearByLocationSearch : RestServiceBase<NearByAdventureLocations>
     {
 
-        public override object OnGet(NearByLocationsSearch request)
+        public override object OnGet(NearByAdventureLocations request)
         {
             if(!string.IsNullOrEmpty(request.LatLon))
             {
