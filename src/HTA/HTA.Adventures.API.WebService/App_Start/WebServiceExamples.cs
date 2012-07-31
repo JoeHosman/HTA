@@ -76,7 +76,7 @@ namespace HTA.Adventures.API.WebService
             Request = request;
         }
 
-        public int Result { get; set; }
+        public List<AdventureLocation> Result { get; set; }
         public ResponseStatus ResponseStatus { get; set; }
 
     }
@@ -111,10 +111,8 @@ namespace HTA.Adventures.API.WebService
                 .Type("region")
                );
 
-            var response = new NearBySearchResponse(request);
-
-            response.Result = results.Documents.ToList().Count;
-
+            var response = new NearBySearchResponse(request) {Result = results.Documents.ToList()};
+            
 
 
             return response;
