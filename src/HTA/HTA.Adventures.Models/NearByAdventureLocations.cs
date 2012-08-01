@@ -7,4 +7,5 @@ namespace HTA.Adventures.API.WebService.App_Start
     public class NearByAdventureLocations : NearBySearch
     {
     }
+
 }

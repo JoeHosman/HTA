@@ -5,9 +5,18 @@ using HTA.Adventures.Models.Types;
 using Nest;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.ServiceModel;
+using System;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
+    public class AdvenuterTypeService : RestServiceBase<AdventureType>
+    {
+        public override object OnPut(AdventureType request)
+        {
+            request.Id = Guid.NewGuid().ToString();
+            return (AdventureType) request;
+        }
+    }
     public class NearByLocationSearch : RestServiceBase<NearByAdventureLocations>
     {
         public override object OnGet(NearByAdventureLocations request)
