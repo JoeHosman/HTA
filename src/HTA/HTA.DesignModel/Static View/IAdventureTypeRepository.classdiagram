@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="5231460e-d118-4c56-968b-88f7bedc8c89" name="IAdventureTypeRepository" linkedPackageId="dc73393b-1731-4be4-b3ea-cb56dc4076e1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="ffb4b942-47c3-499d-bfcc-39ea83278c27" name="IAdventureTypeRepository" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="75afd0ec-2b7e-4725-8692-51e9c0fbef9c" />
+        <ownedOperations>
+          <operation Id="a0cf3e91-1767-451c-91fe-3976b524a703" name="GetAdventureTypes" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="f9dae523-29df-4525-9521-5fc4a76443ae" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="f22e473f-8e46-4649-b4ae-80c3f6b7e2d2" direction="Return" isUnique="false">
+                  <elementDefinition Id="e46b8e40-54db-4c84-bb91-a0de472402bb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="916c445a-f5d5-4738-b46a-4afdef4b5692" LastKnownName="IList&lt;AdventureType&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a71f489-d684-4484-bb91-c3f94197703f" name="GetAdventureType" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="4043d8a3-5874-4764-91ec-ae3af0cb23a7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="797558e8-3a5f-4516-aa68-9a2cbba009de" direction="Return" isUnique="false">
+                  <elementDefinition Id="99b76a3a-603b-4955-94b4-c93c6d8b8924" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="48cf5ebb-6e26-4f8c-b2bf-58ca15dacad1" LastKnownName="AdventureType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b35f20ee-9a08-4616-9a79-1a9b0022c4dc" name="adventureTypeName" direction="In" isUnique="false">
+                  <elementDefinition Id="358ea6b5-1b17-42b5-b949-f054b350d919" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="25e65895-8f2a-4eb1-a99d-9f38b0ae0a91" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3e60ac5c-ef71-4cc2-8ca5-ddb57232735e" name="GetAdventureTypeTemplates" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c501da13-1a32-49a6-8d85-305258e22fda" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="22918ab8-44a2-419c-b250-b35638da0fd9" direction="Return" isUnique="false">
+                  <elementDefinition Id="21d2ab3c-0413-49e5-a8c2-0d0f6ee69d2b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="ae2f42d7-7463-46fc-8c28-c47caed8d175" LastKnownName="IList&lt;AdventureTypeTemplate&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="db572089-6eec-4596-90bc-0442252fa900" name="SaveAdventureType" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="99673d59-3a27-4c65-88b1-c2b8a69959ce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4eb26c0a-df04-4b38-af07-dfd221191d0d" name="adventureType" direction="In" isUnique="false">
+                  <elementDefinition Id="797d8efe-82d0-4842-805e-2dc5bb5d2a23" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7fadc5c6-b008-4010-a828-056e8617fa6b" direction="Return" isUnique="false">
+                  <elementDefinition Id="6e35d301-7368-4767-8192-6bc77d405044" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="48cf5ebb-6e26-4f8c-b2bf-58ca15dacad1" LastKnownName="AdventureType" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="916c445a-f5d5-4738-b46a-4afdef4b5692" name="IList&lt;AdventureType&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;AdventureType&gt;">
+        <elementDefinition Id="9006aad6-b98f-4fa0-b14c-43b5d0de6b5c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fae47188-f20c-412f-ad63-2b29d05bab83" name="AdventureType" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7502e899-7362-4664-980c-2a220f112bce" />
+        <suppliersInternal>
+          <dependency Id="09dc0f80-1523-4015-95b3-b77d4cec6280">
+            <classMoniker Id="c05a05f8-b0b5-4a30-8a2e-0819d946cad5" LastKnownName="AdventureTypeTemplate" />
+            <elementDefinition Id="8ee17224-7318-4fae-bdc3-240329ba2092" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="68715f9c-be62-4e3f-96db-ac388ef9c1e5" isSubstitutable="false">
+            <classMoniker Id="d47c323b-c099-49f3-84a1-1562e2b222ad" LastKnownName="Entity" />
+            <elementDefinition Id="e9464e60-946f-4af8-b790-9d9dcb50efb6" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="c91bcefd-c99d-42f4-b395-4f720ee42efd" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d662bad8-cfe1-4ef8-ba82-01ab4d174d60" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="8d48f463-43d1-42a8-93e5-17ba9805301e" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="05347776-0219-4be1-85c8-ea99b8da00c8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="884c775b-c23a-4963-b05f-a86691f05ecf" name="PhotoLink" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="96966f5e-c3c3-49b9-9fc1-5881e302fc8a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="843d50d0-690c-44f1-9c5f-16f290c0dc4a" name="IconLink" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1eb45562-cd92-4b2b-ba6e-79ba21df9382" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="9bde67f3-50e6-428c-9f87-5b044cf9fd11" name="Templates" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3a3667a9-7347-4919-80f0-35b9fde1d120" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f70a667d-ca22-4e33-b781-f96966fbc75c" LastKnownName="IList&lt;AdventureTypeTemplate&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d47c323b-c099-49f3-84a1-1562e2b222ad" name="Entity" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c2965a6c-959c-4bbe-bba5-c90a05820286" />
+        <ownedAttributesInternal>
+          <property Id="5ba3c15f-b281-49f7-b000-25da9c5711a7" name="ID" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d4d1fe74-575b-4629-a6fb-e041d838b521" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ae2f42d7-7463-46fc-8c28-c47caed8d175" name="IList&lt;AdventureTypeTemplate&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;AdventureTypeTemplate&gt;">
+        <elementDefinition Id="e59d49e6-e931-493e-911d-84947b4a351c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="48cf5ebb-6e26-4f8c-b2bf-58ca15dacad1" name="AdventureType" isAbstract="false" isLeaf="false" cachedFullName="HTA.DesignModel::AdventureType">
+        <elementDefinition Id="7502e899-7362-4664-980c-2a220f112bce" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c05a05f8-b0b5-4a30-8a2e-0819d946cad5" name="AdventureTypeTemplate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f5b881be-b126-49dd-8ff8-41eba9c3a7d0" />
+        <suppliersInternal>
+          <dependency Id="afef3123-0e01-4d9f-b75c-ace7893bd03c">
+            <classMoniker Id="c7a24640-3f6b-4811-8bd1-48083ec65df6" LastKnownName="DataCard" />
+            <elementDefinition Id="3f7a3711-fa17-40d9-bc24-01e10bc510d0" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="3c44a3a0-202a-4a7d-abab-3e27c1f29c79" isSubstitutable="false">
+            <classMoniker Id="d47c323b-c099-49f3-84a1-1562e2b222ad" LastKnownName="Entity" />
+            <elementDefinition Id="f867427c-a4c1-4f76-96b1-0554a727cf97" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="955d3111-34a3-4548-aa90-697ed6631bb8" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4fe67f42-e507-4dbf-86e7-89ddc9421028" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="f9f21376-9477-4089-bbe4-53d31c7cb460" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2d8fa82f-7587-4d3c-8b61-1e1d8a8af1c9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="405fda66-e8cb-49eb-b0dd-01c325010cf3" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="4409b30d-32ca-4318-90f7-f7b4d561df39" name="DataCardSuggestions" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7eb87a54-48bf-4c1e-b428-8b8572b0dac1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="90b69713-e4e1-4f5b-b746-b1cb209f50e2" LastKnownName="IList&lt;DataCard&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c7a24640-3f6b-4811-8bd1-48083ec65df6" name="DataCard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="874ad936-3197-49a8-ba15-5bbb5c052275" />
+        <generalsInternal>
+          <generalization Id="cd5b5d6b-2999-4796-9163-05a66e30da9b" isSubstitutable="false">
+            <classMoniker Id="d47c323b-c099-49f3-84a1-1562e2b222ad" LastKnownName="Entity" />
+            <elementDefinition Id="eee6b961-8691-404b-9b0b-510458cdf20e" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="90b69713-e4e1-4f5b-b746-b1cb209f50e2" name="IList&lt;DataCard&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;DataCard&gt;">
+        <elementDefinition Id="dbc39530-602b-4a89-a57f-88a1a98f300e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="25e65895-8f2a-4eb1-a99d-9f38b0ae0a91" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="76811052-4a32-4c5f-b99a-ddfd14ccac49" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f70a667d-ca22-4e33-b781-f96966fbc75c" name="IList&lt;AdventureTypeTemplate&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;AdventureTypeTemplate&gt;">
+        <elementDefinition Id="e59d49e6-e931-493e-911d-84947b4a351c" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="dc73393b-1731-4be4-b3ea-cb56dc4076e1" name="HTA.DesignModel">
+    <elementDefinition Id="8e8701da-f83b-4683-a2da-c7012e4d4903" />
+    <profileInstances>
+      <packageHasProfileInstances Id="0a4501f5-a329-4229-ba54-f419ff04b88a">
+        <profileInstance Id="09dbba8b-7962-4d0f-b4e6-ccb02c6378c6" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="67100d07-9727-4500-acc8-69fa600a8c7a">
+        <profileInstance Id="cbb9ebd2-3c78-49f6-8d02-859d3cf0ec7f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>

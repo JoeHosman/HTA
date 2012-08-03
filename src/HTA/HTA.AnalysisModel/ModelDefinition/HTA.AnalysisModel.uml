@@ -1,0 +1,1133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d13660f2-7696-4973-a27d-dfbce90857f1"
+  name="HTA.AnalysisModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="1ac5cfe2-8fc0-40bc-8d08-5b41aec91ba4">
+      <body>Vision Statement:
+Adventure Types serve as a way to group reviews by their activity type and to provide data templates</body>
+    </comment>
+    <comment
+      Id="d0eabf7c-aaeb-4e15-922e-3d257f4ce7c2">
+      <body>Get Adventure Type list</body>
+    </comment>
+    <comment
+      Id="3012c669-7ce9-48b2-b9d6-ab2da7a3013a">
+      <body>Manage adventure type inventory (CRUD)
+</body>
+    </comment>
+    <comment
+      Id="37670678-8b76-4a92-a25a-525d33b7c7f2">
+      <body>Constraints:
+- There shouldn't be duplicate names</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <subsystem
+        Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+        name="HowToAdventures.AdventureTypes"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="3d6ec81b-24c2-4517-85f5-8d9dbdee9caf"
+        name="Adventurer"
+        isAbstract="false"
+        isLeaf="false">
+        <generalsInternal>
+          <generalization
+            Id="6e76dc5c-35e7-4844-941f-5fe0a9198d65"
+            isSubstitutable="false">
+            <actorMoniker
+              Id="7498d293-c245-4b7a-9ab6-955b0402f8f2"
+              LastKnownName="Unregistered"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="54d95d8c-e3f6-46cd-a702-c678051ac507"
+            isDerived="false"
+            sourceEndRoleName="Adventurer"
+            targetEndRoleName="HowToAdventures.AdventureTypes"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+              LastKnownName="HowToAdventures.AdventureTypes"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7cb776fd-063f-4bdf-968f-66af4cb9da29"
+                  name="Adventurer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0f0c48bc-9f23-4421-9e48-3d3159a8af3f"
+                  name="HowToAdventures.AdventureTypes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a714f754-d646-43e2-8d94-9a487ef41be5"
+            isDerived="false"
+            sourceEndRoleName="Adventurer"
+            targetEndRoleName="Set Adventure Type for Adventure Review"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="13a56689-9753-4fe1-a848-b695caafde6b"
+              LastKnownName="Set Adventure Type for Adventure Review"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f180bd36-9894-407c-9ab0-a91b8b786c9e"
+                  name="Adventurer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0b55bf23-199c-4a8a-b7b8-418cdfa31f8f"
+                  name="Set Adventure Type for Adventure Review"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b38e6161-e53e-4321-9996-9bbaf958cfd1"
+        name="Administrator"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="341d3e10-efc8-4a16-b83a-335d2c27a75f"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="HowToAdventures.AdventureTypes"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+              LastKnownName="HowToAdventures.AdventureTypes"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6a12db5e-f96d-45d2-99dd-ce3939b9b260"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bfc4ad6e-a5db-48c8-9077-451856d73615"
+                  name="HowToAdventures.AdventureTypes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="8c56c8b7-a5c4-498c-ac33-1232d7e45322"
+            isDerived="false"
+            sourceEndRoleName="Administrator"
+            targetEndRoleName="Manage Adventure Types List"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b070a5e8-c241-4dfc-ae1f-6a278756727e"
+              LastKnownName="Manage Adventure Types List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1e26233a-62d8-4cf4-b753-db5814415818"
+                  name="Administrator"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e3d830c3-0415-4fcc-b390-92f22f4d1fdb"
+                  name="Manage Adventure Types List"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="13a56689-9753-4fe1-a848-b695caafde6b"
+        name="Set Adventure Type for Adventure Review"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="8ab2b610-4c02-4721-be58-41d8c4caddb8">
+            <useCaseMoniker
+              Id="9ea1dc0f-e55a-4d5a-a5ce-e4890e658f40"
+              LastKnownName="Get Adventure Types List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="9ea1dc0f-e55a-4d5a-a5ce-e4890e658f40"
+        name="Get Adventure Types List"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="9478c6d0-91bc-4635-9f6e-6300ee87ee45">
+            <useCaseMoniker
+              Id="dddf1679-4103-4d23-8bad-2008baa7e74f"
+              LastKnownName="Get Adventure Type Template List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+            LastKnownName="HowToAdventures.AdventureTypes"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cb711941-d894-4855-b22f-012d9b0f0135"
+        name="Filter Adventure Review List by Adventure Types"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="0fee76f1-baa5-4be5-9dd6-5598a0a64abd">
+            <useCaseMoniker
+              Id="9ea1dc0f-e55a-4d5a-a5ce-e4890e658f40"
+              LastKnownName="Get Adventure Types List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="54f0cbda-7c49-4cd8-8345-58241920744d"
+        name="Business"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="7d340bcc-987e-41dd-88e2-3e2f1c3979b5"
+            isDerived="false"
+            sourceEndRoleName="Business"
+            targetEndRoleName="HowToAdventures.AdventureTypes"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+              LastKnownName="HowToAdventures.AdventureTypes"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="55decbdc-1e1b-4294-b42e-983fa61a1a32"
+                  name="Business"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b23c773a-02bb-478a-bf83-686aef437a94"
+                  name="HowToAdventures.AdventureTypes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="7216650b-06d7-4745-b982-ea2a1955b397"
+            isDerived="false"
+            sourceEndRoleName="Business"
+            targetEndRoleName="Unregistered"
+            isLeaf="false"
+            isAbstract="false">
+            <actorMoniker
+              Id="7498d293-c245-4b7a-9ab6-955b0402f8f2"
+              LastKnownName="Unregistered"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4abcda17-79b0-488a-901c-8619f35f1357"
+                  name="Business"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d1f6dfec-44f8-4119-b853-a168a93d3e33"
+                  name="Unregistered"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7498d293-c245-4b7a-9ab6-955b0402f8f2"
+        name="Unregistered"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="fe93ae79-6a03-49ff-be2b-2811a20ca3a1"
+            isDerived="false"
+            sourceEndRoleName="Unregistered"
+            targetEndRoleName="Get Adventure Types List"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="9ea1dc0f-e55a-4d5a-a5ce-e4890e658f40"
+              LastKnownName="Get Adventure Types List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3cd0df2a-4516-4670-9351-be99743a75a9"
+                  name="Unregistered"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f3e0b04-b913-4ac4-a2e6-a29036d10322"
+                  name="Get Adventure Types List"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="40445b98-56e0-4c5e-8cf8-522e89729fee"
+            isDerived="false"
+            sourceEndRoleName="Unregistered"
+            targetEndRoleName="Filter Adventure Review List by Adventure Types"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="cb711941-d894-4855-b22f-012d9b0f0135"
+              LastKnownName="Filter Adventure Review List by Adventure Types"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0a21e230-3a35-40a2-894c-8aa2ea1388ca"
+                  name="Unregistered"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e87ae4a-a5d3-42e2-a6e2-dde28d112cdd"
+                  name="Filter Adventure Review List by Adventure Types"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1a740834-c551-4b5d-bd61-dc6df6c8c9ea"
+            isDerived="false"
+            sourceEndRoleName="Unregistered"
+            targetEndRoleName="HowToAdventures.AdventureTypes"
+            isLeaf="false"
+            isAbstract="false">
+            <subsystemMoniker
+              Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+              LastKnownName="HowToAdventures.AdventureTypes"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d100869f-e49a-46cc-80f9-52ed4633d9a2"
+                  name="Unregistered"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="325ec4f7-b0cd-42b1-bf59-8cbe7f8812c4"
+                  name="HowToAdventures.AdventureTypes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b070a5e8-c241-4dfc-ae1f-6a278756727e"
+        name="Manage Adventure Types List"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="5427b031-8961-4a69-af11-6f94d21e9d99">
+            <useCaseMoniker
+              Id="9ea1dc0f-e55a-4d5a-a5ce-e4890e658f40"
+              LastKnownName="Get Adventure Types List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+          <include
+            Id="78d7a070-0080-4f7d-9a07-7641d155c5bc">
+            <useCaseMoniker
+              Id="3a15ebb5-1ac7-4784-8f36-9e47d3cb6d25"
+              LastKnownName="Create Adventure Type"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+          <include
+            Id="739d2607-e3b6-457c-a55f-6751e241df2a">
+            <useCaseMoniker
+              Id="435aaa98-c76a-4dfd-9620-60d374972ed6"
+              LastKnownName="Edit Adventure Type"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+            LastKnownName="HowToAdventures.AdventureTypes"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3a15ebb5-1ac7-4784-8f36-9e47d3cb6d25"
+        name="Create Adventure Type"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="81a4d3e0-3635-4a2a-aaa2-18204291c926">
+            <useCaseMoniker
+              Id="3acc8444-579d-4152-b2bf-ca2f1c4c9462"
+              LastKnownName="Manage Adventure Type Templates"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+          <include
+            Id="3bca7d73-17f7-4bf7-b1c0-ca13a7ca0985">
+            <useCaseMoniker
+              Id="2870a111-cd28-4382-99e2-ffdab1f2aae4"
+              LastKnownName="Manage Adventure Type Templates"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+            LastKnownName="HowToAdventures.AdventureTypes"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="435aaa98-c76a-4dfd-9620-60d374972ed6"
+        name="Edit Adventure Type"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="41f876b3-950f-40a5-8387-0bf5d1527d09">
+            <useCaseMoniker
+              Id="3acc8444-579d-4152-b2bf-ca2f1c4c9462"
+              LastKnownName="Manage Adventure Type Templates"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+          <include
+            Id="2748b0e8-d4be-4982-84d8-56490df96611">
+            <useCaseMoniker
+              Id="2870a111-cd28-4382-99e2-ffdab1f2aae4"
+              LastKnownName="Manage Adventure Type Templates"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+            LastKnownName="HowToAdventures.AdventureTypes"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="b4fdd821-28ff-4cc4-9993-8ee6761002d3"
+        name="HowToAdventures.AdventureTypeTemplates"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="3acc8444-579d-4152-b2bf-ca2f1c4c9462"
+        name="Manage Adventure Type Templates"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2870a111-cd28-4382-99e2-ffdab1f2aae4"
+        name="Manage Adventure Type Templates"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="2666ed02-b323-4858-80ea-6315521148ee">
+            <useCaseMoniker
+              Id="dddf1679-4103-4d23-8bad-2008baa7e74f"
+              LastKnownName="Get Adventure Type Template List"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+          <include
+            Id="bed50d17-a41a-4580-8d1f-381132d78118">
+            <useCaseMoniker
+              Id="47425203-83ed-4229-834f-feb710d3a39b"
+              LastKnownName="Create Adventure Type Template"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+          <include
+            Id="9077d7ce-5f42-4004-978a-99e86f694f4f">
+            <useCaseMoniker
+              Id="cf2d8927-f10c-4b0d-a1ca-a807713b8c75"
+              LastKnownName="Edit Adventure Type Template"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="69bd8483-da4e-4389-b367-5f595eee4e06"
+            LastKnownName="HowToAdventures.AdventureTypes"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dddf1679-4103-4d23-8bad-2008baa7e74f"
+        name="Get Adventure Type Template List"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="b4fdd821-28ff-4cc4-9993-8ee6761002d3"
+            LastKnownName="HowToAdventures.AdventureTypeTemplates"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="750cad3b-3e29-4eb9-8930-8a25bb400ca8"
+        name="Create Adventure Type Template"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="47425203-83ed-4229-834f-feb710d3a39b"
+        name="Create Adventure Type Template"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="227eb953-81d7-445f-ac4b-27cf314e03bc">
+            <useCaseMoniker
+              Id="aa944607-18ad-49d6-aecc-983ff64d9c12"
+              LastKnownName="Duplicate Adventure Type Template"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="b4fdd821-28ff-4cc4-9993-8ee6761002d3"
+            LastKnownName="HowToAdventures.AdventureTypeTemplates"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="cf2d8927-f10c-4b0d-a1ca-a807713b8c75"
+        name="Edit Adventure Type Template"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="6774bb15-bffe-4f13-936d-831de9e6d732">
+            <useCaseMoniker
+              Id="aa944607-18ad-49d6-aecc-983ff64d9c12"
+              LastKnownName="Duplicate Adventure Type Template"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="b4fdd821-28ff-4cc4-9993-8ee6761002d3"
+            LastKnownName="HowToAdventures.AdventureTypeTemplates"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="aa944607-18ad-49d6-aecc-983ff64d9c12"
+        name="Duplicate Adventure Type Template"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="b4fdd821-28ff-4cc4-9993-8ee6761002d3"
+            LastKnownName="HowToAdventures.AdventureTypeTemplates"
+            LastKnownLocation="HTA.AnalysisModel.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c6785c6c-d60b-40ad-83f5-1160034d75c4"
+        name="AdventureType"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="0f6a4116-fff1-46ef-9d2d-9e85aa3cc895"
+            isDerived="false"
+            sourceEndRoleName="AdventureType"
+            targetEndRoleName="AdventureTypeTemplates"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="54411de3-5557-47a2-982c-e231d65e8aff"
+              LastKnownName="AdventureTypeTemplate"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a3dc6743-c5b5-49de-8d10-13d06d3a7eff"
+                  name="AdventureType"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="67d88581-4b85-4fd8-9126-9d8abd10af11"
+                  name="AdventureTypeTemplates"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="68c66f04-fdb4-4ea7-958e-cca5ea373385"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="3d064066-47d6-41b3-bb25-6364d8a8f7ea"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f867f4d5-107f-47c1-b65c-06891f871803"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4359cd85-f39e-43f4-b04b-995dfd821699"
+            name="Tags"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="cfcc0e4a-3c3d-4406-bbed-f82ca1557c46"
+            name="Templates"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="9c4f2ecb-d406-406e-a226-a62d33a83de3"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="277dd32a-43af-4df7-98e0-baf43fea0619"
+            name="Pin"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0a94b5ba-ac81-4d2d-9c9b-d0ed50df6e16"
+            name="Picture"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="c4aa4957-9200-4e5b-82c9-0b3d671496b9"
+            name="PathName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="54411de3-5557-47a2-982c-e231d65e8aff"
+        name="AdventureTypeTemplate"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="46a203fc-9bd6-4d1f-afd8-789af5c06f72"
+            isDerived="false"
+            sourceEndRoleName="AdventureTypeTemplate"
+            targetEndRoleName="TemplateSuggestedDataCards"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="bc67cc1d-982b-4898-a29a-c869ae848864"
+              LastKnownName="DataCard"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45402616-579c-4085-9cbc-3ce4d6c6a315"
+                  name="AdventureTypeTemplate"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a059802f-8c6e-4601-a522-625d39efb9ac"
+                  name="TemplateSuggestedDataCards"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="3e26783c-8833-4f6b-9f90-81c5ff9e3797"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="29325fb0-2c8b-42a5-aa78-9743b2562581"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="96a7263b-6bd6-4748-a396-676aca4dd954"
+            name="Name"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="97f80409-f844-4805-af13-dc97864cde67"
+            name="Description"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="92f2ab4b-e549-4905-a476-14911542c89f"
+            name="DataCards"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bc67cc1d-982b-4898-a29a-c869ae848864"
+        name="DataCard"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c3b45ea3-85fc-418b-88e1-cbcf52a1623d"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="DataCardStatus"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="5866936c-f876-4acc-99d4-a246a6aa1ed9"
+              LastKnownName="DataCardStatus"
+              LastKnownLocation="HTA.AnalysisModel.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ac156727-a026-4f78-b06f-ac81c2ae382f"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="988c85f4-0d20-4341-804e-e3a287e586ee"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="bec5009b-bc88-4426-9b78-9f7ed044a0f9"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3d4d77fd-dff2-42c7-b1e0-64911065acb4"
+                  name="DataCardStatus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="fc10a27f-505f-41ae-9f7b-6d626903165c"
+            name="Title"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0e286303-14f1-4ffa-ad9b-36f9d5d250dd"
+            name="Body"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="fd26a0d1-7516-49eb-8adf-e663197349c5"
+            name="Photos"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5e5ff306-4d3d-468b-82d5-4f36c31e6d14"
+            name="State"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="5866936c-f876-4acc-99d4-a246a6aa1ed9"
+        name="DataCardStatus"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="590d1176-ef58-4799-821b-7c03f6a3bdf6"
+            name="Public" />
+          <enumerationLiteral
+            Id="5280bc76-4855-46ab-8c4c-f70093c6a152"
+            name="Verified" />
+          <enumerationLiteral
+            Id="47ff0e70-e378-4b35-81ff-e06135f6b5d7"
+            name="NotUsed" />
+          <enumerationLiteral
+            Id="3f47dc25-e3c9-4661-92b2-2d6b41b21fe2"
+            name="Removed" />
+          <enumerationLiteral
+            Id="f268aad1-bb31-490f-b335-8b86419e1d91"
+            name="UnderReview" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

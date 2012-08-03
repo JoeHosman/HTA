@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8dad86ed-7a4e-409d-804f-0dc2ad2af032" name="Adventurer Adventure Types" linkedPackageId="82771aba-0f46-4eae-b33e-0f3f5999d12e" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="715c4b31-0e2e-4e84-a7db-96f20835436a">
+      <profileInstance Id="796db536-704d-42a3-b8e5-264f99f34506" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4103ce49-f0f5-4033-b2af-d9a7732c311a">
+      <profileInstance Id="7acb0be0-fae8-4831-be55-a1869fb6d865" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" name="HowToAdventures.AdventureTypes" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="69bd8483-da4e-4389-b367-5f595eee4e06" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="43241e4b-7e3d-43dc-b35e-c3c0fdac1785" name="Get Adventure Types List" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9ea1dc0f-e55a-4d5a-a5ce-e4890e658f40" />
+        <additions>
+          <include Id="c3972cb2-d217-488c-8a5a-f7f51a47f707">
+            <useCaseMoniker Id="8c4e4124-4277-489c-91d8-3f7509067ce4" LastKnownName="Get Adventure Type Template List" />
+            <elementDefinition Id="9478c6d0-91bc-4635-9f6e-6300ee87ee45" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="05405ee7-65bf-4f3d-895e-974083a1c3bb" name="Unregistered" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7498d293-c245-4b7a-9ab6-955b0402f8f2" />
+        <targetEnds>
+          <association Id="4cb1111e-b556-40e2-9f54-3dcd0676b060" isDerived="false" sourceEndRoleName="Unregistered" targetEndRoleName="Get Adventure Types List" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="43241e4b-7e3d-43dc-b35e-c3c0fdac1785" LastKnownName="Get Adventure Types List" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6bb87edd-f043-4594-92d7-670d8dd89735" name="Unregistered" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3cd0df2a-4516-4670-9351-be99743a75a9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dbe3e37a-e79a-4bcf-b233-4d0802aacc3d" name="Get Adventure Types List" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9f3e0b04-b913-4ac4-a2e6-a29036d10322" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fe93ae79-6a03-49ff-be2b-2811a20ca3a1" />
+          </association>
+          <association Id="69da9b01-b47e-4d62-a972-f79fe21cd763" isDerived="false" sourceEndRoleName="Unregistered" targetEndRoleName="HowToAdventures.AdventureTypes" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8499188-4363-457b-a767-dd8ad40165c7" name="Unregistered" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d100869f-e49a-46cc-80f9-52ed4633d9a2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8305ee65-d640-4de9-9625-1530c2dbf75a" name="HowToAdventures.AdventureTypes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="325ec4f7-b0cd-42b1-bf59-8cbe7f8812c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1a740834-c551-4b5d-bd61-dc6df6c8c9ea" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="9697c213-d8c0-474d-929d-d80a69072e91" name="Administrator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b38e6161-e53e-4321-9996-9bbaf958cfd1" />
+        <targetEnds>
+          <association Id="621055ed-5173-4e5a-b4ce-caafc9be1caf" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="HowToAdventures.AdventureTypes" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d521263-e40c-490a-98de-ad3ed23965fa" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a12db5e-f96d-45d2-99dd-ce3939b9b260" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9c3c38c-2272-4e19-8fd8-e053a2bce1d6" name="HowToAdventures.AdventureTypes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bfc4ad6e-a5db-48c8-9077-451856d73615" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="341d3e10-efc8-4a16-b83a-335d2c27a75f" />
+          </association>
+          <association Id="e6fa7c49-1427-4694-a9ed-277b106309eb" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="Manage Adventure Types List" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="28c56066-007c-486e-b659-80149cdef424" LastKnownName="Manage Adventure Types List" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c7b406c5-bc73-43f3-8883-2eaa83bb2ee9" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1e26233a-62d8-4cf4-b753-db5814415818" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ba6ca18-41f3-44b7-a304-015c686364f4" name="Manage Adventure Types List" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e3d830c3-0415-4fcc-b390-92f22f4d1fdb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8c56c8b7-a5c4-498c-ac33-1232d7e45322" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="28c56066-007c-486e-b659-80149cdef424" name="Manage Adventure Types List" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b070a5e8-c241-4dfc-ae1f-6a278756727e" />
+        <additions>
+          <include Id="a784c34a-5cfe-48be-881f-3a90f16672dd">
+            <useCaseMoniker Id="43241e4b-7e3d-43dc-b35e-c3c0fdac1785" LastKnownName="Get Adventure Types List" />
+            <elementDefinition Id="5427b031-8961-4a69-af11-6f94d21e9d99" />
+          </include>
+          <include Id="06e1e624-336d-4512-a647-9081d62f7ab8">
+            <useCaseMoniker Id="56549144-2f5e-48a2-a680-5f7348a3c2fc" LastKnownName="Create Adventure Type" />
+            <elementDefinition Id="78d7a070-0080-4f7d-9a07-7641d155c5bc" />
+          </include>
+          <include Id="9ea4f50f-f269-4576-adef-c64ee990aa88">
+            <useCaseMoniker Id="d647e575-baf9-421e-9c08-ef3faeba245a" LastKnownName="Edit Adventure Type" />
+            <elementDefinition Id="739d2607-e3b6-457c-a55f-6751e241df2a" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="56549144-2f5e-48a2-a680-5f7348a3c2fc" name="Create Adventure Type" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a15ebb5-1ac7-4784-8f36-9e47d3cb6d25" />
+        <additions>
+          <include Id="aa291e88-9bd4-4986-abbe-81fab149db1d">
+            <useCaseMoniker Id="a8d023ba-0650-4640-b275-1b004e47cd64" LastKnownName="Manage Adventure Type Templates" />
+            <elementDefinition Id="3bca7d73-17f7-4bf7-b1c0-ca13a7ca0985" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d647e575-baf9-421e-9c08-ef3faeba245a" name="Edit Adventure Type" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="435aaa98-c76a-4dfd-9620-60d374972ed6" />
+        <additions>
+          <include Id="2a4adae5-243a-4cd2-976b-420c5c26d54c">
+            <useCaseMoniker Id="a8d023ba-0650-4640-b275-1b004e47cd64" LastKnownName="Manage Adventure Type Templates" />
+            <elementDefinition Id="2748b0e8-d4be-4982-84d8-56490df96611" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a8d023ba-0650-4640-b275-1b004e47cd64" name="Manage Adventure Type Templates" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2870a111-cd28-4382-99e2-ffdab1f2aae4" />
+        <additions>
+          <include Id="6ae54517-49ee-4e72-84af-9d7d6b761344">
+            <useCaseMoniker Id="8c4e4124-4277-489c-91d8-3f7509067ce4" LastKnownName="Get Adventure Type Template List" />
+            <elementDefinition Id="2666ed02-b323-4858-80ea-6315521148ee" />
+          </include>
+          <include Id="3cc1fe39-ad1b-4f12-ab59-d3aa42cdc439">
+            <useCaseMoniker Id="34274aaf-13d1-430c-8f37-7de76e00733d" LastKnownName="Create Adventure Type Template" />
+            <elementDefinition Id="bed50d17-a41a-4580-8d1f-381132d78118" />
+          </include>
+          <include Id="933d9e76-f056-4c90-af79-3f20f081ac79">
+            <useCaseMoniker Id="b9daed06-9e70-495e-bf84-17eb0680e08b" LastKnownName="Edit Adventure Type Template" />
+            <elementDefinition Id="9077d7ce-5f42-4004-978a-99e86f694f4f" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="c4ce4c02-85e1-47d7-80bb-d2d178f66cb9" LastKnownName="HowToAdventures.AdventureTypes" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b03f9809-ca40-4515-85cb-45d6b97b50a5" name="HowToAdventures.AdventureTypeTemplates" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b4fdd821-28ff-4cc4-9993-8ee6761002d3" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="8c4e4124-4277-489c-91d8-3f7509067ce4" name="Get Adventure Type Template List" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="dddf1679-4103-4d23-8bad-2008baa7e74f" />
+        <subjects>
+          <subsystemMoniker Id="b03f9809-ca40-4515-85cb-45d6b97b50a5" LastKnownName="HowToAdventures.AdventureTypeTemplates" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="34274aaf-13d1-430c-8f37-7de76e00733d" name="Create Adventure Type Template" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="47425203-83ed-4229-834f-feb710d3a39b" />
+        <extendedCases>
+          <extend Id="749f5717-def3-4b8a-b432-353f5875dc6f">
+            <useCaseMoniker Id="8f2b0ede-4e70-429c-9ac1-fad505d3d187" LastKnownName="Duplicate Adventure Type Template" />
+            <elementDefinition Id="227eb953-81d7-445f-ac4b-27cf314e03bc" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="b03f9809-ca40-4515-85cb-45d6b97b50a5" LastKnownName="HowToAdventures.AdventureTypeTemplates" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b9daed06-9e70-495e-bf84-17eb0680e08b" name="Edit Adventure Type Template" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="cf2d8927-f10c-4b0d-a1ca-a807713b8c75" />
+        <extendedCases>
+          <extend Id="844ed4ca-4bb7-4852-b7e2-a71d5f32bd2f">
+            <useCaseMoniker Id="8f2b0ede-4e70-429c-9ac1-fad505d3d187" LastKnownName="Duplicate Adventure Type Template" />
+            <elementDefinition Id="6774bb15-bffe-4f13-936d-831de9e6d732" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="b03f9809-ca40-4515-85cb-45d6b97b50a5" LastKnownName="HowToAdventures.AdventureTypeTemplates" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="8f2b0ede-4e70-429c-9ac1-fad505d3d187" name="Duplicate Adventure Type Template" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="aa944607-18ad-49d6-aecc-983ff64d9c12" />
+        <subjects>
+          <subsystemMoniker Id="b03f9809-ca40-4515-85cb-45d6b97b50a5" LastKnownName="HowToAdventures.AdventureTypeTemplates" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="82771aba-0f46-4eae-b33e-0f3f5999d12e" name="HTA.AnalysisModel">
+    <elementDefinition Id="d13660f2-7696-4973-a27d-dfbce90857f1" />
+  </package>
+</useCaseModelRoot>

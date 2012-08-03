@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="d5fecbdf-b460-43e8-83aa-2a9386487b1e" name="HowToAdventures" linkedPackageId="0ea201e2-ef11-4158-adf2-90f744d93676" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="c11a9cd6-1e4c-453b-8d75-6bcdfa4410ac">
+      <profileInstance Id="c9a0b7b4-1448-43f5-87d7-e589baf584df" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="446db7f3-209f-4840-891f-a4c2d05dc106">
+      <profileInstance Id="2fbd1e0b-d3bf-452f-9fd7-29e67fa98218" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="001ba69d-02c4-4ec3-b273-4f3f7acd0b99" name="HTA.Web" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="26bb8b64-a8dd-4ecc-b72f-32a759727632" />
+        <suppliersInternal>
+          <dependency Id="efb51b2b-b7d1-4da8-a0b1-22c69d32efc8">
+            <componentMoniker Id="ee45c62c-6f04-4fa8-be4c-a4107f6230c2" LastKnownName="HTA.API" />
+            <elementDefinition Id="4f24f826-067e-4485-8c74-76475eda61c9" />
+          </dependency>
+          <dependency Id="8b8c91c1-1a00-4d61-9cc4-d510a70fdb9c">
+            <componentMoniker Id="67727dd8-07fc-4802-9cbd-8a1fefd7ea17" LastKnownName="HTA.Intrastructure" />
+            <elementDefinition Id="ecb4daef-e030-4d29-95b1-8711cd7aad8c" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="ee45c62c-6f04-4fa8-be4c-a4107f6230c2" name="HTA.API" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0670fc51-cd8c-4cdf-9c4a-e95f4855ac70" />
+        <suppliersInternal>
+          <dependency Id="da431600-f874-4536-a316-bf52ef0fd3c9">
+            <componentMoniker Id="7f50a468-97cd-4715-bab1-780537ce0395" LastKnownName="HTA.Domain" />
+            <elementDefinition Id="45e994ad-fc16-4d97-b05d-7d844722e50b" />
+          </dependency>
+          <dependency Id="1e8773f3-da3e-42dc-9bf7-a5863b688f94">
+            <componentMoniker Id="67727dd8-07fc-4802-9cbd-8a1fefd7ea17" LastKnownName="HTA.Intrastructure" />
+            <elementDefinition Id="12e8a6b4-9826-4164-bbc5-c63dad15079c" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <providedInterface Id="2b2b09b1-0c45-45cd-ab16-f68ddbce28bf" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="c7a1cb2c-8c19-4db8-ab93-01d9932421be" />
+            <type_NamedElement>
+              <interfaceMoniker Id="afecdfb3-9fa9-406f-b7e3-9000126c6b53" LastKnownName="api.hta.com" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="afecdfb3-9fa9-406f-b7e3-9000126c6b53" name="api.hta.com" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2942f928-be47-45ca-8574-e433c0f03734" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="7f50a468-97cd-4715-bab1-780537ce0395" name="HTA.Domain" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9a44aeb1-da4d-44d4-9ebe-534d3b344fba" />
+        <suppliersInternal>
+          <dependency Id="bb44e8a1-cd92-4176-86f7-82c5a67eea85">
+            <componentMoniker Id="67727dd8-07fc-4802-9cbd-8a1fefd7ea17" LastKnownName="HTA.Intrastructure" />
+            <elementDefinition Id="a4da5764-beea-432e-bd2c-74e000fbc30e" />
+          </dependency>
+          <dependency Id="24a85927-eea2-44f9-8daf-69ab685efe46">
+            <componentMoniker Id="04ab7a39-234a-4bd3-9a72-fe75b7b48c8d" LastKnownName="HTA.DataAccess" />
+            <elementDefinition Id="56f0df11-d07b-42bc-95eb-49028c8988ff" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="29b5a6fc-dc4f-43a0-88bf-5dc2a594de27" name="Mobile Apps" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bb768759-2454-4102-9969-320a5329bd1d" />
+        <suppliersInternal>
+          <dependency Id="1065866d-9ac7-4bb9-bf34-f2f392f70797">
+            <providedInterfaceMoniker Id="2b2b09b1-0c45-45cd-ab16-f68ddbce28bf" LastKnownName="Port1" />
+            <elementDefinition Id="06bcc2bb-2939-4e13-ae45-7d4433fb1bae" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="67727dd8-07fc-4802-9cbd-8a1fefd7ea17" name="HTA.Intrastructure" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ed163000-59d8-4779-bd33-9b0463081939" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="04ab7a39-234a-4bd3-9a72-fe75b7b48c8d" name="HTA.DataAccess" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8c203634-ca14-4f12-b1e5-77cfd1549bf4" />
+        <suppliersInternal>
+          <dependency Id="e03e0890-4a88-406b-a7ac-c98361a04cdc">
+            <componentMoniker Id="67727dd8-07fc-4802-9cbd-8a1fefd7ea17" LastKnownName="HTA.Intrastructure" />
+            <elementDefinition Id="140ddcd5-30f4-4714-95fc-8e41a89252c3" />
+          </dependency>
+          <dependency Id="aea0bea4-7ea4-4dfd-a6d5-76d9936b7798">
+            <componentMoniker Id="f4046381-730f-4c49-aa55-a618652dcf4b" LastKnownName="MongoDB" />
+            <elementDefinition Id="6c9ef2a4-c85a-420c-a75d-e7c2669ca061" />
+          </dependency>
+          <dependency Id="c68a7351-8640-43f0-acf3-b8451ece1b2f">
+            <componentMoniker Id="b5bd7ce7-44bb-457e-9ff4-bad1cfd532b4" LastKnownName="ElasticSearch" />
+            <elementDefinition Id="7913f844-7bfe-4646-84c5-f7163d19c576" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f4046381-730f-4c49-aa55-a618652dcf4b" name="MongoDB" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="011ccaec-8702-4aa9-8578-5636a5c15151" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b5bd7ce7-44bb-457e-9ff4-bad1cfd532b4" name="ElasticSearch" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c1583f58-b273-4f1e-81c3-4501771b6aa7" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="0ea201e2-ef11-4158-adf2-90f744d93676" name="HTA.DesignModel">
+    <elementDefinition Id="8e8701da-f83b-4683-a2da-c7012e4d4903" />
+  </package>
+</componentModel>

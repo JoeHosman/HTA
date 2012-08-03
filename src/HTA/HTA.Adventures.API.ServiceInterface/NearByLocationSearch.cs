@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using HTA.Adventures.API.WebService.App_Start;
+using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
 using Nest;
 using ServiceStack.ServiceInterface;
@@ -9,19 +9,28 @@ using System;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
+
     public class AdvenuterTypeService : RestServiceBase<AdventureType>
     {
-        public override object OnPut(AdventureType request)
+        public override object OnPost(AdventureType request)
         {
             request.Id = Guid.NewGuid().ToString();
-            return (AdventureType) request;
+            return request;
+        }
+        public override object OnGet(AdventureType request)
+        {
+            if (!string.IsNullOrEmpty(request.Name))
+            {
+                return request;
+            }
+            return new List<AdventureType>();
         }
     }
     public class NearByLocationSearch : RestServiceBase<NearByAdventureLocations>
     {
         public override object OnGet(NearByAdventureLocations request)
         {
-            if(!string.IsNullOrEmpty(request.LatLon))
+            if (!string.IsNullOrEmpty(request.LatLon))
             {
                 var values = request.SplitLatLon();
                 request.Lat = values[0];
@@ -34,7 +43,7 @@ namespace HTA.Adventures.API.ServiceInterface
 
             string defaultRangeSetting = Settings.DefaultLocationSearchRange;
             request.ValidateRange(defaultRangeSetting);
-            
+
             var results = client.Search<AdventureLocation>(s => s
                                                             .From(0)  // skip
                                                             .Size(10) // limit
@@ -46,8 +55,8 @@ namespace HTA.Adventures.API.ServiceInterface
                                                             .Type("region") // what type in the index
                 );
 
-            var response = new NearBySearchResponse(request) {Result = results.Documents.ToList()};
-            
+            var response = new NearBySearchResponse(request) { Result = results.Documents.ToList() };
+
 
 
             return response;

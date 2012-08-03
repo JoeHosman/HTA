@@ -1,46 +1,52 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegionInfomationBrief.cs" caret="742" fromTop="17" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.Designer.cs" caret="9312" fromTop="32" />
+    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.Designer.cs" caret="9712" fromTop="32" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:App.config" caret="220" fromTop="6" />
     <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Program.cs" caret="505" fromTop="15" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1587" fromTop="27" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1868" fromTop="34" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="995" fromTop="21" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1464" fromTop="19" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:PageBase.cs" caret="0" fromTop="0" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="1432" fromTop="12" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1468" fromTop="14" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:NearBySearch.cs" caret="116" fromTop="5" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="0" fromTop="0" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="410" fromTop="19" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:Web.config" caret="0" fromTop="0" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1134" fromTop="21" />
+    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1404" fromTop="12" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:NearByAdventureLocations.cs" caret="191" fromTop="6" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="509" fromTop="11" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:default.htm" caret="20538" fromTop="10" />
+    <File id="15F5A194-EEE4-47BC-9437-4ED106A52767/f:Form1.cs" caret="757" fromTop="15" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="535" fromTop="16" />
   </RecentFiles>
   <RecentEdits>
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="1334" fromTop="25" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1818" fromTop="24" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="2334" fromTop="19" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="373" fromTop="14" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="714" fromTop="13" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1818" fromTop="10" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1891" fromTop="25" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="571" fromTop="13" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1820" fromTop="23" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="697" fromTop="6" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="2337" fromTop="28" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="1389" fromTop="15" />
-    <File id="2162B6CD-F0AD-4173-AB7E-F66B8B81FAAB/f:Form1.cs" caret="2310" fromTop="28" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="1732" fromTop="18" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="5904" fromTop="39" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="3472" fromTop="31" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2156" fromTop="17" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2156" fromTop="17" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2263" fromTop="19" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3641" fromTop="35" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="1878" fromTop="22" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1543" fromTop="26" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3641" fromTop="27" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3641" fromTop="26" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3655" fromTop="25" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="995" fromTop="21" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3339" fromTop="7" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="3637" fromTop="15" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="1145" fromTop="3" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:WebServiceExamples.cs" caret="2028" fromTop="22" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="341" fromTop="11" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:NearByAdventureLocations.cs" caret="3237" fromTop="6" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="2031" fromTop="21" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="2031" fromTop="6" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="2031" fromTop="6" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="250" fromTop="1" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:NearByAdventureLocations.cs" caret="102" fromTop="3" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:NearByAdventureLocations.cs" caret="244" fromTop="12" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:NearByAdventureLocations.cs" caret="244" fromTop="8" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureRegion.cs" caret="2227" fromTop="13" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="2970" fromTop="10" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="302" fromTop="10" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="197" fromTop="14" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="2566" fromTop="5" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="2566" fromTop="9" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1698" fromTop="10" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="2566" fromTop="8" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="709" fromTop="10" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="789" fromTop="14" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:default.htm" caret="23216" fromTop="21" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:default.htm" caret="23216" fromTop="26" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:default.htm" caret="20772" fromTop="23" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1134" fromTop="21" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByLocationSearch.cs" caret="495" fromTop="5" />
+    <File id="15F5A194-EEE4-47BC-9437-4ED106A52767/f:Form1.cs" caret="324" fromTop="13" />
+    <File id="15F5A194-EEE4-47BC-9437-4ED106A52767/f:Form1.cs" caret="757" fromTop="15" />
+    <File id="15F5A194-EEE4-47BC-9437-4ED106A52767/f:Form1.cs" caret="878" fromTop="15" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="672" fromTop="15" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="445" fromTop="17" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="693" fromTop="16" />
   </RecentEdits>
 </RecentFiles>

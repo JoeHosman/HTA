@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="43221d84-bdc7-459e-9373-b8c78f70da71" name="Adventure Types" linkedPackageId="2a2bc351-3167-4910-a5e3-9dbbebded1b1" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="d9ff2a75-c627-435b-ae7d-8677b08ee28f">
+      <profileInstance Id="b7ae55da-3018-43cb-b276-68d3a138084d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="185bb93f-3a77-4e46-b01d-fba49164107a">
+      <profileInstance Id="73cc821c-b980-4272-b450-6d8f9973e600" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5b53ab0b-1179-46ce-8c9b-06c7ef71fc42" name="AdventureType" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c6785c6c-d60b-40ad-83f5-1160034d75c4" />
+        <targetEnds>
+          <association Id="740cb1af-aa87-4a3d-9782-b5bf1af60251" isDerived="false" sourceEndRoleName="AdventureType" targetEndRoleName="AdventureTypeTemplates" isLeaf="false" isAbstract="false">
+            <classMoniker Id="667cc40f-fc17-4b45-a23f-b07ba33a33b0" LastKnownName="AdventureTypeTemplate" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="44cc7ee4-28a6-4112-8412-843b5d0a51a8" name="AdventureType" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a3dc6743-c5b5-49de-8d10-13d06d3a7eff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="71a76bf9-9ddf-406d-b68c-0c003784b6e2" name="AdventureTypeTemplates" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="cc49ff79-aafc-49aa-8bbc-cc2054cb857c" name="Lower" value="*">
+                      <elementDefinition Id="68c66f04-fdb4-4ea7-958e-cca5ea373385" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a09ebeb8-1ee5-41b6-94b8-4cafa3029554" name="Upper" value="*">
+                      <elementDefinition Id="3d064066-47d6-41b3-bb25-6364d8a8f7ea" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="67d88581-4b85-4fd8-9126-9d8abd10af11" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0f6a4116-fff1-46ef-9d2d-9e85aa3cc895" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="08e83a56-1257-4602-84cf-de3a9583a949" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f867f4d5-107f-47c1-b65c-06891f871803" />
+          </property>
+          <property Id="3754b322-4e5c-4476-b489-2479e6aa418b" name="Tags" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4359cd85-f39e-43f4-b04b-995dfd821699" />
+          </property>
+          <property Id="dd6aef3d-4033-4467-a934-53d60792979b" name="Templates" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="cfcc0e4a-3c3d-4406-bbed-f82ca1557c46" />
+          </property>
+          <property Id="af7cd0b5-dd9b-4e3e-87c1-c94c0881d8a6" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9c4f2ecb-d406-406e-a226-a62d33a83de3" />
+          </property>
+          <property Id="f14520b7-64c6-4a1b-a901-d26c9bd882e5" name="Pin" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="277dd32a-43af-4df7-98e0-baf43fea0619" />
+          </property>
+          <property Id="b01c779a-ee53-4cbe-b202-ca222c583639" name="Picture" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0a94b5ba-ac81-4d2d-9c9b-d0ed50df6e16" />
+          </property>
+          <property Id="a994e64d-7b8b-4f54-bdd4-1d242fd3712d" name="PathName" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c4aa4957-9200-4e5b-82c9-0b3d671496b9" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="667cc40f-fc17-4b45-a23f-b07ba33a33b0" name="AdventureTypeTemplate" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="54411de3-5557-47a2-982c-e231d65e8aff" />
+        <targetEnds>
+          <association Id="69a938f6-6511-451b-90ba-a89e8aef74b3" isDerived="false" sourceEndRoleName="AdventureTypeTemplate" targetEndRoleName="TemplateSuggestedDataCards" isLeaf="false" isAbstract="false">
+            <classMoniker Id="94a8e958-ada7-4b4e-a311-b25c9223444f" LastKnownName="DataCard" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eddf127d-cdeb-4ca3-bad7-7659cf4c25a3" name="AdventureTypeTemplate" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="45402616-579c-4085-9cbc-3ce4d6c6a315" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b98ab57-a34c-4825-a8a2-73505a1c2475" name="TemplateSuggestedDataCards" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="e4265d5e-1c31-4250-90aa-cd85d2a31db4" name="Lower" value="1">
+                      <elementDefinition Id="3e26783c-8833-4f6b-9f90-81c5ff9e3797" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="fb6bca51-d2cb-4dcc-ac5d-d63a770e8752" name="Upper" value="*">
+                      <elementDefinition Id="29325fb0-2c8b-42a5-aa78-9743b2562581" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="a059802f-8c6e-4601-a522-625d39efb9ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="46a203fc-9bd6-4d1f-afd8-789af5c06f72" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="c78a0ac3-b1bf-44e4-a93f-a465145ac48b" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="96a7263b-6bd6-4748-a396-676aca4dd954" />
+          </property>
+          <property Id="8b23f4fd-599a-483f-9708-4944e17707d8" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="97f80409-f844-4805-af13-dc97864cde67" />
+          </property>
+          <property Id="3dca2a3f-5010-46d9-81db-450a771ebf86" name="DataCards" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="92f2ab4b-e549-4905-a476-14911542c89f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="94a8e958-ada7-4b4e-a311-b25c9223444f" name="DataCard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bc67cc1d-982b-4898-a29a-c869ae848864" />
+        <targetEnds>
+          <association Id="097645bc-79a0-463d-9dcc-6f4f6921901a" isDerived="false" sourceEndRoleName="" targetEndRoleName="DataCardStatus" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="d14f44a7-6566-4bd3-b4e9-d5906c13f2cd" LastKnownName="DataCardStatus" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8563773b-7494-4c43-9809-01969e0e4e7f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="a2b51df7-5388-4a9e-9442-888d9960668f" name="Lower" value="*">
+                      <elementDefinition Id="988c85f4-0d20-4341-804e-e3a287e586ee" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1ace1a89-117f-4f16-8515-baa384cde243" name="Upper" value="*">
+                      <elementDefinition Id="bec5009b-bc88-4426-9b78-9f7ed044a0f9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="ac156727-a026-4f78-b06f-ac81c2ae382f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="752cf8b7-eacf-4e06-b4b6-58c8ff7eaabb" name="DataCardStatus" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3d4d77fd-dff2-42c7-b1e0-64911065acb4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c3b45ea3-85fc-418b-88e1-cbcf52a1623d" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="72d4f4ee-de67-4fd3-9fda-bd783cd99a94" name="Title" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fc10a27f-505f-41ae-9f7b-6d626903165c" />
+          </property>
+          <property Id="a07e2ba2-46c7-4f97-8367-dc683cf8f9d0" name="Body" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0e286303-14f1-4ffa-ad9b-36f9d5d250dd" />
+          </property>
+          <property Id="73cd80e0-a08b-449f-ac47-a7735de98aa9" name="Photos" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fd26a0d1-7516-49eb-8adf-e663197349c5" />
+          </property>
+          <property Id="5389e426-8317-4e92-b6cc-aa71f7a40cce" name="State" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5e5ff306-4d3d-468b-82d5-4f36c31e6d14" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="d14f44a7-6566-4bd3-b4e9-d5906c13f2cd" name="DataCardStatus" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5866936c-f876-4acc-99d4-a246a6aa1ed9" />
+        <ownedLiterals>
+          <enumerationLiteral Id="fea02bd5-9e23-4256-9fb5-389de3c7b901" name="Public">
+            <elementDefinition Id="590d1176-ef58-4799-821b-7c03f6a3bdf6" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="6e22330e-0aa1-4051-bf00-f46f1b8c53cc" name="Verified">
+            <elementDefinition Id="5280bc76-4855-46ab-8c4c-f70093c6a152" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="7cf94db9-6993-4500-b0e3-d755d09f97f0" name="NotUsed">
+            <elementDefinition Id="47ff0e70-e378-4b35-81ff-e06135f6b5d7" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="c16635d0-70fd-4174-9b5d-d0cfd4b39e95" name="Removed">
+            <elementDefinition Id="3f47dc25-e3c9-4661-92b2-2d6b41b21fe2" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="8c7614e4-d447-4ded-a0d3-117dbec11bfa" name="UnderReview">
+            <elementDefinition Id="f268aad1-bb31-490f-b335-8b86419e1d91" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="2a2bc351-3167-4910-a5e3-9dbbebded1b1" name="HTA.AnalysisModel">
+    <elementDefinition Id="d13660f2-7696-4973-a27d-dfbce90857f1" />
+  </package>
+</logicalClassDesignerModel>

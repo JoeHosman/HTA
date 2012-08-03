@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{689eb006-8d5b-4b7a-b2a4-234587bbf6ed}</ProjectGuid>
+    <ArchitectureToolsVersion>1.0.0.0</ArchitectureToolsVersion>
+    <Name>HTA.DesignModel</Name>
+    <RootNamespace>HTA.DesignModel</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
+  <ItemGroup>
+    <Content Include="Dynamic View\Uc02 - Adventure Locations\Basic Flow.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dynamic View\Uc02 - Adventure Locations\Basic Flow.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Dynamic View\Uc02 - Adventure Locations\Basic Flow.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Static View\IAdventureTypeRepository.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Static View\IAdventureTypeRepository.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Static View\IAdventureTypeRepository.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="Dynamic View\Uc02 - Adventure Locations" />
+    <Folder Include="Dynamic View\UC01 - Adventure Types" />
+    <Folder Include="ModelDefinition\" />
+    <Content Include="Dynamic View\UC01 - Adventure Types\Basic Flow.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Dynamic View\UC01 - Adventure Types\Basic Flow.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Dynamic View\UC01 - Adventure Types\Basic Flow.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="HowToAdventures.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="HowToAdventures.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>HowToAdventures.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\HTA.DesignModel.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="Dynamic View" />
+    <Folder Include="Static View" />
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="Application Architecture.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="Application Architecture.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Application Architecture.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="Application Architecture.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>Application Architecture.layerdiagram</DependentUpon>
+    </Validate>
+  </ItemGroup>
+</Project>

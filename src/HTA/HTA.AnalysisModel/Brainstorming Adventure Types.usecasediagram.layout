@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Brainstorming Adventure Types">
+  <useCaseModelRootMoniker Id="589ae226-f6c7-41af-964c-9b18a5cf2469" />
+  <nestedChildShapes>
+    <actorShape Id="01cc9279-652b-4ed8-96ed-f965ea2d140b" absoluteBounds="6.875, 2.125, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="272684ef-b22f-4fdf-902a-c9a39ae5ef89" LastKnownName="Administrator" />
+      <relativeChildShapes />
+    </actorShape>
+    <commentShape Id="f7b8d5e6-976a-4566-a28d-69f6660b39b5" absoluteBounds="0.5, 2.75, 1.75, 1" customColor="251, 247, 200">
+      <commentMoniker Id="c4f03d41-f102-48ef-935a-2f60606f7efc" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentShape Id="de429969-a511-4992-a72d-f380f5cb0de0" absoluteBounds="6.625, 2.875, 2.375, 0.75" customColor="251, 247, 200">
+      <commentMoniker Id="7b4a0b71-690d-4573-8f01-97946a1de64f" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentShape Id="b910807a-4f53-4577-89d2-156a7dc6bfce" absoluteBounds="3.25, 0.75, 2.625, 0.5" customColor="251, 247, 200">
+      <commentMoniker Id="658e6ab9-c1aa-43fc-ba92-bdcb259791e1" />
+      <relativeChildShapes />
+    </commentShape>
+    <actorShape Id="884dba91-3b4b-4489-9d00-3371983cd6bb" absoluteBounds="1.25, 1.75, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="30ef9ed5-bf21-492e-99ae-79ed55833a3b" LastKnownName="Unregistered" />
+      <relativeChildShapes />
+    </actorShape>
+    <SubsystemShape Id="ab56928f-4706-4036-8aaf-00bc65357794" absoluteBounds="2.875, 1.875, 3, 1.5" customColor="Gray">
+      <subsystemMoniker Id="82b9d7ae-4c50-4457-a7c5-aad9275dcf99" LastKnownName="HowToAdventures.AdventureTypes" />
+      <nestedChildShapes>
+        <commentShape Id="b166a5ee-b285-4850-a313-8d279c0fffa6" absoluteBounds="3.375, 2.375, 2, 0.75" customColor="251, 247, 200">
+          <commentMoniker Id="10783638-e3f4-46f0-b433-e0de07adb4f5" />
+          <relativeChildShapes />
+        </commentShape>
+      </nestedChildShapes>
+    </SubsystemShape>
+    <useCaseAssociationConnector edgePoints="[(6.875 : 2.39772727272727); (5.875 : 2.48863636363636)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="7f6f2c38-db6d-4c62-8c14-db7b93bf956d" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="01cc9279-652b-4ed8-96ed-f965ea2d140b" />
+        <SubsystemShapeMoniker Id="ab56928f-4706-4036-8aaf-00bc65357794" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(1.75 : 2.05434782608696); (2.875 : 2.29891304347826)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="065284d5-e5e3-4463-8bef-4b1233106b53" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="884dba91-3b4b-4489-9d00-3371983cd6bb" />
+        <SubsystemShapeMoniker Id="ab56928f-4706-4036-8aaf-00bc65357794" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

@@ -2,6 +2,8 @@ using System;
 using System.Linq;
 using System.Configuration;
 using System.Collections.Generic;
+using HTA.Adventures.Models;
+using HTA.Adventures.Models.Types;
 using ServiceStack.Configuration;
 using ServiceStack.OrmLite;
 using ServiceStack.OrmLite.SqlServer;
@@ -35,11 +37,13 @@ namespace HTA.Adventures.API.WebService.App_Start
 
             //Configure User Defined REST Paths
             Routes
-              .Add<Hello>("/hello")
-              .Add<Hello>("/hello/{Name*}")
-              .Add<Todo>("/todos")
-              .Add<Todo>("/todos/{Id}")
-              .Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
+                .Add<Hello>("/hello")
+                .Add<Hello>("/hello/{Name*}")
+                .Add<Todo>("/todos")
+                .Add<Todo>("/todos/{Id}")
+                .Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
+       
+
 
             //Uncomment to change the default ServiceStack configuration
             //SetConfig(new EndpointHostConfig {

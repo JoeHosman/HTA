@@ -9,17 +9,6 @@ using ServiceStack.ServiceHost;
 
 namespace HTA.Adventures.Models.Types
 {
-    /// <summary>
-    /// A region where adventures happen
-    /// </summary>
-    public partial class AdventureRegion : Entity
-    {
-        public string Name { get; set; }
-        public string PathName { get; set; }
-        public string NearBy { get; set; }
-
-    }
-
     public class GeoRange
     {
         public int Range { get; set; }
@@ -85,37 +74,6 @@ namespace HTA.Adventures.Models.Types
         [ElasticProperty(Name = "name")]
         [DataMember]
         public string Name { get; set; }
-    }
-
-    [RestService("/Adventure/Type", Verbs = "PUT")]
-    [ElasticType(Name = "adventure_type", IdProperty = "id")]
-    [DataContract]
-    public class AdventureType : Entity
-    {
-        [ElasticProperty(Name = "name")]
-        [DataMember]
-        public string Name { get; set; }
-
-        [ElasticProperty(Name = "uniq_name")]
-        [DataMember]
-        public string UniqueName { get; set; }
-
-        [ElasticProperty(Name = "description")]
-        [DataMember]
-        public string Description { get; set; }
-
-        [ElasticProperty(Name = "icon")]
-        [DataMember]
-        public string Icon { get; set; }
-
-        [ElasticProperty(Name = "picture")]
-        [DataMember]
-        public string Picture { get; set; }
-
-        [ElasticProperty(Name = "adventure_type_templates")]
-        [DataMember]
-        public List<AdventureTypeTemplateReference> AdventureTypeTemplates { get; set; }
-
     }
 
     [ElasticType(Name = "region", IdProperty = "id")]

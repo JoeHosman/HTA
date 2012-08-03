@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="HowToAdventures">
+  <componentModelMoniker Id="d5fecbdf-b460-43e8-83aa-2a9386487b1e" />
+  <nestedChildShapes>
+    <componentShape Id="11c3c530-0078-4e7f-98ed-8d17b324ffe4" absoluteBounds="3.5, 0.875, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="001ba69d-02c4-4ec3-b273-4f3f7acd0b99" LastKnownName="HTA.Web" />
+    </componentShape>
+    <componentShape Id="8d3693a2-944c-43dd-949a-cda12d6425af" absoluteBounds="6.25, 0.875, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="ee45c62c-6f04-4fa8-be4c-a4107f6230c2" LastKnownName="HTA.API" />
+      <relativeChildShapes>
+        <providedInterfaceShape Id="e836a831-4637-41c2-8cde-9fda0f7e5e35" absoluteBounds="7.4375, 1.825, 0.15625, 0.40625" blackBoxLocation="0" whiteBoxLocation="0" whiteBoxEdge="" blackBoxEdge="" whiteBoxIsOnPort="false" blackBoxIsOnPort="false">
+          <providedInterfaceMoniker Id="2b2b09b1-0c45-45cd-ab16-f68ddbce28bf" LastKnownName="Port1" />
+          <relativeChildShapes />
+        </providedInterfaceShape>
+      </relativeChildShapes>
+    </componentShape>
+    <dependencyConnector edgePoints="[(5 : 1.35); (6.25 : 1.35)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="efb51b2b-b7d1-4da8-a0b1-22c69d32efc8" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="11c3c530-0078-4e7f-98ed-8d17b324ffe4" />
+        <componentShapeMoniker Id="8d3693a2-944c-43dd-949a-cda12d6425af" />
+      </nodes>
+    </dependencyConnector>
+    <componentShape Id="d07195cb-e50b-4e3f-a479-7243d18f8863" absoluteBounds="6.375, 3.125, 1.6666666666666661, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="7f50a468-97cd-4715-bab1-780537ce0395" LastKnownName="HTA.Domain" />
+    </componentShape>
+    <dependencyConnector edgePoints="[(6.94113685344827 : 1.825); (6.94113685344827 : 2.2); (6.93055555555556 : 2.2); (6.93055555555556 : 3.125)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="da431600-f874-4536-a316-bf52ef0fd3c9" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="8d3693a2-944c-43dd-949a-cda12d6425af" />
+        <componentShapeMoniker Id="d07195cb-e50b-4e3f-a479-7243d18f8863" />
+      </nodes>
+    </dependencyConnector>
+    <componentShape Id="77d993e3-83a6-493d-bfc1-28608634a12a" absoluteBounds="8.5, 0.875, 1.5, 0.95" customColor="255, 192, 128" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="29b5a6fc-dc4f-43a0-88bf-5dc2a594de27" LastKnownName="Mobile Apps" />
+    </componentShape>
+    <dependencyConnector edgePoints="[(8.5 : 1.618752); (8.125 : 1.618752); (8.125 : 2.60625); (7.515625 : 2.60625); (7.515625 : 2.23125)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="1065866d-9ac7-4bb9-bf34-f2f392f70797" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="77d993e3-83a6-493d-bfc1-28608634a12a" />
+        <providedInterfaceShapeMoniker Id="e836a831-4637-41c2-8cde-9fda0f7e5e35" />
+      </nodes>
+    </dependencyConnector>
+    <componentShape Id="0fb51ca7-dbff-4719-8574-c24826b55d96" absoluteBounds="3.375, 3.125, 1.760416666666667, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="67727dd8-07fc-4802-9cbd-8a1fefd7ea17" LastKnownName="HTA.Intrastructure" />
+    </componentShape>
+    <dependencyConnector edgePoints="[(4.25 : 1.825); (4.25 : 3.125)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="8b8c91c1-1a00-4d61-9cc4-d510a70fdb9c" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="11c3c530-0078-4e7f-98ed-8d17b324ffe4" />
+        <componentShapeMoniker Id="0fb51ca7-dbff-4719-8574-c24826b55d96" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(6.25 : 1.618752); (5.875 : 1.618752); (5.875 : 3.23562169312169); (5.13541666666667 : 3.23562169312169)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="1e8773f3-da3e-42dc-9bf7-a5863b688f94" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="8d3693a2-944c-43dd-949a-cda12d6425af" />
+        <componentShapeMoniker Id="0fb51ca7-dbff-4719-8574-c24826b55d96" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(6.375 : 3.51709090909091); (5.56770833333333 : 3.51709090909091); (5.56770833333333 : 3.5210668633235); (5.13541666666667 : 3.5210668633235)]" manuallyRouted="true" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="bb44e8a1-cd92-4176-86f7-82c5a67eea85" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="d07195cb-e50b-4e3f-a479-7243d18f8863" />
+        <componentShapeMoniker Id="0fb51ca7-dbff-4719-8574-c24826b55d96" />
+      </nodes>
+    </dependencyConnector>
+    <componentShape Id="c4162c2d-8d26-4542-ada2-067e12031e89" absoluteBounds="6, 4.75, 2.6458333333333321, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="04ab7a39-234a-4bd3-9a72-fe75b7b48c8d" LastKnownName="HTA.DataAccess" />
+    </componentShape>
+    <dependencyConnector edgePoints="[(6 : 5.225); (4.25520833333333 : 5.225); (4.25520833333333 : 4.075)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="e03e0890-4a88-406b-a7ac-c98361a04cdc" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="c4162c2d-8d26-4542-ada2-067e12031e89" />
+        <componentShapeMoniker Id="0fb51ca7-dbff-4719-8574-c24826b55d96" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(7.20833333333333 : 4.075); (7.20833333333333 : 4.45); (7.07022471910112 : 4.45); (7.07022471910112 : 4.75)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="24a85927-eea2-44f9-8daf-69ab685efe46" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="d07195cb-e50b-4e3f-a479-7243d18f8863" />
+        <componentShapeMoniker Id="c4162c2d-8d26-4542-ada2-067e12031e89" />
+      </nodes>
+    </dependencyConnector>
+    <componentShape Id="53fdd974-e87e-43b1-b37e-1e021ec0425e" absoluteBounds="5.125, 6.5, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="f4046381-730f-4c49-aa55-a618652dcf4b" LastKnownName="MongoDB" />
+    </componentShape>
+    <componentShape Id="3f387258-c2eb-4df9-9902-8da022567163" absoluteBounds="7.5, 6.5, 1.5, 0.95" customColor="161, 199, 231" whiteBoxBoundsHeight="0" whiteBoxBoundsWidth="0" blackBoxBoundsHeight="0" blackBoxBoundsWidth="0" whiteBoxTopEdgeShapesCount="0" whiteBoxRightEdgeShapesCount="0" whiteBoxBottomEdgeShapesCount="0" whiteBoxLeftEdgeShapesCount="0" blackBoxTopEdgeShapesCount="0" blackBoxRightEdgeShapesCount="0" blackBoxBottomEdgeShapesCount="0" blackBoxLeftEdgeShapesCount="0">
+      <componentMoniker Id="b5bd7ce7-44bb-457e-9ff4-bad1cfd532b4" LastKnownName="ElasticSearch" />
+    </componentShape>
+    <dependencyConnector edgePoints="[(6.3125 : 5.7); (6.3125 : 6.5)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="aea0bea4-7ea4-4dfd-a6d5-76d9936b7798" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="c4162c2d-8d26-4542-ada2-067e12031e89" />
+        <componentShapeMoniker Id="53fdd974-e87e-43b1-b37e-1e021ec0425e" />
+      </nodes>
+    </dependencyConnector>
+    <dependencyConnector edgePoints="[(8.07291666666667 : 5.7); (8.07291666666667 : 6.5)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="c68a7351-8640-43f0-acf3-b8451ece1b2f" />
+      <relativeChildShapes />
+      <nodes>
+        <componentShapeMoniker Id="c4162c2d-8d26-4542-ada2-067e12031e89" />
+        <componentShapeMoniker Id="3f387258-c2eb-4df9-9902-8da022567163" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</componentDiagram>

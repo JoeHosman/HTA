@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="a4d6ad1d-8798-40b3-9437-cbd9ab4b1657" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="49ea72ce-32e9-4e75-9e26-eb4149330779" name="Comment1">
+      <body>Source: Microsoft Application Architecture Guide, 2nd Edition. 
+Refer to "Chapter 23: Designing Rich Internet Applications" for more information.
+URL: http://msdn.microsoft.com/en-us/library/ee658083.aspx</body>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="ca48e819-4551-4332-bdc9-ede71ca3c5b6" name="How To Adventures Infrastructure">
+      <childLayers>
+        <layer Id="490e70ff-f0ea-4b27-a323-bb303830085b" name="Security" />
+        <layer Id="059ba9f7-41b2-4ebe-9783-465562c1ca6d" name="Communication" />
+        <layer Id="3d9d155e-6bb8-4fb4-b9dd-5a065a73474a" name="Operational Management" />
+      </childLayers>
+    </layer>
+    <layer Id="6d1d9fe0-3233-43fd-9054-80de29bf988e" name="Client">
+      <childLayers>
+        <layer Id="62b14011-c07d-4222-a17d-4c0d3e1e2d60" name="Isolated Storage" />
+        <layer Id="750e44e2-c8d5-464e-abd7-2f189e17c897" name="Browser">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="abcfe999-aab6-49dd-8717-a994752f60e5" direction="Forward">
+              <layerMoniker Id="be24fc98-d27d-4d84-b6b7-0a8f17d3cdd9" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="83bad7f9-fd3c-4c20-a0bf-016536a60c9d" name="Plug-in Execution Container">
+              <childLayers>
+                <layer Id="0a2f9058-1b90-4b2f-adc7-c2bd447ff2b4" name="Rich UI Engine" />
+                <layer Id="966f987e-591d-4822-b295-6a8ba69041aa" name="Business Processing Components" />
+                <layer Id="d748b4f7-333e-44ab-b0f1-a727bb3073c4" name="Presentation Layer" />
+              </childLayers>
+            </layer>
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="a5816bd8-a409-4ac6-b5dd-fe3024b1e27f" name="How To Adventures">
+      <childLayers>
+        <layer Id="be24fc98-d27d-4d84-b6b7-0a8f17d3cdd9" name="How To Adventures Website [www]">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="90ba04ec-6ec6-41aa-be9c-2b47d7deeb25" direction="Forward">
+              <layerMoniker Id="fdf0cc69-9896-4a23-83ab-014d0c0d341f" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="8be3204d-b0fe-42a2-ae50-f4b299a51c48" direction="Forward">
+              <layerMoniker Id="ca48e819-4551-4332-bdc9-ede71ca3c5b6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="b997043e-50a1-49be-b62f-8165f828975c" name="Adventurers" />
+            <layer Id="e0e7b545-a89b-46ef-b257-bf559d423767" name="Businesses" />
+            <layer Id="e1cbbdda-691f-4b0c-b061-9ad38dfc95b6" name="Regions" />
+            <layer Id="6fa441aa-7ec7-4685-969b-f8b8362e964d" name="Reviews" />
+          </childLayers>
+        </layer>
+        <layer Id="100c8b4d-312a-4d72-8c89-3370b233e74c" name="Data Layer">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="031434a7-6e37-45d3-9919-5a98ac2b3d5a" direction="Forward">
+              <layerMoniker Id="9120712a-ddc5-4321-88a4-67026be7130a" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="c3212cf7-fdc7-4cc2-846c-609d0ea39c69" direction="Forward">
+              <layerMoniker Id="4b63814e-976e-482a-80d9-e240ad702186" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="d931e1dd-a7dd-4e8a-8c17-a1d980273d2c" direction="Forward">
+              <layerMoniker Id="ca48e819-4551-4332-bdc9-ede71ca3c5b6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="15cb8afd-1209-4498-9a67-bbbefc505042" name="Data Access Components" />
+            <layer Id="973273ef-e0a0-4ed8-b553-416f5326d7c7" name="Data Helpers/ Utilities" />
+            <layer Id="0a3d3ed9-16ed-4ff5-bb48-3cee1b3c03ff" name="Service Agents" />
+          </childLayers>
+        </layer>
+        <layer Id="fdf0cc69-9896-4a23-83ab-014d0c0d341f" name="How To Adventures Business Domain [api]">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="d9a41b33-b0e5-4129-b298-e9d1cfe03727" direction="Forward">
+              <layerMoniker Id="100c8b4d-312a-4d72-8c89-3370b233e74c" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="3e53e7ee-be56-4958-b5a6-394d8bb19b9a" direction="Forward">
+              <layerMoniker Id="ca48e819-4551-4332-bdc9-ede71ca3c5b6" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <childLayers>
+            <layer Id="73121a35-a331-42c4-80fe-abf852fbc752" name="Application Facade" />
+            <layer Id="a7a4e755-b41e-4848-a9de-9d4fb9adb4c4" name="Business Workflow" />
+            <layer Id="e921e42e-b137-4e09-b1a8-55845460d1cd" name="Business Components" />
+            <layer Id="1dbf046f-3e42-4ad0-82f3-b83a4d8616c1" name="Business Entities" />
+          </childLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="9120712a-ddc5-4321-88a4-67026be7130a" name="MongoDB" />
+    <layer Id="4b63814e-976e-482a-80d9-e240ad702186" name="Elastic Search DB" />
+  </layers>
+</layerModel>

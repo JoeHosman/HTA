@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="589ae226-f6c7-41af-964c-9b18a5cf2469" name="Brainstorming Adventure Types" linkedPackageId="c01a66f9-8df4-4358-989f-19cab10a90c0" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <ownedCommentsInternal>
+    <comment Id="c4f03d41-f102-48ef-935a-2f60606f7efc">
+      <elementDefinition Id="d0eabf7c-aaeb-4e15-922e-3d257f4ce7c2" />
+      <body>Get Adventure Type list</body>
+    </comment>
+    <comment Id="7b4a0b71-690d-4573-8f01-97946a1de64f">
+      <elementDefinition Id="3012c669-7ce9-48b2-b9d6-ab2da7a3013a" />
+      <body>Manage adventure type inventory (CRUD)
+</body>
+    </comment>
+    <comment Id="658e6ab9-c1aa-43fc-ba92-bdcb259791e1">
+      <elementDefinition Id="37670678-8b76-4a92-a25a-525d33b7c7f2" />
+      <body>Constraints:
+- There shouldn't be duplicate names</body>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="544b7f62-a441-4d52-9025-1c6538202b09">
+      <profileInstance Id="b1e0e79c-cf03-4f1a-9266-b48290cfaae6" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="1bff4180-796d-415a-94cf-64975eb70d92">
+      <profileInstance Id="b2be12cb-3a18-432d-b5bb-0e1817bd7131" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="82b9d7ae-4c50-4457-a7c5-aad9275dcf99" name="HowToAdventures.AdventureTypes" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="10783638-e3f4-46f0-b433-e0de07adb4f5">
+            <elementDefinition Id="1ac5cfe2-8fc0-40bc-8d08-5b41aec91ba4" />
+            <body>Vision Statement:
+Adventure Types serve as a way to group reviews by their activity type and to provide data templates</body>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="69bd8483-da4e-4389-b367-5f595eee4e06" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="272684ef-b22f-4fdf-902a-c9a39ae5ef89" name="Administrator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b38e6161-e53e-4321-9996-9bbaf958cfd1" />
+        <targetEnds>
+          <association Id="7f6f2c38-db6d-4c62-8c14-db7b93bf956d" isDerived="false" sourceEndRoleName="Administrator" targetEndRoleName="HowToAdventures.AdventureTypes" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="82b9d7ae-4c50-4457-a7c5-aad9275dcf99" LastKnownName="HowToAdventures.AdventureTypes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cace1ddf-edcb-4141-bb84-a131d3d80745" name="Administrator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6a12db5e-f96d-45d2-99dd-ce3939b9b260" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="45ae3ae2-9805-4446-b8dc-1c85408f10ae" name="HowToAdventures.AdventureTypes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bfc4ad6e-a5db-48c8-9077-451856d73615" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="341d3e10-efc8-4a16-b83a-335d2c27a75f" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="30ef9ed5-bf21-492e-99ae-79ed55833a3b" name="Unregistered" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7498d293-c245-4b7a-9ab6-955b0402f8f2" />
+        <targetEnds>
+          <association Id="065284d5-e5e3-4463-8bef-4b1233106b53" isDerived="false" sourceEndRoleName="Unregistered" targetEndRoleName="HowToAdventures.AdventureTypes" isLeaf="false" isAbstract="false">
+            <subsystemMoniker Id="82b9d7ae-4c50-4457-a7c5-aad9275dcf99" LastKnownName="HowToAdventures.AdventureTypes" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4d99db27-9c3e-4517-9554-bd1eb97df71e" name="Unregistered" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d100869f-e49a-46cc-80f9-52ed4633d9a2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="26e6cd92-4a31-47c0-b845-ae5a873ab492" name="HowToAdventures.AdventureTypes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="325ec4f7-b0cd-42b1-bf59-8cbe7f8812c4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1a740834-c551-4b5d-bd61-dc6df6c8c9ea" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="c01a66f9-8df4-4358-989f-19cab10a90c0" name="HTA.AnalysisModel">
+    <elementDefinition Id="d13660f2-7696-4973-a27d-dfbce90857f1" />
+  </package>
+</useCaseModelRoot>

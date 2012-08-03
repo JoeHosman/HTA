@@ -6,4 +6,5 @@
   <Module PersistentId="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed" ModuleId="Newtonsoft.Json" />
   <Module PersistentId="6845016B-4A50-4FBB-89E3-6D4BF32A7346" ModuleId="HTA.Adventures.API.WebService" />
   <Module PersistentId="1EEDEE88-3BC8-4344-95DE-148CBB7677FA" ModuleId="HTA.Adventures.API.ServiceInterface" />
+  <Module PersistentId="15F5A194-EEE4-47BC-9437-4ED106A52767" ModuleId="HTA.Adventure.Types.TestGUI" />
 </Modules>
