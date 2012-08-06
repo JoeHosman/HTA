@@ -1,0 +1,11 @@
+﻿@model AdventureDataCard
+<tr>
+    <th>@Html.HiddenFor(m => m.Id)
+    </th>
+    <th>
+        @Html.TextBoxFor(m => m.Title)
+    </th>
+    <th>
+        @Html.TextBoxFor(m => m.Body, new { @class = "textbox" })
+    </th>
+</tr>

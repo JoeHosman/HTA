@@ -7,4 +7,6 @@
   <Module PersistentId="6845016B-4A50-4FBB-89E3-6D4BF32A7346" ModuleId="HTA.Adventures.API.WebService" />
   <Module PersistentId="1EEDEE88-3BC8-4344-95DE-148CBB7677FA" ModuleId="HTA.Adventures.API.ServiceInterface" />
   <Module PersistentId="15F5A194-EEE4-47BC-9437-4ED106A52767" ModuleId="HTA.Adventure.Types.TestGUI" />
+  <Module PersistentId="08E32832-A73A-4033-AD06-0D53A8631399" ModuleId="HTA.Website.MVC.Example_1" />
+  <Module PersistentId="16EFA342-8554-4FEA-B2D9-87C72EEA5697" ModuleId="HTA.Website.MVC.Example.Tests" />
 </Modules>

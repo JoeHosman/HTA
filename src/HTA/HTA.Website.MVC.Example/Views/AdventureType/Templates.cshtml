@@ -1,0 +1,26 @@
+﻿@model HTA.Website.MVC.Example.Controllers.UpdateTypeTemplatesModel
+@{
+    ViewBag.Title = "Templates";
+}
+<h2>
+    Templates</h2>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>UpdateTypeTemplatesModel</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TemplatesSelected) :
+            @Html.ListBoxFor(model => model.TemplatesSelected, Model.TemplateList.Select(fl => new SelectListItem() { Text = fl.Name, Value = fl.Id }), new { Multiple = "multiple" })
+        </div>
+         @Html.HiddenFor(model => model.AdventureTypeId)
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

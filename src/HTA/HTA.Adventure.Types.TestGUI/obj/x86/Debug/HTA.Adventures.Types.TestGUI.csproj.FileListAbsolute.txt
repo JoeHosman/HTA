@@ -1,8 +1,3 @@
-E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\HTA.Adventure.Types.TestGUI.Form1.resources
-E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\HTA.Adventure.Types.TestGUI.Properties.Resources.resources
-E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\GenerateResource.read.1.tlog
-E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\HTA.Adventure.Types.TestGUI.exe.config
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\HTA.Adventure.Types.TestGUI.exe
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\HTA.Adventure.Types.TestGUI.pdb
@@ -36,5 +31,10 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\ServiceStack.Servic
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\ServiceStack.Text.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\ServiceStack.Text.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\bin\Debug\Newtonsoft.Json.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\HTA.Adventure.Types.TestGUI.Form1.resources
+E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\HTA.Adventure.Types.TestGUI.Properties.Resources.resources
+E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\HTA.Adventure.Types.TestGUI.exe
 E:\Dev\git\HTA\src\HTA\HTA.Adventure.Types.TestGUI\obj\x86\Debug\HTA.Adventure.Types.TestGUI.pdb

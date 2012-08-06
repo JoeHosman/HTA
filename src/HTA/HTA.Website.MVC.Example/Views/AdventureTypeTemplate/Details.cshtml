@@ -1,0 +1,45 @@
+﻿@model AdventureTypeTemplate
+@{
+    ViewBag.Title = "Adventure Type Template Details";
+}
+<h2>
+    Adventure Type Template Details
+</h2>
+<fieldset>
+    <legend>Adventure Type Template</legend>
+    <div class="display-label">
+        Name : '<b>@Html.DisplayFor(model => model.Name)</b>' [ <i>@Html.DisplayFor(model => model.Id)</i>
+        ]
+    </div>
+    <div class="display-label">
+        Description: @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="display-label">
+        Data cards :
+        <table>
+            <tr>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Body
+                </th>
+            </tr>
+            @foreach (var template in Model.DataCards)
+            {
+                <tr>
+                    <th>
+                        @template.Title
+                    </th>
+                    <th>
+                        @template.Body
+                    </th>
+                </tr>
+            }
+        </table>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -9,23 +9,6 @@ using System;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
-
-    public class AdvenuterTypeService : RestServiceBase<AdventureType>
-    {
-        public override object OnPost(AdventureType request)
-        {
-            request.Id = Guid.NewGuid().ToString();
-            return request;
-        }
-        public override object OnGet(AdventureType request)
-        {
-            if (!string.IsNullOrEmpty(request.Name))
-            {
-                return request;
-            }
-            return new List<AdventureType>();
-        }
-    }
     public class NearByLocationSearch : RestServiceBase<NearByAdventureLocations>
     {
         public override object OnGet(NearByAdventureLocations request)

@@ -1,9 +1,7 @@
-using System;
 using System.Linq;
 using System.Configuration;
-using System.Collections.Generic;
+using HTA.Adventures.API.WebService.Data;
 using HTA.Adventures.Models;
-using HTA.Adventures.Models.Types;
 using ServiceStack.Configuration;
 using ServiceStack.OrmLite;
 using ServiceStack.OrmLite.SqlServer;
@@ -42,7 +40,7 @@ namespace HTA.Adventures.API.WebService.App_Start
                 .Add<Todo>("/todos")
                 .Add<Todo>("/todos/{Id}")
                 .Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
-       
+
 
 
             //Uncomment to change the default ServiceStack configuration
@@ -55,6 +53,13 @@ namespace HTA.Adventures.API.WebService.App_Start
 
             //Register all your dependencies
             container.Register(new TodoRepository());
+
+            // Add our mongo adventure type repo into the system
+            container.Register(new MongoAdventureTypeRepository());
+
+            // Register our mongo adapter as the IAdventuretypeRepository to use :D
+            container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeRepository>();
+            container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeTemplateRepository>();
         }
 
         /* Uncomment to enable ServiceStack Authentication and CustomUserSession
