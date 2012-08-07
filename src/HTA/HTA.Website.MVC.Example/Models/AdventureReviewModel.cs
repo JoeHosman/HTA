@@ -5,7 +5,6 @@ namespace HTA.Website.MVC.Example.Models
 {
     public class AdventureReviewModel
     {
-
         public AdventureReview Review { get; set; }
         public IEnumerable<AdventureType> SelectableTypes { get; set; }
 

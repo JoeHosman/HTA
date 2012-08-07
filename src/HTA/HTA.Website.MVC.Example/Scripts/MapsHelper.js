@@ -28,22 +28,27 @@ function init_draggable_map(map_canvas_id, lat, lng, zoomLevel, title, latBox, l
 
     var map = new google.maps.Map(map_canvas, options);
 
-    new google.maps.Marker(marker).setMap(map);
+    var marker = new google.maps.Marker(marker);
+    marker.setMap(map);
 
     google.maps.event.addListener(marker, 'drag', function () {
         document.getElementById(latBox).value = marker.getPosition().lat();
         document.getElementById(lngBox).value = marker.getPosition().lng();
     });
     google.maps.event.addListener(marker, 'dragend', function () {
+        
         document.getElementById(latBox).value = marker.getPosition().lat();
         document.getElementById(lngBox).value = marker.getPosition().lng();
     });
 }
 
 function getMarkerFromAddress(icon) {
-
     var address = document.getElementById('Location_Address').value;
+    getMarkerFromAddress(icon, address);
+}
+function getMarkerFromAddress(icon, address) {
 
+    alert("address: " + address);
     var geocoder = new google.maps.Geocoder();
 
     geocoder.geocode({ 'address': address }, function (results, status) {
