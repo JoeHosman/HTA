@@ -11,5 +11,9 @@ namespace HTA.Website.MVC.Example.Models
 
         public int DataCardCount { get; set; }
         public string AdventureTypeId { get; set; }
+
+        public string AdventureAddress { get; set; }
+        public string AdventureLat { get; set; }
+        public string AdventureLog { get; set; }
     }
 }

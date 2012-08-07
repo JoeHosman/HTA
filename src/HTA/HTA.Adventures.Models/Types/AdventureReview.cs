@@ -19,6 +19,8 @@ namespace HTA.Adventures.Models.Types
         [DataMember]
         public string Name { get; set; }
 
+
+
         [DataMember]
         public AdventureType AdventureType { get; set; }
 
