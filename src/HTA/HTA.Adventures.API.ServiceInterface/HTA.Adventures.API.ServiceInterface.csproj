@@ -68,7 +68,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureTypeDataCardService.cs" />
     <Compile Include="AdventureTypeService.cs" />
+    <Compile Include="AdventureTypeTemplateService.cs" />
     <Compile Include="NearByLocationSearch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />

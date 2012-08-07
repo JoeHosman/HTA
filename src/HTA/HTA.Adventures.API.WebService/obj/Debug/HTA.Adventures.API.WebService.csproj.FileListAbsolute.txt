@@ -127,8 +127,8 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.AP
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.API.WebService.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.dll
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.xml

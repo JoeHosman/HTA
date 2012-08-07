@@ -11,11 +11,4 @@ namespace HTA.Adventures.Models
 
         IList<AdventureDataCard> GetTypeDataCards(string id);
     }
-
-    public interface IAdventureTypeTemplateRepository
-    {
-        IList<AdventureTypeTemplate> GetTypeTemplateList();
-        AdventureTypeTemplate GetTypeTemplate(string id);
-        AdventureTypeTemplate SaveTypeTemplate(AdventureTypeTemplate template);
-    }
 }

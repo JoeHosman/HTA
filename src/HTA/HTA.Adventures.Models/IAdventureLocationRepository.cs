@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using HTA.Adventures.Models.Types;
-using Newtonsoft.Json;
 
 namespace HTA.Adventures.Models
 {

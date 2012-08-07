@@ -75,9 +75,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureLocationRepository.cs" />
     <Compile Include="IAdventureLocationRepository.cs" />
+    <Compile Include="IAdventureReviewRepository.cs" />
     <Compile Include="IAdventureTypeRepository.cs" />
+    <Compile Include="IAdventureTypeTemplateRepository.cs" />
     <Compile Include="NearByAdventureLocations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\AdventureDataCard.cs" />
@@ -85,7 +86,6 @@
     <Compile Include="Types\AdventureReview.cs" />
     <Compile Include="Types\AdventureType.cs" />
     <Compile Include="Types\AdventureTypeTemplate.cs" />
-    <Compile Include="Types\AdventureTypeTemplateReference.cs" />
     <Compile Include="Types\Geo.cs" />
     <Compile Include="Types\GeoRange.cs" />
     <Compile Include="Types\Location.cs" />

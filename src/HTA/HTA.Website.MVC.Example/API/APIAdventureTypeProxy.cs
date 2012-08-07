@@ -3,7 +3,7 @@ using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
 using ServiceStack.ServiceClient.Web;
 
-namespace HTA.Website.MVC.Example.Models
+namespace HTA.Website.MVC.Example.API
 {
     internal class APIAdventureTypeProxy : IAdventureTypeRepository
     {
@@ -42,38 +42,10 @@ namespace HTA.Website.MVC.Example.Models
 
         public IList<AdventureDataCard> GetTypeDataCards(string id)
         {
-            throw new System.NotImplementedException();
+            var dataCards = _client.Get<IList<AdventureDataCard>>("/Adventure/Type/DataCards/" + id);
+            return dataCards;
         }
 
         #endregion
-    }
-
-    internal class APIAdventureTypeTemplateProxy : IAdventureTypeTemplateRepository
-    {
-        private readonly JsonServiceClient _client;
-
-        public APIAdventureTypeTemplateProxy()
-        {
-            _client = new JsonServiceClient("http://localhost:10768/");
-
-        }
-
-        public IList<AdventureTypeTemplate> GetTypeTemplateList()
-        {
-            var list = _client.Get<IList<AdventureTypeTemplate>>("/Adventure/TypeTemplates");
-            return list;
-        }
-
-        public AdventureTypeTemplate GetTypeTemplate(string id)
-        {
-            var adventureType = _client.Get<AdventureTypeTemplate>("/Adventure/TypeTemplates/" + id);
-            return adventureType;
-        }
-
-        public AdventureTypeTemplate SaveTypeTemplate(AdventureTypeTemplate template)
-        {
-            template = _client.Post<AdventureTypeTemplate>("/Adventure/TypeTemplates/", template);
-            return template;
-        }
     }
 }

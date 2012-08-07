@@ -1,20 +1,28 @@
 ﻿@model HTA.Adventures.Models.Types.AdventureReview
-
 @{
     ViewBag.Title = "Details";
 }
-
-<h2>Details</h2>
-
+<h2>
+    Details</h2>
 <fieldset>
     <legend>AdventureReview</legend>
-
-    <div class="display-label">Name</div>
-    <div class="display-field">
+    <div class="display-label">
+        Name :
         @Html.DisplayFor(model => model.Name)
     </div>
+    <h2>
+        DataCards:
+    </h2>
+    @foreach (var dataCard in Model.DataCards)
+    {
+        <div  style="border: 1px solid gainsboro">
+            <legend>@Html.DisplayFor(model => dataCard.Title)</legend>
+            <span class=" display-field"> @Html.DisplayFor(model => dataCard.Body)</span>
+        </div>
+        <br/>
+    }
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

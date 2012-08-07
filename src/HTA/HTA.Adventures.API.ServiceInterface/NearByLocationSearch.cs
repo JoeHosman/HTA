@@ -5,7 +5,6 @@ using HTA.Adventures.Models.Types;
 using Nest;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.ServiceModel;
-using System;
 
 namespace HTA.Adventures.API.ServiceInterface
 {

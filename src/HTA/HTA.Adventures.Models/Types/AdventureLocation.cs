@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Text;
+﻿using System.Runtime.Serialization;
 using DreamSongs.MongoRepository;
 using Nest;
-using ServiceStack.ServiceHost;
 
 namespace HTA.Adventures.Models.Types
 {
     [ElasticType(Name = "region", IdProperty = "id")]
     [DataContract]
-    public partial class AdventureLocation : Entity
+    public class AdventureLocation : Entity
     {
         [ElasticProperty(Name = "geo")]
         [DataMember]
@@ -33,8 +28,8 @@ namespace HTA.Adventures.Models.Types
         public AdventureLocation(Geo location, string name, string address, string picture)
         {
             Geo = location;
-            this.Name = name;
-            this.Address = address;
+            Name = name;
+            Address = address;
             Picture = picture;
         }
     }

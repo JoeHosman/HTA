@@ -4,39 +4,25 @@ using ServiceStack.ServiceInterface;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
-    public class AdventureTypeTemplateService : RestServiceBase<AdventureTypeTemplate>
+    public class AdventureReviewService : RestServiceBase<AdventureReview>
     {
-        public IAdventureTypeTemplateRepository AdventureTypeRepository { get; set; }
+        public IAdventureReviewRepository AdventureReviewRepository { get; set; }
 
-        public override object OnPost(AdventureTypeTemplate request)
+        public override object OnPost(AdventureReview request)
         {
-            return AdventureTypeRepository.SaveTypeTemplate(request);
+            return AdventureReviewRepository.SaveAdventureReview(request);
         }
 
-        private AdventureTypeTemplate GetTemplate(string id)
+        public override object OnGet(AdventureReview request)
         {
-            return AdventureTypeRepository.GetTypeTemplate(id);
-        }
-
-        public override object OnGet(AdventureTypeTemplate request)
-        {
-            try
+            if (!string.IsNullOrEmpty(request.Id))
             {
-                if (!string.IsNullOrEmpty(request.Id))
-                {
-                    return GetTemplate(request.Id);
-                }
-                return AdventureTypeRepository.GetTypeTemplateList();
+                return AdventureReviewRepository.GetAdventureReviewById(request.Id);
             }
-            catch (System.Exception exception)
-            {
-
-                string ex = exception.Message;
-
-                return null;
-            }
+            return AdventureReviewRepository.GetAdventureReviews();
         }
     }
+
     public class AdventureTypeService : RestServiceBase<AdventureType>
     {
         public IAdventureTypeRepository AdventureTypeRepository { get; set; }
@@ -67,34 +53,12 @@ namespace HTA.Adventures.API.ServiceInterface
 
         public override object OnGet(AdventureType request)
         {
-            try
+            if (!string.IsNullOrEmpty(request.Id))
             {
-                if (!string.IsNullOrEmpty(request.Id))
-                {
-                    return GetAdventureType(request.Id);
-                }
-                return AdventureTypeRepository.GetAdventureTypes();
+                return GetAdventureType(request.Id);
             }
-            catch (System.Exception exception)
-            {
+            return AdventureTypeRepository.GetAdventureTypes();
 
-                string ex = exception.Message;
-
-                return null;
-            }
         }
     }
-
-    public class AdventureTypeDataCardService : RestServiceBase<AdventureTypeDataCards>
-    {
-        public IAdventureTypeRepository AdventureTypeRepository { get; set; }
-        public override object OnGet(AdventureTypeDataCards request)
-        {
-            var response = new AdventureTypeDataCardsResponse() { Id = request.Id };
-            response.DataCards = AdventureTypeRepository.GetTypeDataCards(request.Id);
-
-            return response;
-        }
-    }
-
 }

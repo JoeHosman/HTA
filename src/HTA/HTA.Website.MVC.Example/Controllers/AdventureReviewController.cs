@@ -1,25 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Website.MVC.Example.API;
 using HTA.Website.MVC.Example.Models;
 
 namespace HTA.Website.MVC.Example.Controllers
 {
     public class AdventureReviewController : Controller
     {
-        private static readonly IAdventureTypeRepository TypeRepository = new APIAdventureTypeProxy();
+        private static readonly IAdventureTypeRepository AdventureTypeRepository = new APIAdventureTypeProxy();
+        private static readonly IAdventureReviewRepository AdventureReviewRepository = new APIAdventureReviewProxy();
         //
         // GET: /AdventureReview/
 
         public ViewResult Index()
         {
-            return View();
+            return View(AdventureReviewRepository.GetAdventureReviews());
         }
 
         //
@@ -27,7 +24,7 @@ namespace HTA.Website.MVC.Example.Controllers
 
         public ViewResult Details(string id)
         {
-            AdventureReview adventurereview = null;
+            AdventureReview adventurereview = AdventureReviewRepository.GetAdventureReviewById(id);
             return View(adventurereview);
         }
 
@@ -38,7 +35,10 @@ namespace HTA.Website.MVC.Example.Controllers
         {
             var model = new AdventureReviewModel();
 
-            model.SelectableTypes = TypeRepository.GetAdventureTypes();
+            var adventureTypeList = AdventureTypeRepository.GetAdventureTypes();
+            //adventureTypeList.Insert(0, new AdventureType(){Name = "-Select Adventure Type-"});
+            model.SelectableTypes = adventureTypeList;
+
             return View(model);
         }
 
@@ -46,18 +46,43 @@ namespace HTA.Website.MVC.Example.Controllers
         // POST: /AdventureReview/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection formCollection, AdventureReviewModel adventurereview)
+        public ActionResult Create(AdventureReviewModel adventurereview, FormCollection formCollection)
         {
+
+            var adventureTypeList = AdventureTypeRepository.GetAdventureTypes();
+            var adventureType = adventureTypeList.FirstOrDefault(t => t.Id == adventurereview.AdventureTypeId);
+
+            adventurereview.Review.AdventureType = adventureType;
+
             if (ModelState.IsValid)
             {
-                foreach (string key in formCollection.Keys)
-                {
+                GetDataCardsFromFormCollection(adventurereview, formCollection);
 
-                }
-                return RedirectToAction("Index");
+
+
+                var review = AdventureReviewRepository.SaveAdventureReview(adventurereview.Review);
+
+                return RedirectToAction("Details",new {review.Id});
             }
 
             return View(adventurereview);
+        }
+
+        private static void GetDataCardsFromFormCollection(AdventureReviewModel adventurereview, FormCollection formCollection)
+        {
+
+            for (int i = 0; i < adventurereview.DataCardCount; i++)
+            {
+                var title =
+                    formCollection.GetValue(string.Format("dataCardTitle{0}", i)).AttemptedValue;
+
+                var body = formCollection.GetValue(string.Format("dataCardBody{0}", i)).AttemptedValue;
+
+                if (!string.IsNullOrEmpty(title) && !string.IsNullOrEmpty(body))
+                {
+                    adventurereview.Review.DataCards.Add(new AdventureDataCard { Title = title, Body = body });
+                }
+            }
         }
 
         //
@@ -65,7 +90,7 @@ namespace HTA.Website.MVC.Example.Controllers
 
         public ActionResult Edit(string id)
         {
-            AdventureReview adventurereview = null;
+            AdventureReview adventurereview = AdventureReviewRepository.GetAdventureReviewById(id);
             return View(adventurereview);
         }
 
@@ -101,13 +126,5 @@ namespace HTA.Website.MVC.Example.Controllers
             AdventureReview adventurereview = null;
             return RedirectToAction("Index");
         }
-    }
-
-    public class AdventureReviewModel
-    {
-        public AdventureReview Review { get; set; }
-        public IEnumerable<AdventureType> SelectableTypes { get; set; }
-
-        public string AdventureTypeId { get; set; }
     }
 }

@@ -58,6 +58,7 @@ namespace HTA.Adventures.API.WebService.App_Start
             container.Register(new MongoAdventureTypeRepository());
 
             // Register our mongo adapter as the IAdventuretypeRepository to use :D
+            container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeTemplateRepository>();
         }

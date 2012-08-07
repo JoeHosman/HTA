@@ -8,8 +8,9 @@ using MongoDB.Bson;
 
 namespace HTA.Adventures.API.WebService.Data
 {
-    public class MongoAdventureTypeRepository : IAdventureTypeRepository, IAdventureTypeTemplateRepository
+    public class MongoAdventureTypeRepository : IAdventureTypeRepository, IAdventureTypeTemplateRepository, IAdventureReviewRepository
     {
+        private static readonly MongoRepository<AdventureReview> AdventureReviewRepository = new MongoRepository<AdventureReview>();
         private static readonly MongoRepository<AdventureType> AdventureTypeRepository = new MongoRepository<AdventureType>();
         private static readonly MongoRepository<AdventureTypeTemplate> AdventureTypeTemplateRepository = new MongoRepository<AdventureTypeTemplate>();
 
@@ -80,6 +81,27 @@ namespace HTA.Adventures.API.WebService.Data
             return string.IsNullOrEmpty(template.Id) ?
                AdventureTypeTemplateRepository.Add(template) :  // Add new one  &
                AdventureTypeTemplateRepository.Update(template); // update existing one
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureReviewRepository
+
+        public IList<AdventureReview> GetAdventureReviews()
+        {
+            return AdventureReviewRepository.All().ToList();
+        }
+
+        public AdventureReview GetAdventureReviewById(string id)
+        {
+            return AdventureReviewRepository.GetById(id);
+        }
+
+        public AdventureReview SaveAdventureReview(AdventureReview adventureReview)
+        {
+            return string.IsNullOrEmpty(adventureReview.Id) ?
+               AdventureReviewRepository.Add(adventureReview) :  // Add new one  &
+               AdventureReviewRepository.Update(adventureReview); // update existing one
         }
 
         #endregion

@@ -1,8 +1,7 @@
-﻿using System.Data;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
-using HTA.Website.MVC.Example.Models;
+using HTA.Website.MVC.Example.API;
 
 namespace HTA.Website.MVC.Example.Controllers
 {
@@ -35,7 +34,7 @@ namespace HTA.Website.MVC.Example.Controllers
 
         public ActionResult Create()
         {
-            AdventureTypeTemplate adventureTypeTemplate = new AdventureTypeTemplate();
+            var adventureTypeTemplate = new AdventureTypeTemplate();
             for (int i = 0; i < 5; i++)
             {
                 adventureTypeTemplate.DataCards.Add(new AdventureDataCard());
@@ -56,7 +55,7 @@ namespace HTA.Website.MVC.Example.Controllers
             if (ModelState.IsValid)
             {
                 AdventureTypeTemplate template = TypeTemplateRepository.SaveTypeTemplate(adventureTypeTemplate);
-                //return View("Details", template);
+                //return View("Details", new { te});
             }
 
             return View("Index");

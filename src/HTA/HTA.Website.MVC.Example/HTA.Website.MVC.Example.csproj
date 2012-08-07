@@ -80,14 +80,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\APIAdventureReviewProxy.cs" />
+    <Compile Include="API\APIAdventureTypeProxy.cs" />
+    <Compile Include="API\APIAdventureTypeTemplateProxy.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdventureReviewController.cs" />
     <Compile Include="Controllers\AdventureTypeController.cs" />
     <Compile Include="Controllers\AdventureTypeTemplateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Models\AdventureReviewContext.cs" />
-    <Compile Include="Models\AdventureTypeTemplateContext.cs" />
-    <Compile Include="Models\APIAdventureTypeProxy.cs" />
+    <Compile Include="Models\AdventureReviewModel.cs" />
+    <Compile Include="Models\AdventureTypeModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -128,6 +130,8 @@
     <Content Include="Scripts\jquery-1.5.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.autosize-min.js" />
+    <Content Include="Scripts\jquery.autosize.js" />
     <Content Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />

@@ -70,9 +70,9 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\Newtonsoft.Json.xm
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\bin\Debug\ServiceStack.Interfaces.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\HTA.Adventures.RegionTestGUI.Form1.resources
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\HTA.Adventures.RegionTestGUI.Properties.Resources.resources
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\HTA.Adventures.RegionTestGUI.exe
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\HTA.Adventures.RegionTestGUI.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.RegionTestGUI\obj\x86\Debug\HTA.Adventures.RegionTestGUI.AdventureLocationRepository.resources

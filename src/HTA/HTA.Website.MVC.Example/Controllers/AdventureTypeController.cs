@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Website.MVC.Example.API;
 using HTA.Website.MVC.Example.Models;
 using System.Linq;
 
@@ -38,8 +39,7 @@ namespace HTA.Website.MVC.Example.Controllers
         public ActionResult Create()
         {
             //ViewBag.AdventureTypeTemplates = TypeTemplateRepository.GetTypeTemplateList();
-            AdventureTypeModel model = new AdventureTypeModel();
-            model.TemplateList = TypeTemplateRepository.GetTypeTemplateList();
+            var model = new AdventureTypeModel {TemplateList = TypeTemplateRepository.GetTypeTemplateList()};
             return View(model);
         }
 
@@ -72,8 +72,8 @@ namespace HTA.Website.MVC.Example.Controllers
             if (adventuretype == null)
                 return View("NotFound");
 
-            AdventureTypeModel model = new AdventureTypeModel(adventuretype);
-            model.TemplateList = TypeTemplateRepository.GetTypeTemplateList();
+            var model = new AdventureTypeModel(adventuretype)
+                            {TemplateList = TypeTemplateRepository.GetTypeTemplateList()};
 
 
             return View(model);
@@ -122,9 +122,11 @@ namespace HTA.Website.MVC.Example.Controllers
             if (adventureType == null)
                 return View("NotFound");
 
-            var model = new UpdateTypeTemplatesModel();
-            model.AdventureTypeId = adventureType.Id;
-            model.TemplateList = TypeTemplateRepository.GetTypeTemplateList();
+            var model = new UpdateTypeTemplatesModel
+                            {
+                                AdventureTypeId = adventureType.Id,
+                                TemplateList = TypeTemplateRepository.GetTypeTemplateList()
+                            };
 
 
             return View(model);
@@ -149,33 +151,10 @@ namespace HTA.Website.MVC.Example.Controllers
         }
     }
 
-    public class AdventureTypeModel
-    {
-        public AdventureTypeModel()
-            : this(new AdventureType())
-        {
-
-        }
-        public AdventureTypeModel(AdventureType adventuretype)
-        {
-            AdventureType = adventuretype;
-            SelectedTemplates = AdventureType.DataCardTemplates.Select(a => a.Id).ToList();
-        }
-
-        public AdventureType AdventureType { get; set; }
-        public IEnumerable<string> SelectedTemplates { get; set; }
-        public IEnumerable<AdventureTypeTemplate> TemplateList { get; set; }
-    }
-
     public class UpdateTypeTemplatesModel
     {
         public string AdventureTypeId { get; set; }
         public IEnumerable<string> TemplatesSelected { get; set; }
         public IEnumerable<AdventureTypeTemplate> TemplateList { get; set; }
-    }
-
-    public class TypeTemplateReferenceModel
-    {
-        AdventureType AdventureType { get; set; }
     }
 }

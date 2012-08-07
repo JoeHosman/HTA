@@ -1,4 +1,4 @@
-﻿@model HTA.Website.MVC.Example.Controllers.AdventureReviewModel
+﻿@model HTA.Website.MVC.Example.Models.AdventureReviewModel
 @{
     ViewBag.Title = "Create";
 }
@@ -6,6 +6,7 @@
     Create</h2>
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts.jquery.autosize.min.js")"></script>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
@@ -18,28 +19,63 @@
             @Html.EditorFor(model => model.Review.Name)
             @Html.ValidationMessageFor(model => model.Review.Name)
         </div>
-        @Html.DropDownListFor(m => m.AdventureTypeId, Model.SelectableTypes.Select(s => new SelectListItem() { Text = s.Name, Value = s.Id }), new { id = "selectAdventureType" })
+        @Html.DropDownListFor(m => m.AdventureTypeId, Model.SelectableTypes.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureType" })
         <script type="text/javascript">
-        $("#selectAdventureType").unbind('change');
-$("#selectAdventureType").change(function(){
-alert($("#selectAdventureType option:selected").text());
-$("#dataCards").html("");
-            $.ajax({
-                        url:"http://localhost:10768/Adventure/Type/DataCards/" + $("#selectAdventureType option:selected").text() + "?format=json",
-                        dataType: 'jsonp', 
-                success:function(json){
-                      for(var i=0;i<json.dataCards.length;i++){
-                       $("#dataCards").append("<input type='text' name='datafield"+i +"' class=''  /><br/>");
-                      }
-                },
-                error:function(){
+            $("#selectAdventureType").unbind('change');
+        
+            $("#selectAdventureType").change(function(){
+                // alert what the selected text is
+                //alert($("#selectAdventureType option:selected").text());  
+        
+                // empty the data cards
+                $("#dataCards").html("");
+
+                function AppendDataCard(element, dataCardJson, index) {
+                    
+                    if(!dataCardJson.title) {
+                        dataCardJson.title = "";
+                    }
+                    if(!dataCardJson.body) {
+                        dataCardJson.body = "";
+                    }
+                    var div = element.append("<div>");
+                    div.append("<h3>DataCard #" + index + "</h3>");
+                    div.append("Title: <input type='text' id='dataCardTitle"+index +"' name='dataCardTitle"+index +"' class='' value='"+dataCardJson.title +"'  /><br/>");
+
+                    div.append("Body: <textarea id='dataCardBody"+index +"' name='dataCardBody"+index +"' class='' > " + dataCardJson.body +"</textarea ><br/>");
+                    element.append("</div>");
+                    element.append("<br/>");
+                    element.append("<br/>");
+                }
+            
+                // perform the request
+                $.ajax({
+                    url:"http://localhost:10768/Adventure/Type/DataCards/" + $("#selectAdventureType option:selected").text() + "?format=json",
+                    dataType: 'jsonp', 
+                    
+                    success:function(json){
+                        for(var i=0;i<json.dataCards.length;i++){
+                            AppendDataCard($("#dataCards"), json.dataCards[i], i);
+                            $("#DataCardCount").val(json.dataCards.length);
+//                    $("#dataCards").append("<input type='text' name='datafield"+i +"' class=''  /><br/>");
+                        }
+                    },
+                    error:function(){
                         alert("Error");
-                },
-        });
-});
+                
+                    },  
+                });
+            });
         </script>
-        <div id="dataCards">
-        </div>
+        <br />
+        <span>
+            <h2>
+                DataCards:
+            </h2>
+            @Html.HiddenFor(m => m.DataCardCount)
+            <div id="dataCards">
+            </div>
+        </span>
         <p>
             <input type="submit" value="Create" />
         </p>
