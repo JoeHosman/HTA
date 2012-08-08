@@ -32,13 +32,13 @@ function init_draggable_map(map_canvas_id, lat, lng, zoomLevel, title, latBox, l
     marker.setMap(map);
 
     google.maps.event.addListener(marker, 'drag', function () {
-        document.getElementById(latBox).value = marker.getPosition().lat();
-        document.getElementById(lngBox).value = marker.getPosition().lng();
+        document.getElementById(latBox).value = marker.getPosition().lat().toFixed(4);
+        document.getElementById(lngBox).value = marker.getPosition().lng().toFixed(4);
     });
     google.maps.event.addListener(marker, 'dragend', function () {
-        
-        document.getElementById(latBox).value = marker.getPosition().lat();
-        document.getElementById(lngBox).value = marker.getPosition().lng();
+
+        document.getElementById(latBox).value = marker.getPosition().lat().toFixed(4);
+        document.getElementById(lngBox).value = marker.getPosition().lng().toFixed(4);
     });
 }
 
@@ -65,8 +65,8 @@ function placeMarker(position, icon) {
     document.getElementById('my_map').style.display = 'block';
     init_draggable_map('my_map', position.lat(), position.lng(), 20, '', 'Location_Lat', 'Location_Lon', icon);
 
-    document.getElementById('Location_Lat').value = position.lat();
-    document.getElementById('Location_Lon').value = position.lng();
+    document.getElementById('Location_Lat').value = position.lat().toFixed(4);
+    document.getElementById('Location_Lon').value = position.lng().toFixed(4);
 }
 
 /***************************************/
