@@ -125,6 +125,12 @@
     <Content Include="Content\themes\base\jquery.ui.tabs.css" />
     <Content Include="Content\themes\base\jquery.ui.theme.css" />
     <Content Include="Global.asax" />
+    <Content Include="Content\chosen\chosen-sprite.png" />
+    <Content Include="Content\chosen.css" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\chosen.jquery.min.js" />
+    <Content Include="Content\chosen\chosen.proto.js" />
+    <Content Include="Content\chosen\chosen.proto.min.js" />
     <Content Include="Scripts\google-maps-3-vs-1-0-vsdoc.js" />
     <Content Include="Scripts\google-maps-3-vs-1-0.js" />
     <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
@@ -140,6 +146,7 @@
     <Content Include="Scripts\MapsHelper.js" />
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\SelectListJQueryPopulator.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
