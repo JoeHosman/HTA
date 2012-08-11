@@ -1,0 +1,60 @@
+﻿@model HTA.Adventures.Models.Types.AdventureType
+@{
+    ViewBag.Title = "Adventure Type Details";
+}
+<h2>
+    Adventure Type Details</h2>
+<fieldset>
+    <legend>Adventure Type</legend>
+    <div class="display-label">
+        Name : @Html.DisplayFor(model => model.Name) [ <i>@Html.DisplayFor(model => model.Id)</i>
+        ]</div>
+    <div class="display-label">
+        Description : @Html.DisplayFor(model => model.Description)
+    </div>
+    <div class="display-label">
+        IconLink :
+        @if (!String.IsNullOrEmpty(Model.IconLink))
+        {
+            <img src=@Model.IconLink />
+        }
+        @Html.DisplayFor(model => model.IconLink)
+    </div>
+    <div class="display-label">
+        PhotoLink : @Html.DisplayFor(model => model.PhotoLink)
+    </div>
+    <div class="display-label">
+        Templates :
+        <table>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+            @foreach (var template in Model.DataCardTemplates)
+            {
+                <tr>
+                    <th>
+                        @Html.ActionLink(@template.Id, "Details", "AdventureTypeTemplate", new { id = template.Id }, new { })
+                    </th>
+                    <th>
+                        @template.Name
+                    </th>
+                    <th>
+                        @template.Description
+                    </th>
+                </tr>
+            }
+        </table>
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

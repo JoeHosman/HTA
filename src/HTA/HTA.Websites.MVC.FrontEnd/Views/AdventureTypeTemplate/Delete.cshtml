@@ -1,0 +1,27 @@
+﻿@model HTA.Adventures.Models.Types.AdventureTypeTemplate
+
+@{
+    ViewBag.Title = "Delete Adventure Type Template";
+}
+
+<h2>Delete Adventure Type Template</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>AdventureTypeTemplate</legend>
+
+    <div class="display-label">
+        Name : '<b>@Html.DisplayFor(model => model.Name)</b>' [ <i>@Html.DisplayFor(model => model.Id)</i> ]
+    </div>
+    <div class="display-label">
+        Description: @Html.DisplayFor(model => model.Description)
+    </div>
+
+
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

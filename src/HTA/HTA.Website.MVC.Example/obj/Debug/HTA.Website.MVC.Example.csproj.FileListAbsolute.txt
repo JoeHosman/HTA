@@ -56,3 +56,17 @@ D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\Newtonsoft.Json.xml
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\ResolveAssemblyReference.cache
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.dll
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.SqlServer.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Razor.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Redis.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.ServiceInterface.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.xml
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.SqlServer.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Razor.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Redis.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Redis.xml
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.ServiceInterface.pdb

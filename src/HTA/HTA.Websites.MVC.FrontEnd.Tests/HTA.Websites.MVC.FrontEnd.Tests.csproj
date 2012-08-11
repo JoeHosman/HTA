@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{21D10C0F-C043-4636-9A73-C1539FF870E5}</ProjectGuid>
+    <ProjectGuid>{AEA2D811-6BF9-463B-9856-B710DFECA6F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>HTA.Websites.MVC.FrontEnd.Tests</RootNamespace>
@@ -44,6 +44,7 @@
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -53,6 +54,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HTA.Websites.MVC.FrontEnd\HTA.Websites.MVC.FrontEnd.csproj">
+      <Project>{7075F2A4-D25A-4500-B054-A2A7E9C64D66}</Project>
+      <Name>HTA.Websites.MVC.FrontEnd</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

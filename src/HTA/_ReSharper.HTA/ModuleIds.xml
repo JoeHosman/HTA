@@ -9,4 +9,5 @@
   <Module PersistentId="08E32832-A73A-4033-AD06-0D53A8631399" ModuleId="HTA.Website.MVC.Example_1" />
   <Module PersistentId="16EFA342-8554-4FEA-B2D9-87C72EEA5697" ModuleId="HTA.Website.MVC.Example.Tests" />
   <Module PersistentId="7075F2A4-D25A-4500-B054-A2A7E9C64D66" ModuleId="HTA.Websites.MVC.FrontEnd" />
+  <Module PersistentId="AEA2D811-6BF9-463B-9856-B710DFECA6F5" ModuleId="HTA.Websites.MVC.FrontEnd.Tests" />
 </Modules>
