@@ -1,0 +1,502 @@
+﻿//All site specific .less families are found here
+
+
+.footer {
+  // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+  *position: relative;
+  *z-index: 2;
+  font-size: @navbarTextsize;
+  overflow: visible;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+// Gradient is applied to it's own element because overflow visible is not honored by IE when filter is present
+.footer-inner {
+  min-height: @navbarHeight;
+  padding-left:  20px;
+  padding-right: 20px;
+  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  .border-radius(4px);
+  .box-shadow(~"0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)");
+}
+// Set width to auto for default container
+// We then reset it for fixed navbars in the #gridSystem mixin
+.footer .container {
+  width: auto;
+}
+
+// Override the default collapsed state
+.nav-collapse.collapse {
+  height: auto;
+}
+
+
+// Brand, links, text, and buttons
+.footer {
+  color: @grayLighter;
+  // Hover and active states
+  .brand:hover {
+    text-decoration: none;
+  }
+  // Website or project name
+  .brand {
+    float: left;
+    display: block;
+    // Vertically center the text given @navbarHeight
+    @elementHeight: 20px;
+    padding: ((@navbarHeight - @elementHeight) / 2 - 2) 20px ((@navbarHeight - @elementHeight) / 2 + 2);
+    margin-left: -20px; // negative indent to left-align the text down the page
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1;
+    color: @navbarBrandColor;
+  }
+  // Plain text in topbar
+  .footer-text {
+    margin-bottom: 0;
+    line-height: @navbarHeight;
+  }
+  // Janky solution for now to account for links outside the .nav
+  .footer-link {
+    color: @navbarLinkColor;
+    &:hover {
+      color: @navbarLinkColorHover;
+    }
+  }
+  // Buttons in navbar
+  .btn,
+  .btn-group {
+    .footerVerticalAlign(30px); // Vertically center in navbar
+  }
+  .btn-group .btn {
+    margin: 0; // then undo the margin here so we don't accidentally double it
+  }
+}
+
+// Navbar forms
+.footer-form {
+  margin-bottom: 0; // remove default bottom margin
+  .clearfix();
+  input,
+  select,
+  .radio,
+  .checkbox {
+    .footerVerticalAlign(30px); // Vertically center in navbar
+  }
+  input,
+  select {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  input[type="image"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    margin-top: 3px;
+  }
+  .input-append,
+  .input-prepend {
+    margin-top: 6px;
+    white-space: nowrap; // preven two  items from separating within a .footer-form that has .pull-left
+    input {
+      margin-top: 0; // remove the margin on top since it's on the parent
+    }
+  }
+}
+
+#mainMap
+{
+	min-height: 300px;
+	background-image: url(/Content/WhiteLabel/images/Map1.png);
+	
+	}
+
+#social
+{
+	margin-top: 5px;
+	margin-left: 20px;
+}
+
+#content{
+	h1, h3, h5  {
+		color: @grayDarker;
+	}
+	
+	h2, h4, h6 {
+		color: @grayDark;
+	}
+	
+	//background-color: rgba(238,238,238,.6);
+	background-color: @grayLighter;
+	
+}
+
+#mainContent{
+//	.span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12{
+//		p, h1, h2, h3, h4, h5, h6, div {
+//		margin: @basePadding;	
+//		}
+	
+//	}
+	}
+
+.smallImg{
+	.border-radius(@imageRadiusSmall);
+	.box-shadow(0 5px 10px rgba(0,0,0,.4));
+	}
+.bigImg{
+	.border-radius(@imageRadiusBig);
+	.box-shadow(0 5px 10px rgba(0,0,0,.4));
+	}
+
+#infoBar{
+	
+	h1, h3, h5  {
+		color: @blue;
+	}
+	
+	h2, h4, h6 {
+		color: @green;
+	}
+	
+	
+	#translucent > .background(@white, .75);
+	
+	}
+
+.clear{
+	clear: both;
+}
+
+.bars{
+	height: 26px;
+	margin: 15px;
+	margin-left: 40px;
+	.border-radius(@modalRadius);
+	#gradient > .vertical(@grayLight, @grayLighter);
+	border: 1px solid white;
+	
+}
+
+.swingLeft{
+	margin-top:				20px;
+	margin-right:			20px;
+	margin-left:			-20px !important;
+	padding:				20px 20px 20px 40px;
+	.border-radius(0px 10px 10px 0 );
+	.box-shadow(0 5px 10px rgba(0,0,0,.4));
+	
+}
+
+.swingRight{
+	margin-top:				20px;
+	margin-left:			20px;
+	width:					330px;
+	padding:				20px 20px 20px 20px;
+	.border-radius(10px 0 0 10px );
+	.box-shadow(0 5px 10px rgba(0,0,0,.4));
+	
+}
+
+.carrotLeftG{
+	margin-left:-20px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right:20px solid darken(@green,10%);
+
+}
+.carrotLeftB{
+	margin-left:-20px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right:20px solid darken(@blue,10%);
+
+}
+.carrotLeftR{
+	margin-left:-20px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right:20px solid darken(@red,10%);
+
+}
+.carrotLeftY{
+	margin-left:-20px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right:20px solid darken(@yellow,10%);
+
+}
+
+.carrotRightG{
+	margin-left:370px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-left:20px solid darken(@green,10%);
+
+}
+.carrotRightB{
+	margin-left:370px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-left:20px solid darken(@blue,10%);
+
+}
+.carrotRightR{
+	margin-left:370px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-left:20px solid darken(@red,10%);
+
+}
+.carrotRightY{
+	margin-left:370px;
+	width: 0; 
+	height: 0; 
+	border-top: 0px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-left:20px solid darken(@yellow,10%);
+
+}
+
+#lightestBlue{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@lightestBlue, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lightestBlue, darken(@lightestBlue, @dark), @angle);
+	//background-color:		@blue;
+	}
+
+#lighterBlue{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@lighterBlue, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lighterBlue, darken(@lighterBlue, @dark), @angle);
+	//background-color:		@blue;
+	}
+
+#blue{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@blue, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@blue, darken(@blue, @dark), @angle);
+	//background-color:		@blue;
+	}
+
+#darkerBlue{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkerBlue, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkerBlue, darken(@darkerBlue, @dark), @angle);
+	//background-color:		@blue;
+	}
+
+#lightestGreen{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@lightestGreen, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lightestGreen, darken(@lightestGreen, @dark), @angle);
+	//background-color:		@green;
+	}
+
+#lighterGreen{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@lighterGreen, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lighterGreen, darken(@lighterGreen, @dark), @angle);
+	//background-color:		@green;
+	}
+
+#green{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@green, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@green, darken(@green, @dark), @angle);
+	//background-color:		@green;
+	}
+
+#darkerGreen{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkerGreen, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkerGreen, darken(@darkerGreen, @dark), @angle);
+	//background-color:		@green;
+	}
+
+#darkestGreen{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkestGreen, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkestGreen, darken(@darkestGreen, @dark), @angle);
+	//background-color:		@green;
+	}
+
+#lightestYellow{
+	.box-shadow-2(inset 0 0 8px 8px darken(@lightestYellow, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lightestYellow, darken(@lightestYellow, @dark), @angle);
+	//background-color:		@yellow;
+	}
+
+#lighterYellow{
+	.box-shadow-2(inset 0 0 8px 8px darken(@lighterYellow, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lighterYellow, darken(@lighterYellow, @dark), @angle);
+	//background-color:		@yellow;
+	}
+#yellow{
+	.box-shadow-2(inset 0 0 8px 8px darken(@yellow, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@yellow, darken(@yellow, @dark), @angle);
+	//background-color:		@yellow;
+	}
+
+#darkerYellow{
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkerYellow, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkerYellow, darken(@darkerYellow, @dark), @angle);
+	//background-color:		@yellow;
+	}
+
+#darkestYellow{
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkestYellow, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkestYellow, darken(@darkestYellow, @dark), @angle);
+	//background-color:		@yellow;
+	}
+
+#lightestRed{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@lightestRed, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lightestRed, darken(@lightestRed, @dark), @angle);
+	//background-color:		@red;
+	}
+
+#lighterRed{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@lighterRed, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@lighterRed, darken(@lighterRed, @dark), @angle);
+	//background-color:		@red;
+	}
+
+#red{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@red, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@red, darken(@red, @dark), @angle);
+	//background-color:		@red;
+	}
+
+#darkerRed{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkerRed, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkerRed, darken(@darkerRed, @dark), @angle);
+	//background-color:		@red;
+	}
+
+#darkerstRed{	
+	.box-shadow-2(inset 0 0 8px 8px darken(@darkestRed, 12%), 0 5px 10px rgba(0,0,0,.4));
+	#gradient > .directional(@darkestRed, darken(@darkestRed, @dark), @angle);
+	//background-color:		@red;
+	}
+.list{
+		background-color:   @white;
+		overflow-y:			auto;
+		border:2px solid @grayLight;
+		.border-radius(5px);
+	}
+
+#mtn{
+	background-image:  url(/Content/Images/MountainBG.png);  
+	background-repeat: no-repeat;
+	background-position: 15px 180px;
+	 
+}
+
+.g4_Post{
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.modal-title{
+	width:250px;
+	float: left;
+}
+
+.post{
+	padding: 15px;
+	margin:10px;
+	#translucent > .background(@white, .5);
+	border: 1px solid @white;
+	.border-radius(@modalRadius);
+}
+
+.offset-row-fix{
+	margin-left: 50px;
+}
+
+.modal-clear {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: @zindexModal;
+  overflow: auto;
+  width: 560px;
+  margin: -250px 0 0 -280px;
+  #translucent > .background(@white, .95);
+  border: 1px solid #999;
+  border: 1px solid rgba(0,0,0,.3);
+  *border: 1px solid #999; /* IE6-7 */
+  .border-radius(@modalRadius);
+  .box-shadow(0 3px 7px rgba(0,0,0,0.3));
+  .background-clip(padding-box);
+  &.fade {
+    .transition(e('opacity .3s linear, top .3s ease-out'));
+    top: -25%;
+  }
+  &.fade.in { top: 50%; }
+}
+
+.modal-clear-header {
+  padding: 9px 15px;
+  border-radius: @modalRadius @modalRadius 0 0;
+  border-bottom: 1px solid #eee;
+  #translucent > .background(@grayLighter, .75);
+  // Close icon
+  .close { margin-top: 2px; }
+}
+
+// Body (where all modal content resides)
+.modal-body {
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+// Remove bottom margin if need be
+.modal-form {
+  margin-bottom: 0;
+}
+
+// Footer (for actions)
+.modal-clear-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right; // right align buttons
+  #translucent > .background(@green, .75);
+  border-top: 1px solid #ddd;
+  .border-radius(0 0 6px 6px);
+  .box-shadow(inset 0 1px 0 @white);
+  .clearfix(); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+}
+
+.map-window{
+	padding: 15px;
+	margin:10px;
+	float:right !important; 
+	#translucent > .background(@white, .9);
+	border: 1px solid @white;
+	.border-radius(@modalRadius);
+
+	p{
+		padding: 10px;
+		background-color: @white;
+		border: 1px solid @grayLighter;
+		.border-radius(@modalRadius);
+
+	}
+}
