@@ -50,7 +50,7 @@
         </div>
   </iframe>
   @*<div class="map-window span3">
-            <h3>Displayed Adventure Destinations <span><%: Html.ActionLink("Create an Account", "Register", "Account")%></span></h3>
+            <h3>Displayed Adventure Destinations <span>@Html.ActionLink("Create an Account", "Register", "Account")</span></h3>
 
             <p>This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
             videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.
@@ -98,7 +98,7 @@
     @*Swing In Tag*@
 
     <div class="swingLeft" id='green' >
-            <h1>Find It -- Share It -- Live It@* <span><%: Html.ActionLink("Create an Account", "Register", "Account")%></span>*@</h1>
+            <h1>Find It -- Share It -- Live It@* <span>@Html.ActionLink("Create an Account", "Register", "Account")</span>*@</h1>
 
             <p>This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
             videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.
@@ -228,7 +228,7 @@
     <div class="modal-clear hide left" id="myModalx">
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <h1><u><%: Html.ActionLink("Business Profile Name", "Details", "Profile")%></u></h1>
+                <h1><u>@Html.ActionLink("Business Profile Name", "Details", "Profile")</u></h1>
                 </div>
                 <div class="modal-body">
                 <div class='modal-title'>
@@ -245,7 +245,7 @@
 
                 </div>
                 <div class="modal-footer">
-                <%: Html.ActionLink("View This Outfitter ", "Details", "Profile")%> &nbsp
+                @Html.ActionLink("View This Outfitter ", "Details", "Profile") &nbsp
                 <a href="#" class="btn" data-dismiss="modal">Close</a>
 
                 </div>
@@ -254,7 +254,7 @@
                 <div class="modal hide left" id="myModalN">
                 <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">×</button>
-                <h1><u><%: Html.ActionLink("Glacier National Park", "Details", "Location")%></u></h1>
+                <h1><u>@Html.ActionLink("Glacier National Park", "Details", "Location")</u></h1>
                 </div>
                 <div class="modal-body">
                 <div class='modal-title'>
@@ -272,7 +272,7 @@
 
                 </div>
                 <div class="modal-footer">
-                <%: Html.ActionLink("Location Details Page ", "Details", "Location")%> | <%: Html.ActionLink("Full Hiking Report ", "Details", "AdventureReview")%> &nbsp
+                @Html.ActionLink("Location Details Page ", "Details", "Location") | @Html.ActionLink("Full Hiking Report ", "Details", "AdventureReview") &nbsp
                 <a href="#" class="btn" data-dismiss="modal">Close</a>
 
                 </div>
