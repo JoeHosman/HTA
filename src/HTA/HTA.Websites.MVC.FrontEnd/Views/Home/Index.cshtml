@@ -1,8 +1,281 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Global Adventure Map: A Global Catalog of Adventure Sports Locations, Guides and Outfitters";
 }
+@section meta {
+    <meta property="og:type" content="adventure_mapping:adventure_map" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta name="description" content="How to Adventures (HTA) is dedicated to being the best place on the web to find, share
+    and store adventure sports information. Find new adventures and share your own experiences accross many sports such as Base Jumping, Biking,
+    Canyoning, Gliding, hiking, Kite Boarding, Mountaineering, Scuba Diving and much more." />
+    <meta name="keywords" content="HTA, hiking, climbing, canyoning, mountaineering, mountains, rock, ice, rock climbing, scuba diving, free diving, snorkeling, sky diving,
+    kite boarding, adventure, adventure sports, base jumping, paddle boarding, motor cross, dirt bike, riding trails, trail, white water rafting, canoeing,
+    camping, longboarding, Surfing, water, snow board, back country, board, raft, snow, air." />
+}
+@section script {
+    <!-- Place this render call where appropriate -->
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    <script type="text/javascript">        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+}
+<section id="mainMap">
 
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-</p>
+  <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=38.030786,-98.041992&amp;spn=23.403278,46.538086&amp;t=h&amp;z=5&amp;output=embed">
+  <div class="btn-group">
+            <button class="btn">Aviation</button>
+            <button class="btn">Base Jumping</button>
+            <button class="btn">Canyoning</button>
+            <button class="btn">City</button>
+            <button class="btn">Cliff Diving</button>
+            <button class="btn">City</button>
+            <button class="btn">Aviation</button>
+            <button class="btn">Base Jumping</button>
+            <button class="btn">Canyoning</button>
+            <button class="btn">City</button>
+            <button class="btn">Cliff Diving</button>
+            <button class="btn">City</button>
+            <button class="btn">Base Jumping</button>
+            <button class="btn">Canyoning</button>
+            <button class="btn">Cliff Diving</button>
+            <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <ul class="dropdown-menu pull-right">
+                    <button class="btn">Cliff Diving</button>
+                    <button class="btn">Gliding</button>
+                </ul>
+        </div>
+  </iframe>
+  @*<div class="map-window span3">
+            <h3>Displayed Adventure Destinations <span><%: Html.ActionLink("Create an Account", "Register", "Account")%></span></h3>
+
+            <p>This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.
+            Get reliable insight into techniquies, practices and much more! </p>
+            <div class="clear"></div>
+            </div>
+ <div class="clear"></div>*@
+
+    </section>
+<section id="content">
+    <div class="row" id="mainContent">
+    <div class="span12" style="display:none;">
+    <div class='span7'>
+       <h1>Search Results</h1>
+       </div>
+       <div class='span11 list' style='height:300px; margin-bottom:30px;'>
+
+            @*CREATE A SERVER SIDE LOOP TO POPULATE THE VARIOUS PIECES FOR THIS SECTION*@
+
+                <dl class='dl-horizontal'>
+    <dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This section needs to be blank and hidden until the search function is requested.</p>
+</dd>
+<dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+<dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+<dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+</dl>
+       </div>
+</div>
+    <div class="span8" id='mtn'>
+
+    @*Swing In Tag*@
+
+    <div class="swingLeft" id='green' >
+            <h1>Find It -- Share It -- Live It@* <span><%: Html.ActionLink("Create an Account", "Register", "Account")%></span>*@</h1>
+
+            <p>This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.
+            Get reliable insight into techniquies, practices and much more! </p>
+
+    </div>
+    <div class='carrotLeftG' ></div>
+    @*Swing In Tag End*@
+    <div class='swingLeft' id='lighterGreen' style='margin-top:420px'>
+            <h1>Adventure of the Week</h1>
+            <dl class='dl-horizontal'>
+    <dt style='overflow:visible'><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='116' height='116' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></a></h3><h4>May 14, 2012<span> by Marc Harrison</span></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+</dl>
+   </div>
+   <div class='carrotLeftG' style='margin-bottom:30px'></div>
+       <div class='span7'>
+       <h1>Recent Activity</h1>
+       </div>
+       <div class='span7 list' style='height:300px; margin-bottom:30px;'>
+
+            @*CREATE A SERVER SIDE LOOP TO POPULATE THE VARIOUS PIECES FOR THIS SECTION*@
+
+                <dl class='dl-horizontal'>
+    <dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p> Search the adventure database. Participate in product reviews.</p>
+</dd>
+<dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+<dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+<dt><a href="#myModalN" data-toggle="modal" title="Click for Preview"><img width='80px' height='80px' class="smallImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" alt='img description'/></a></dt>
+    <dd style='min-height:108px;'><h3><a href="#myModalN" data-toggle="modal" title="Click for Preview">Review Title<span> City, State</span></h3><h4>May 14, 2012<span> by Marc Harrison</span></a></h4>
+<p>This is a text area that can be modified and updated by users. This is to be a full paragraph about what HTA is and how to get started. Users can: Create trip reports with pictures,
+            videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.</p>
+</dd>
+</dl>
+       </div>
+                <div class="clear"></div>
+<div class='span7'>
+<h1>Featured Business Partners</h1>
+  <div id="myCarousel" class="carousel slide" style='height:360px;'>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+    <img src="../../Content/Images/slide1.png" />
+        <div class='carousel-caption'>
+        <h4>Emporia State Track And Feild</h4>
+        <p><a href="#myModalx" data-toggle="modal" title="Click for Preview">Making big moves!</a></p>
+        </div>
+    </div>
+    <div class="item">
+    <img src="../../Content/Images/slide2.png" />
+        <div class='carousel-caption'>
+        <h4>Guardian Creed</h4>
+        <p><a href="#myModalx" data-toggle="modal" title="Click for Preview">Live the Creed.</a></p>
+        </div>
+    </div>
+    <div class="item">
+    <img src="../../Content/Images/slide3.png" />
+        <div class='carousel-caption'>
+        <h4>Guardian Creed</h4>
+        <p><a href="#myModalx" data-toggle="modal" title="Click for Preview">Type The stuff here!</a></p>
+        </div>
+    </div>
+    <div class="item">
+    <img src="../../Content/Images/slide4.png" />
+        <div class='carousel-caption'>
+        <h4>Getting it Done</h4>
+        <p><a href="#myModalx" data-toggle="modal" title="Click for Preview">Type The stuff here!</a></p>
+        </div>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+</div>
+
+    </div>
+    <div class="span4" id="infoBar" style='height: 1640px;'>
+    <div id="Div1" class="center">
+            <div class="swingRight" id='yellow'>
+            <h4>Share the Adventure</h4>
+            <g:plusone style="left:-50px;" size="Medium"></g:plusone>
+            <a style="left:-50px;"  href="https://twitter.com/share" class="twitter-share-button" data-via="howtoadventures">Tweet</a>
+            <a href="https://twitter.com/howtoadventures" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow howtoadventures</a>
+            <div id="fb-1" class="fb-like" data-href="http://howtoadventures.com/adventurereview" data-send="false" data-width="200" data-height="20" data-show-faces="true"></div>
+            </div>
+            <div class='carrotRightY'></div>
+            <h2>Featured Items</h2>
+            @*Swing In*@
+            <div class="swingRight" id='lighterBlue'>
+            <h3>Welcome To HowToAdventures.com</h3>
+            <iframe style="float: left;" width="90%" height="300" src="http://www.youtube.com/embed/iW6uY8nFjX0" frameborder="0" allowfullscreen="true"></iframe>
+            <div class="clear"></div>
+            </div>
+            <div class="carrotRightB"></div>
+            <div class="g4_Post">
+            <h3>Featured Vendor<span>Available to sponsors and business users.</span></h3>
+            <img width="90%" height="250" src="none" alt="FEATURE" />
+            </div>
+
+            <div class="g4_Post">
+            <h3>Twitter Feed<span>Displays HTA's twitter feed</span></h3>
+            <img width="90%" height="200" src="none" alt="Displays HTA's twitter feed" />
+            </div>
+
+            <div class="g4_Post">
+            <h3>Google Ads<span>Limited to relevant topics like travel. </span></h3>
+            <img width="90%" height="250" src="none" alt="FEATURE" />
+            </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="modal-clear hide left" id="myModalx">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h1><u><%: Html.ActionLink("Business Profile Name", "Details", "Profile")%></u></h1>
+                </div>
+                <div class="modal-body">
+                <div class='modal-title'>
+                <h4> Bigfork, Montana - United States</h4>
+                <h4>Camping and Hiking Outfitter</h4>
+                <p><b>Business Profile:</b> </br> Create trip reports with pictures,
+                 videos, geographical locations and personal experiences. Search the adventure database. Participate in product reviews.
+                 Get reliable insight into techniquies, practices and much more!</p>
+                </div>
+                <div style="float:right;">
+                <a href="#" title="Link to Review"><img class="Inline-Image" src="http://images.revaxarts-themes.com/201456/116x116.jpg" width="200" height ="200" alt=""></a>
+                 </div>
+                 </br>
+
+                </div>
+                <div class="modal-footer">
+                <%: Html.ActionLink("View This Outfitter ", "Details", "Profile")%> &nbsp
+                <a href="#" class="btn" data-dismiss="modal">Close</a>
+
+                </div>
+                </div>
+
+                <div class="modal hide left" id="myModalN">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h1><u><%: Html.ActionLink("Glacier National Park", "Details", "Location")%></u></h1>
+                </div>
+                <div class="modal-body">
+                <div class='modal-title'>
+                <h3>Green Hollow Trail</h3>
+                <h4> Bigfork, Montana - United States</h4>
+                <h4>Hiking Review<span> by Default324</span></h4>
+                </div>
+                <div style='float:right;'>
+                <a href="#" title="Link to Review"><img class="bigImg" src="http://images.revaxarts-themes.com/201456/116x116.jpg" width="300" height ="300" alt=""></a>
+                </div>
+                <p><b>Description: </b> </br> The Green Hollow Trail is one of the two superhighways of Glacier National Park, the other being
+                 the South Kaibab Trail. Both of these trails are well maintained and offer some spectacular views of the Canyon.
+                 The Bright Angel Trail has the advantage of offering a considerable amount of shade (depending on the time of day)
+                 of which the South Kaibab Trail offers virtually none. </p> </br>
+
+                </div>
+                <div class="modal-footer">
+                <%: Html.ActionLink("Location Details Page ", "Details", "Location")%> | <%: Html.ActionLink("Full Hiking Report ", "Details", "AdventureReview")%> &nbsp
+                <a href="#" class="btn" data-dismiss="modal">Close</a>
+
+                </div>
+                </div>
+
+    </section>

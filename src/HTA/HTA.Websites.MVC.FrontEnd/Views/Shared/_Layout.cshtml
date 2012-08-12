@@ -39,13 +39,32 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
           <span class="icon-bar"></span>
         </a>
         <a class="brand" href="#">
-            <img src="../../Content/Images/HeaderLogo.png" /></a>
+            <img src="@Url.Content("~/Content/Images/HeaderLogo.png")" /></a>
         <div class="nav-collapse">
           <ul class="nav">
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
-            <li>@Html.ActionLink("Location Pages", "Details", "Location")</li>
-            <li>@Html.ActionLink("Review Pages", "Details", "AdventureReview")</li>
-            <li>@Html.ActionLink("Create/Edit", "Create", "AdventureReview")</li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adv. Review<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Create", "Create", "AdventureReview") </li>
+                <li>@Html.ActionLink("Index", "Index", "AdventureReview") </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Adv. Type<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Create", "Create", "AdventureType") </li>
+                <li>@Html.ActionLink("Index", "Index", "AdventureType") </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Type Templates<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>@Html.ActionLink("Create", "Create", "AdventureTypeTemplate") </li>
+                <li>@Html.ActionLink("Index", "Index", "AdventureTypeTemplate") </li>
+              </ul>
+            </li>
+            @*<li>@Html.ActionLink("Create/Edit", "Create", "AdventureReview")</li>*@
             @*<li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -80,7 +99,49 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
     </div><!-- /navbar-inner -->
   </div><!-- /navbar -->
   @*End Header*@
-    <div class="page">
+
+  @RenderBody()
+
+     <!-- <div class="header_image" style="background-image: url(<%= Url.Content("~/Content/WhiteLabel/light/images/HeadMap.png") %>)">
+            &nbsp;</div> -->
+ <!-- To be revisited when initiating FB App interactions SEE FB OPEN GRAPH TUTORIAL FOR FINAL IMPLEMENTATION -->
+     <div id="fb-root"></div>
+  <script>
+      window.fbAsyncInit = function () {
+          FB.init({
+              appId: '[389917811040391]', // App ID
+              status: true, // check login status
+              cookie: true, // enable cookies to allow the server to access the session
+              xfbml: true  // parse XFBML
+          });
+      };
+
+      // Load the SDK Asynchronously
+      (function (d) {
+          var js, id = 'facebook-jssdk'; if (d.getElementById(id)) { return; }
+          js = d.createElement('script'); js.id = id; js.async = true;
+          js.src = "//connect.facebook.net/en_US/all.js";
+          d.getElementsByTagName('head')[0].appendChild(js);
+      } (document));
+  </script>
+
+  <!-- <fb:login-button show-faces="true" width="200" max-rows="1" scope="publish_actions">
+  </fb:login-button> --> 
+
+      <div class="footer">
+    <div class="footer-inner">
+      <div class="container">
+        <div style="margin-top: 15px; border-bottom: 1px solid white;">
+            <p><a href="/#">Terms of Use</a> | <a href="/#">Contact</a> | <a href="/#">About Us</a> </p>
+            <p style="float:left;">Built Using Twitter <a href="/#">Bootstraps</a></p><p style="float:right;"> © 2012 How To Adventures, All Rights Reserved.</p>
+        </div>
+      </div>
+    </div><!-- /footer-inner -->
+  </div><!-- /footer -->
+
+
+</div>
+    @*<div class="page">
         <header>
             <div id="title">
                 <h1>My MVC Application</h1>
@@ -102,6 +163,13 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
         </section>
         <footer>
         </footer>
-    </div>
+    </div>*@
 </body>
+<script>
+    $(function () {
+        $("#popover").popover();
+
+        $("#tip").tooltip();
+    });  
+</script>
 </html>
