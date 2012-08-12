@@ -1,0 +1,9 @@
+Using Url: http://joelabrahamsson.com/entry/extending-aspnet-mvc-music-store-with-elasticsearch
+
+download elastic search for windows
+http://www.elasticsearch.org/download/
+
+Version 0.19.8	http://www.elasticsearch.org/download/2012/07/02/0.19.8.html
+https://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-0.19.8.zip
+
+copied elasticsearch binary to HTA/Bin/ElasticSearch-0.19.8
