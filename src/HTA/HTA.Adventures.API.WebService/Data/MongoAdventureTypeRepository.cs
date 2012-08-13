@@ -8,11 +8,17 @@ using MongoDB.Bson;
 
 namespace HTA.Adventures.API.WebService.Data
 {
-    public class MongoAdventureTypeRepository : IAdventureTypeRepository, IAdventureTypeTemplateRepository, IAdventureReviewRepository
+    public class MongoAdventureTypeRepository : IAdventureTypeRepository,
+                                                IAdventureTypeTemplateRepository,
+                                                IAdventureReviewRepository,
+                                                IAdventureRegionRepository,
+                                                IAdventureLocationRepository
     {
+        private static readonly MongoRepository<AdventureRegion> AdventureRegionRepository = new MongoRepository<AdventureRegion>();
         private static readonly MongoRepository<AdventureReview> AdventureReviewRepository = new MongoRepository<AdventureReview>();
         private static readonly MongoRepository<AdventureType> AdventureTypeRepository = new MongoRepository<AdventureType>();
         private static readonly MongoRepository<AdventureTypeTemplate> AdventureTypeTemplateRepository = new MongoRepository<AdventureTypeTemplate>();
+        private static readonly MongoRepository<AdventureLocation> AdventureLocationRepository = new MongoRepository<AdventureLocation>();
 
         #region Implementation of IAdventureTypeRepository
 
@@ -45,9 +51,9 @@ namespace HTA.Adventures.API.WebService.Data
                 AdventureTypeRepository.Update(adventuretype); // update existing one
         }
 
-        public IList<AdventureDataCard> GetTypeDataCards(string id)
+        public IList<AdventureDataCard> GetTypeDataCards(string typeId)
         {
-            var adventureType = GetAdventureType(id);
+            var adventureType = GetAdventureType(typeId);
 
             if (adventureType == null)
                 return null;
@@ -102,6 +108,48 @@ namespace HTA.Adventures.API.WebService.Data
             return string.IsNullOrEmpty(adventureReview.Id) ?
                AdventureReviewRepository.Add(adventureReview) :  // Add new one  &
                AdventureReviewRepository.Update(adventureReview); // update existing one
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureRegionRepository
+
+        public IList<AdventureRegion> GetAdventureRegions()
+        {
+            return AdventureRegionRepository.All().ToList();
+        }
+
+        public AdventureRegion GetAdventureRegion(string id)
+        {
+            return AdventureRegionRepository.GetById(id);
+        }
+
+        public AdventureRegion SaveAdventureRegion(AdventureRegion adventureRegion)
+        {
+            return (string.IsNullOrEmpty(adventureRegion.Id)) ?
+                AdventureRegionRepository.Add((AdventureRegion)adventureRegion) :
+            AdventureRegionRepository.Update((AdventureRegion)adventureRegion);
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureLocationRepository
+
+        public IList<AdventureLocation> GetAdventureLocations()
+        {
+            return AdventureLocationRepository.All().ToList();
+        }
+
+        public AdventureLocation GetAdventureLocation(string id)
+        {
+            return AdventureLocationRepository.GetById(id);
+        }
+
+        public AdventureLocation SaveAdventureReview(AdventureLocation model)
+        {
+            return (string.IsNullOrEmpty(model.Id))
+                       ? AdventureLocationRepository.Add(model)
+                       : AdventureLocationRepository.Update(model);
         }
 
         #endregion

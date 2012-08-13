@@ -5,7 +5,7 @@ namespace HTA.Adventures.Models.Types
 {
     public class NearBySearch
     {
-        public List<AdventureLocation> Result { get; set; }
+        public List<AdventureSpot> Result { get; set; }
         public string LatLon { get; set; }
         public double Lat { get; set; }
         public double Lon { get; set; }

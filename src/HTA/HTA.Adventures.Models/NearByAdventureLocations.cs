@@ -3,7 +3,8 @@ using ServiceStack.ServiceHost;
 
 namespace HTA.Adventures.Models
 {
-    [RestService("/Adventure/Locations/{LatLon}", Verbs = "GET")]
+
+    [RestService("/Adventure/LocationSearch/{LatLon}", Verbs = "GET")]
     public class NearByAdventureLocations : NearBySearch
     {
     }

@@ -1,16 +1,17 @@
 ﻿using System.Runtime.Serialization;
 using DreamSongs.MongoRepository;
+using MongoDB.Bson.Serialization.Attributes;
 using Nest;
 
 namespace HTA.Adventures.Models.Types
 {
-    [ElasticType(Name = "region", IdProperty = "id")]
     [DataContract]
-    public class AdventureLocation : Entity
+    [BsonKnownTypes(typeof(AdventureRegion), typeof(AdventureLocation))]
+    public class AdventureSpot : Entity
     {
-        [ElasticProperty(Name = "geo")]
+        [ElasticProperty(Name = "geo_location")]
         [DataMember]
-        public Geo Geo { get; set; }
+        public LocationPoint LocationPoint { get; set; }
 
         [ElasticProperty(Name = "name")]
         [DataMember]
@@ -24,10 +25,14 @@ namespace HTA.Adventures.Models.Types
         [DataMember]
         public string Picture { get; set; }
 
-
-        public AdventureLocation(Geo location, string name, string address, string picture)
+        public AdventureSpot()
         {
-            Geo = location;
+
+        }
+
+        public AdventureSpot(LocationPoint locationPoint, string name, string address, string picture)
+        {
+            LocationPoint = locationPoint;
             Name = name;
             Address = address;
             Picture = picture;

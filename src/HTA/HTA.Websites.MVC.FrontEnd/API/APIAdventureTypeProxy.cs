@@ -40,9 +40,9 @@ namespace HTA.Websites.MVC.FrontEnd.API
             return adventuretype;
         }
 
-        public IList<AdventureDataCard> GetTypeDataCards(string id)
+        public IList<AdventureDataCard> GetTypeDataCards(string typeId)
         {
-            var dataCards = _client.Get<IList<AdventureDataCard>>("/Adventure/Type/DataCards/" + id);
+            var dataCards = _client.Get<IList<AdventureDataCard>>("/Adventure/Type/DataCards/" + typeId);
             return dataCards;
         }
 

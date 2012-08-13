@@ -25,12 +25,9 @@ namespace HTA.Adventures.RegionTestGUI
             double.TryParse(txtLat.Text, out lat);
             double lon = 0.0;
             double.TryParse(txtLon.Text, out lon);
-            Geo geoLocation = new Geo { Location = new Location() { Lat = lat, Lon = lon } };
             string name = txtName.Text;
             string address = txtAddress.Text;
-            var location = new AdventureLocation(geoLocation, name, address, textBox1.Text);
-
-            _adventureLocationRepository.Add(location);
+            var location = new AdventureSpot(new LocationPoint() { Lat = lat, Lon = lon }, name, address, textBox1.Text);
 
             MessageBox.Show("added: " + location.Id);
         }
@@ -41,22 +38,21 @@ namespace HTA.Adventures.RegionTestGUI
             double.TryParse(txtLatSearch.Text, out lat);
             double lon = 0.0;
             double.TryParse(txtLonSearch.Text, out lon);
-            Geo geoLocation = new Geo { Location = new Location() { Lat = lat, Lon = lon } };
-
+            
             int range = 5;
             int.TryParse(txtMilesSearch.Text, out range);
             GeoRange geoRange = new GeoRange() { Range = range };
-            var locations = _adventureLocationRepository.GetNearBy(geoLocation, geoRange);
+            //var locations = _adventureLocationRepository.GetNearBy(new LocationPoint() { Lat = lat, Lon = lon }, geoRange);
 
-            StringBuilder sb = new StringBuilder();
-            int c = 0;
-            foreach (var adventureLocation in locations)
-            {
-                sb.AppendFormat("{0}. {1} [Lon:{2}, lat:{3}]", c++, adventureLocation.Name, adventureLocation.Geo.Location.Lon, adventureLocation.Geo.Location.Lat);
-                sb.AppendLine();
-            }
+            //StringBuilder sb = new StringBuilder();
+            //int c = 0;
+            //foreach (var adventureLocation in locations)
+            //{
+            //    sb.AppendFormat("{0}. {1} [Lon:{2}, lat:{3}]", c++, adventureLocation.Name, adventureLocation.LocationPoint.Lon, adventureLocation.LocationPoint.Lat);
+            //    sb.AppendLine();
+            //}
 
-            MessageBox.Show(sb.ToString());
+            //MessageBox.Show(sb.ToString());
         }
     }
 

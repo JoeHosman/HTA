@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using DreamSongs.MongoRepository;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
@@ -16,33 +15,11 @@ namespace HTA.Adventures.RegionTestGUI
             client = new ElasticClient(setting);
         }
 
-        static readonly MongoRepository<AdventureLocation> MongoAdventureLocationRepository = new MongoRepository<AdventureLocation>();
+        static readonly MongoRepository<AdventureSpot> MongoAdventureLocationRepository = new MongoRepository<AdventureSpot>();
         private readonly ElasticClient client;
-
-        public void Add(AdventureLocation location)
+        public IList<AdventureLocation> GetAdventureLocations()
         {
-            MongoAdventureLocationRepository.Add(location);
-
-            var result = client.Index(location, "pins", "region", location.Id);
-
-            //it was extra testing
-            //string data = JsonConvert.SerializeObject(location);
-        }
-
-        public List<AdventureLocation> GetNearBy(Geo geoLocation, GeoRange geoRange)
-        {
-
-            var results = client.Search<AdventureLocation>(s => s
-                                                                    .From(0)
-                                                                    .Size(10)
-                                                                    .Filter(f => f
-                                                                                     .GeoDistance("geo.location", filter => filter
-                                                                                                                                .Location(geoLocation.Location.Lon, geoLocation.Location.Lat)
-                                                                                                                                .Distance(string.Format("{0}mi", geoRange.Range))))
-                                                                    .Index("pins")
-                                                                    .Type("region")
-                );
-            return results.Documents.ToList();
+            throw new System.NotImplementedException();
         }
     }
 }

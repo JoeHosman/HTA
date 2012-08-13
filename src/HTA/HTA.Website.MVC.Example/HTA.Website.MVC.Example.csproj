@@ -100,14 +100,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\APIAdventureLocationProxy.cs" />
+    <Compile Include="API\APIAdventureRegionProxy.cs" />
     <Compile Include="API\APIAdventureReviewProxy.cs" />
     <Compile Include="API\APIAdventureTypeProxy.cs" />
     <Compile Include="API\APIAdventureTypeTemplateProxy.cs" />
+    <Compile Include="API\APIProxyBase.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdventureLocationController.cs" />
+    <Compile Include="Controllers\AdventureRegionController.cs" />
     <Compile Include="Controllers\AdventureReviewController.cs" />
     <Compile Include="Controllers\AdventureTypeController.cs" />
     <Compile Include="Controllers\AdventureTypeTemplateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\AdventureLocationModel.cs" />
     <Compile Include="Models\AdventureReviewModel.cs" />
     <Compile Include="Models\AdventureTypeModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -262,6 +268,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\AdventureReview\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AdventureRegion\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <Content Include="Views\AdventureRegion\Create.cshtml" />
+    <Content Include="Views\AdventureRegion\Details.cshtml" />
+    <Content Include="Views\AdventureLocation\Index.cshtml" />
+    <Content Include="Views\AdventureLocation\Create.cshtml" />
+    <Content Include="Views\AdventureLocation\Details.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
