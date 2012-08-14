@@ -1,31 +1,35 @@
-﻿@model HTA.Adventures.Models.Types.AdventureRegion
-
+﻿@model HTA.Website.MVC.Example.Models.AdventureRegionAdventureLocationsModel
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Details</h2>
-
+<h2>
+    Details</h2>
 <fieldset>
     <legend>AdventureRegion</legend>
-
-    <div class="display-label">Name</div>
+    <div class="display-label">
+        Name</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
+        @Html.DisplayFor(model => model.Region.Name)
     </div>
-
-    <div class="display-label">Address</div>
+    <div class="display-label">
+        Address</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Address)
+        @Html.DisplayFor(model => model.Region.Address)
     </div>
-
-    <div class="display-label">Picture</div>
+    <div class="display-label">
+        Picture</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Picture)
+        @Html.DisplayFor(model => model.Region.Picture)
     </div>
+    <span>
+        @foreach (var item in Model.Locations)
+        {
+            <p>@Html.DisplayFor(model => item.Name) @@ @Html.DisplayFor(model => item.LocationPoint.LatLon)</p>
+        }
+    </span>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Region.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
