@@ -11,7 +11,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\Newtonsoft.Json.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.Models.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\DreamSongs.MongoRepository.xml
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\EntityFramework.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Interfaces.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Interfaces.xml
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\MongoDB.Driver.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\MongoDB.Driver.xml
@@ -23,9 +22,7 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Common.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Text.dll
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Common.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Common.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Text.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Text.xml
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Website.MVC.Example.dll
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Website.MVC.Example.pdb
@@ -62,14 +59,8 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.SqlServe
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Razor.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Redis.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.ServiceInterface.dll
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.OrmLite.SqlServer.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Razor.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Redis.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Redis.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.ServiceInterface.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Website.MVC.Example.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Website.MVC.Example.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\bin\DreamSongs.MongoRepository.dll
