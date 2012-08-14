@@ -28,7 +28,14 @@ namespace HTA.Website.MVC.Example.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Assign the adventure region to the location object.
+                model.AdventureLocation
+                    .AdventureRegion =_adventureRegionRepository
+                                        .GetAdventureRegion(model.AdventureLocation.AdventureRegion.Id);
+
                 var location = _adventureLocationRepository.SaveAdventureReview(model.AdventureLocation);
+
+
                 return View("Details", location);
             }
             return View(model);

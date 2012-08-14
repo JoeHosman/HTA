@@ -19,6 +19,8 @@ namespace HTA.Adventures.Models.Types
             AdventureRegion = new AdventureRegion(locationPoint, name, address, picture);
         }
 
+        [ElasticProperty(Name = "region")]
+        [DataMember]
         public AdventureRegion AdventureRegion { get; set; }
 
     }
