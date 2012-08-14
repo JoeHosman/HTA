@@ -1,0 +1,11 @@
+[2012-08-13 21:13:44,457][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2012-08-13 21:13:44,461][INFO ][node                     ] [Maxam] {0.19.8}[8040]: initializing ...
+[2012-08-13 21:13:44,465][INFO ][plugins                  ] [Maxam] loaded [], sites []
+[2012-08-13 21:13:46,859][INFO ][node                     ] [Maxam] {0.19.8}[8040]: initialized
+[2012-08-13 21:13:46,860][INFO ][node                     ] [Maxam] {0.19.8}[8040]: starting ...
+[2012-08-13 21:13:46,996][INFO ][transport                ] [Maxam] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.8.1.108:9300]}
+[2012-08-13 21:13:50,181][INFO ][cluster.service          ] [Maxam] new_master [Maxam][hoFyDdClRRSbKeP332bceQ][inet[/10.8.1.108:9300]], reason: zen-disco-join (elected_as_master)
+[2012-08-13 21:13:50,198][INFO ][discovery                ] [Maxam] elasticsearch/hoFyDdClRRSbKeP332bceQ
+[2012-08-13 21:13:50,250][INFO ][gateway                  ] [Maxam] recovered [0] indices into cluster_state
+[2012-08-13 21:13:50,283][INFO ][http                     ] [Maxam] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.8.1.108:9200]}
+[2012-08-13 21:13:50,283][INFO ][node                     ] [Maxam] {0.19.8}[8040]: started
