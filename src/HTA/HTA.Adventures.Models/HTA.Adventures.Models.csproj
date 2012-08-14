@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Types\AdventureLocation.cs" />
     <Compile Include="Types\AdventureRegion.cs" />
     <Compile Include="IAdventureLocationRepository.cs" />
     <Compile Include="IAdventureReviewRepository.cs" />

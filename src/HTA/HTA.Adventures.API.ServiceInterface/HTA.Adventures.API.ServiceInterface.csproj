@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureLocationService.cs" />
     <Compile Include="AdventureRegionService.cs" />
     <Compile Include="AdventureReviewService.cs" />
     <Compile Include="AdventureTypeDataCardService.cs" />

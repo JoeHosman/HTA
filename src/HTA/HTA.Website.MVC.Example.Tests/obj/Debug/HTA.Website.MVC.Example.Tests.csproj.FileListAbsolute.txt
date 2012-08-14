@@ -85,3 +85,4 @@ C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\D
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\HTA.Website.MVC.Example.Tests.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\HTA.Website.MVC.Example.Tests.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Interfaces.pdb
