@@ -1,12 +1,10 @@
 ﻿@model IEnumerable<HTA.Adventures.Models.Types.AdventureLocation>
-
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Index</h2>
-
+<h2>
+    Index</h2>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -21,26 +19,40 @@
         <th>
             Picture
         </th>
-        <th></th>
+        <th>
+            Lat,Lon
+        </th>
+        <th>
+            Region
+        </th>
+        <th>
+        </th>
     </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Picture)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture)
+            </td>
+            <td>@Html.DisplayFor(model => item.LocationPoint.LatLon)
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.AdventureRegion.Name))
+                { 
+                    @Html.ActionLink(item.AdventureRegion.Name, "Details", "AdventureRegion", new { item.AdventureRegion.Id }, new { });
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 </table>

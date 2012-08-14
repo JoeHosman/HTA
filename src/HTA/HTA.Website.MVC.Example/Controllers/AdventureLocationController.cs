@@ -60,6 +60,25 @@ namespace HTA.Website.MVC.Example.Controllers
             return View(model);
         }
 
+        [HttpPost]
+        public ActionResult Edit(AdventureLocationModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                // Assign the adventure region to the location object.
+                model.AdventureLocation
+                    .AdventureRegion = _adventureRegionRepository
+                                        .GetAdventureRegion(model.AdventureLocation.AdventureRegion.Id);
+
+                var location = _adventureLocationRepository.SaveAdventureReview(model.AdventureLocation);
+
+                return View("Details", location);
+            }
+
+            model.SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions();
+            return View(model);
+        }
+
         public ActionResult Delete(string id)
         {
             throw new System.NotImplementedException();
