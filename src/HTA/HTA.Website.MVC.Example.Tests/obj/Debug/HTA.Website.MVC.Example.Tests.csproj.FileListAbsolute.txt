@@ -12,7 +12,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\Newtonsoft.Json.d
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\HTA.Website.MVC.Example.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\HTA.Adventures.Models.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\DreamSongs.MongoRepository.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Interfaces.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Interfaces.xml
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\MongoDB.Driver.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\MongoDB.Driver.xml
@@ -24,9 +23,7 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\HTA.Website.MVC.E
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\HTA.Website.MVC.Example.Tests.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Common.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Text.dll
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Common.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Common.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Text.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Text.xml
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\HTA.Website.MVC.Example.Tests.dll.config
 D:\dev\git\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\HTA.Website.MVC.Example.Tests.dll
