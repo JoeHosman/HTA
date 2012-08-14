@@ -7,7 +7,6 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
-
 .clearfix {
   *zoom: 1;
 }
@@ -86,7 +85,7 @@
   }
   input[type="checkbox"],
   input[type="radio"] {
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
   }
   .form-horizontal .control-group > label {
     float: none;
@@ -301,58 +300,58 @@
     box-sizing: border-box;
     float: left;
     margin-left: 2.762430939%;
-    *margin-left: 2.70923945%;
+    *margin-left: 2.709239449638298%;
   }
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
   .row-fluid .span12 {
     width: 99.999999993%;
-    *width: 99.946808504%;
+    *width: 99.9468085036383%;
   }
   .row-fluid .span11 {
     width: 91.436464082%;
-    *width: 91.383272593%;
+    *width: 91.38327259263829%;
   }
   .row-fluid .span10 {
-    width: 82.872928171%;
-    *width: 82.819736682%;
+    width: 82.87292817100001%;
+    *width: 82.8197366816383%;
   }
   .row-fluid .span9 {
     width: 74.30939226%;
-    *width: 74.256200771%;
+    *width: 74.25620077063829%;
   }
   .row-fluid .span8 {
-    width: 65.745856349%;
-    *width: 65.69266486%;
+    width: 65.74585634900001%;
+    *width: 65.6926648596383%;
   }
   .row-fluid .span7 {
-    width: 57.182320438%;
-    *width: 57.129128949%;
+    width: 57.182320438000005%;
+    *width: 57.129128948638304%;
   }
   .row-fluid .span6 {
     width: 48.618784527%;
-    *width: 48.565593038%;
+    *width: 48.5655930376383%;
   }
   .row-fluid .span5 {
     width: 40.055248616%;
-    *width: 40.002057127%;
+    *width: 40.0020571266383%;
   }
   .row-fluid .span4 {
     width: 31.491712705%;
-    *width: 31.438521216%;
+    *width: 31.4385212156383%;
   }
   .row-fluid .span3 {
     width: 22.928176794%;
-    *width: 22.874985305%;
+    *width: 22.874985304638297%;
   }
   .row-fluid .span2 {
     width: 14.364640883%;
-    *width: 14.311449394%;
+    *width: 14.311449393638298%;
   }
   .row-fluid .span1 {
     width: 5.801104972%;
-    *width: 5.747913483%;
+    *width: 5.747913482638298%;
   }
   input,
   textarea,
@@ -512,58 +511,58 @@
     box-sizing: border-box;
     float: left;
     margin-left: 2.564102564%;
-    *margin-left: 2.510911075%;
+    *margin-left: 2.510911074638298%;
   }
   .row-fluid [class*="span"]:first-child {
     margin-left: 0;
   }
   .row-fluid .span12 {
     width: 100%;
-    *width: 99.946808511%;
+    *width: 99.94680851063829%;
   }
   .row-fluid .span11 {
-    width: 91.452991453%;
-    *width: 91.399799964%;
+    width: 91.45299145300001%;
+    *width: 91.3997999636383%;
   }
   .row-fluid .span10 {
     width: 82.905982906%;
-    *width: 82.852791417%;
+    *width: 82.8527914166383%;
   }
   .row-fluid .span9 {
     width: 74.358974359%;
-    *width: 74.30578287%;
+    *width: 74.30578286963829%;
   }
   .row-fluid .span8 {
-    width: 65.811965812%;
-    *width: 65.758774323%;
+    width: 65.81196581200001%;
+    *width: 65.7587743226383%;
   }
   .row-fluid .span7 {
     width: 57.264957265%;
-    *width: 57.211765776%;
+    *width: 57.2117657756383%;
   }
   .row-fluid .span6 {
     width: 48.717948718%;
-    *width: 48.664757229%;
+    *width: 48.6647572286383%;
   }
   .row-fluid .span5 {
-    width: 40.170940171%;
-    *width: 40.117748682%;
+    width: 40.170940171000005%;
+    *width: 40.117748681638304%;
   }
   .row-fluid .span4 {
     width: 31.623931624%;
-    *width: 31.570740135%;
+    *width: 31.5707401346383%;
   }
   .row-fluid .span3 {
     width: 23.076923077%;
-    *width: 23.023731588%;
+    *width: 23.0237315876383%;
   }
   .row-fluid .span2 {
-    width: 14.52991453%;
-    *width: 14.476723041%;
+    width: 14.529914530000001%;
+    *width: 14.4767230406383%;
   }
   .row-fluid .span1 {
     width: 5.982905983%;
-    *width: 5.929714494%;
+    *width: 5.929714493638298%;
   }
   input,
   textarea,
@@ -660,14 +659,14 @@
     display: none;
   }
   .nav-collapse .nav .nav-header {
-    color: #00c90d;
+    color: #eeeeee;
     text-shadow: none;
   }
   .nav-collapse .nav > li > a,
   .nav-collapse .dropdown-menu a {
     padding: 6px 15px;
     font-weight: bold;
-    color: #00c90d;
+    color: #eeeeee;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
