@@ -1,21 +1,48 @@
 ﻿@model HTA.Websites.MVC.FrontEnd.Models.AdventureReviewModel
 @{
     ViewBag.Title = "Create a Review";
+    string mymodel = "@model HTA.Websites.MVC.FrontEnd.Models.AdventureReviewModel";
 }
 
 @section meta{
     <link href="/Content/chosen.css" rel="stylesheet" type="text/css" />
 }
 <section id="content">
-<a class="btn" href="#myModal2" data-toggle="modal">Launch demo modal</a>
+<div class="row">
+    <div class="span8" >
+@*<a class="btn" href="#myModal2" data-toggle="modal">Launch demo modal</a>*@
 
-    @Html.Partial("ReviewForm")
-
-<div>
     @Html.ActionLink("Back to List", "Index")
-</div>
-<div class="clear"></div>
+<div class="span7" >
+    <div class="navbar" style="margin-bottom:10px;">
+    <div class="navbar-inner">
+    <div class="container">
+    <h1>Required Information</h1>
+     <p>
+        This structure is best rendered as modal windows over the main body.</p>
+    </div>
+    </div>
+    </div>
+    @Html.Partial("RequiredForm")
+    </div>
+    @*<div class="span7">
+    <div class="navbar" style="margin-bottom: 10px;">
+        <div class="navbar-inner">
+            <div class="container">
+                <h1>
+                    Add Your Own Touch</h1>
+                <p>
+                    This Tab will be where the Data Cards are displayed.<b>(This section does not exist in the DB structure)</b></p>
+            </div>
+        </div>
+    </div>
+    @Html.Partial("TypeTemp")
+    </div>*@
+    </div>
+    @Html.Partial("_RightBar")
 
+<div class="clear"></div>
+</div>
 @section script {
     <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>

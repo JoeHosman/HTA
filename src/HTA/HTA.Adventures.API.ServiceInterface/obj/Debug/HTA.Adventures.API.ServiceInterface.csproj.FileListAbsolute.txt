@@ -55,3 +55,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\obj\Debug\HTA.Adventu
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.xml
+C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.dll
+C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.pdb
+C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.xml

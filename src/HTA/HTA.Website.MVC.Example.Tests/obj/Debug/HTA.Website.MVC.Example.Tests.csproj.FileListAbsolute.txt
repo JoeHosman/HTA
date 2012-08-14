@@ -70,12 +70,9 @@ C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\D
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\Newtonsoft.Json.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\HTA.Website.MVC.Example.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\HTA.Adventures.Models.pdb
-C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Common.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Common.xml
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\DreamSongs.MongoRepository.xml
-C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Interfaces.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Interfaces.xml
-C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Text.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Text.xml
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\MongoDB.Driver.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\MongoDB.Driver.xml
@@ -85,3 +82,4 @@ C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\D
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\HTA.Website.MVC.Example.Tests.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\obj\Debug\HTA.Website.MVC.Example.Tests.pdb
+C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example.Tests\bin\Debug\ServiceStack.Interfaces.pdb
