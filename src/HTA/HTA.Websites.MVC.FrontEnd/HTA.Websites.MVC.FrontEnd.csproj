@@ -115,11 +115,47 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\js\bootstrap-modal.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
     <Content Include="Content\chosen.css" />
     <Content Include="Content\chosen\chosen-sprite.png" />
     <Content Include="Content\chosen\chosen.proto.js" />
     <Content Include="Content\chosen\chosen.proto.min.js" />
     <Content Include="Content\chosen\readme.txt" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstraps.css" />
+    <Content Include="Content\css\bootstraps2.css" />
+    <Content Include="Content\css\responsive.css" />
+    <Content Include="Content\css\responsives.css" />
+    <Content Include="Content\css\responsives1.css" />
+    <Content Include="Content\Images\BGD.png" />
+    <Content Include="Content\Images\BGDB.png" />
+    <Content Include="Content\Images\BGDBl.png" />
+    <Content Include="Content\Images\BGDGy.png" />
+    <Content Include="Content\Images\BGDGy2.png" />
+    <Content Include="Content\Images\BGDGy3.png" />
+    <Content Include="Content\Images\BGgG.png" />
+    <Content Include="Content\Images\BGVLG.png" />
+    <Content Include="Content\Images\favicon.png" />
+    <Content Include="Content\Images\HeaderLogo.png" />
+    <Content Include="Content\Images\IMG_0474.JPG" />
+    <Content Include="Content\Images\IMG_0491.JPG" />
+    <Content Include="Content\Images\IMG_0494.JPG" />
+    <Content Include="Content\Images\IMG_0619.JPG" />
+    <Content Include="Content\Images\IMG_0628.JPG" />
+    <Content Include="Content\Images\MountainBG.png" />
+    <Content Include="Content\Images\roadLarge.png" />
+    <Content Include="Content\Images\slide1.png" />
+    <Content Include="Content\Images\slide2.png" />
+    <Content Include="Content\Images\slide3.png" />
+    <Content Include="Content\Images\slide4.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -227,6 +263,50 @@
       <Project>{DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE}</Project>
       <Name>HTA.Adventures.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\less\accordion.less" />
+    <None Include="Content\less\alerts.less" />
+    <None Include="Content\less\bootstrap.less" />
+    <None Include="Content\less\breadcrumbs.less" />
+    <None Include="Content\less\button-groups.less" />
+    <None Include="Content\less\buttons.less" />
+    <None Include="Content\less\carousel.less" />
+    <None Include="Content\less\close.less" />
+    <None Include="Content\less\code.less" />
+    <None Include="Content\less\component-animations.less" />
+    <None Include="Content\less\custom.less" />
+    <None Include="Content\less\dropdowns.less" />
+    <None Include="Content\less\forms.less" />
+    <None Include="Content\less\grid.less" />
+    <None Include="Content\less\hero-unit.less" />
+    <None Include="Content\less\labels-badges.less" />
+    <None Include="Content\less\layouts.less" />
+    <None Include="Content\less\mixins.less" />
+    <None Include="Content\less\modals.less" />
+    <None Include="Content\less\navbar.less" />
+    <None Include="Content\less\navs.less" />
+    <None Include="Content\less\pager.less" />
+    <None Include="Content\less\pagination.less" />
+    <None Include="Content\less\popovers.less" />
+    <None Include="Content\less\progress-bars.less" />
+    <None Include="Content\less\reset.less" />
+    <None Include="Content\less\responsive-1200px-min.less" />
+    <None Include="Content\less\responsive-767px-max.less" />
+    <None Include="Content\less\responsive-768px-979px.less" />
+    <None Include="Content\less\responsive-navbar.less" />
+    <None Include="Content\less\responsive-utilities.less" />
+    <None Include="Content\less\responsive.less" />
+    <None Include="Content\less\scaffolding.less" />
+    <None Include="Content\less\sprites.less" />
+    <None Include="Content\less\tables.less" />
+    <None Include="Content\less\thumbnails.less" />
+    <None Include="Content\less\tooltip.less" />
+    <None Include="Content\less\type.less" />
+    <None Include="Content\less\utilities.less" />
+    <None Include="Content\less\variables.less" />
+    <None Include="Content\less\wells.less" />
+    <Content Include="Views\AdventureReview\ReviewForm.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

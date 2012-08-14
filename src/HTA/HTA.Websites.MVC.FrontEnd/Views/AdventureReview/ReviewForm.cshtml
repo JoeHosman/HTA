@@ -1,0 +1,198 @@
+﻿@model HTA.Websites.MVC.FrontEnd.Models.AdventureReviewModel
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+<div class="span5" >
+    <div class="navbar" style="margin-bottom:10px;">
+    <div class="navbar-inner">
+    <div class="container">
+    <h1>Required Information</h1>
+     <p>
+        This structure is best rendered as modal windows over the main body.</p>
+    </div>
+    </div>
+    </div>
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Review.Name) 
+            @Html.EditorFor(model => model.Review.Name)
+            @Html.ValidationMessageFor(model => model.Review.Name)
+        </div>
+        <div>
+            <label for="Adventure_Type">
+            Adventure Type</label>
+            @Html.DropDownListFor(m => m.AdventureTypeId, Model.SelectableTypes.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureType" })
+        </div>
+         <h3>
+            Location Info</h3>
+        <div style="display: block">
+            <div class="Map_image" id="my_map" style="width: 500px; height: 300px; display: none;
+                float: right; padding-top: 3px">
+            </div>
+            <div class="editor-label">
+                Adventure Address</div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.AdventureAddress)
+            </div>
+            <div class="editor-label">
+                Lat</div>
+            <div class="editor-field">
+                <input length="4" id="Location_Lat" name="Location.Lat" type="text" value="0" />
+            </div>
+            <div class="editor-label">
+                <label for="Location_Lon">
+                    Lon</label>
+            </div>
+            <div class="editor-field">
+                <input length="4" id="Location_Lon" name="Location.Lon" type="text" value="0" />
+            </div>
+            <input id="findNearByBtn" type="button" value="Find Your Adventure Location or Create an New Adventure Location" />
+            <div class="editor-field">
+                <div id="regionSelectionDiv" style="display: none">
+                    <select id="nearBy" data-placeholder="Choose a Country..." class="chzn-select" style="width: 350px;"
+                        tabindex="2">
+                        <option value=""></option>
+                    </select>
+                </div>
+            </div>
+            <label for="date">
+            Date<b>(This field does not exist in the DB structure)</b></label>
+        <div>
+            <input id="date" name="date" type="text" class="date">
+            <br>
+            <span class="help-block">When was this Adventure</span>
+        </div>
+        <div class="form-inline">
+            <label for="integer_minmax">
+                How long was your Adventure?<b>(This field does not exist in the DB structure)</b></label>
+            <div>
+                <span>Days</span><input id="Days" type="number" class="span1" min="0" max="30"><span>Hours</span>
+                <input id="Hours" name="integer_minmax" type="number" class="span1" min="0" max="23"><span>Minutes</span>
+                <input id="Minutes" name="integer_minmax" type="number" class="span1" min="0" max="59">
+                <br>
+                <span class="help-block">Select the number of days, hours and minutes for your adventure.</span>
+            </div>
+        </div>
+        <div class="form-inline">
+            <label>
+                Season<b>(This field does not exist in the DB structure)</b><br />
+                <span>Select the seasons this adventure is available.</span></label>
+            <div>
+                <input type="checkbox" id="Spring_check"><label for="Spring_check">&nbsp Spring &nbsp
+                    &nbsp</label>
+                <input type="checkbox" id="Summer_check"><label for="Summer_check">&nbsp Summer &nbsp
+                    &nbsp</label>
+                <input type="checkbox" id="Fall_check"><label for="Fall_check">&nbsp Fall &nbsp &nbsp</label>
+                <input type="checkbox" id="Winter_check"><label for="Winter_check">&nbsp Winter &nbsp
+                    &nbsp</label>
+            </div>
+            <span class="help-block">It is possible to select all the seasons.</span>
+        </div>
+        <label for="Adventure_Type">
+            Difficulty<b>(This field does not exist in the DB structure)</b><br />
+            <span>How would you rate the difficulty of this Adventure?</span></label>
+        <div>
+            <select class="span2" name="dropdown_Difficulty" id="Difficulty">
+                <optgroup label="Select One">
+                    <option value="Location1">Easy</option>
+                    <option value="Location2">Medium</option>
+                    <option value="More">Hard</option>
+                </optgroup>
+            </select>
+        </div>
+        <label for="textarea">
+            The Story<b>(This field does not exist in the DB structure)</b><br />
+            <span>Share your adventure story here.</span></label>
+        <div>
+            <textarea class="span4" id="textarea" name="textarea" rows="10" placeholder="Use this space to share all the details of your experience like how you found it, your favorite spot, etc..."></textarea></div>
+        <label for="file_upload_multiple">
+            Upload Pictures<b>(This field does not exist in the DB structure)</b></label>
+        <div>
+            <input class="span3" type="file" id="file_upload_multiple" name="file_upload_multiple"
+                multiple>
+        </div>
+        <br />
+        <label for="url">
+            Video Link<b>(This field does not exist in the DB structure)</b><br />
+            <span>Insert link to Youtube video here.</span></label>
+        <div>
+            <input class="span3" id="url" name="url" type="url" placeholder="http://">
+            <br>
+            <span class="help-block">Insert Youtube Link.</span>
+        </div>
+        </div>
+        <br />
+        
+        <br />
+        <div>
+            <h2>
+                DataCards:
+            </h2>
+            @Html.HiddenFor(m => m.DataCardCount)
+            <div id="dataCards">
+            </div>
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+</div>
+<div class="span5 offset1">
+    <div class="navbar" style="margin-bottom: 10px;">
+        <div class="navbar-inner">
+            <div class="container">
+                <h1>
+                    Add Your Own Touch</h1>
+                <p>
+                    This Tab will be where the Data Cards are displayed.<b>(This section does not exist in the DB structure)</b></p>
+            </div>
+        </div>
+    </div>
+    <fieldset>
+        <h3>
+            Add More Details</h3>
+        <p>
+            Do you have more to say? Say it here in your own way with custom fields!</p>
+        <label>
+            Text Description</label>
+        <input class="span3" id="url1" name="url" type="url" placeholder="Custom Field Label">
+        <textarea class="span4" id="textarea" name="textarea" rows="10" placeholder="Use this space for long additions"></textarea>
+        <span class="help-block">Remember all information shared is subject to the user agreement.</span>
+        <label class="checkbox">
+            <input type="checkbox">
+            This information is common to this adventure.
+        </label>
+        <button type="submit" class="btn">
+            Submit</button>
+        <div class="navbar" style="margin-bottom: 10px;">
+            <div class="navbar-inner">
+                <div class="container">
+                    <h1>
+                        Suggested Fields</h1>
+                    <p>
+                        This Tab will be where the Data Cards are displayed.<b>(This section does not exist in the DB structure)</b></p>
+                </div>
+            </div>
+        </div>
+        <h3>
+            Suggested Fields</h3>
+        <p>
+            Use these fields for more detialed reviews.</p>
+        <label>
+            Stipulations</label>
+        <textarea class="span4" id="textarea1" name="textarea" rows="10" placeholder="Use this space for long additions"></textarea>
+        <span class="help-block">Remember all information shared is subject to the user agreement.</span>
+        <label for="date">
+            Stipulations</label>
+        <div>
+            <input id="Text1" name="date" type="text" class="date">
+            <br>
+            <span class="help-block">What should people look out for?</span>
+        </div>
+        <button type="submit" class="btn">
+            Submit</button>
+    </fieldset>
+</div>
+
+}

@@ -53,7 +53,6 @@ C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\S
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\ServiceStack.Text.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\WebActivator.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.dll
-C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.API.ServiceInterface.pdb
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.Models.pdb
