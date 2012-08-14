@@ -1,0 +1,110 @@
+Using Url: http://joelabrahamsson.com/entry/extending-aspnet-mvc-music-store-with-elasticsearch
+
+
+*	Setting up Elastic Search on windows 
+=========================================
+
+download elastic search for windows
+http://www.elasticsearch.org/download/
+
+Version 0.19.8	http://www.elasticsearch.org/download/2012/07/02/0.19.8.html
+https://github.com/downloads/elasticsearch/elasticsearch/elasticsearch-0.19.8.zip
+
+copied elasticsearch binary to HTA/Bin/ElasticSearch-0.19.8
+
+Set 'JAVA_HOME' to C:\Program Files (x86)\Java\jre7
+
+***	DO NOT INCLUDE '\BIN'
+rebooted
+
+
+Open command prompt:
+> cd to ...\HTA\bin\elastisearch-0.19.8\bin
+> elasticsearch
+
+
+[Elastic search is now running]
+
+*	Setting up GeoLocation search
+=========================================
+
+Example: http://elasticsearch-users.115913.n3.nabble.com/Problems-with-Geo-Mapping-td3578293.html#a3578343
+
+[Do this if you want to remove existing data]
+[Using Fiddler: http://www.youtube.com/watch?v=2xNT3RMcxxU]
+
+DELETE 'http://localhost:9200/adventure'
+# this will remove the adventure data tree
+# if there is no adventure tree, you will receive 404
+PUT 'http://localhost:9200/adventure'
+# this will create the adventure data tree
+
+
+[Now lets create an Adventure Region location index mapping]
+
+PUT 'http://localhost:9200/adventure/region/_mapping' 
+# include data
+{
+"region": {
+    "properties": {
+        "geo_location":{  "type":"geo_point"}      
+        }
+    }
+}
+
+# end data
+
+[now lets add example data]
+
+#PUT 'http://localhost:9200/adventure/region/{id}
+
+[This is test data and should not be executed in real world]
+PUT 'http://localhost:9200/adventure/region/1
+# include data
+{
+"region": {   
+    "name":"region name",
+    "address":"street address",
+    "geo_location": {  "lat":50,"lon":50}                      
+    }
+}
+#end data
+
+[Test Search]
+[this searches for regions near 50,50 by 15 miles.  It does not search tags or names]
+SEARCH/GET 'http://localhost:9200/adventure/region/_search' -d
+{ "query" : {
+    "filtered" : {
+        "query" : {
+            "match_all" : {  }
+        },
+        "filter" : {
+            "geo_distance" : {
+                "distance" : "5mi",
+                "geo.location" : {
+                    "lat" : 50,
+                    "lon" : 50
+                }
+            }
+        }
+    }
+}} 
+
+[this searches for regions near 50,50 by 15 miles and by name.]
+SEARCH/GET 'http://localhost:9200/adventure/region/_search' -d
+{ "query" : {
+    "filtered" : {
+        "query" : {
+            "field" : { "name" : "searchQuery" } 
+        },
+        "filter" : {
+            "geo_distance" : {
+                "distance" : "5mi",
+                "geo.location" : {
+                    "lat" : 50,
+                    "lon" : 50
+                }
+            }
+        }
+    }
+}} 

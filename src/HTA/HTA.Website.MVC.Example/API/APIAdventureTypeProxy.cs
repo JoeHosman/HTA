@@ -5,27 +5,20 @@ using ServiceStack.ServiceClient.Web;
 
 namespace HTA.Website.MVC.Example.API
 {
-    internal class APIAdventureTypeProxy : IAdventureTypeRepository
+    internal class APIAdventureTypeProxy :APIProxyBase, IAdventureTypeRepository
     {
-        private readonly JsonServiceClient _client;
-
-        public APIAdventureTypeProxy()
-        {
-            _client = new JsonServiceClient("http://localhost:10768/");
-
-        }
 
         #region Implementation of IAdventureTypeRepository
 
         public IList<AdventureType> GetAdventureTypes()
         {
-            var list = _client.Get<IList<AdventureType>>("/Adventure/Types");
+            var list = Client.Get<List<AdventureType>>("/Adventure/Types");
             return list;
         }
 
         public AdventureType GetAdventureType(string id)
         {
-            var adventureType = _client.Get<AdventureType>("/Adventure/Types/" + id);
+            var adventureType = Client.Get<AdventureType>("/Adventure/Types/" + id);
             return adventureType;
         }
 
@@ -36,13 +29,13 @@ namespace HTA.Website.MVC.Example.API
             //    adventuretype.Id = (_stuff.Count + 1).ToString();
             //    _stuff.Add(adventuretype);
             //}
-            adventuretype = _client.Post<AdventureType>("/Adventure/Types/", adventuretype);
+            adventuretype = Client.Post<AdventureType>("/Adventure/Types/", adventuretype);
             return adventuretype;
         }
 
-        public IList<AdventureDataCard> GetTypeDataCards(string id)
+        public IList<AdventureDataCard> GetTypeDataCards(string typeId)
         {
-            var dataCards = _client.Get<IList<AdventureDataCard>>("/Adventure/Type/DataCards/" + id);
+            var dataCards = Client.Get<IList<AdventureDataCard>>("/Adventure/Type/DataCards/" + typeId);
             return dataCards;
         }
 

@@ -5,31 +5,24 @@ using ServiceStack.ServiceClient.Web;
 
 namespace HTA.Website.MVC.Example.API
 {
-    internal class APIAdventureTypeTemplateProxy : IAdventureTypeTemplateRepository
+    internal class APIAdventureTypeTemplateProxy :APIProxyBase, IAdventureTypeTemplateRepository
     {
-        private readonly JsonServiceClient _client;
-
-        public APIAdventureTypeTemplateProxy()
-        {
-            _client = new JsonServiceClient("http://localhost:10768/");
-
-        }
 
         public IList<AdventureTypeTemplate> GetTypeTemplateList()
         {
-            var list = _client.Get<IList<AdventureTypeTemplate>>("/Adventure/TypeTemplates");
+            var list = Client.Get<IList<AdventureTypeTemplate>>("/Adventure/TypeTemplates");
             return list;
         }
 
         public AdventureTypeTemplate GetTypeTemplate(string id)
         {
-            var adventureType = _client.Get<AdventureTypeTemplate>("/Adventure/TypeTemplates/" + id);
+            var adventureType = Client.Get<AdventureTypeTemplate>("/Adventure/TypeTemplates/" + id);
             return adventureType;
         }
 
         public AdventureTypeTemplate SaveTypeTemplate(AdventureTypeTemplate template)
         {
-            template = _client.Post<AdventureTypeTemplate>("/Adventure/TypeTemplates/", template);
+            template = Client.Post<AdventureTypeTemplate>("/Adventure/TypeTemplates/", template);
             return template;
         }
     }

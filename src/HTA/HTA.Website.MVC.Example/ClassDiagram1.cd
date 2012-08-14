@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HTA.Website.MVC.Example.API.APIAdventureRegionProxy" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAACA=</HashCode>
+      <FileName>API\APIAdventureRegionProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.API.APIAdventureReviewProxy" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAA=</HashCode>
+      <FileName>API\APIAdventureReviewProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.API.APIAdventureTypeProxy" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAABAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>API\APIAdventureTypeProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.API.APIAdventureTypeTemplateProxy" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>API\APIAdventureTypeTemplateProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.API.APIProxyBase" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>API\APIProxyBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.AccountController" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAAABAAAEAAAAAAQAIAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.AdventureLocationController" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdventureLocationController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.AdventureRegionController" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABAAAAAA=</HashCode>
+      <FileName>Controllers\AdventureRegionController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.AdventureReviewController" Collapsed="true">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAACAAEAAAAAgAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdventureReviewController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.AdventureTypeController" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAkABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdventureTypeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.UpdateTypeTemplatesModel" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdventureTypeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.AdventureTypeTemplateController" Collapsed="true">
+    <Position X="15" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgABAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\AdventureTypeTemplateController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Controllers.HomeController" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.MvcApplication" Collapsed="true">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAIQAAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Models.ChangePasswordModel" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\AccountModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Models.LogOnModel" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAQAAAAAgAAA=</HashCode>
+      <FileName>Models\AccountModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Models.RegisterModel" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAACAQAAAAAAIAA=</HashCode>
+      <FileName>Models\AccountModels.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Models.AdventureReviewModel" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAEAAAAAAAAAAAAAAABAABAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\AdventureReviewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HTA.Website.MVC.Example.Models.AdventureTypeModel" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Models\AdventureTypeModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

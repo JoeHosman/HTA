@@ -26,7 +26,7 @@ namespace HTA.Adventures.API.ServiceInterface
             string defaultRangeSetting = Settings.DefaultLocationSearchRange;
             request.ValidateRange(defaultRangeSetting);
 
-            var results = client.Search<AdventureLocation>(s => s
+            var results = client.Search<AdventureSpot>(s => s
                                                             .From(0)  // skip
                                                             .Size(10) // limit
                                                             .Filter(f => f
@@ -54,7 +54,7 @@ namespace HTA.Adventures.API.ServiceInterface
             Request = request;
         }
 
-        public List<AdventureLocation> Result { get; set; }
+        public List<AdventureSpot> Result { get; set; }
 
         public ResponseStatus ResponseStatus { get; set; }
     }

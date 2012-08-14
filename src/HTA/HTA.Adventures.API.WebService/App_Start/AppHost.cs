@@ -61,6 +61,8 @@ namespace HTA.Adventures.API.WebService.App_Start
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeTemplateRepository>();
+            container.RegisterAs<MongoAdventureTypeRepository, IAdventureRegionRepository>();
+            container.RegisterAs<MongoAdventureTypeRepository, IAdventureLocationRepository>();
         }
 
         /* Uncomment to enable ServiceStack Authentication and CustomUserSession

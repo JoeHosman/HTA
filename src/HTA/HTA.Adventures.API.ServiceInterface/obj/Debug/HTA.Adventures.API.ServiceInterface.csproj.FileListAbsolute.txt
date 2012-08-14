@@ -52,3 +52,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\ServiceStac
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\obj\Debug\ResolveAssemblyReference.cache
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\obj\Debug\HTA.Adventures.API.ServiceInterface.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\obj\Debug\HTA.Adventures.API.ServiceInterface.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.xml

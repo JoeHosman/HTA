@@ -9,6 +9,6 @@ namespace HTA.Adventures.Models
         AdventureType GetAdventureType(string id);
         AdventureType SaveAdventureType(AdventureType adventuretype);
 
-        IList<AdventureDataCard> GetTypeDataCards(string id);
+        IList<AdventureDataCard> GetTypeDataCards(string typeId);
     }
 }
