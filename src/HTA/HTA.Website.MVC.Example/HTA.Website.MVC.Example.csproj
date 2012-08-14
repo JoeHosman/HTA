@@ -114,6 +114,7 @@
     <Compile Include="Controllers\AdventureTypeTemplateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\AdventureLocationModel.cs" />
+    <Compile Include="Models\AdventureRegionAdventureLocationsModel.cs" />
     <Compile Include="Models\AdventureReviewModel.cs" />
     <Compile Include="Models\AdventureTypeModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -279,6 +280,7 @@
     <Content Include="Views\AdventureLocation\Index.cshtml" />
     <Content Include="Views\AdventureLocation\Create.cshtml" />
     <Content Include="Views\AdventureLocation\Details.cshtml" />
+    <Content Include="Views\AdventureRegion\Locations.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

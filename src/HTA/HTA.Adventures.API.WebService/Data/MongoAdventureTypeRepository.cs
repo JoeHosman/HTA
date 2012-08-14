@@ -152,6 +152,11 @@ namespace HTA.Adventures.API.WebService.Data
                        : AdventureLocationRepository.Update(model);
         }
 
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        {
+            return AdventureLocationRepository.All(l => l.AdventureRegion.Id == regionId).ToList();
+        }
+
         #endregion
     }
 }

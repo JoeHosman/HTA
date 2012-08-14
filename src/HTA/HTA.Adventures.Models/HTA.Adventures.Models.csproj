@@ -75,6 +75,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdventureRegionRepository.cs" />
     <Compile Include="Types\AdventureLocation.cs" />
     <Compile Include="Types\AdventureRegion.cs" />
     <Compile Include="IAdventureLocationRepository.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Types\GeoRange.cs" />
     <Compile Include="Types\LocationPoint.cs" />
     <Compile Include="Types\NearBySearch.cs" />
+    <Compile Include="Types\RegionLocations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

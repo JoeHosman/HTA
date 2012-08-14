@@ -4,6 +4,16 @@ using ServiceStack.ServiceInterface;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
+    public class AdventureRegionAdventureLocationsService : RestServiceBase<AdventureRegionAdventureLocationsRequest>
+    {
+        public IAdventureLocationRepository AdventureLocationRepository { get; set; }
+        public override object OnGet(AdventureRegionAdventureLocationsRequest request)
+        {
+            return AdventureLocationRepository.GetRegionAdventureLocations(request.RegionId);
+        }
+
+    }
+
     public class AdventureLocationService : RestServiceBase<AdventureLocation>
     {
         public IAdventureLocationRepository AdventureLocationRepository { get; set; }

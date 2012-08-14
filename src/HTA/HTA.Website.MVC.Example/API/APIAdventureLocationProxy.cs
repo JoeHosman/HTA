@@ -23,5 +23,11 @@ namespace HTA.Website.MVC.Example.API
             var Location = Client.Post<AdventureLocation>("/Adventure/Locations/" + model.Id, model);
             return Location;
         }
+
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        {
+            var locations = Client.Get<List<AdventureLocation>>("/Adventure/Region/Locations/" + regionId);
+            return locations;
+        }
     }
 }
