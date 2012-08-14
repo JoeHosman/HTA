@@ -21,8 +21,10 @@ namespace HTA.Website.MVC.Example.Controllers
             var model = new AdventureLocationModel();
 
             model.SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions();
+            model.SelectableAdventureRegions.Insert(0, new AdventureRegion(new LocationPoint() { Lat = double.MaxValue }, "** Create New Region **", "", ""));
             return View(model);
         }
+
         [HttpPost]
         public ActionResult Create(AdventureLocationModel model)
         {
@@ -30,11 +32,10 @@ namespace HTA.Website.MVC.Example.Controllers
             {
                 // Assign the adventure region to the location object.
                 model.AdventureLocation
-                    .AdventureRegion =_adventureRegionRepository
+                    .AdventureRegion = _adventureRegionRepository
                                         .GetAdventureRegion(model.AdventureLocation.AdventureRegion.Id);
 
                 var location = _adventureLocationRepository.SaveAdventureReview(model.AdventureLocation);
-
 
                 return View("Details", location);
             }
@@ -50,7 +51,13 @@ namespace HTA.Website.MVC.Example.Controllers
         public ActionResult Edit(string id)
         {
             var location = _adventureLocationRepository.GetAdventureLocation(id);
-            return View(location);
+
+            var model = new AdventureLocationModel()
+                            {
+                                AdventureLocation = location,
+                                SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions()
+                            };
+            return View(model);
         }
 
         public ActionResult Delete(string id)
