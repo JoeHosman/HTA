@@ -50,5 +50,17 @@ namespace HTA.Website.MVC.Example.Controllers
 
             return View(model);
         }
+
+        public ActionResult Edit(string id)
+        {
+            var region = _adventureRegionRepository.GetAdventureRegion(id);
+            var regionLocations = _adventureLocationRepository.GetRegionAdventureLocations(id);
+
+            var model = new AdventureRegionAdventureLocationsModel();
+            model.Region = region;
+            model.Locations = regionLocations;
+
+            return View(model);
+        }
     }
 }
