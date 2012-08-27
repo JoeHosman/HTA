@@ -32,9 +32,9 @@ xmlns:fb="http://www.facebook.com/2008/fbml">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </a>
-        <a class="brand" href="#">
+        <a class="brand" href="@Url.Action("Index", "Home")">
             <img src="@Url.Content("~/Content/Images/HeaderLogo.png")" /></a>
-        <div class="nav-collapse">
+        <div class="nav-collapse pull-right">
           <ul class="nav">
             <li>@Html.ActionLink("Home", "Index", "Home")</li>
             <li class="dropdown">

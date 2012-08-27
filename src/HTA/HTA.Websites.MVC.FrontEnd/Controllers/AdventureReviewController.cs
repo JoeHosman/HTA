@@ -113,7 +113,7 @@ namespace HTA.Websites.MVC.FrontEnd.Controllers
 
         public ActionResult Delete(string id)
         {
-            AdventureReview adventurereview = null;
+            AdventureReview adventurereview = AdventureReviewRepository.GetAdventureReviewById(id);
             return View(adventurereview);
         }
 
@@ -123,7 +123,7 @@ namespace HTA.Websites.MVC.FrontEnd.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(string id)
         {
-            AdventureReview adventurereview = null;
+            AdventureReview adventurereview = AdventureReviewRepository.GetAdventureReviewById(id);
             return RedirectToAction("Index");
         }
     }

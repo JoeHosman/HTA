@@ -3,7 +3,10 @@
 @{
     ViewBag.Title = "Delete";
 }
-
+<section id="content">
+<div class="row">
+    <div class="span8" >
+    <div class="span7">
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
@@ -14,6 +17,10 @@
     <div class="display-field">
         @Html.DisplayFor(model => model.Name)
     </div>
+    <div class="display-label">ID</div>
+    <div class="display-field">
+    @Html.DisplayFor(model => model.Id)
+    </div>
 </fieldset>
 @using (Html.BeginForm()) {
     <p>
@@ -21,3 +28,7 @@
         @Html.ActionLink("Back to List", "Index")
     </p>
 }
+    </div>
+    </div>
+    </div>
+    </section>
