@@ -13,10 +13,18 @@ namespace HTA.Adventures.Models.Types
     public class AdventureLocation : AdventureSpot
     {
         public AdventureLocation() : base() { AdventureRegion = new AdventureRegion(); }
-        public AdventureLocation(LocationPoint locationPoint, string name, string address, string picture)
-            : base(locationPoint, name, address, picture)
+        public AdventureLocation(LocationPoint locationPoint, string name)
+            : base(locationPoint, name)
         {
-            AdventureRegion = new AdventureRegion(locationPoint, name, address, picture);
+        }
+
+        public AdventureLocation(AdventureRegion adventureRegion)
+        {
+            base.LocationPoint = adventureRegion.LocationPoint;
+            base.Address = adventureRegion.Address;
+            base.Name = adventureRegion.Name;
+            base.Picture = adventureRegion.Picture;
+            AdventureRegion = adventureRegion;
         }
 
         [ElasticProperty(Name = "region")]

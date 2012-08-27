@@ -55,3 +55,5 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\obj\Debug\HTA.Adventu
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\MongoDB.Bson.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\HTA.Adventures.Data.ModelValidation.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.ServiceInterface\bin\Debug\HTA.Adventures.Data.ModelValidation.pdb

@@ -28,7 +28,7 @@ namespace HTA.Adventures.API.ServiceInterface
 
         public override object OnPost(AdventureLocation request)
         {
-            return AdventureLocationRepository.SaveAdventureReview(request);
+            return AdventureLocationRepository.SaveAdventureLocation(request);
         }
     }
 }

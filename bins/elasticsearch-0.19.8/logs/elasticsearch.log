@@ -9,3 +9,119 @@
 [2012-08-13 21:13:50,250][INFO ][gateway                  ] [Maxam] recovered [0] indices into cluster_state
 [2012-08-13 21:13:50,283][INFO ][http                     ] [Maxam] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.8.1.108:9200]}
 [2012-08-13 21:13:50,283][INFO ][node                     ] [Maxam] {0.19.8}[8040]: started
+[2012-08-14 18:13:14,026][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2012-08-14 18:13:14,030][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: initializing ...
+[2012-08-14 18:13:14,034][INFO ][plugins                  ] [Gargantus] loaded [], sites []
+[2012-08-14 18:13:16,427][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: initialized
+[2012-08-14 18:13:16,427][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: starting ...
+[2012-08-14 18:13:16,550][INFO ][transport                ] [Gargantus] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.8.1.108:9300]}
+[2012-08-14 18:13:19,723][INFO ][cluster.service          ] [Gargantus] new_master [Gargantus][C65wBdzGTqOtBAOu6SqE-A][inet[/10.8.1.108:9300]], reason: zen-disco-join (elected_as_master)
+[2012-08-14 18:13:19,739][INFO ][discovery                ] [Gargantus] elasticsearch/C65wBdzGTqOtBAOu6SqE-A
+[2012-08-14 18:13:19,772][INFO ][gateway                  ] [Gargantus] recovered [0] indices into cluster_state
+[2012-08-14 18:13:19,827][INFO ][http                     ] [Gargantus] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.8.1.108:9200]}
+[2012-08-14 18:13:19,827][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: started
+[2012-08-14 18:35:57,705][INFO ][cluster.metadata         ] [Gargantus] [adventure] creating index, cause [api], shards [5]/[1], mappings []
+[2012-08-14 20:35:58,275][WARN ][index.engine.robin       ] [Gargantus] [adventure][4] failed to read latest segment infos on flush
+java.io.FileNotFoundException: E:\Dev\git\HTA\bins\elasticsearch-0.19.8\data\elasticsearch\nodes\0\indices\adventure\4\index\segments_1 (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(Unknown Source)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.SimpleFSDirectory.openInput(SimpleFSDirectory.java:58)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:905)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:508)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2012-08-14 20:35:58,289][WARN ][index.engine.robin       ] [Gargantus] [adventure][3] failed to read latest segment infos on flush
+java.io.FileNotFoundException: E:\Dev\git\HTA\bins\elasticsearch-0.19.8\data\elasticsearch\nodes\0\indices\adventure\3\index\segments_1 (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(Unknown Source)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.SimpleFSDirectory.openInput(SimpleFSDirectory.java:58)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:905)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:508)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2012-08-14 20:36:03,191][WARN ][index.engine.robin       ] [Gargantus] [adventure][0] failed to read latest segment infos on flush
+java.io.FileNotFoundException: E:\Dev\git\HTA\bins\elasticsearch-0.19.8\data\elasticsearch\nodes\0\indices\adventure\0\index\segments_1 (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(Unknown Source)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.SimpleFSDirectory.openInput(SimpleFSDirectory.java:58)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:905)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:508)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2012-08-14 20:36:03,204][WARN ][index.engine.robin       ] [Gargantus] [adventure][1] failed to read latest segment infos on flush
+java.io.FileNotFoundException: E:\Dev\git\HTA\bins\elasticsearch-0.19.8\data\elasticsearch\nodes\0\indices\adventure\1\index\segments_1 (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(Unknown Source)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.SimpleFSDirectory.openInput(SimpleFSDirectory.java:58)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:905)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:508)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2012-08-14 20:36:03,263][WARN ][index.engine.robin       ] [Gargantus] [adventure][2] failed to read latest segment infos on flush
+java.io.FileNotFoundException: E:\Dev\git\HTA\bins\elasticsearch-0.19.8\data\elasticsearch\nodes\0\indices\adventure\2\index\segments_1 (The system cannot find the file specified)
+	at java.io.RandomAccessFile.open(Native Method)
+	at java.io.RandomAccessFile.<init>(Unknown Source)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput$Descriptor.<init>(SimpleFSDirectory.java:71)
+	at org.apache.lucene.store.SimpleFSDirectory$SimpleFSIndexInput.<init>(SimpleFSDirectory.java:98)
+	at org.apache.lucene.store.SimpleFSDirectory.openInput(SimpleFSDirectory.java:58)
+	at org.apache.lucene.store.FSDirectory.openInput(FSDirectory.java:345)
+	at org.elasticsearch.index.store.Store$StoreDirectory.openInput(Store.java:521)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:265)
+	at org.apache.lucene.index.SegmentInfos$1.doBody(SegmentInfos.java:363)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:709)
+	at org.apache.lucene.index.SegmentInfos$FindSegmentsFile.run(SegmentInfos.java:554)
+	at org.apache.lucene.index.SegmentInfos.read(SegmentInfos.java:359)
+	at org.elasticsearch.index.engine.robin.RobinEngine.flush(RobinEngine.java:905)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.flush(InternalIndexShard.java:508)
+	at org.elasticsearch.index.translog.TranslogService$TranslogBasedFlush$1.run(TranslogService.java:191)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+[2012-08-14 20:50:01,513][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: stopping ...
+[2012-08-14 20:50:01,529][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: stopped
+[2012-08-14 20:50:01,529][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: closing ...
+[2012-08-14 20:50:01,532][INFO ][node                     ] [Gargantus] {0.19.8}[7308]: closed

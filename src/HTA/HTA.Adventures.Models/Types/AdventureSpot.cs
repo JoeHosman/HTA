@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
 using DreamSongs.MongoRepository;
 using MongoDB.Bson.Serialization.Attributes;
 using Nest;
@@ -11,10 +12,12 @@ namespace HTA.Adventures.Models.Types
     {
         [ElasticProperty(Name = "geo_location")]
         [DataMember]
+        [Required]
         public LocationPoint LocationPoint { get; set; }
 
         [ElasticProperty(Name = "name")]
         [DataMember]
+        [Required]
         public string Name { get; set; }
 
         [ElasticProperty(Name = "address")]
@@ -27,15 +30,14 @@ namespace HTA.Adventures.Models.Types
 
         public AdventureSpot()
         {
-
+            Name = "";
+            LocationPoint = new LocationPoint();
         }
 
-        public AdventureSpot(LocationPoint locationPoint, string name, string address, string picture)
+        public AdventureSpot(LocationPoint locationPoint, string name)
         {
             LocationPoint = locationPoint;
             Name = name;
-            Address = address;
-            Picture = picture;
         }
     }
 }

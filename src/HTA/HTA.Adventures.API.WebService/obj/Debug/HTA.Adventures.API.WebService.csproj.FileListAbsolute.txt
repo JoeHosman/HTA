@@ -130,3 +130,5 @@ D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.xml
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.pdb
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.xml
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.Data.ModelValidation.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.Data.ModelValidation.pdb

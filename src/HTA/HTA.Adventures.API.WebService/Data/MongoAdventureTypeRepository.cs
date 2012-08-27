@@ -145,7 +145,7 @@ namespace HTA.Adventures.API.WebService.Data
             return AdventureLocationRepository.GetById(id);
         }
 
-        public AdventureLocation SaveAdventureReview(AdventureLocation model)
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
         {
             return (string.IsNullOrEmpty(model.Id))
                        ? AdventureLocationRepository.Add(model)

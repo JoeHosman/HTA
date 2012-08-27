@@ -7,7 +7,7 @@ namespace HTA.Adventures.Models
     {
         IList<AdventureLocation> GetAdventureLocations();
         AdventureLocation GetAdventureLocation(string id);
-        AdventureLocation SaveAdventureReview(AdventureLocation model);
+        AdventureLocation SaveAdventureLocation(AdventureLocation model);
         IList<AdventureLocation> GetRegionAdventureLocations(string regionId);
     }
 }

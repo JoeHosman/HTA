@@ -18,7 +18,7 @@ namespace HTA.Website.MVC.Example.API
             return adventureLocation;
         }
 
-        public AdventureLocation SaveAdventureReview(AdventureLocation model)
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
         {
             var Location = Client.Post<AdventureLocation>("/Adventure/Locations/" + model.Id, model);
             return Location;

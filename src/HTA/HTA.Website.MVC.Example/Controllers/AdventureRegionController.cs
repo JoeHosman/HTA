@@ -88,7 +88,7 @@ namespace HTA.Website.MVC.Example.Controllers
 
                     location.AdventureRegion = model.Region;
 
-                    _adventureLocationRepository.SaveAdventureReview(location);
+                    _adventureLocationRepository.SaveAdventureLocation(location);
                     locations.Add(location);
                 }
 
