@@ -29,13 +29,12 @@ namespace HTA.Websites.API.Tests
         {
             var validator = new AdventureSpotValidator();
             // First test sending null :(
-            AdventureRegion nullAdventureRegion = null;
-            Assert.AreNotEqual(0, validator.Validate(nullAdventureRegion).Count);
+            Assert.AreNotEqual(0, validator.Validate(null).Count);
 
-            var nullResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", nullAdventureRegion);
+            var nullResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", null);
             Assert.IsFalse(String.IsNullOrEmpty(nullResponse.ResponseStatus.ErrorCode));
 
-            AdventureRegion validAdventureRegion = new AdventureRegion(new LocationPoint { Lat = 0, Lon = 0 }, "Name");
+            var validAdventureRegion = new AdventureRegion(new LocationPoint { Lat = 0, Lon = 0 }, "Name");
             Assert.AreEqual(0, validator.Validate(validAdventureRegion).Count);
 
             var validResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", validAdventureRegion);

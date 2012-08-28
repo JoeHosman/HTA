@@ -12,9 +12,9 @@ namespace HTA.Adventures.Models.Tests
     ///to contain all AdventureRegionTest Unit Tests
     ///</summary>
     [TestClass()]
-    public class AdventureSpotTest
+    public class AdventureRegionTests
     {
-        public const int ValidResultCount = GenericValidator<AdventureRegion>.ValidResultCount;
+        public const int ValidResultCount = 0;
 
         /// <summary>
         ///Gets or sets the test context which provides

@@ -70,7 +70,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureSpotTest.cs" />
+    <Compile Include="AdventureRegionTests.cs" />
     <Compile Include="LocationPointTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

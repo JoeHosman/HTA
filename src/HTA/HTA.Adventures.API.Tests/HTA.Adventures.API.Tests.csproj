@@ -58,6 +58,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureLocationTests.cs" />
+    <Compile Include="AdventureReviewTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AdventureRegionTests.cs" />
   </ItemGroup>
