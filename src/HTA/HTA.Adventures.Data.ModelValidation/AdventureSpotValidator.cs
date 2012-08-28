@@ -4,20 +4,52 @@ using HTA.Adventures.Models.Types;
 
 namespace HTA.Adventures.Data.ModelValidation
 {
-    public sealed class GeoLocationValidator
+    public sealed class AdventureReviewValidator
     {
-        public IList<ValidationResult> Validate(LocationPoint locationPoint)
+        private readonly GenericValidator<AdventureReview> _reviewValidator;
+        private readonly GenericValidator<AdventureType> _typeValidator;
+        private readonly AdventureSpotValidator _adventureSpotValidator;
+
+        public AdventureReviewValidator()
+        {
+            _reviewValidator = new GenericValidator<AdventureReview>();
+            _typeValidator = new GenericValidator<AdventureType>();
+            _adventureSpotValidator = new AdventureSpotValidator();
+        }
+
+        public IList<ValidationResult> Validate(AdventureReview entity)
         {
             var results = new List<ValidationResult>();
-            if (locationPoint == null || locationPoint.Lat < -91.0 || locationPoint.Lat > 91.0)
-                results.Add(new ValidationResult("Lat must be between -90.0 and 90.0"));
+            var spotValidationResults = _reviewValidator.Validate(entity);
+            results.AddRange(spotValidationResults);
 
-            if (locationPoint == null || locationPoint.Lon < -91.0 || locationPoint.Lon > 91.0)
-                results.Add(new ValidationResult("Lon must be between -90.0 and 90.0"));
+            if (entity != null)
+            {
+                if (entity.AdventureType != null)
+                {
+                    var typeValidationResults = _typeValidator.Validate(entity.AdventureType);
+                    results.AddRange(typeValidationResults);
+                }
+                else
+                {
+                    results.Add(new ValidationResult("Null AdventureType"));
+                }
+
+                if (entity.AdventureLocation != null)
+                {
+                    var regionSpotValidationResults = _adventureSpotValidator.Validate(entity.AdventureLocation);
+                    results.AddRange(regionSpotValidationResults);
+                }
+                else
+                {
+                    results.Add(new ValidationResult("Null AdventureLocation"));
+                }
+            }
 
             return results;
         }
     }
+
     public sealed class AdventureSpotValidator
     {
         private readonly GenericValidator<AdventureSpot> _spotValidator;
@@ -37,7 +69,7 @@ namespace HTA.Adventures.Data.ModelValidation
             var spotValidationResults = _spotValidator.Validate(entity);
             results.AddRange(spotValidationResults);
 
-            if (entity!= null &&  entity.LocationPoint != null)
+            if (entity != null && entity.LocationPoint != null)
             {
                 var locValidationResults = _locationValidator.Validate(entity.LocationPoint);
                 results.AddRange(locValidationResults);

@@ -24,10 +24,24 @@ namespace HTA.Websites.API.Tests
         {
             var validator = new GenericValidator<AdventureReview>();
 
-            Assert.AreNotEqual(0, validator.Validate(null), "Null should not be valid");
+            Assert.AreNotEqual(0, validator.Validate(null).Count, "Null should not be valid");
+            Assert.AreNotEqual(0, validator.Validate(new AdventureReview()).Count, "new AdventureReview() should not be valid");
 
-            var nullResult = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", null);
-            Assert.IsFalse(string.IsNullOrEmpty(nullResult.ResponseStatus.ErrorCode));
+            var nullReviewResults = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", null);
+            Assert.IsFalse(string.IsNullOrEmpty(nullReviewResults.ResponseStatus.ErrorCode));
+
+            var validReview = new AdventureReview
+                                  {
+                                      Name = "My Adventure",
+                                      AdventureType = new AdventureType() { Name = "type" },
+                                      AdventureLocation = new AdventureLocation(new AdventureRegion(new LocationPoint { Lat = 50, Lon = 50 }, "Location"))
+
+                                  };
+
+            Assert.AreEqual(0, validator.Validate(validReview).Count);
+
+            var validReviewResults = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", validReview);
+            Assert.IsTrue(string.IsNullOrEmpty(validReviewResults.ResponseStatus.ErrorCode));
         }
     }
 }

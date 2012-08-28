@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AdventureSpotValidator.cs" />
     <Compile Include="GenericValidator.cs" />
+    <Compile Include="GeoLocationValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

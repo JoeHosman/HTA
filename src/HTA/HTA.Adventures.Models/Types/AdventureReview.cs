@@ -15,17 +15,25 @@ namespace HTA.Adventures.Models.Types
         public AdventureReview()
         {
             DataCards = new List<AdventureDataCard>();
+
         }
-        [Required]
+        
         [DataMember]
+        [Required]
         public string Name { get; set; }
 
-
+        
         [DataMember]
+        [Required]
         public AdventureType AdventureType { get; set; }
 
         [DataMember]
+        [Required]
         public IList<AdventureDataCard> DataCards { get; set; }
+
+        [DataMember]
+        [Required]
+        public AdventureLocation AdventureLocation { get; set; }
     }
 
     public class AdventureReviewResponse : IHasResponseStatus
