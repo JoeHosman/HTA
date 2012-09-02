@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="2d3203ba-f370-4535-bfe6-07165c5ab41a" name="Review" linkedPackageId="e0a7aaa8-b292-4c55-8cb2-20961c27f9f6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="f7a6cfc9-2b61-47fd-94a7-96f0d1e468b0">
+      <profileInstance Id="97f93001-07b0-43ba-af41-12118d46fd07" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="879ec4c6-7104-49e5-8201-2f1f28116a39">
+      <profileInstance Id="2ab04da9-b61f-4e9b-beb0-fbae5213129e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1920b8a4-456b-4585-bcc6-9b4576cbb395" name="Review" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6cb2fe43-a2a6-4fc4-9c24-cf4bdbb99cc5" />
+        <targetEnds>
+          <association Id="9d717268-39db-471a-8bf2-4d8d2a807a8e" isDerived="false" sourceEndRoleName="Reviews" targetEndRoleName="Location" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d4c273f0-66c1-432f-ba44-c2cd4bf02683" LastKnownName="Location" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4127b821-8913-48af-928c-c1f5ca20e242" name="Reviews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="2ae24419-bdfa-44ab-8955-c7473fa8a6c0" name="Lower" value="*">
+                      <elementDefinition Id="8a3eda90-b0dc-44cb-b8fb-4bd78ca176c8" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="fce1330a-116c-45c1-8b2e-1f0673a88c04" name="Upper" value="*">
+                      <elementDefinition Id="bda741a5-a2db-4ff1-bc13-792c2e4f4051" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c543268f-b413-4e77-8813-62cc1f963c1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="137da779-729f-422e-848b-f057533d4c0e" name="Location" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c77fe7e6-4f9d-4f90-aa3a-607c8ed1c9a3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="43598987-c5a3-401d-b4fd-45efc5eacdf7" />
+          </association>
+          <association Id="93b4d226-e78b-47a2-818d-31d823729141" isDerived="false" sourceEndRoleName="Reviews" targetEndRoleName="AdventureType" isLeaf="false" isAbstract="false">
+            <classMoniker Id="85824942-c674-450f-a97d-0d9bd9d7ec2a" LastKnownName="AdventureType" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c4816356-aaf3-4e0c-9f9f-e2c8b6a8323f" name="Reviews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="c5269fbb-66dc-4c88-8f7d-5772c5aecf46" name="Lower" value="*">
+                      <elementDefinition Id="953307c6-d644-41ef-b412-0e316fe7e82b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c1e4088b-782f-4849-8d58-798e55dfcfd8" name="Upper" value="*">
+                      <elementDefinition Id="bc5ce731-bf10-4d10-a7ab-d21bc44e6ab2" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="9845f175-9b86-4644-8d4d-9f01bc1defea" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3785f4c6-82a1-4406-a50d-be81f82ac64a" name="AdventureType" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="27b29686-4538-4b4b-86ab-5bee323b357d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="16021d4e-b79c-4ccb-b56c-f8a7fee38762" />
+          </association>
+          <association Id="53577d48-2156-4b81-b3d8-cd2c3f49ae5a" isDerived="false" sourceEndRoleName="Review" targetEndRoleName="DataCards" isLeaf="false" isAbstract="false">
+            <classMoniker Id="57221db6-ff0e-4a7f-a965-3f918e543fec" LastKnownName="DataCard" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60d94991-6698-4194-9130-01732f2f9f3a" name="Review" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cb1cebd9-e841-482c-b5c4-c00eb3ac3d84" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d514d7ce-47c4-47fe-885d-7839584f70b3" name="DataCards" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="51ccf4eb-fd13-47fd-aed1-1754954647e1" name="Lower" value="*">
+                      <elementDefinition Id="ec50fd11-2c57-4398-b651-2b719f1c7cc0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="06f5924b-50fe-41cb-8842-89e8b8064882" name="Upper" value="*">
+                      <elementDefinition Id="9042cc6a-ccc5-4b54-8d00-2204928b00b7" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="693bd74a-3cb0-44ac-a39f-d13ed6433e86" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8aadb8a8-203c-4774-9b9c-fe03da7ec389" />
+          </association>
+          <association Id="200ef77d-2a3f-47e1-89c3-6f86f32ea24f" isDerived="false" sourceEndRoleName="Reviews" targetEndRoleName="Author" isLeaf="false" isAbstract="false">
+            <classMoniker Id="22b943da-01b5-4fc7-9f6e-804b473f5033" LastKnownName="Adventuerer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90bdb5c6-231c-445d-9404-3810176a0414" name="Reviews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="d3d23a47-d093-450d-a52e-1962f1a7a036" name="Lower" value="*">
+                      <elementDefinition Id="bb3a6ed6-159d-4002-8924-795c6b36f556" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c33e8e9f-5429-4b2d-bba8-47b861279121" name="Upper" value="*">
+                      <elementDefinition Id="01e04c34-25e5-442c-8e32-6d1be84c4076" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="48bdbd96-af6a-4757-8873-4612d44d346f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3cd68455-73f5-4707-a89d-5da8e31a99c2" name="Author" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1af4dac7-17f4-4eca-b904-75b7110b93a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1532e7ad-910d-47e6-a49f-84f88701727b" />
+          </association>
+          <association Id="dcf2f3e6-b4ef-4bc2-8154-981f0b23ab59" isDerived="false" sourceEndRoleName="Review" targetEndRoleName="Photo" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7b3fbfb8-3772-4170-83fe-4b3a09fa9670" LastKnownName="Photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="89f22bcb-591d-457c-83fd-fa3026a578b0" name="Review" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d004b26e-d9f7-4a77-ac23-404715caa325" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed0f06d8-3bff-4965-b555-386d9dfb4b31" name="Photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="13546067-ef6b-4803-ab18-85915763218c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2600ba37-8401-420d-8c05-a4ebf1c92811" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d4c273f0-66c1-432f-ba44-c2cd4bf02683" name="Location" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b08d2ea6-4654-4f8f-b99e-ed806d723b6b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4d6b2671-2941-4666-8f98-07af39f83d6e" name="Region" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="58b70d5f-9ddb-4a2a-9fb3-314162a93386" />
+        <targetEnds>
+          <association Id="21de7481-1d48-4f16-8a39-297c49ea231d" isDerived="false" sourceEndRoleName="Region" targetEndRoleName="Locations" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d4c273f0-66c1-432f-ba44-c2cd4bf02683" LastKnownName="Location" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81316569-ec64-4cd8-bace-2d4c9e1dcc08" name="Region" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="827e60c7-8bd8-4a8e-a8ca-7fb76af5ec97" name="Lower" value="0">
+                      <elementDefinition Id="d3880192-e0f6-401d-b17b-b7d8b9d52026" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6bd30999-5b8a-4f50-b8b7-4d0409d7bc8c" name="Upper" value="1">
+                      <elementDefinition Id="17c7ca65-d930-4367-b64f-9c49abd93988" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c8db4a50-b0c6-41fb-965e-f4e17434f567" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70a4e968-bee1-4334-8fdf-9eef176c115d" name="Locations" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="8c347a87-7727-45a7-a168-26c79b97ad34" name="Lower" value="1">
+                      <elementDefinition Id="d845ca6b-2da5-42c7-af24-bc7fc5ee39a1" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="a216a351-5aed-4964-a3a8-9424593b1bcd" name="Upper" value="*">
+                      <elementDefinition Id="829c4805-4dde-4d93-81b6-d796054162f9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="13127db2-fc49-42a0-8c45-a01a68f90c55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff4871ca-05d9-4f5d-be65-ed7c525cb608" />
+          </association>
+          <association Id="7d2b122e-c17e-4414-b61a-f8c45176bfbf" isDerived="false" sourceEndRoleName="Region" targetEndRoleName="Reviews" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1920b8a4-456b-4585-bcc6-9b4576cbb395" LastKnownName="Review" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d5c7da5b-20bd-4b06-8a7a-f1b49652400f" name="Region" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="143d6e3b-3db6-442f-8da8-79c2fa0a8b0c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="943169c1-14d2-4507-97aa-2878231786d0" name="Reviews" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="dffdc6a0-36e2-4262-bd8a-1c666ef2b07d" name="Lower" value="*">
+                      <elementDefinition Id="ce4a166c-f69c-4d61-8a5e-d172e26691e7" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2adb2dfc-404d-4f3d-bd1c-84dff16406fe" name="Upper" value="*">
+                      <elementDefinition Id="1ff14f85-8c6c-468d-ac4f-2a2093b2ec7e" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="9c06bf83-e5de-4a55-8894-2d9e6c6de0c7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="99babb55-6ef7-4fea-a4ac-af56eef0c633" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="85824942-c674-450f-a97d-0d9bd9d7ec2a" name="AdventureType" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7502e899-7362-4664-980c-2a220f112bce" />
+        <ownedAttributesInternal>
+          <property Id="cddb2f1f-886d-4323-b0dd-c20453c2008e" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d662bad8-cfe1-4ef8-ba82-01ab4d174d60" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="db27379a-5823-44e7-8a99-e5daaa5acd51" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="edcd9b82-6e40-4ddd-9d55-836bde221fac" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="05347776-0219-4be1-85c8-ea99b8da00c8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="db27379a-5823-44e7-8a99-e5daaa5acd51" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="6ab580df-10c3-41d9-b23b-bf8aeb5bb5fe" name="PhotoLink" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="96966f5e-c3c3-49b9-9fc1-5881e302fc8a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="db27379a-5823-44e7-8a99-e5daaa5acd51" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="35f6baec-2649-4b83-8243-85bc41a0fa3f" name="IconLink" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1eb45562-cd92-4b2b-ba6e-79ba21df9382" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="db27379a-5823-44e7-8a99-e5daaa5acd51" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="bb1b1870-0353-4f5f-afb4-b590c0e7da83" name="Templates" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3a3667a9-7347-4919-80f0-35b9fde1d120" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7072254c-a00f-48a6-bf80-067c1de0c2d5" LastKnownName="IList&lt;AdventureTypeTemplate&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="db27379a-5823-44e7-8a99-e5daaa5acd51" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7072254c-a00f-48a6-bf80-067c1de0c2d5" name="IList&lt;AdventureTypeTemplate&gt;" isAbstract="false" isLeaf="false" cachedFullName="IList&lt;AdventureTypeTemplate&gt;">
+        <elementDefinition Id="e59d49e6-e931-493e-911d-84947b4a351c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="22b943da-01b5-4fc7-9f6e-804b473f5033" name="Adventuerer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cb8e5563-1d1a-46d6-9342-ca80a520d08b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="57221db6-ff0e-4a7f-a965-3f918e543fec" name="DataCard" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="874ad936-3197-49a8-ba15-5bbb5c052275" />
+        <targetEnds>
+          <association Id="ec802b05-e0f0-4667-8d46-2f113a43e815" isDerived="false" sourceEndRoleName="DataCards" targetEndRoleName="Author" isLeaf="false" isAbstract="false">
+            <classMoniker Id="22b943da-01b5-4fc7-9f6e-804b473f5033" LastKnownName="Adventuerer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6a08fea6-c355-4bf1-97cd-cc2600d1b99d" name="DataCards" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="4a02c1d6-bf5f-4e91-bcc7-4e5f0c13acfa" name="Lower" value="*">
+                      <elementDefinition Id="bb010bf6-b0be-443c-938b-d9d09973110e" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="06780e95-ab38-4900-9166-4055f6c487c7" name="Upper" value="*">
+                      <elementDefinition Id="d4130df4-61d5-40bf-ba8c-62d0464e3878" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b62d4f9b-6dc4-4e65-88b6-9e027209e6c0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d8449595-1a78-4e15-b359-1745ef6068c2" name="Author" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="81d8bbc2-e3e3-46b0-a0d7-9cf114fa911a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="852af3ca-682b-4cc9-99f5-4f58081133d4" />
+          </association>
+          <association Id="5e92e32b-cb47-4fc6-a3ec-e8c2208f3db2" isDerived="false" sourceEndRoleName="DataCards" targetEndRoleName="Photo" isLeaf="false" isAbstract="false">
+            <classMoniker Id="7b3fbfb8-3772-4170-83fe-4b3a09fa9670" LastKnownName="Photo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="545f8e4d-5eba-47ce-a384-a6f28e22486e" name="DataCards" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="7461de65-e990-4a4e-a759-941c1801e8e0" name="Lower" value="*">
+                      <elementDefinition Id="bad647b4-1b84-4ff4-b391-bcb92ea72588" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3a6e740a-dffc-4778-ba65-09911111be5f" name="Upper" value="*">
+                      <elementDefinition Id="6d1e7a03-8888-413e-8940-3f89b1742527" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="8e06d825-da05-44fb-8457-9f8f71b8afc7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1414a31a-cbd8-4532-948d-501ac1ff5bdc" name="Photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1150e494-d326-4c48-9dbb-410ce326462f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="10a60317-5467-4030-bde3-06e26f3c5f8e" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7b3fbfb8-3772-4170-83fe-4b3a09fa9670" name="Photo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e70f66e7-e4a2-474e-8ce2-25022cf0ed36" />
+        <targetEnds>
+          <association Id="c7e44d28-372e-49b8-84f4-3a175113b719" isDerived="false" sourceEndRoleName="Photo" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="22b943da-01b5-4fc7-9f6e-804b473f5033" LastKnownName="Adventuerer" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0417c5f5-f156-423b-9833-08a8cc1493d9" name="Photo" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="dda28e14-2016-4b8d-aeb0-1d65f7209897" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f79f6ed9-cfad-487c-8eb4-a9e30115bc44" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="7c7787cd-11f4-4a0d-9b67-73b1515c75d8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bc87d015-4f5f-47c2-b75e-aef1764cfa31" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="e0a7aaa8-b292-4c55-8cb2-20961c27f9f6" name="HTA.DesignModel">
+    <elementDefinition Id="8e8701da-f83b-4683-a2da-c7012e4d4903" />
+  </package>
+</logicalClassDesignerModel>

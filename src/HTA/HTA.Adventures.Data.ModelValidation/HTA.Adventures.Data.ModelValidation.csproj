@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdventureReviewValidator.cs" />
     <Compile Include="AdventureSpotValidator.cs" />
     <Compile Include="GenericValidator.cs" />
     <Compile Include="GeoLocationValidator.cs" />

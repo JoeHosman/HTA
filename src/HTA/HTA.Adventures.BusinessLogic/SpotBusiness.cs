@@ -10,7 +10,7 @@ namespace HTA.Adventures.BusinessLogic
 {
     public class SpotBusiness : IDisposable
     {
-        public bool Validate(Location item)
+        public bool Validate(Spot item)
         {
             IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             if (item != null)
