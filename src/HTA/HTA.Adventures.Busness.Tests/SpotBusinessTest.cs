@@ -1,11 +1,11 @@
-﻿using HTA.Adventures.BusinessLogic;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using HTA.Adventures.BusinessLogic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using HTA.Adventures.Models.Types;
 
 namespace HTA.Adventures.Busness.Tests
 {
-
-
     /// <summary>
     ///This is a test class for SpotBusinessTest and is intended
     ///to contain all SpotBusinessTest Unit Tests
@@ -64,27 +64,35 @@ namespace HTA.Adventures.Busness.Tests
             const bool NotValid = false;
             const bool Valid = true;
             bool isValidActual;
+            IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
+
 
             // check validation of null location... not valid.
-            Spot nullLocation = null;
+            Spot nullSpot = null;
 
             // check  validation
-            isValidActual = spotBusiness.Validate(nullLocation);
+
+            isValidActual = spotBusiness.Validate(nullSpot, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "null is not valid");
+            Assert.AreNotEqual(0, validationErrorResults.Count);
 
             // check validation of default location constructor... not valid.
             Spot defaultLocation = new Spot();
 
             // check validation
-            isValidActual = spotBusiness.Validate(defaultLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(defaultLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "newly constructed empty class is not valid");
+            Assert.AreNotEqual(0, validationErrorResults.Count);
 
             // Check validation of a seemly normal location.
             Spot validGenericLocation = new Spot(new GeoPoint { Lat = 0.0, Lon = 0.0 }, "Spot");
 
             // check validation
-            isValidActual = spotBusiness.Validate(validGenericLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(validGenericLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "Valid generic location");
+            Assert.AreEqual(0, validationErrorResults.Count);
 
         }
         /// <summary>
@@ -96,22 +104,25 @@ namespace HTA.Adventures.Busness.Tests
         public void InvalidSpotTest()
         {
             var spotBusiness = new SpotBusiness();
-
+            IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             const bool NotValid = false;
             bool isValidActual;
+
 
             // Check validation of a seemly normal location.
             var noName = new Spot(new GeoPoint { Lat = 0.0, Lon = 0.0 }, null);
 
             // check validation
-            isValidActual = spotBusiness.Validate(noName);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(noName, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "no name generic location");
 
             // Check validation of a seemly normal location.
             var noLocation = new Spot(null, "Spot");
 
             // check validation
-            isValidActual = spotBusiness.Validate(noLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(noLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "no location generic location");
         }
 
@@ -124,7 +135,7 @@ namespace HTA.Adventures.Busness.Tests
         public void ValidateSpotTest()
         {
             var spotBusiness = new SpotBusiness();
-
+            IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             const bool NotValid = false;
             const bool Valid = true;
             bool isValidActual;
@@ -133,13 +144,15 @@ namespace HTA.Adventures.Busness.Tests
             Spot invalidLatLocation = new Spot(new GeoPoint { Lat = 90.1, Lon = 0.0 }, "Spot");
 
             // check validation invalid
-            isValidActual = spotBusiness.Validate(invalidLatLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLatLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, " latitude greater than 90.0 is not valid");
 
             invalidLatLocation = new Spot(new GeoPoint { Lat = 90.0, Lon = 0.0 }, "Spot");
 
             // check validation valid
-            isValidActual = spotBusiness.Validate(invalidLatLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLatLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "latitude less than or equal to 90.0 is valid");
 
 
@@ -147,42 +160,48 @@ namespace HTA.Adventures.Busness.Tests
             invalidLatLocation = new Spot(new GeoPoint { Lat = -90.1, Lon = 0.0 }, "Spot");
 
             // check validation
-            isValidActual = spotBusiness.Validate(invalidLatLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLatLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "latitude less than -90.0 is not valid");
 
             // Check validation of an invalid latitude location.
             invalidLatLocation = new Spot(new GeoPoint { Lat = -90.0, Lon = 0.0 }, "Spot");
 
             // check validation
-            isValidActual = spotBusiness.Validate(invalidLatLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLatLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "latitude greater than or equal to -90.0 is valid");
 
             // Check validation of an invalid latitude location.
             Spot invalidLonLocation = new Spot(new GeoPoint { Lat = 0.0, Lon = 180.1 }, "Spot");
 
             // check validation invalid
-            isValidActual = spotBusiness.Validate(invalidLonLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLonLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "longitude greater than 180.0 is not valid");
 
             // Check validation of an invalid latitude location.
             invalidLonLocation = new Spot(new GeoPoint { Lat = 0.0, Lon = 180.0 }, "Spot");
 
             // check validation valid
-            isValidActual = spotBusiness.Validate(invalidLonLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLonLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "longitude less than or equal to 180.0 is valid");
 
             // Check validation of an invalid latitude location.
             invalidLonLocation = new Spot(new GeoPoint { Lat = 0.0, Lon = -180.1 }, "Spot");
 
             // check validation
-            isValidActual = spotBusiness.Validate(invalidLonLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLonLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "longitude less than -180.0 is not valid");
 
             // Check validation of an invalid latitude location.
             invalidLonLocation = new Spot(new GeoPoint { Lat = 0.0, Lon = -180.0 }, "Spot");
 
             // check validation
-            isValidActual = spotBusiness.Validate(invalidLonLocation);
+            validationErrorResults.Clear();
+            isValidActual = spotBusiness.Validate(invalidLonLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "longitude great than or equal to -180.0 is valid");
         }
     }

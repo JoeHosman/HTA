@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Data.ModelValidation;
 using HTA.Adventures.Models;
@@ -65,10 +67,10 @@ namespace HTA.Website.MVC.Example.Controllers
         [HttpPost]
         public ActionResult Edit(AdventureLocationModel model)
         {
-            using (var businessValidator = new SpotBusiness())
+            using (var businessValidator = new LocationBusiness())
             {
-
-                if (businessValidator.Validate(model.Location))
+                IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
+                if (businessValidator.Validate(model.Location, validationErrorResults))
                 {
                     // Assign the adventure region to the location object.
                     model.Location

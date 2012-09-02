@@ -10,9 +10,8 @@ namespace HTA.Adventures.BusinessLogic
 {
     public class SpotBusiness : IDisposable
     {
-        public bool Validate(Spot item)
+        public bool Validate(Spot item, IList<ValidationResult> validationErrorResults)
         {
-            IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             if (item != null)
             {
                 if (string.IsNullOrEmpty(item.Name))
@@ -34,6 +33,7 @@ namespace HTA.Adventures.BusinessLogic
             }
             else
                 validationErrorResults.Add(new ValidationResult("A non-null object is required.", new[] { "Spot" }));
+
 
             return validationErrorResults.Count == 0;
         }
