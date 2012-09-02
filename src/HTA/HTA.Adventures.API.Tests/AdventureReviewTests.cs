@@ -34,8 +34,7 @@ namespace HTA.Websites.API.Tests
                                   {
                                       Name = "My Adventure",
                                       AdventureType = new AdventureType() { Name = "type" },
-                                      AdventureLocation = new AdventureLocation(new AdventureRegion(new LocationPoint { Lat = 50, Lon = 50 }, "Location"))
-
+                                      Location = new Location(new Region(new GeoPoint { Lat = 50, Lon = 50 }, "Location"))
                                   };
 
             Assert.AreEqual(0, validator.Validate(validReview).Count);

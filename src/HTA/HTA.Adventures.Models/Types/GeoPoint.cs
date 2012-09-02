@@ -1,25 +1,29 @@
-using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using Nest;
 
 namespace HTA.Adventures.Models.Types
 {
+    /// <summary>
+    /// Represents a get location point with  Lat and Lon values.
+    /// </summary>
     [DataContract]
-    public class LocationPoint
+    public class GeoPoint
     {
+        /// <summary>
+        /// Longitude 
+        /// </summary>
         [ElasticProperty(Name = "lon")]
-        [Required]
-        [Range(-90.0, 90.0, ErrorMessage = "A valid lon between -90 and 90 must be presented")]
         [DataMember]
         public double Lon { get; set; }
 
+        /// <summary>
+        /// Latitude
+        /// </summary>
         [ElasticProperty(Name = "lat")]
-        [Required]
-        [Range(-90.0, 90.0, ErrorMessage = "A valid lat between -90 and 90 must be presented")]
         [DataMember]
         public double Lat { get; set; }
 
-        public LocationPoint()
+        public GeoPoint()
         {
             Lat = Lon = double.MinValue;
         }

@@ -8,21 +8,21 @@ namespace HTA.Website.MVC.Example.API
     {
         #region Implementation of IAdventureRegionRepository
 
-        public IList<AdventureRegion> GetAdventureRegions()
+        public IList<Region> GetAdventureRegions()
         {
-            var list = Client.Get<IList<AdventureRegion>>("/Adventure/Regions");
+            var list = Client.Get<IList<Region>>("/Adventure/Regions");
             return list;
         }
 
-        public AdventureRegion GetAdventureRegion(string id)
+        public Region GetAdventureRegion(string id)
         {
-            var review = Client.Get<AdventureRegion>("/Adventure/Regions/" + id);
+            var review = Client.Get<Region>("/Adventure/Regions/" + id);
             return review;
         }
 
-        public AdventureRegion SaveAdventureRegion(AdventureRegion adventureRegion)
+        public Region SaveAdventureRegion(Region region)
         {
-            var review = Client.Post<AdventureRegion>("/Adventure/Regions/", adventureRegion);
+            var review = Client.Post<Region>("/Adventure/Regions/", region);
             return review;
         }
 

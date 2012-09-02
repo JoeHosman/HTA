@@ -33,7 +33,7 @@ namespace HTA.Adventures.Models.Types
 
         [DataMember]
         [Required]
-        public AdventureLocation AdventureLocation { get; set; }
+        public Location Location { get; set; }
     }
 
     public class AdventureReviewResponse : IHasResponseStatus

@@ -76,8 +76,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAdventureRegionRepository.cs" />
-    <Compile Include="Types\AdventureLocation.cs" />
-    <Compile Include="Types\AdventureRegion.cs" />
+    <Compile Include="Types\Location.cs" />
+    <Compile Include="Types\Region.cs" />
     <Compile Include="IAdventureLocationRepository.cs" />
     <Compile Include="IAdventureReviewRepository.cs" />
     <Compile Include="IAdventureTypeRepository.cs" />
@@ -85,12 +85,12 @@
     <Compile Include="NearByAdventureLocations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\AdventureDataCard.cs" />
-    <Compile Include="Types\AdventureSpot.cs" />
+    <Compile Include="Types\Spot.cs" />
     <Compile Include="Types\AdventureReview.cs" />
     <Compile Include="Types\AdventureType.cs" />
     <Compile Include="Types\AdventureTypeTemplate.cs" />
     <Compile Include="Types\GeoRange.cs" />
-    <Compile Include="Types\LocationPoint.cs" />
+    <Compile Include="Types\GeoPoint.cs" />
     <Compile Include="Types\NearBySearch.cs" />
     <Compile Include="Types\RegionLocations.cs" />
   </ItemGroup>

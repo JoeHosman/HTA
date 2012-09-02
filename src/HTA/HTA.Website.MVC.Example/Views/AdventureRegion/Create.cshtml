@@ -1,4 +1,4 @@
-﻿@model HTA.Adventures.Models.Types.AdventureRegion
+﻿@model HTA.Adventures.Models.Types.Region
 
 @{
     ViewBag.Title = "Create";
@@ -40,19 +40,19 @@
         </div>
         
         <div class="editor-label">
-            @Html.LabelFor(model => model.LocationPoint.Lat)
+            @Html.LabelFor(model => model.Point.Lat)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.LocationPoint.Lat)
-            @Html.ValidationMessageFor(model => model.LocationPoint.Lat)
+            @Html.EditorFor(model => model.Point.Lat)
+            @Html.ValidationMessageFor(model => model.Point.Lat)
         </div>
         
         <div class="editor-label">
-            @Html.LabelFor(model => model.LocationPoint.Lon)
+            @Html.LabelFor(model => model.Point.Lon)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.LocationPoint.Lon)
-            @Html.ValidationMessageFor(model => model.LocationPoint.Lon)
+            @Html.EditorFor(model => model.Point.Lon)
+            @Html.ValidationMessageFor(model => model.Point.Lon)
         </div>
 
         <p>

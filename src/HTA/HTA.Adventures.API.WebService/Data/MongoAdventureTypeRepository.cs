@@ -14,11 +14,11 @@ namespace HTA.Adventures.API.WebService.Data
                                                 IAdventureRegionRepository,
                                                 IAdventureLocationRepository
     {
-        private static readonly MongoRepository<AdventureRegion> AdventureRegionRepository = new MongoRepository<AdventureRegion>();
+        private static readonly MongoRepository<Region> AdventureRegionRepository = new MongoRepository<Region>();
         private static readonly MongoRepository<AdventureReview> AdventureReviewRepository = new MongoRepository<AdventureReview>();
         private static readonly MongoRepository<AdventureType> AdventureTypeRepository = new MongoRepository<AdventureType>();
         private static readonly MongoRepository<AdventureTypeTemplate> AdventureTypeTemplateRepository = new MongoRepository<AdventureTypeTemplate>();
-        private static readonly MongoRepository<AdventureLocation> AdventureLocationRepository = new MongoRepository<AdventureLocation>();
+        private static readonly MongoRepository<Location> AdventureLocationRepository = new MongoRepository<Location>();
 
         #region Implementation of IAdventureTypeRepository
 
@@ -114,47 +114,55 @@ namespace HTA.Adventures.API.WebService.Data
 
         #region Implementation of IAdventureRegionRepository
 
-        public IList<AdventureRegion> GetAdventureRegions()
+        public IList<Region> GetAdventureRegions()
         {
             return AdventureRegionRepository.All().ToList();
         }
 
-        public AdventureRegion GetAdventureRegion(string id)
+        public Region GetAdventureRegion(string id)
         {
             return AdventureRegionRepository.GetById(id);
         }
 
-        public AdventureRegion SaveAdventureRegion(AdventureRegion adventureRegion)
+        public Region SaveAdventureRegion(Region region)
         {
-            return (string.IsNullOrEmpty(adventureRegion.Id)) ?
-                AdventureRegionRepository.Add((AdventureRegion)adventureRegion) :
-            AdventureRegionRepository.Update((AdventureRegion)adventureRegion);
+            return (string.IsNullOrEmpty(region.Id)) ?
+                AdventureRegionRepository.Add((Region)region) :
+            AdventureRegionRepository.Update((Region)region);
         }
 
         #endregion
 
         #region Implementation of IAdventureLocationRepository
 
-        public IList<AdventureLocation> GetAdventureLocations()
+        public IList<Location> GetAdventureLocations()
         {
             return AdventureLocationRepository.All().ToList();
         }
 
-        public AdventureLocation GetAdventureLocation(string id)
+        public AdventureLocationResponse GetAdventureLocation(string id)
         {
-            return AdventureLocationRepository.GetById(id);
+            var response = new AdventureLocationResponse(new Location() { Id = id });
+
+            response.Location = AdventureLocationRepository.GetById(id);
+
+            return response;
         }
 
-        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
+        public AdventureLocationResponse SaveAdventureLocation(Location model)
         {
-            return (string.IsNullOrEmpty(model.Id))
+            var response = new AdventureLocationResponse(model);
+
+            response.Location = (string.IsNullOrEmpty(model.Id))
                        ? AdventureLocationRepository.Add(model)
                        : AdventureLocationRepository.Update(model);
+
+            return response;
         }
 
-        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        public IList<Location> GetRegionAdventureLocations(string regionId)
         {
-            return AdventureLocationRepository.All(l => l.AdventureRegion.Id == regionId).ToList();
+            return AdventureLocationRepository.All(l => l.Region.Id == regionId).ToList();
         }
 
         #endregion

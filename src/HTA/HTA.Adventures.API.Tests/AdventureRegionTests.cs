@@ -34,7 +34,7 @@ namespace HTA.Websites.API.Tests
             var nullResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", null);
             Assert.IsFalse(String.IsNullOrEmpty(nullResponse.ResponseStatus.ErrorCode));
 
-            var validAdventureRegion = new AdventureRegion(new LocationPoint { Lat = 0, Lon = 0 }, "Name");
+            var validAdventureRegion = new Region(new GeoPoint { Lat = 0, Lon = 0 }, "Name");
             Assert.AreEqual(0, validator.Validate(validAdventureRegion).Count);
 
             var validResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", validAdventureRegion);

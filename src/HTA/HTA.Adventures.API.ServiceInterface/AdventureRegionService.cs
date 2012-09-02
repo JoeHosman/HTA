@@ -7,12 +7,12 @@ using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
-    public class AdventureRegionService : RestServiceBase<AdventureRegion>
+    public class AdventureRegionService : RestServiceBase<Region>
     {
         public IAdventureRegionRepository AdventureRegionRepository { get; set; }
         public IAdventureLocationRepository AdventureLocationRepository { get; set; }
 
-        public override object OnGet(AdventureRegion request)
+        public override object OnGet(Region request)
         {
             if (!string.IsNullOrEmpty(request.Id))
             {
@@ -22,7 +22,7 @@ namespace HTA.Adventures.API.ServiceInterface
         }
 
 
-        public override object OnPost(AdventureRegion request)
+        public override object OnPost(Region request)
         {
             var response = new AdventureRegionResponse(request);
 
@@ -37,10 +37,10 @@ namespace HTA.Adventures.API.ServiceInterface
 
                 if (response.Locations.Count == 0)
                 {
-                    var location = AdventureLocationRepository.SaveAdventureLocation(response.Region.CreateLocation()); ;
-                    
-                    
-                    response.Locations.Add(location);
+                    var locationResponse = AdventureLocationRepository.SaveAdventureLocation(response.Region.CreateLocation()); ;
+
+
+                    response.Locations.Add(locationResponse.Location);
                 }
 
                 response.ResponseStatus = new ResponseStatus();

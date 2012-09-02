@@ -5,8 +5,8 @@ namespace HTA.Adventures.Models
 {
     public interface IAdventureRegionRepository
     {
-        IList<AdventureRegion> GetAdventureRegions();
-        AdventureRegion GetAdventureRegion(string id);
-        AdventureRegion SaveAdventureRegion(AdventureRegion adventureRegion);
+        IList<Region> GetAdventureRegions();
+        Region GetAdventureRegion(string id);
+        Region SaveAdventureRegion(Region region);
     }
 }

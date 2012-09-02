@@ -7,11 +7,11 @@
     Locations</h2>
 <fieldset>
     <legend>Adventure Region's Adventure Locations</legend>
-    @Html.DisplayFor(model => model.Region.Name) @@ @Html.DisplayFor(model => model.Region.LocationPoint.LatLon)
+    @Html.DisplayFor(model => model.Region.Name) @@ @Html.DisplayFor(model => model.Region.Point.LatLon)
     <br />
     @foreach (var item in Model.Locations)
     {
-        <p>@Html.DisplayFor(model => item.Name) [@Html.DisplayFor(model => item.Id)] @@ @Html.DisplayFor(model => item.LocationPoint.LatLon)</p>
+        <p>@Html.DisplayFor(model => item.Name) [@Html.DisplayFor(model => item.Id)] @@ @Html.DisplayFor(model => item.Point.LatLon)</p>
     }
 </fieldset>
 <p>

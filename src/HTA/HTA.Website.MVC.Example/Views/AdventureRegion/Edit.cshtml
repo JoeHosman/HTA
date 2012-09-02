@@ -25,21 +25,21 @@
             @Html.ValidationMessageFor(model => model.Region.Name)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Region.LocationPoint.Lat) :
-            @Html.EditorFor(model => model.Region.LocationPoint.Lat)
-            @Html.ValidationMessageFor(model => model.Region.LocationPoint.Lat)
+            @Html.LabelFor(model => model.Region.Point.Lat) :
+            @Html.EditorFor(model => model.Region.Point.Lat)
+            @Html.ValidationMessageFor(model => model.Region.Point.Lat)
         </div>
                 <div class="editor-label">
-            @Html.LabelFor(model => model.Region.LocationPoint.Lon) :
-            @Html.EditorFor(model => model.Region.LocationPoint.Lon)
-            @Html.ValidationMessageFor(model => model.Region.LocationPoint.Lon)
+            @Html.LabelFor(model => model.Region.Point.Lon) :
+            @Html.EditorFor(model => model.Region.Point.Lon)
+            @Html.ValidationMessageFor(model => model.Region.Point.Lon)
         </div>
         <div class="editor-label">
             @Html.LabelFor(model => model.SelectedLocations) :
             @Html.ListBoxFor(model => model.SelectedLocations, Model.Locations.Select(fl => new SelectListItem()
                                                                                           {
-                                                                                              Text = ((fl.LocationPoint.Lat != double.MaxValue) ?
-                                                                                                        string.Format("{0} @ {1}", fl.Name, fl.LocationPoint.LatLon) :
+                                                                                              Text = ((fl.Point.Lat != double.MaxValue) ?
+                                                                                                        string.Format("{0} @ {1}", fl.Name, fl.Point.LatLon) :
                                                                                                         fl.Name),
                                                                                               Value = fl.Id
                                                                                           }), new { Multiple = "multiple", Class = "chzn-select" })

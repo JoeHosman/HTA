@@ -116,13 +116,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\ServiceStack.Text.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\ResolveAssemblyReference.cache
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.API.WebService.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\obj\Debug\HTA.Adventures.API.WebService.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.dll
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.dll
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.xml
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.xml
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.xml
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.dll
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.dll
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.pdb
@@ -132,3 +125,12 @@ D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.xml
 D:\dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.Data.ModelValidation.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.Data.ModelValidation.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Bson.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\MongoDB.Driver.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\Newtonsoft.Json.xml
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.BusinessLogic.dll
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.API.WebService\bin\HTA.Adventures.BusinessLogic.pdb

@@ -77,6 +77,7 @@
       <HintPath>..\packages\ServiceStack.Text.3.9.4\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -211,6 +212,14 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HTA.Adventures.BusinessLogic\HTA.Adventures.BusinessLogic.csproj">
+      <Project>{9843E129-E60D-49E8-AF71-2F4F45A7F209}</Project>
+      <Name>HTA.Adventures.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTA.Adventures.Data.ModelValidation\HTA.Adventures.Data.ModelValidation.csproj">
+      <Project>{3A36D566-AA5F-4C12-98CF-A99231B70962}</Project>
+      <Name>HTA.Adventures.Data.ModelValidation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HTA.Adventures.Models\HTA.Adventures.Models.csproj">
       <Project>{DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE}</Project>
       <Name>HTA.Adventures.Models</Name>
@@ -283,6 +292,7 @@
     <Content Include="Views\AdventureRegion\Locations.cshtml" />
     <Content Include="Views\AdventureRegion\Edit.cshtml" />
     <Content Include="Views\AdventureLocation\Edit.cshtml" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

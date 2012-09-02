@@ -34,16 +34,16 @@ namespace HTA.Websites.API.Tests
 
 
             // create a valid region, this should exist already.
-            var validAdventureRegion = new AdventureRegion(new LocationPoint { Lat = 0, Lon = 0 }, "Name");
+            var validAdventureRegion = new Region(new GeoPoint { Lat = 0, Lon = 0 }, "Name");
             Assert.AreEqual(0, validator.Validate(validAdventureRegion).Count);
             var validRegionResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", validAdventureRegion);
             Assert.IsTrue(String.IsNullOrEmpty(validRegionResponse.ResponseStatus.ErrorCode));
 
             validAdventureRegion = validRegionResponse.Region;
 
-            var validLocation = new AdventureLocation(validAdventureRegion)
+            var validLocation = new Location(validAdventureRegion)
                                     {
-                                        LocationPoint = new LocationPoint { Lat = 0.5, Lon = 0.5 }
+                                        Point = new GeoPoint { Lat = 0.5, Lon = 0.5 }
                                     };
 
             var validLocationRequest = _apiProxyClient.Post<AdventureLocationResponse>("/Adventure/Locations", validLocation);

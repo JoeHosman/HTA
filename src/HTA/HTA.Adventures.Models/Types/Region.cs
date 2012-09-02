@@ -12,36 +12,36 @@ namespace HTA.Adventures.Models.Types
     [RestService("/Adventure/Regions")]
     [RestService("/Adventure/Regions/{Id}")]
     [CollectionName("AdventureRegions")]
-    public class AdventureRegion : AdventureSpot
+    public class Region : Spot
     {
-        public AdventureRegion()
+        public Region()
             : base()
         {
 
         }
-        public AdventureRegion(LocationPoint locationPoint, string name)
-            : base(locationPoint, name)
+        public Region(GeoPoint geoPoint, string name)
+            : base(geoPoint, name)
         {
         }
 
-        public AdventureLocation CreateLocation()
+        public Location CreateLocation()
         {
-            return new AdventureLocation(this);
+            return new Location(this);
         }
     }
 
     public class AdventureRegionResponse : IHasResponseStatus
     {
-        public AdventureRegionResponse(AdventureRegion request)
+        public AdventureRegionResponse(Region request)
         {
             Request = request;
         }
 
-        public AdventureRegion Request { get; set; }
+        public Region Request { get; set; }
 
-        public AdventureRegion Region { get; set; }
+        public Region Region { get; set; }
 
-        public IList<AdventureLocation> Locations { get; set; }
+        public IList<Location> Locations { get; set; }
 
         #region Implementation of IHasResponseStatus
 

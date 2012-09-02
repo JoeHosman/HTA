@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Data.ModelValidation;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
@@ -17,12 +18,12 @@ namespace HTA.Adventures.API.ServiceInterface
 
     }
 
-    public class AdventureLocationService : RestServiceBase<AdventureLocation>
+    public class AdventureLocationService : RestServiceBase<Location>
     {
         public IAdventureLocationRepository AdventureLocationRepository { get; set; }
         public IAdventureRegionRepository AdventureRegionRepository { get; set; }
 
-        public override object OnGet(AdventureLocation request)
+        public override object OnGet(Location request)
         {
             if (!string.IsNullOrEmpty(request.Id))
             {
@@ -31,30 +32,32 @@ namespace HTA.Adventures.API.ServiceInterface
             return AdventureLocationRepository.GetAdventureLocations();
         }
 
-        public override object OnPost(AdventureLocation request)
+        public override object OnPost(Location request)
         {
             var response = new AdventureLocationResponse(request);
 
+            var spotBusiness = new SpotBusiness();
+            
             var validator = new AdventureSpotValidator();
             var results = validator.Validate(response.Request);
 
             if (results.Count == 0)
             {
-                if (string.IsNullOrEmpty(request.AdventureRegion.Id))
+                if (string.IsNullOrEmpty(request.Region.Id))
                 {
                     response.Region =
-                        AdventureRegionRepository.SaveAdventureRegion(request.AdventureRegion);
+                        AdventureRegionRepository.SaveAdventureRegion(request.Region);
                 }
                 else
                 {
                     // attempt to get the right region based off Id, if none are found, create a new one.
-                    response.Region = AdventureRegionRepository.GetAdventureRegion(request.AdventureRegion.Id) ??
-                                      AdventureRegionRepository.SaveAdventureRegion(request.AdventureRegion);
+                    response.Region = AdventureRegionRepository.GetAdventureRegion(request.Region.Id) ??
+                                      AdventureRegionRepository.SaveAdventureRegion(request.Region);
                 }
 
-                request.AdventureRegion = response.Region;
+                request.Region = response.Region;
 
-                response.Location = AdventureLocationRepository.SaveAdventureLocation(request);
+                response.Location = AdventureLocationRepository.SaveAdventureLocation(request).Location;
 
                 response.ResponseStatus = new ResponseStatus();
             }

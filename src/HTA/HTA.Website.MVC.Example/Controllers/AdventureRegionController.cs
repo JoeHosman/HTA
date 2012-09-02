@@ -37,13 +37,13 @@ namespace HTA.Website.MVC.Example.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Create(AdventureRegion model)
+        public ActionResult Create(Region model)
         {
             if (ModelState.IsValid)
             {
                 model = _adventureRegionRepository.SaveAdventureRegion(model);
 
-                var item = new AdventureRegionAdventureLocationsModel() { Region = model, Locations = new List<AdventureLocation>() };
+                var item = new AdventureRegionAdventureLocationsModel() { Region = model, Locations = new List<Location>() };
                 return View("Details", item);
             }
             return View(model);
@@ -81,15 +81,20 @@ namespace HTA.Website.MVC.Example.Controllers
         {
             if (ModelState.IsValid)
             {
-                var locations = new List<AdventureLocation>();
+                var locations = new List<Location>();
                 foreach (var locationId in model.SelectedLocations)
                 {
-                    var location = _adventureLocationRepository.GetAdventureLocation(locationId);
+                    // Get existing location object
+                    var locationResponse = _adventureLocationRepository.GetAdventureLocation(locationId);
 
-                    location.AdventureRegion = model.Region;
+                    // set location.region to new region
+                    locationResponse.Location.Region = model.Region;
 
-                    _adventureLocationRepository.SaveAdventureLocation(location);
-                    locations.Add(location);
+                    // save in API and get response
+                    locationResponse = _adventureLocationRepository.SaveAdventureLocation(locationResponse.Location);
+
+                    // add response to this response.locations
+                    locations.Add(locationResponse.Location);
                 }
 
                 var region = model.Region;

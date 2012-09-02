@@ -6,27 +6,31 @@ namespace HTA.Website.MVC.Example.API
 {
     internal class APIAdventureLocationProxy : APIProxyBase, IAdventureLocationRepository
     {
-        public IList<AdventureLocation> GetAdventureLocations()
+        public IList<Location> GetAdventureLocations()
         {
-            var list = Client.Get<List<AdventureLocation>>("/Adventure/Locations");
+            var list = Client.Get<List<Location>>("/Adventure/Locations");
             return list;
         }
 
-        public AdventureLocation GetAdventureLocation(string id)
+        public AdventureLocationResponse GetAdventureLocation(string id)
         {
-            var adventureLocation = Client.Get<AdventureLocation>("/Adventure/Locations/"+ id);
-            return adventureLocation;
+
+            var response = Client.Get<AdventureLocationResponse>("/Adventure/Locations/" + id);
+
+            return response;
         }
 
-        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
+        public AdventureLocationResponse SaveAdventureLocation(Location model)
         {
-            var Location = Client.Post<AdventureLocation>("/Adventure/Locations/" + model.Id, model);
-            return Location;
+
+            var response = Client.Post<AdventureLocationResponse>("/Adventure/Locations/" + model.Id, model);
+
+            return response;
         }
 
-        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        public IList<Location> GetRegionAdventureLocations(string regionId)
         {
-            var locations = Client.Get<List<AdventureLocation>>("/Adventure/Region/Locations/" + regionId);
+            var locations = Client.Get<List<Location>>("/Adventure/Region/Locations/" + regionId);
             return locations;
         }
     }

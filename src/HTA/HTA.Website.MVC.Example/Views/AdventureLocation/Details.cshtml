@@ -1,4 +1,4 @@
-﻿@model HTA.Adventures.Models.Types.AdventureLocation
+﻿@model HTA.Adventures.Models.Types.Location
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -17,13 +17,13 @@
         Picture : @Html.DisplayFor(model => model.Picture)
     </div>
     <div class="display-label">
-        Lat : @Html.DisplayFor(model => model.LocationPoint.Lat)
+        Lat : @Html.DisplayFor(model => model.Point.Lat)
     </div>
     <div class="display-label">
-        Lon : @Html.DisplayFor(model => model.LocationPoint.Lon)
+        Lon : @Html.DisplayFor(model => model.Point.Lon)
     </div>
     <div class="display-label">
-        Adventure Region : @Html.DisplayFor(model => model.AdventureRegion.Name) [<i>@Html.DisplayFor(model => model.AdventureRegion.Id)</i>]
+        Adventure Region : @Html.DisplayFor(model => model.Region.Name) [<i>@Html.DisplayFor(model => model.Region.Id)</i>]
     </div>
 </fieldset>
 <p>
