@@ -1,4 +1,6 @@
-using HTA.Adventures.Data.ModelValidation;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models.Types;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ServiceStack.ServiceClient.Web;
@@ -20,12 +22,15 @@ namespace HTA.Websites.API.Tests
         /// This will test Creation of a new Adventure Location with an existing Region
         /// </summary>
         [TestMethod]
-        public void CreateNewAdventureLocationTest()
+        public void CreateNewAdventureReviewTest()
         {
-            var validator = new GenericValidator<AdventureReview>();
+            var validator = new ReviewBusiness();
 
-            Assert.AreNotEqual(0, validator.Validate(null).Count, "Null should not be valid");
-            Assert.AreNotEqual(0, validator.Validate(new AdventureReview()).Count, "new AdventureReview() should not be valid");
+            IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
+            validationErrorResults.Clear();
+            Assert.IsFalse(validator.Validate(null, validationErrorResults), "Null should not be valid");
+            validationErrorResults.Clear();
+            Assert.IsFalse(validator.Validate(new AdventureReview(), validationErrorResults), "new AdventureReview() should not be valid");
 
             var nullReviewResults = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", null);
             Assert.IsFalse(string.IsNullOrEmpty(nullReviewResults.ResponseStatus.ErrorCode));
@@ -37,7 +42,8 @@ namespace HTA.Websites.API.Tests
                                       Location = new Location(new Region(new GeoPoint { Lat = 50, Lon = 50 }, "Location"))
                                   };
 
-            Assert.AreEqual(0, validator.Validate(validReview).Count);
+            validationErrorResults.Clear();
+            Assert.IsTrue(validator.Validate(validReview, validationErrorResults));
 
             var validReviewResults = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", validReview);
             Assert.IsTrue(string.IsNullOrEmpty(validReviewResults.ResponseStatus.ErrorCode));

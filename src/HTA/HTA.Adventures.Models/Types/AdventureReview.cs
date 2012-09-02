@@ -36,19 +36,21 @@ namespace HTA.Adventures.Models.Types
         public Location Location { get; set; }
     }
 
+    [DataContract]
     public class AdventureReviewResponse : IHasResponseStatus
     {
         public AdventureReviewResponse(AdventureReview request)
         {
             Request = request;
         }
-
+        [DataMember]
         public AdventureReview Request { get; set; }
-
+        [DataMember]
         public AdventureReview Review { get; set; }
 
         #region Implementation of IHasResponseStatus
 
+        [DataMember]
         public ResponseStatus ResponseStatus { get; set; }
 
         #endregion

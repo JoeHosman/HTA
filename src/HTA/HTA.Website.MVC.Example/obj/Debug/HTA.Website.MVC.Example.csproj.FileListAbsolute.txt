@@ -95,7 +95,5 @@ C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\bin\Newtons
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\ResolveAssemblyReference.cache
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.dll
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.pdb
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.Data.ModelValidation.dll
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.Data.ModelValidation.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.BusinessLogic.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.BusinessLogic.pdb

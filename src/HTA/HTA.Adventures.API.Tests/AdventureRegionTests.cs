@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Text;
+using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Linq;
-using HTA.Adventures.Data.ModelValidation;
+using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models.Types;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ServiceStack.ServiceClient.Web;
-using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Websites.API.Tests
 {
@@ -25,18 +24,26 @@ namespace HTA.Websites.API.Tests
         /// This will test Creation of new Adventure Regions
         /// </summary>
         [TestMethod]
-        public void CreateNewRegionTest()
+        public void CreateNewRegionWithAPITest()
         {
-            var validator = new AdventureSpotValidator();
+            IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
+            var validator = new RegionBusiness();
             // First test sending null :(
-            Assert.AreNotEqual(0, validator.Validate(null).Count);
 
+            // Verify invalid
+            validationErrorResults.Clear();
+            Assert.IsFalse(validator.Validate(null, validationErrorResults));
+
+            // send Invalid
             var nullResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", null);
             Assert.IsFalse(String.IsNullOrEmpty(nullResponse.ResponseStatus.ErrorCode));
 
+            // Verify valid
             var validAdventureRegion = new Region(new GeoPoint { Lat = 0, Lon = 0 }, "Name");
-            Assert.AreEqual(0, validator.Validate(validAdventureRegion).Count);
+            validationErrorResults.Clear();
+            Assert.IsTrue(validator.Validate(validAdventureRegion, validationErrorResults));
 
+            // send Valid
             var validResponse = _apiProxyClient.Post<AdventureRegionResponse>("/Adventure/Regions", validAdventureRegion);
             Assert.IsTrue(String.IsNullOrEmpty(validResponse.ResponseStatus.ErrorCode));
             // we should have atleast one location

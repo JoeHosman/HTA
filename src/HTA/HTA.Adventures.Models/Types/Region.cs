@@ -30,6 +30,7 @@ namespace HTA.Adventures.Models.Types
         }
     }
 
+    [DataContract]
     public class AdventureRegionResponse : IHasResponseStatus
     {
         public AdventureRegionResponse(Region request)
@@ -37,14 +38,18 @@ namespace HTA.Adventures.Models.Types
             Request = request;
         }
 
+        [DataMember]
         public Region Request { get; set; }
 
+        [DataMember]
         public Region Region { get; set; }
 
+        [DataMember]
         public IList<Location> Locations { get; set; }
 
         #region Implementation of IHasResponseStatus
 
+        [DataMember]
         public ResponseStatus ResponseStatus { get; set; }
 
         #endregion

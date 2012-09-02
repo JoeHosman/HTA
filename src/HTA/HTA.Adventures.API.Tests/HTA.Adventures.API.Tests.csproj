@@ -64,9 +64,9 @@
     <Compile Include="AdventureRegionTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HTA.Adventures.Data.ModelValidation\HTA.Adventures.Data.ModelValidation.csproj">
-      <Project>{3A36D566-AA5F-4C12-98CF-A99231B70962}</Project>
-      <Name>HTA.Adventures.Data.ModelValidation</Name>
+    <ProjectReference Include="..\HTA.Adventures.BusinessLogic\HTA.Adventures.BusinessLogic.csproj">
+      <Project>{9843E129-E60D-49E8-AF71-2F4F45A7F209}</Project>
+      <Name>HTA.Adventures.BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\HTA.Adventures.Models\HTA.Adventures.Models.csproj">
       <Project>{DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE}</Project>

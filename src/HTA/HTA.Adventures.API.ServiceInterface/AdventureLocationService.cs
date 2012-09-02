@@ -1,6 +1,7 @@
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
-using HTA.Adventures.Data.ModelValidation;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
 using ServiceStack.ServiceInterface;
@@ -35,46 +36,39 @@ namespace HTA.Adventures.API.ServiceInterface
         public override object OnPost(Location request)
         {
             var response = new AdventureLocationResponse(request);
+            //response.ResponseStatus = new ResponseStatus() { ErrorCode = "NULL" };
 
-            var spotBusiness = new SpotBusiness();
-            
-            var validator = new AdventureSpotValidator();
-            var results = validator.Validate(response.Request);
-
-            if (results.Count == 0)
+            using (var locationBusiness = new LocationBusiness())
             {
-                if (string.IsNullOrEmpty(request.Region.Id))
+                IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
+                if (locationBusiness.Validate(request, validationErrorResults))
                 {
-                    response.Region =
-                        AdventureRegionRepository.SaveAdventureRegion(request.Region);
+                    if (string.IsNullOrEmpty(request.Region.Id))
+                    {
+                        response.Region =
+                            AdventureRegionRepository.SaveAdventureRegion(request.Region);
+                    }
+                    else
+                    {
+                        // attempt to get the right region based off Id, if none are found, create a new one.
+                        response.Region = AdventureRegionRepository.GetAdventureRegion(request.Region.Id) ??
+                                          AdventureRegionRepository.SaveAdventureRegion(request.Region);
+                    }
+
+                    request.Region = response.Region;
+
+                    response.Location = AdventureLocationRepository.SaveAdventureLocation(request).Location;
+
+                    response.ResponseStatus = new ResponseStatus();
                 }
                 else
                 {
-                    // attempt to get the right region based off Id, if none are found, create a new one.
-                    response.Region = AdventureRegionRepository.GetAdventureRegion(request.Region.Id) ??
-                                      AdventureRegionRepository.SaveAdventureRegion(request.Region);
-                }
-
-                request.Region = response.Region;
-
-                response.Location = AdventureLocationRepository.SaveAdventureLocation(request).Location;
-
-                response.ResponseStatus = new ResponseStatus();
-            }
-            else
-            {
-                response.ResponseStatus = new ResponseStatus("Invalid", string.Format("'{0}' errors prevents this from valid.", results.Count));
-                response.ResponseStatus.Errors = new List<ResponseError>();
-
-                foreach (var validationResult in results)
-                {
-                    validationResult.MemberNames.GetEnumerator().MoveNext();
-                    response.ResponseStatus.Errors.Add(new ResponseError
-                    {
-                        //FieldName = validationResult.MemberNames.GetEnumerator().Current,
-                        Message = validationResult.ErrorMessage,
-                        ErrorCode = "FailedValidation"
-                    });
+                    response.ResponseStatus = new ResponseStatus("Invalid",
+                                                                 string.Format(
+                                                                     "'{0}' errors prevents this from valid.",
+                                                                     validationErrorResults.Count));
+                    
+                    ErrorUtility.TransformResponseErrors(response.ResponseStatus.Errors, validationErrorResults);
                 }
             }
 

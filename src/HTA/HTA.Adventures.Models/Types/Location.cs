@@ -54,6 +54,7 @@ namespace HTA.Adventures.Models.Types
 
         #region Implementation of IHasResponseStatus
 
+        [DataMember]
         public ResponseStatus ResponseStatus { get; set; }
 
         #endregion

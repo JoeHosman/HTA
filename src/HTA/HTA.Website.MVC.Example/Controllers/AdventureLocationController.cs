@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using HTA.Adventures.BusinessLogic;
-using HTA.Adventures.Data.ModelValidation;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
 using HTA.Website.MVC.Example.API;
