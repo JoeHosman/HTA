@@ -1,66 +1,66 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoRange.cs" caret="0" fromTop="0" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:default.htm" caret="761" fromTop="16" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:Web.config" caret="318" fromTop="8" />
-    <File id="F4462921-087B-40AF-87E2-A7DCD471734E/f:LocationPointTest.cs" caret="0" fromTop="0" />
     <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureRegionTests.cs" caret="1718" fromTop="5" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1230" fromTop="22" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="0" fromTop="0" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureRegionService.cs" caret="1365" fromTop="10" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureRegionController.cs" caret="3732" fromTop="12" />
-    <File id="3A36D566-AA5F-4C12-98CF-A99231B70962/f:GeoLocationValidator.cs" caret="746" fromTop="18" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="421" fromTop="12" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:MongoAdventureTypeRepository.cs" caret="5497" fromTop="21" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureLocationService.cs" caret="1600" fromTop="12" />
-    <File id="3A36D566-AA5F-4C12-98CF-A99231B70962/f:GenericValidator.cs" caret="379" fromTop="7" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewTests.cs" caret="1309" fromTop="12" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/f:_ViewStart.cshtml" caret="8" fromTop="1" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureLocation/f:Edit.cshtml" caret="2400" fromTop="7" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="600" fromTop="15" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Models/f:AdventureLocationModel.cs" caret="315" fromTop="13" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Region.cs" caret="478" fromTop="0" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureDataCard.cs" caret="0" fromTop="0" />
-    <File id="3A36D566-AA5F-4C12-98CF-A99231B70962/f:AdventureSpotValidator.cs" caret="2429" fromTop="11" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Location.cs" caret="666" fromTop="0" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureLocationTests.cs" caret="1783" fromTop="17" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2947" fromTop="15" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureLocationBusiness.cs" caret="361" fromTop="12" />
-    <File id="F4462921-087B-40AF-87E2-A7DCD471734E/f:AdventureRegionTests.cs" caret="0" fromTop="0" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="0" fromTop="0" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="588" fromTop="7" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoPoint.cs" caret="298" fromTop="12" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureDataCard.cs" caret="584" fromTop="21" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoPoint.cs" caret="0" fromTop="0" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureLocation/f:Create.cshtml" caret="0" fromTop="0" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="2166" fromTop="29" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Location.cs" caret="667" fromTop="17" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="854" fromTop="21" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureRegionService.cs" caret="1365" fromTop="10" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="749" fromTop="0" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewTests.cs" caret="1309" fromTop="12" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:RegionBusiness.cs" caret="0" fromTop="0" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureRegionProxy.cs" caret="463" fromTop="10" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1427" fromTop="12" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Region.cs" caret="824" fromTop="19" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureLocationTests.cs" caret="1028" fromTop="13" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoRange.cs" caret="0" fromTop="0" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:LocationBusinessTest.cs" caret="5335" fromTop="23" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:SpotBusiness.cs" caret="312" fromTop="12" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureLocationService.cs" caret="3238" fromTop="34" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="1501" fromTop="6" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:ReviewBusiness.cs" caret="572" fromTop="12" />
   </RecentFiles>
   <RecentEdits>
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="510" fromTop="15" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="887" fromTop="20" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="638" fromTop="12" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Models/f:AdventureLocationModel.cs" caret="347" fromTop="14" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4094" fromTop="24" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Location.cs" caret="1005" fromTop="16" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureLocation/f:Edit.cshtml" caret="596" fromTop="13" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4094" fromTop="4" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="600" fromTop="15" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4110" fromTop="24" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2819" fromTop="8" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4094" fromTop="10" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureLocationBusiness.cs" caret="1536" fromTop="18" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureLocationBusiness.cs" caret="807" fromTop="21" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureLocationBusiness.cs" caret="1057" fromTop="18" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureLocationBusiness.cs" caret="1340" fromTop="24" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureLocationBusiness.cs" caret="1151" fromTop="20" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2575" fromTop="2" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2920" fromTop="11" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="395" fromTop="7" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="280" fromTop="6" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="470" fromTop="10" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="661" fromTop="17" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="844" fromTop="12" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="1033" fromTop="19" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="0" fromTop="0" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoPoint.cs" caret="469" fromTop="14" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoPoint.cs" caret="0" fromTop="0" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoPoint.cs" caret="170" fromTop="6" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:GeoPoint.cs" caret="298" fromTop="12" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4184" fromTop="22" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4184" fromTop="14" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="273" fromTop="10" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4446" fromTop="22" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="4653" fromTop="22" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="1378" fromTop="12" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="2000" fromTop="22" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="1880" fromTop="13" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="2166" fromTop="20" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2506" fromTop="10" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2506" fromTop="14" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2487" fromTop="18" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2282" fromTop="16" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureLocation/f:Create.cshtml" caret="598" fromTop="13" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureRegionProxy.cs" caret="598" fromTop="16" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:LocationBusinessTest.cs" caret="6277" fromTop="18" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Location.cs" caret="667" fromTop="17" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="718" fromTop="13" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="469" fromTop="17" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="336" fromTop="10" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="854" fromTop="21" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureDataCard.cs" caret="313" fromTop="10" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureDataCard.cs" caret="584" fromTop="21" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:LocationBusinessTest.cs" caret="5461" fromTop="13" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:LocationBusinessTest.cs" caret="5722" fromTop="23" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:SpotBusiness.cs" caret="312" fromTop="12" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:SpotBusiness.cs" caret="5722" fromTop="12" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:ReviewBusiness.cs" caret="572" fromTop="12" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:ReviewBusiness.cs" caret="882" fromTop="12" />
   </RecentEdits>
 </RecentFiles>

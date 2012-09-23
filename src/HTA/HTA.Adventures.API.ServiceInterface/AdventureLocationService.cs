@@ -50,9 +50,17 @@ namespace HTA.Adventures.API.ServiceInterface
                     }
                     else
                     {
-                        // attempt to get the right region based off Id, if none are found, create a new one.
-                        response.Region = AdventureRegionRepository.GetAdventureRegion(request.Region.Id) ??
-                                          AdventureRegionRepository.SaveAdventureRegion(request.Region);
+                        try
+                        {
+                            // attempt to get the right region based off Id, if none are found, create a new one.
+                            response.Region = AdventureRegionRepository.GetAdventureRegion(request.Region.Id) ??
+                                              AdventureRegionRepository.SaveAdventureRegion(request.Region);
+                        }
+                        catch (Exception ex)
+                        {
+                            
+                            throw;
+                        }
                     }
 
                     request.Region = response.Region;

@@ -24,6 +24,12 @@ namespace HTA.Adventures.Models.Types
         {
         }
 
+
+        public static Region CreateNewRegion
+        {
+            get { return new Region() { Name = "<Create New Region>", Id = string.Empty }; }
+        }
+
         public Location CreateLocation()
         {
             return new Location(this);

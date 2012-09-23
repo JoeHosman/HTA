@@ -15,9 +15,11 @@ namespace HTA.Adventures.Models.Types
     {
         public Location()
         { Region = new Region(); }
+
         public Location(GeoPoint geoPoint, string name)
             : base(geoPoint, name)
         {
+            Region = new Region();
         }
 
         public Location(Region region)

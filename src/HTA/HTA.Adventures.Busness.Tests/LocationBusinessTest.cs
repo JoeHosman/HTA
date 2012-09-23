@@ -171,6 +171,7 @@ namespace HTA.Adventures.Busness.Tests
 
             // Check validation of a seemly normal location.
             Location validGenericLocation = new Location(new GeoPoint { Lat = 0.0, Lon = 0.0 }, "Location");
+            validGenericLocation.Region.Id = "not empty";
 
             // check validation
             validationErrorResults.Clear();

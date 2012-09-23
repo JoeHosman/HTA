@@ -25,6 +25,8 @@ namespace HTA.Websites.API.Tests
         [TestMethod]
         public void CreateNewLocationTest()
         {
+            var Region = new Region();
+            Region.Id = "FAKE";
             IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             var validator = new LocationBusiness();
             // First test sending null :(
@@ -40,6 +42,9 @@ namespace HTA.Websites.API.Tests
                 Point = new GeoPoint { Lat = 0.5, Lon = 0.5 },
                 Name = "AllByMySelf"
             };
+
+            newLocation.Region.Name = "Fake";
+            newLocation.Region.Id = "5043e280b38389085c55cea9"; // fake from db
 
             validationErrorResults.Clear();
             Assert.IsTrue(validator.Validate(newLocation, validationErrorResults));
