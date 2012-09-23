@@ -156,6 +156,10 @@ namespace HTA.Adventures.Busness.Tests
             // check validation of null location... not valid.
             Location nullLocation = null;
 
+            isValidActual = locationBusiness.Validate(nullLocation, null);
+            Assert.AreEqual(NotValid, isValidActual, "null is not valid, null result parameter");
+
+
             // check  validation
             validationErrorResults.Clear();
             isValidActual = locationBusiness.Validate(nullLocation, validationErrorResults);
@@ -177,6 +181,8 @@ namespace HTA.Adventures.Busness.Tests
             validationErrorResults.Clear();
             isValidActual = locationBusiness.Validate(validGenericLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "Valid generic location");
+
+            locationBusiness.Dispose();
         }
     }
 }

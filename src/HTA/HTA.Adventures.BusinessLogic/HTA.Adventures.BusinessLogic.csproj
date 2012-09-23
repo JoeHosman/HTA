@@ -48,6 +48,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureTypeBusiness.cs" />
+    <Compile Include="AdventureTypeTemplateBusiness.cs" />
     <Compile Include="LocationBusiness.cs" />
     <Compile Include="RegionBusiness.cs" />
     <Compile Include="ReviewBusiness.cs" />

@@ -9,17 +9,17 @@ namespace HTA.Adventures.BusinessLogic
     {
         public bool Validate(Location item, IList<ValidationResult> validationErrorResults)
         {
-            if (item != null)
-            {
-                bool spotIsValidated = base.Validate(item, validationErrorResults);
+            if (null == validationErrorResults)
+                validationErrorResults = new List<ValidationResult>();
 
-                if (item.Region == null || string.IsNullOrEmpty(item.Region.Id))
-                {
-                    validationErrorResults.Add(new ValidationResult("A Region is required", new[] { "Region" }));
-                }
+
+            bool spotIsValidated = base.Validate(item, validationErrorResults);
+
+            if (null == item || null == item.Region || string.IsNullOrEmpty(item.Region.Id))
+            {
+                validationErrorResults.Add(new ValidationResult("A Region is required", new[] { "Region" }));
             }
-            else
-                validationErrorResults.Add(new ValidationResult("A non-null object is required.", new[] { "Location" }));
+
 
             return validationErrorResults.Count == 0;
         }

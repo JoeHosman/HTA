@@ -12,27 +12,34 @@ namespace HTA.Adventures.BusinessLogic
     {
         public bool Validate(Spot item, IList<ValidationResult> validationErrorResults)
         {
-            if (item != null)
+            if (null == validationErrorResults)
+                validationErrorResults = new List<ValidationResult>();
+
+            if (null == item)
+                validationErrorResults.Add(new ValidationResult("A non-null object is required.", new[] { "Spot" }));
+            else
             {
                 if (string.IsNullOrEmpty(item.Name))
                     validationErrorResults.Add(new ValidationResult("A Name is required", new[] { "LocationName" }));
-                if (item.Point == null)
+                if (null == item.Point)
                     validationErrorResults.Add(new ValidationResult("A Point is required", new[] { "LocationPoint" }));
                 else
                 {
                     if (item.Point.Lat < -90)
-                        validationErrorResults.Add(new ValidationResult("A Latitude >= -90 is required", new[] { "PointLat" }));
+                        validationErrorResults.Add(new ValidationResult("A Latitude >= -90 is required",
+                                                                        new[] { "PointLat" }));
                     else if (item.Point.Lat > 90)
-                        validationErrorResults.Add(new ValidationResult("A Latitude <= 90 is required", new[] { "PointLat" }));
+                        validationErrorResults.Add(new ValidationResult("A Latitude <= 90 is required",
+                                                                        new[] { "PointLat" }));
 
                     if (item.Point.Lon < -180)
-                        validationErrorResults.Add(new ValidationResult("A Longitude >= -180 is required", new[] { "PointLon" }));
+                        validationErrorResults.Add(new ValidationResult("A Longitude >= -180 is required",
+                                                                        new[] { "PointLon" }));
                     else if (item.Point.Lon > 180)
-                        validationErrorResults.Add(new ValidationResult("A Longitude <= 180 is required", new[] { "PointLon" }));
+                        validationErrorResults.Add(new ValidationResult("A Longitude <= 180 is required",
+                                                                        new[] { "PointLon" }));
                 }
             }
-            else
-                validationErrorResults.Add(new ValidationResult("A non-null object is required.", new[] { "Spot" }));
 
 
             return validationErrorResults.Count == 0;

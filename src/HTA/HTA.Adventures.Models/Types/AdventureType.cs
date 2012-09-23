@@ -42,7 +42,27 @@ namespace HTA.Adventures.Models.Types
 
         [DataMember]
         public List<AdventureTypeTemplate> DataCardTemplates { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is AdventureType)
+            {
+                var other = obj as AdventureType;
+
+                if (string.IsNullOrEmpty(Id) != string.IsNullOrEmpty(other.Id))
+                    return false;
+
+                if (!string.IsNullOrEmpty(Id) && string.Compare(Id, other.Id) == 0)
+                {
+                    return (string.Compare(Name, other.Name) == 0
+                        && string.Compare(Description, other.Description) == 0);
+                }
+
+            }
+            return base.Equals(obj);
+        }
     }
+
 
     [RestService("/Adventure/Type/DataCards/{Id}")]
     public class AdventureTypeDataCards

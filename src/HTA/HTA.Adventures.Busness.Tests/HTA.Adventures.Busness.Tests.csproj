@@ -55,6 +55,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureTypeBusinessTest.cs" />
     <Compile Include="LocationBusinessTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpotBusinessTest.cs" />
