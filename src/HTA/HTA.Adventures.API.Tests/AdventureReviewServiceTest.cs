@@ -150,6 +150,7 @@ namespace HTA.Websites.API.Tests
             Assert.AreEqual(expectedNewReviewResponse, actual);
         }
 
+        [TestMethod]
         public void OnPostUpdateTest()
         {
             const string adventurename = "AdventureName";

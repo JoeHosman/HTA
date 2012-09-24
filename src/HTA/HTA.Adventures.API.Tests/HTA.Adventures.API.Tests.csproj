@@ -74,13 +74,10 @@
   <ItemGroup>
     <Compile Include="AdventureDataCardServiceTest.cs" />
     <Compile Include="AdventureLocationServiceTest.cs" />
-    <Compile Include="AdventureLocationTests.cs" />
     <Compile Include="AdventureRegionServiceTest.cs" />
     <Compile Include="AdventureReviewServiceTest.cs" />
-    <Compile Include="AdventureReviewTests.cs" />
     <Compile Include="AdventureTypeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AdventureRegionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HTA.Adventures.API.ServiceInterface\HTA.Adventures.API.ServiceInterface.csproj">

@@ -19,9 +19,6 @@
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureLocation.cs" caret="496" fromTop="16" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureRegionAdventureLocationsService.cs" caret="0" fromTop="0" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="0" fromTop="0" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewTests.cs" caret="0" fromTop="0" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewServiceTest.cs" caret="2513" fromTop="23" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureLocationTests.cs" caret="0" fromTop="0" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="2977" fromTop="2" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="747" fromTop="16" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureLocationRepository.cs" caret="370" fromTop="10" />
@@ -29,10 +26,10 @@
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureLocationService.cs" caret="810" fromTop="17" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:MongoAdventureTypeRepository.cs" caret="5519" fromTop="16" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureRegionController.cs" caret="3699" fromTop="16" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureLocationServiceTest.cs" caret="2301" fromTop="18" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureLocationServiceTest.cs" caret="1827" fromTop="8" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewServiceTest.cs" caret="6431" fromTop="74" />
   </RecentFiles>
   <RecentEdits>
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureLocation.cs" caret="1042" fromTop="31" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureLocation.cs" caret="1040" fromTop="5" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureLocation.cs" caret="1042" fromTop="27" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureLocation.cs" caret="1040" fromTop="12" />
@@ -62,5 +59,6 @@
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="3078" fromTop="25" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:MongoAdventureTypeRepository.cs" caret="5384" fromTop="9" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureRegionController.cs" caret="3864" fromTop="19" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewServiceTest.cs" caret="6452" fromTop="13" />
   </RecentEdits>
 </RecentFiles>
