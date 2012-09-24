@@ -15,7 +15,7 @@ namespace HTA.Adventures.BusinessLogic
 
             bool spotIsValidated = base.Validate(item, validationErrorResults);
 
-            if (null == item || null == item.Region || string.IsNullOrEmpty(item.Region.Id))
+            if (null == item || null == item.Region )
             {
                 validationErrorResults.Add(new ValidationResult("A Region is required", new[] { "Region" }));
             }

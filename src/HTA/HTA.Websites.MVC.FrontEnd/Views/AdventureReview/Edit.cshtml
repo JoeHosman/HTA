@@ -17,11 +17,11 @@
         <legend>AdventureReview</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
+            @Html.LabelFor(model => model.AdventureName)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
+            @Html.EditorFor(model => model.AdventureName)
+            @Html.ValidationMessageFor(model => model.AdventureName)
         </div>
 
         @Html.HiddenFor(model => model.Id)

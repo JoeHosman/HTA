@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
@@ -7,7 +8,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace HTA.Adventures.Busness.Tests
 {
     [TestClass]
-    public class AdventureTypeBusinessTest
+    public class AdventureReviewBusinessTest
     {
         /// <summary>
         ///Gets or sets the test context which provides
@@ -57,7 +58,7 @@ namespace HTA.Adventures.Busness.Tests
         [TestMethod]
         public void ValidateTest()
         {
-            var business = new AdventureTypeBusiness();
+            var business = new AdventureReviewBusiness();
 
             IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             const bool NotValid = false;
@@ -65,65 +66,38 @@ namespace HTA.Adventures.Busness.Tests
             bool isValidActual;
 
             // check validation of null type... not valid.
-            AdventureType nullType = null;
+            AdventureReview nullReview = null;
 
             //check no result handler
-            isValidActual = business.Validate(nullType, null);
+            isValidActual = business.Validate(nullReview, null);
             Assert.AreEqual(NotValid, isValidActual, "null input result list parameter");
 
 
             // check  validation
             validationErrorResults.Clear();
-            isValidActual = business.Validate(nullType, validationErrorResults);
+            isValidActual = business.Validate(nullReview, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "null is not valid");
 
             // check validation of default type constructor... not valid.
-            var defaultType = new AdventureType();
-
-            // check validation
+            var defaultReview = new AdventureReview();
+            // check  validation
             validationErrorResults.Clear();
-            isValidActual = business.Validate(defaultType, validationErrorResults);
-            Assert.AreEqual(NotValid, isValidActual, "newly constructed empty class is not valid");
+            isValidActual = business.Validate(defaultReview, validationErrorResults);
+            Assert.AreEqual(NotValid, isValidActual, "default constructor is not valid");
 
-            // Check validation of a seemly normal location.
-            var validType = new AdventureType
-                                {
-                                    Name = "TypeName",
-                                    Description = "TypeDescription",
-                                };
 
-            // check validation
+            var validReview = new AdventureReview
+                                  {
+                                      AdventureName = "some adventure name",
+                                      AdventureType = new AdventureType { Id = "someLegitId" },
+                                      AdventureLocation = new Location(new GeoPoint { Lat = 0, Lon = 0 }, "location"),
+                                      AdventureDuration = new TimeSpan(0, 0, 0, 1),
+                                      AdventureDate = DateTime.Now
+                                  };
+
             validationErrorResults.Clear();
-            isValidActual = business.Validate(validType, validationErrorResults);
-            Assert.AreEqual(Valid, isValidActual, "Valid generic type");
-
-            validType.PhotoLink = string.Empty;
-
-            // check validation
-            validationErrorResults.Clear();
-            isValidActual = business.Validate(validType, validationErrorResults);
-            Assert.AreEqual(Valid, isValidActual, "Valid generic type, null photo link");
-
-            validType.IconLink = string.Empty;
-
-            // check validation
-            validationErrorResults.Clear();
-            isValidActual = business.Validate(validType, validationErrorResults);
-            Assert.AreEqual(Valid, isValidActual, "Valid generic type, null icon link");
-
-            validType.DataCardTemplates.Add(new AdventureTypeTemplate());
-            // check validation
-            validationErrorResults.Clear();
-            isValidActual = business.Validate(validType, validationErrorResults);
-            Assert.AreEqual(Valid, isValidActual, "Valid generic type, new empty dataCardTemplate");
-
-            validType.DataCardTemplates = null;
-            // check validation
-            validationErrorResults.Clear();
-            isValidActual = business.Validate(validType, validationErrorResults);
-            Assert.AreEqual(NotValid, isValidActual, "Valid generic type, null dataCardTemplateList");
-
-            business.Dispose();
+            isValidActual = business.Validate(validReview, validationErrorResults);
+            Assert.AreEqual(Valid, isValidActual, "valid review");
         }
     }
 }

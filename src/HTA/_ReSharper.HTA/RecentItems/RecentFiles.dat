@@ -1,66 +1,66 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewTests.cs" caret="1309" fromTop="12" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1427" fromTop="12" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureDataCard.cs" caret="584" fromTop="21" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:ReviewBusiness.cs" caret="821" fromTop="19" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Region.cs" caret="824" fromTop="0" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureLocation/f:Create.cshtml" caret="0" fromTop="0" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="1501" fromTop="6" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:ErrorUtility.cs" caret="650" fromTop="3" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:MongoAdventureTypeRepository.cs" caret="4792" fromTop="16" />
     <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureLocationTests.cs" caret="2297" fromTop="55" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureTypeTemplate.cs" caret="542" fromTop="14" />
     <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:RegionBusiness.cs" caret="487" fromTop="13" />
     <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:SpotBusiness.cs" caret="312" fromTop="12" />
-    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="259" fromTop="9" />
     <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:LocationBusinessTest.cs" caret="6072" fromTop="34" />
     <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:SpotBusinessTest.cs" caret="8954" fromTop="21" />
-    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="1802" fromTop="17" />
     <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureTypeBusiness.cs" caret="468" fromTop="0" />
     <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureTypeTemplateBusiness.cs" caret="539" fromTop="14" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureTypeRepository.cs" caret="139" fromTop="5" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Location.cs" caret="1340" fromTop="15" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeFindResponse.cs" caret="159" fromTop="4" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureLocationService.cs" caret="3556" fromTop="45" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeSaveResponse.cs" caret="1227" fromTop="28" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="1980" fromTop="21" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeGetResponse.cs" caret="683" fromTop="17" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="4027" fromTop="12" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeDeleteResponse.cs" caret="772" fromTop="25" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="1819" fromTop="45" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeFindResponse.cs" caret="0" fromTop="0" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="475" fromTop="15" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="3536" fromTop="21" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeDeleteResponse.cs" caret="0" fromTop="0" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="915" fromTop="10" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="1472" fromTop="18" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="658" fromTop="13" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeGetResponse.cs" caret="464" fromTop="15" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="786" fromTop="6" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="1817" fromTop="8" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:MongoAdventureTypeRepository.cs" caret="1492" fromTop="21" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureReviewProxy.cs" caret="0" fromTop="0" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureTypeProxy.cs" caret="904" fromTop="19" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2767" fromTop="16" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureReviewBusiness.cs" caret="1420" fromTop="19" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureReviewTests.cs" caret="1551" fromTop="23" />
   </RecentFiles>
   <RecentEdits>
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="941" fromTop="13" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="2394" fromTop="28" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="1674" fromTop="6" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="727" fromTop="16" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2692" fromTop="16" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2585" fromTop="16" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2367" fromTop="18" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="372" fromTop="11" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="1896" fromTop="22" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeSaveResponse.cs" caret="1212" fromTop="19" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2741" fromTop="23" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="1970" fromTop="22" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="1840" fromTop="18" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeSaveResponse.cs" caret="667" fromTop="13" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="3602" fromTop="17" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeGetResponse.cs" caret="1319" fromTop="31" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeGetResponse.cs" caret="747" fromTop="14" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeGetResponse.cs" caret="416" fromTop="7" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeGetResponse.cs" caret="1281" fromTop="21" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="2039" fromTop="25" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureTypeService.cs" caret="1834" fromTop="17" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="3267" fromTop="15" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="3584" fromTop="21" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="3745" fromTop="25" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="3101" fromTop="14" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2234" fromTop="12" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="4108" fromTop="24" />
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="4405" fromTop="18" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeDeleteResponse.cs" caret="786" fromTop="27" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureTypeDeleteResponse.cs" caret="772" fromTop="25" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="3799" fromTop="25" />
+    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:AdventureTypeServiceTest.cs" caret="2990" fromTop="16" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureTypeProxy.cs" caret="580" fromTop="9" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureTypeProxy.cs" caret="801" fromTop="15" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureTypeProxy.cs" caret="1053" fromTop="22" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="1096" fromTop="12" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="468" fromTop="13" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="1309" fromTop="18" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="1453" fromTop="23" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="1157" fromTop="14" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="687" fromTop="9" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1026" fromTop="16" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1980" fromTop="28" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1495" fromTop="17" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="2060" fromTop="31" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="1733" fromTop="21" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="1897" fromTop="26" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="221" fromTop="7" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="952" fromTop="21" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:AdventureReviewBaseResponse.cs" caret="658" fromTop="13" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureReviewBusiness.cs" caret="212" fromTop="7" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="303" fromTop="9" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="1793" fromTop="17" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureReviewBusiness.cs" caret="468" fromTop="12" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="2682" fromTop="11" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="2113" fromTop="4" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureReviewBusiness.cs" caret="1625" fromTop="30" />
+    <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureReviewBusiness.cs" caret="1119" fromTop="15" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="3394" fromTop="17" />
+    <File id="5E601570-2A8B-4CD1-B222-6FAE348815BF/f:AdventureTypeBusinessTest.cs" caret="3643" fromTop="22" />
   </RecentEdits>
 </RecentFiles>

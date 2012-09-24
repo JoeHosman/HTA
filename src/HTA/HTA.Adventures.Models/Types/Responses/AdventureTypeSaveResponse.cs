@@ -1,49 +1,32 @@
 using System.Runtime.Serialization;
-using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.Models.Types.Responses
 {
     [DataContract]
-    public class AdventureTypeSaveResponse : IHasResponseStatus
+    public class AdventureTypeSaveResponse : AdventureTypeBaseResponse
     {
-        [DataMember]
-        public AdventureType Request { get; set; }
-
         [DataMember]
         public AdventureType AdventureType { get; set; }
 
         public AdventureTypeSaveResponse(AdventureType request)
+            : base(request)
         {
-            Request = request;
         }
 
         public override bool Equals(object obj)
         {
             AdventureTypeSaveResponse other = obj as AdventureTypeSaveResponse;
-            if (other != null)
+            if (base.Equals(obj) && null != other)
             {
-                if (null == Request && null == other.Request)
+                if (null == AdventureType && null == other.AdventureType)
                     return true;
-                if (null != Request)
-                {
-                    if (!Request.Equals(other.Request))
-                        return false;
 
-                    if (null == AdventureType && null == other.AdventureType)
-                        return true;
-
-                    if (null != AdventureType)
-                        return AdventureType.Equals(other.AdventureType);
-                }
+                if (null != AdventureType)
+                    return AdventureType.Equals(other.AdventureType);
             }
 
-            return base.Equals(obj);
+            return false;
         }
-        #region Implementation of IHasResponseStatus
 
-        [DataMember]
-        public ResponseStatus ResponseStatus { get; set; }
-
-        #endregion
     }
 }

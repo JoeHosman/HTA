@@ -73,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdventureLocationTests.cs" />
+    <Compile Include="AdventureReviewServiceTest.cs" />
     <Compile Include="AdventureReviewTests.cs" />
     <Compile Include="AdventureTypeServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

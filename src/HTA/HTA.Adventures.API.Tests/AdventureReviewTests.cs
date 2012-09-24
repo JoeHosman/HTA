@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ServiceStack.ServiceClient.Web;
 
@@ -24,7 +25,7 @@ namespace HTA.Websites.API.Tests
         [TestMethod]
         public void CreateNewAdventureReviewTest()
         {
-            var validator = new ReviewBusiness();
+            var validator = new AdventureReviewBusiness();
 
             IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
             validationErrorResults.Clear();
@@ -32,20 +33,20 @@ namespace HTA.Websites.API.Tests
             validationErrorResults.Clear();
             Assert.IsFalse(validator.Validate(new AdventureReview(), validationErrorResults), "new AdventureReview() should not be valid");
 
-            var nullReviewResults = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", null);
+            var nullReviewResults = _apiProxyClient.Post<AdventureReviewBaseResponse>("/Adventure/Reviews/", null);
             Assert.IsFalse(string.IsNullOrEmpty(nullReviewResults.ResponseStatus.ErrorCode));
 
             var validReview = new AdventureReview
                                   {
-                                      Name = "My Adventure",
+                                      AdventureName = "My Adventure",
                                       AdventureType = new AdventureType() { Name = "type" },
-                                      Location = new Location(new Region(new GeoPoint { Lat = 50, Lon = 50 }, "Location"))
+                                      AdventureLocation = new Location(new Region(new GeoPoint { Lat = 50, Lon = 50 }, "Location"))
                                   };
 
             validationErrorResults.Clear();
             Assert.IsTrue(validator.Validate(validReview, validationErrorResults));
 
-            var validReviewResults = _apiProxyClient.Post<AdventureReviewResponse>("/Adventure/Reviews/", validReview);
+            var validReviewResults = _apiProxyClient.Post<AdventureReviewBaseResponse>("/Adventure/Reviews/", validReview);
             Assert.IsTrue(string.IsNullOrEmpty(validReviewResults.ResponseStatus.ErrorCode));
         }
     }

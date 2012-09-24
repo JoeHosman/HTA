@@ -1,26 +1,27 @@
-using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace HTA.Adventures.Models.Types.Responses
 {
     [DataContract]
-    public class AdventureTypeFindResponse : AdventureTypeBaseResponse
+    public class AdventureReviewDeleteResponse : AdventureReviewBaseResponse
     {
         [DataMember]
-        public IList<AdventureType> AdventureTypeResults { get; set; }
+        public bool Success { get; set; }
 
-        public AdventureTypeFindResponse(AdventureType request)
+        public AdventureReviewDeleteResponse(AdventureReview request)
             : base(request)
         {
+            Success = false;
         }
 
         public override bool Equals(object obj)
         {
-            var other = obj as AdventureTypeFindResponse;
+            var other = obj as AdventureReviewDeleteResponse;
             if (base.Equals(obj) && null != other)
             {
 
             }
+
             return false;
         }
     }

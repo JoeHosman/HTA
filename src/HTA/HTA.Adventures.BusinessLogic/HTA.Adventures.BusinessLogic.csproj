@@ -52,7 +52,7 @@
     <Compile Include="AdventureTypeTemplateBusiness.cs" />
     <Compile Include="LocationBusiness.cs" />
     <Compile Include="RegionBusiness.cs" />
-    <Compile Include="ReviewBusiness.cs" />
+    <Compile Include="AdventureReviewBusiness.cs" />
     <Compile Include="SpotBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

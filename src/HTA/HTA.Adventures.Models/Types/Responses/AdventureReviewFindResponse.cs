@@ -4,19 +4,20 @@ using System.Runtime.Serialization;
 namespace HTA.Adventures.Models.Types.Responses
 {
     [DataContract]
-    public class AdventureTypeFindResponse : AdventureTypeBaseResponse
+    public class AdventureReviewFindResponse : AdventureReviewBaseResponse
     {
         [DataMember]
-        public IList<AdventureType> AdventureTypeResults { get; set; }
+        public IList<AdventureReview> AdventureReviews { get; set; }
 
-        public AdventureTypeFindResponse(AdventureType request)
+        public AdventureReviewFindResponse(AdventureReview request)
             : base(request)
         {
+            AdventureReviews = new List<AdventureReview>();
         }
 
         public override bool Equals(object obj)
         {
-            var other = obj as AdventureTypeFindResponse;
+            var other = obj as AdventureReviewFindResponse;
             if (base.Equals(obj) && null != other)
             {
 

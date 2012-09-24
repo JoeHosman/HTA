@@ -76,6 +76,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IAdventureRegionRepository.cs" />
+    <Compile Include="Types\Responses\AdventureReviewBaseResponse.cs" />
+    <Compile Include="Types\Responses\AdventureReviewDeleteResponse.cs" />
+    <Compile Include="Types\Responses\AdventureReviewFindResponse.cs" />
+    <Compile Include="Types\Responses\AdventureReviewGetResponse.cs" />
+    <Compile Include="Types\Responses\AdventureReviewSaveResponse.cs" />
+    <Compile Include="Types\Responses\AdventureTypeBaseResponse.cs" />
     <Compile Include="Types\Responses\AdventureTypeDeleteResponse.cs" />
     <Compile Include="Types\Responses\AdventureTypeFindResponse.cs" />
     <Compile Include="Types\Responses\AdventureTypeGetResponse.cs" />
