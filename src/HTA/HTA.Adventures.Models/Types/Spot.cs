@@ -9,7 +9,7 @@ namespace HTA.Adventures.Models.Types
     /// Represents a spot somewhere in the world with a Geo location point and a name.
     /// </summary>
     [DataContract]
-    [BsonKnownTypes(typeof(Region), typeof(Location))]
+    [BsonKnownTypes(typeof(Region), typeof(AdventureLocation))]
     public class Spot : Entity
     {
         /// <summary>

@@ -59,21 +59,12 @@ namespace HTA.Websites.API.Tests
         ///A test for OnGet
         ///</summary>
         [TestMethod]
-        public void OnGetTest()
+        public void OnGetSingleTest()
         {
             var singleRequest = new AdventureReview { Id = "legit id" };
-
-
-            var allReviewsRequest = new AdventureReview();
             var reviewList = new List<AdventureReview> { singleRequest };
 
             var expectedSingleReviewResponse = new AdventureReviewGetResponse(singleRequest) { AdventureReviews = reviewList };
-
-            var expectedAllReviewsResponse = new AdventureReviewGetResponse(allReviewsRequest) { AdventureReviews = reviewList };
-
-
-
-            var notExpectedAllReviewsResponse = new AdventureReviewGetResponse(allReviewsRequest);
 
             var mock = new Mock<IAdventureReviewRepository>();
             mock.Setup(a => a.GetAdventureReviewById(singleRequest.Id)).Returns(singleRequest);
@@ -84,8 +75,27 @@ namespace HTA.Websites.API.Tests
 
             var actual = target.OnGet(singleRequest) as AdventureReviewGetResponse;
             Assert.AreEqual(expectedSingleReviewResponse, actual);
+        }
 
-            actual = target.OnGet(allReviewsRequest) as AdventureReviewGetResponse;
+        [TestMethod]
+        public void OnGetListTest()
+        {
+            var singleRequest = new AdventureReview { Id = "legit id" };
+
+            var allReviewsRequest = new AdventureReview();
+            var reviewList = new List<AdventureReview> { singleRequest };
+
+            var expectedAllReviewsResponse = new AdventureReviewGetResponse(allReviewsRequest) { AdventureReviews = reviewList };
+
+            var notExpectedAllReviewsResponse = new AdventureReviewGetResponse(allReviewsRequest);
+
+            var mock = new Mock<IAdventureReviewRepository>();
+            mock.Setup(a => a.GetAdventureReviews()).Returns(reviewList);
+
+
+            var target = new AdventureReviewService { AdventureReviewRepository = mock.Object };
+
+            var actual = target.OnGet(allReviewsRequest) as AdventureReviewGetResponse;
             Assert.AreEqual(expectedAllReviewsResponse, actual);
 
             Assert.AreNotEqual(notExpectedAllReviewsResponse, actual);
@@ -95,7 +105,7 @@ namespace HTA.Websites.API.Tests
         ///A test for OnPost
         ///</summary>
         [TestMethod]
-        public void OnPostTest()
+        public void OnPostNewTest()
         {
             const string adventurename = "AdventureName";
             var adventureDate = DateTime.Now;
@@ -103,7 +113,7 @@ namespace HTA.Websites.API.Tests
 
             var adventureType = new AdventureType { Id = "typeId", Name = "AdventureType" };
 
-            var adventureLocation = new Location(new GeoPoint { Lat = 0, Lon = 0 }, "AdventureLocation");
+            var adventureLocation = new AdventureLocation(new GeoPoint { Lat = 0, Lon = 0 }, "AdventureLocation");
 
             var newReviewRequest = new AdventureReview
                                                    {
@@ -124,6 +134,32 @@ namespace HTA.Websites.API.Tests
                                                              AdventureLocation = adventureLocation
                                                          };
 
+            var expectedNewReviewResponse = new AdventureReviewSaveResponse(newReviewRequest)
+                                                                        {
+                                                                            AdventureReview = newReviewRequestOutput
+                                                                        };
+
+     
+            var mock = new Mock<IAdventureReviewRepository>();
+            mock.Setup(a => a.SaveAdventureReview(newReviewRequest)).Returns(expectedNewReviewResponse.AdventureReview);
+            
+            var target = new AdventureReviewService { AdventureReviewRepository = mock.Object };
+            
+            // new review
+            var actual = target.OnPost(newReviewRequest) as AdventureReviewSaveResponse;
+            Assert.AreEqual(expectedNewReviewResponse, actual);
+        }
+
+        public void OnPostUpdateTest()
+        {
+            const string adventurename = "AdventureName";
+            var adventureDate = DateTime.Now;
+            var adventureDuration = new TimeSpan(0, 0, 1);
+
+            var adventureType = new AdventureType { Id = "typeId", Name = "AdventureType" };
+
+            var adventureLocation = new AdventureLocation(new GeoPoint { Lat = 0, Lon = 0 }, "AdventureLocation");
+            
             var updateReviewRequestOutput = new AdventureReview
             {
                 Id = "differentId",
@@ -134,29 +170,18 @@ namespace HTA.Websites.API.Tests
                 AdventureLocation = adventureLocation
             };
 
-            var expectedNewReviewResponse = new AdventureReviewSaveResponse(newReviewRequest)
-                                                                        {
-                                                                            AdventureReview = newReviewRequestOutput
-                                                                        };
-
             var expectedUpdateReviewResponse = new AdventureReviewSaveResponse(updateReviewRequestOutput)
-                                                   {
-                                                       AdventureReview = updateReviewRequestOutput
-                                                   };
+            {
+                AdventureReview = updateReviewRequestOutput
+            };
 
             var mock = new Mock<IAdventureReviewRepository>();
-            mock.Setup(a => a.SaveAdventureReview(newReviewRequest)).Returns(expectedNewReviewResponse.AdventureReview);
             mock.Setup(a => a.SaveAdventureReview(updateReviewRequestOutput)).Returns(updateReviewRequestOutput);
 
             var target = new AdventureReviewService { AdventureReviewRepository = mock.Object };
 
-
-            // new review
-            var actual = target.OnPost(newReviewRequest) as AdventureReviewSaveResponse;
-            Assert.AreEqual(expectedNewReviewResponse, actual);
-
             // update
-            actual = target.OnPost(updateReviewRequestOutput) as AdventureReviewSaveResponse;
+            var actual = target.OnPost(updateReviewRequestOutput) as AdventureReviewSaveResponse;
             Assert.AreEqual(expectedUpdateReviewResponse, actual);
         }
     }

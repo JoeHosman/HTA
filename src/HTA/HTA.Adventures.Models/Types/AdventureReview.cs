@@ -32,7 +32,7 @@ namespace HTA.Adventures.Models.Types
 
         [DataMember]
         [Required]
-        public Location AdventureLocation { get; set; }
+        public AdventureLocation AdventureLocation { get; set; }
 
         [DataMember]
         [Required]

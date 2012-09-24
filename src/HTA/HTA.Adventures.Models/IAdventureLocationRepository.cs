@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 
 namespace HTA.Adventures.Models
 {
     public interface IAdventureLocationRepository
     {
-        IList<Location> GetAdventureLocations();
-        AdventureLocationResponse GetAdventureLocation(string id);
-        AdventureLocationResponse SaveAdventureLocation(Location model);
-        IList<Location> GetRegionAdventureLocations(string regionId);
+        IList<AdventureLocation> GetAdventureLocations();
+        AdventureLocation GetAdventureLocation(string id);
+        AdventureLocation SaveAdventureLocation(AdventureLocation model);
+        IList<AdventureLocation> GetRegionAdventureLocations(string regionId);
     }
 }

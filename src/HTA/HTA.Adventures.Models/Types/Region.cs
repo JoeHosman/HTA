@@ -1,9 +1,7 @@
-using System.Collections.Generic;
 using System.Runtime.Serialization;
 using DreamSongs.MongoRepository;
 using Nest;
 using ServiceStack.ServiceHost;
-using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.Models.Types
 {
@@ -15,7 +13,6 @@ namespace HTA.Adventures.Models.Types
     public class Region : Spot
     {
         public Region()
-            : base()
         {
 
         }
@@ -27,37 +24,12 @@ namespace HTA.Adventures.Models.Types
 
         public static Region CreateNewRegion
         {
-            get { return new Region() { Name = "<Create New Region>", Id = string.Empty }; }
+            get { return new Region { Name = "<Create New Region>", Id = string.Empty }; }
         }
 
-        public Location CreateLocation()
+        public AdventureLocation CreateLocation()
         {
-            return new Location(this);
+            return new AdventureLocation(this);
         }
-    }
-
-    [DataContract]
-    public class AdventureRegionResponse : IHasResponseStatus
-    {
-        public AdventureRegionResponse(Region request)
-        {
-            Request = request;
-        }
-
-        [DataMember]
-        public Region Request { get; set; }
-
-        [DataMember]
-        public Region Region { get; set; }
-
-        [DataMember]
-        public IList<Location> Locations { get; set; }
-
-        #region Implementation of IHasResponseStatus
-
-        [DataMember]
-        public ResponseStatus ResponseStatus { get; set; }
-
-        #endregion
     }
 }

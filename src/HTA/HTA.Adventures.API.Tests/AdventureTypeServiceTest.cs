@@ -54,35 +54,7 @@ namespace HTA.Websites.API.Tests
         #endregion
 
 
-        /// <summary>
-        ///A test for OnPost
-        ///</summary>
-        [TestMethod]
-        public void OnPostTest()
-        {
-            const string typeName = "Valid";
-            const string typeDescription = "Type";
-            var newTypeRequest = new AdventureType { Name = typeName, Description = typeDescription };
-            var savedRequest = new AdventureType { Name = typeName, Description = typeDescription, Id = "newId" };
-            var expectedNewResponse = new AdventureTypeSaveResponse(newTypeRequest) { AdventureType = savedRequest };
 
-            var updateTypeRequest = new AdventureType { Name = typeName, Description = typeDescription, Id = "existingId" };
-            var expectedUpdateResponse = new AdventureTypeSaveResponse(updateTypeRequest) { AdventureType = updateTypeRequest };
-
-
-            var repoMock = new Mock<IAdventureTypeRepository>();
-            repoMock.Setup(a => a.SaveAdventureType(newTypeRequest)).Returns(savedRequest);
-            repoMock.Setup(a => a.SaveAdventureType(updateTypeRequest)).Returns(updateTypeRequest);
-
-            IAdventureTypeRepository repo = repoMock.Object;
-            var target = new AdventureTypeService { AdventureTypeRepository = repo };
-
-            var actual = target.OnPost(newTypeRequest) as AdventureTypeSaveResponse;
-            Assert.AreEqual(expectedNewResponse, actual);
-
-            actual = target.OnPost(updateTypeRequest) as AdventureTypeSaveResponse;
-            Assert.AreEqual(expectedUpdateResponse, actual);
-        }
 
         /// <summary>
         ///A test for OnGet
@@ -112,6 +84,47 @@ namespace HTA.Websites.API.Tests
             Assert.IsNotNull(actual);
             Assert.AreEqual(adventureTypeList.Count, actual.AdventureTypes.Count);
             Assert.AreEqual(adventureTypeList[0], actual.AdventureTypes[0]);
+        }
+
+        /// <summary>
+        ///A test for OnPost
+        ///</summary>
+        [TestMethod]
+        public void OnPostNewTest()
+        {
+            const string typeName = "Valid";
+            const string typeDescription = "Type";
+            var newTypeRequest = new AdventureType { Name = typeName, Description = typeDescription };
+            var savedRequest = new AdventureType { Name = typeName, Description = typeDescription, Id = "newId" };
+            var expectedNewResponse = new AdventureTypeSaveResponse(newTypeRequest) { AdventureType = savedRequest };
+
+            var repoMock = new Mock<IAdventureTypeRepository>();
+            repoMock.Setup(a => a.SaveAdventureType(newTypeRequest)).Returns(savedRequest);
+
+            IAdventureTypeRepository repo = repoMock.Object;
+            var target = new AdventureTypeService { AdventureTypeRepository = repo };
+
+            var actual = target.OnPost(newTypeRequest) as AdventureTypeSaveResponse;
+            Assert.AreEqual(expectedNewResponse, actual);
+        }
+
+        [TestMethod]
+        public void OnPostUpdateTest()
+        {
+            const string typeName = "Valid";
+            const string typeDescription = "Type";
+
+            var updateTypeRequest = new AdventureType { Name = typeName, Description = typeDescription, Id = "existingId" };
+            var expectedUpdateResponse = new AdventureTypeSaveResponse(updateTypeRequest) { AdventureType = updateTypeRequest };
+
+            var repoMock = new Mock<IAdventureTypeRepository>();
+            repoMock.Setup(a => a.SaveAdventureType(updateTypeRequest)).Returns(updateTypeRequest);
+
+            IAdventureTypeRepository repo = repoMock.Object;
+            var target = new AdventureTypeService { AdventureTypeRepository = repo };
+
+            var actual = target.OnPost(updateTypeRequest) as AdventureTypeSaveResponse;
+            Assert.AreEqual(expectedUpdateResponse, actual);
         }
 
         /// <summary>

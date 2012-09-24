@@ -75,7 +75,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAdventureDataCardRepository.cs" />
     <Compile Include="IAdventureRegionRepository.cs" />
+    <Compile Include="Types\Responses\AdventureDataCardBaseResponse.cs" />
+    <Compile Include="Types\Responses\AdventureDataCardFindResponse.cs" />
+    <Compile Include="Types\Responses\AdventureDataCardGetResponse.cs" />
+    <Compile Include="Types\Responses\AdventureDataCardSaveResponse.cs" />
+    <Compile Include="Types\Responses\AdventureRegionBaseResponse.cs" />
+    <Compile Include="Types\Responses\AdventureLocationDeleteResponse.cs" />
+    <Compile Include="Types\Responses\AdventureLocationFindResponse.cs" />
+    <Compile Include="Types\Responses\AdventureLocationGetResponse.cs" />
+    <Compile Include="Types\Responses\AdventureLocationSaveResponse.cs" />
+    <Compile Include="Types\Responses\AdventureLocationBaseResponse.cs" />
+    <Compile Include="Types\Responses\AdventureRegionDeleteResponse.cs" />
+    <Compile Include="Types\Responses\AdventureRegionFindResponse.cs" />
+    <Compile Include="Types\Responses\AdventureRegionGetResponse.cs" />
+    <Compile Include="Types\Responses\AdventureRegionSaveResponse.cs" />
     <Compile Include="Types\Responses\AdventureReviewBaseResponse.cs" />
     <Compile Include="Types\Responses\AdventureReviewDeleteResponse.cs" />
     <Compile Include="Types\Responses\AdventureReviewFindResponse.cs" />
@@ -86,7 +101,7 @@
     <Compile Include="Types\Responses\AdventureTypeFindResponse.cs" />
     <Compile Include="Types\Responses\AdventureTypeGetResponse.cs" />
     <Compile Include="Types\Responses\AdventureTypeSaveResponse.cs" />
-    <Compile Include="Types\Location.cs" />
+    <Compile Include="Types\AdventureLocation.cs" />
     <Compile Include="Types\Region.cs" />
     <Compile Include="IAdventureLocationRepository.cs" />
     <Compile Include="IAdventureReviewRepository.cs" />

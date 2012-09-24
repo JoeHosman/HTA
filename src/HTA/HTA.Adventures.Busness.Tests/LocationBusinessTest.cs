@@ -68,7 +68,7 @@ namespace HTA.Adventures.Busness.Tests
             bool isValidActual;
 
             // check validation of null location... not valid.
-            Location nullRegion = null;
+            AdventureLocation nullRegion = null;
 
             // check  validation
             validationErrorResults.Clear();
@@ -154,7 +154,7 @@ namespace HTA.Adventures.Busness.Tests
             bool isValidActual;
 
             // check validation of null location... not valid.
-            Location nullLocation = null;
+            AdventureLocation nullLocation = null;
 
             isValidActual = locationBusiness.Validate(nullLocation, null);
             Assert.AreEqual(NotValid, isValidActual, "null is not valid, null result parameter");
@@ -166,7 +166,7 @@ namespace HTA.Adventures.Busness.Tests
             Assert.AreEqual(NotValid, isValidActual, "null is not valid");
 
             // check validation of default location constructor... not valid.
-            Location defaultLocation = new Location();
+            AdventureLocation defaultLocation = new AdventureLocation();
 
             // check validation
             validationErrorResults.Clear();
@@ -174,7 +174,7 @@ namespace HTA.Adventures.Busness.Tests
             Assert.AreEqual(NotValid, isValidActual, "newly constructed empty class is not valid");
 
             // Check validation of a seemly normal location.
-            Location validGenericLocation = new Location(new GeoPoint { Lat = 0.0, Lon = 0.0 }, "Location");
+            AdventureLocation validGenericLocation = new AdventureLocation(new GeoPoint { Lat = 0.0, Lon = 0.0 }, "Location");
             validGenericLocation.Region.Id = "not empty";
 
             // check validation

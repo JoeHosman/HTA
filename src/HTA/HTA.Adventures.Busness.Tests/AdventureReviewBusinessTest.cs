@@ -90,7 +90,7 @@ namespace HTA.Adventures.Busness.Tests
                                   {
                                       AdventureName = "some adventure name",
                                       AdventureType = new AdventureType { Id = "someLegitId" },
-                                      AdventureLocation = new Location(new GeoPoint { Lat = 0, Lon = 0 }, "location"),
+                                      AdventureLocation = new AdventureLocation(new GeoPoint { Lat = 0, Lon = 0 }, "location"),
                                       AdventureDuration = new TimeSpan(0, 0, 0, 1),
                                       AdventureDate = DateTime.Now
                                   };

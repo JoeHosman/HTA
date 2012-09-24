@@ -40,7 +40,7 @@ namespace HTA.Websites.API.Tests
                                   {
                                       AdventureName = "My Adventure",
                                       AdventureType = new AdventureType() { Name = "type" },
-                                      AdventureLocation = new Location(new Region(new GeoPoint { Lat = 50, Lon = 50 }, "Location"))
+                                      AdventureLocation = new AdventureLocation(new Region(new GeoPoint { Lat = 50, Lon = 50 }, "Location"))
                                   };
 
             validationErrorResults.Clear();

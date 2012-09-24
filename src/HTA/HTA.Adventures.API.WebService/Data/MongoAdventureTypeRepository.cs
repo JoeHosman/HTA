@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DreamSongs.MongoRepository;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using MongoDB.Bson;
 
 namespace HTA.Adventures.API.WebService.Data
@@ -18,7 +19,7 @@ namespace HTA.Adventures.API.WebService.Data
         private static readonly MongoRepository<AdventureReview> AdventureReviewRepository = new MongoRepository<AdventureReview>();
         private static readonly MongoRepository<AdventureType> AdventureTypeRepository = new MongoRepository<AdventureType>();
         private static readonly MongoRepository<AdventureTypeTemplate> AdventureTypeTemplateRepository = new MongoRepository<AdventureTypeTemplate>();
-        private static readonly MongoRepository<Location> AdventureLocationRepository = new MongoRepository<Location>();
+        private static readonly MongoRepository<AdventureLocation> AdventureLocationRepository = new MongoRepository<AdventureLocation>();
 
         #region Implementation of IAdventureTypeRepository
 
@@ -135,32 +136,30 @@ namespace HTA.Adventures.API.WebService.Data
 
         #region Implementation of IAdventureLocationRepository
 
-        public IList<Location> GetAdventureLocations()
+        public IList<AdventureLocation> GetAdventureLocations()
         {
             return AdventureLocationRepository.All().ToList();
         }
 
-        public AdventureLocationResponse GetAdventureLocation(string id)
+        public AdventureLocation GetAdventureLocation(string id)
         {
-            var response = new AdventureLocationResponse(new Location() { Id = id });
-
-            response.Location = AdventureLocationRepository.GetById(id);
+            var response  = AdventureLocationRepository.GetById(id);
 
             return response;
         }
 
-        public AdventureLocationResponse SaveAdventureLocation(Location model)
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
         {
-            var response = new AdventureLocationResponse(model);
+            var response = new AdventureLocationSaveResponse(model);
 
-            response.Location = (string.IsNullOrEmpty(model.Id))
+            response.AdventureLocation = (string.IsNullOrEmpty(model.Id))
                        ? AdventureLocationRepository.Add(model)
                        : AdventureLocationRepository.Update(model);
 
-            return response;
+            return response.AdventureLocation;
         }
 
-        public IList<Location> GetRegionAdventureLocations(string regionId)
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
         {
             return AdventureLocationRepository.All(l => l.Region.Id == regionId).ToList();
         }

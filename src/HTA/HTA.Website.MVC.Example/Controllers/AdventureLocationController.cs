@@ -36,16 +36,16 @@ namespace HTA.Website.MVC.Example.Controllers
             using (var businessValidator = new LocationBusiness())
             {
                 IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
-                if (businessValidator.Validate(model.Location, validationErrorResults))
+                if (businessValidator.Validate(model.AdventureLocation, validationErrorResults))
                 {
                     // Assign the adventure region to the location object.
-                    model.Location
+                    model.AdventureLocation
                         .Region = _adventureRegionRepository
-                            .GetAdventureRegion(model.Location.Region.Id);
+                            .GetAdventureRegion(model.AdventureLocation.Region.Id);
 
-                    var locationResponse = _adventureLocationRepository.SaveAdventureLocation(model.Location);
+                    var locationResponse = _adventureLocationRepository.SaveAdventureLocation(model.AdventureLocation);
 
-                    return View("Details", locationResponse.Location);
+                    return View("Details", locationResponse);
                 }
 
                 ErrorUtility.TransformResponseErrors(ModelState, validationErrorResults);
@@ -62,7 +62,7 @@ namespace HTA.Website.MVC.Example.Controllers
         public ActionResult Details(string id)
         {
             var location = _adventureLocationRepository.GetAdventureLocation(id);
-            return View(location.Location);
+            return View(location);
         }
 
         public ActionResult Edit(string id)
@@ -71,7 +71,7 @@ namespace HTA.Website.MVC.Example.Controllers
 
             var model = new AdventureLocationModel()
                             {
-                                Location = locationResponse.Location,
+                                AdventureLocation = locationResponse,
                                 SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions()
                             };
             model.SelectableAdventureRegions.Insert(0, Region.CreateNewRegion);
@@ -85,15 +85,15 @@ namespace HTA.Website.MVC.Example.Controllers
             using (var businessValidator = new LocationBusiness())
             {
                 IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
-                if (businessValidator.Validate(model.Location, validationErrorResults))
+                if (businessValidator.Validate(model.AdventureLocation, validationErrorResults))
                 {
                     // Assign the adventure region to the location object.
-                    model.Location
+                    model.AdventureLocation
                         .Region = _adventureRegionRepository
-                                            .GetAdventureRegion(model.Location.Region.Id);
+                                            .GetAdventureRegion(model.AdventureLocation.Region.Id);
 
-                    var location = _adventureLocationRepository.SaveAdventureLocation(model.Location);
-                    return RedirectToAction("Details", location.Location);
+                    var location = _adventureLocationRepository.SaveAdventureLocation(model.AdventureLocation);
+                    return RedirectToAction("Details", location);
                 }
 
                 model.SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions();

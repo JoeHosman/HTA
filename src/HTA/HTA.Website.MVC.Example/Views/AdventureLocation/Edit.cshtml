@@ -15,48 +15,48 @@
     <fieldset>
         <legend>AdventureLocationModel</legend>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Location.Name)
+            @Html.LabelFor(model => model.AdventureLocation.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Location.Name)
-            @Html.ValidationMessageFor(model => model.Location.Name)
+            @Html.EditorFor(model => model.AdventureLocation.Name)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Name)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Location.Address)
+            @Html.LabelFor(model => model.AdventureLocation.Address)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Location.Address)
-            @Html.ValidationMessageFor(model => model.Location.Address)
+            @Html.EditorFor(model => model.AdventureLocation.Address)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Address)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Location.Picture)
+            @Html.LabelFor(model => model.AdventureLocation.Picture)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Location.Picture)
-            @Html.ValidationMessageFor(model => model.Location.Picture)
+            @Html.EditorFor(model => model.AdventureLocation.Picture)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Picture)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Location.Point.Lat)
+            @Html.LabelFor(model => model.AdventureLocation.Point.Lat)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Location.Point.Lat)
-            @Html.ValidationMessageFor(model => model.Location.Point.Lat)
+            @Html.EditorFor(model => model.AdventureLocation.Point.Lat)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Point.Lat)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Location.Point.Lon)
+            @Html.LabelFor(model => model.AdventureLocation.Point.Lon)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Location.Point.Lon)
-            @Html.ValidationMessageFor(model => model.Location.Point.Lon)
+            @Html.EditorFor(model => model.AdventureLocation.Point.Lon)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Point.Lon)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Location.Region)
+            @Html.LabelFor(model => model.AdventureLocation.Region)
         </div>
         <div class="editor-field">
-            @Html.DropDownListFor(m => m.Location.Region.Id, Model.SelectableAdventureRegions.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureRegion", Class = "chzn-select" })
+            @Html.DropDownListFor(m => m.AdventureLocation.Region.Id, Model.SelectableAdventureRegions.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureRegion", Class = "chzn-select" })
         </div>
         <p>
-            @Html.HiddenFor(model => model.Location.Id)
+            @Html.HiddenFor(model => model.AdventureLocation.Id)
             <input type="submit" value="Save" />
         </p>
     </fieldset>
