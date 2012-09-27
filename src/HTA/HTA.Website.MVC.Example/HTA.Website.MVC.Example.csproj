@@ -212,6 +212,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HTA.Adventures.API.ServiceInterface\HTA.Adventures.API.ServiceInterface.csproj">
+      <Project>{1EEDEE88-3BC8-4344-95DE-148CBB7677FA}</Project>
+      <Name>HTA.Adventures.API.ServiceInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HTA.Adventures.BusinessLogic\HTA.Adventures.BusinessLogic.csproj">
       <Project>{9843E129-E60D-49E8-AF71-2F4F45A7F209}</Project>
       <Name>HTA.Adventures.BusinessLogic</Name>

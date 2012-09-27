@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.ServiceModel;
 
@@ -16,35 +17,32 @@ namespace HTA.Adventures.API.ServiceInterface
 
         public override object OnGet(Region request)
         {
+            var response = new AdventureRegionGetResponse(request);
             if (!string.IsNullOrEmpty(request.Id))
             {
-                return AdventureRegionRepository.GetAdventureRegion(request.Id);
+                var region = AdventureRegionRepository.GetAdventureRegion(request.Id);
+                response.AdventureRegions.Add(region);
             }
-            return AdventureRegionRepository.GetAdventureRegions();
+            else
+                response.AdventureRegions = AdventureRegionRepository.GetAdventureRegions();
+
+            return response;
         }
 
 
         public override object OnPost(Region request)
         {
-            var response = new AdventureRegionResponse(request);
+            var response = new AdventureRegionSaveResponse(request);
 
             using (var regionBusiness = new RegionBusiness())
             {
                 IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
-               
+
                 if (regionBusiness.Validate(request, validationErrorResults))
                 {
-                    response.Region = AdventureRegionRepository.SaveAdventureRegion(request);
+                    var region = AdventureRegionRepository.SaveAdventureRegion(request);
 
-                    response.Locations = AdventureLocationRepository.GetRegionAdventureLocations(response.Region.Id);
-
-                    if (response.Locations.Count == 0)
-                    {
-                        var locationResponse = AdventureLocationRepository.SaveAdventureLocation(response.Region.CreateLocation()); ;
-
-
-                        response.Locations.Add(locationResponse.Location);
-                    }
+                    response.AdventureRegion = region;
 
                     response.ResponseStatus = new ResponseStatus();
                 }

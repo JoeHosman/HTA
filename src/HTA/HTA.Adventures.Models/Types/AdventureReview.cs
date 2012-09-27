@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.Serialization;
 using DreamSongs.MongoRepository;
 using ServiceStack.ServiceHost;
-using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.Models.Types
 {
@@ -17,12 +17,11 @@ namespace HTA.Adventures.Models.Types
             DataCards = new List<AdventureDataCard>();
 
         }
-        
+
         [DataMember]
         [Required]
-        public string Name { get; set; }
+        public string AdventureName { get; set; }
 
-        
         [DataMember]
         [Required]
         public AdventureType AdventureType { get; set; }
@@ -33,26 +32,14 @@ namespace HTA.Adventures.Models.Types
 
         [DataMember]
         [Required]
-        public Location Location { get; set; }
-    }
-
-    [DataContract]
-    public class AdventureReviewResponse : IHasResponseStatus
-    {
-        public AdventureReviewResponse(AdventureReview request)
-        {
-            Request = request;
-        }
-        [DataMember]
-        public AdventureReview Request { get; set; }
-        [DataMember]
-        public AdventureReview Review { get; set; }
-
-        #region Implementation of IHasResponseStatus
+        public AdventureLocation AdventureLocation { get; set; }
 
         [DataMember]
-        public ResponseStatus ResponseStatus { get; set; }
+        [Required]
+        public TimeSpan? AdventureDuration { get; set; }
 
-        #endregion
+        [DataMember]
+        [Required]
+        public DateTime? AdventureDate { get; set; }
     }
 }

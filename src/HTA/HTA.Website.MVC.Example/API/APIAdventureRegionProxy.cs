@@ -16,6 +16,8 @@ namespace HTA.Website.MVC.Example.API
 
         public Region GetAdventureRegion(string id)
         {
+            if (string.IsNullOrEmpty(id)) return null;
+
             var review = Client.Get<Region>("/Adventure/Regions/" + id);
             return review;
         }

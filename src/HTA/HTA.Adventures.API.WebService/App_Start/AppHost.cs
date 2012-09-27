@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Configuration;
+using HTA.Adventures.API.ServiceInterface;
 using HTA.Adventures.API.WebService.Data;
 using HTA.Adventures.Models;
 using ServiceStack.Configuration;
@@ -26,7 +27,7 @@ namespace HTA.Adventures.API.WebService.App_Start
         : AppHostBase
     {
         public AppHost() //Tell ServiceStack the name and where to find your web services
-            : base("StarterTemplate ASP.NET Host", typeof(ServiceInterface.NearByLocationSearch).Assembly) { }
+            : base("StarterTemplate ASP.NET Host", typeof(ServiceInterface.NearByLocationSearchService).Assembly) { }
 
         public override void Configure(Funq.Container container)
         {
@@ -38,8 +39,8 @@ namespace HTA.Adventures.API.WebService.App_Start
                 .Add<Hello>("/hello")
                 .Add<Hello>("/hello/{Name*}")
                 .Add<Todo>("/todos")
-                .Add<Todo>("/todos/{Id}")
-                .Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
+                .Add<Todo>("/todos/{Id}");
+                //.Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
 
 
 
@@ -57,12 +58,16 @@ namespace HTA.Adventures.API.WebService.App_Start
             // Add our mongo adventure type repo into the system
             container.Register(new MongoAdventureTypeRepository());
 
+            container.Register(new ElasticAdventureLocationSearchRepository(Settings.ElasticLocationServer, Settings.DefaultLocationSearchRange));
+
             // Register our mongo adapter as the IAdventuretypeRepository to use :D
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeTemplateRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureRegionRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureLocationRepository>();
+
+            container.RegisterAs<ElasticAdventureLocationSearchRepository, IAdventureLocationSearchRepository>();
         }
 
         /* Uncomment to enable ServiceStack Authentication and CustomUserSession

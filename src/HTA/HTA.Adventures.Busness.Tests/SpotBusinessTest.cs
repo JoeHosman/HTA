@@ -70,6 +70,9 @@ namespace HTA.Adventures.Busness.Tests
             // check validation of null location... not valid.
             Spot nullSpot = null;
 
+            isValidActual = spotBusiness.Validate(nullSpot, null);
+            Assert.AreEqual(NotValid, isValidActual, "null is not valid, null result parameter");
+
             // check  validation
 
             isValidActual = spotBusiness.Validate(nullSpot, validationErrorResults);
@@ -93,6 +96,8 @@ namespace HTA.Adventures.Busness.Tests
             isValidActual = spotBusiness.Validate(validGenericLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "Valid generic location");
             Assert.AreEqual(0, validationErrorResults.Count);
+
+            spotBusiness.Dispose();
 
         }
         /// <summary>
@@ -124,6 +129,8 @@ namespace HTA.Adventures.Busness.Tests
             validationErrorResults.Clear();
             isValidActual = spotBusiness.Validate(noLocation, validationErrorResults);
             Assert.AreEqual(NotValid, isValidActual, "no location generic location");
+
+            spotBusiness.Dispose();
         }
 
         /// <summary>
@@ -203,6 +210,8 @@ namespace HTA.Adventures.Busness.Tests
             validationErrorResults.Clear();
             isValidActual = spotBusiness.Validate(invalidLonLocation, validationErrorResults);
             Assert.AreEqual(Valid, isValidActual, "longitude great than or equal to -180.0 is valid");
+
+            spotBusiness.Dispose();
         }
     }
 }

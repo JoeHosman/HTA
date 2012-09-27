@@ -4,38 +4,36 @@ using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
-    public class AdventureRegionAdventureLocationsService : RestServiceBase<AdventureRegionAdventureLocationsRequest>
-    {
-        public IAdventureLocationRepository AdventureLocationRepository { get; set; }
-        public override object OnGet(AdventureRegionAdventureLocationsRequest request)
-        {
-            return AdventureLocationRepository.GetRegionAdventureLocations(request.RegionId);
-        }
-
-    }
-
-    public class AdventureLocationService : RestServiceBase<Location>
+    public class AdventureLocationService : RestServiceBase<AdventureLocation>
     {
         public IAdventureLocationRepository AdventureLocationRepository { get; set; }
         public IAdventureRegionRepository AdventureRegionRepository { get; set; }
 
-        public override object OnGet(Location request)
+        public override object OnGet(AdventureLocation request)
         {
+            var response = new AdventureLocationGetResponse(request);
+
             if (!string.IsNullOrEmpty(request.Id))
             {
-                return AdventureLocationRepository.GetAdventureLocation(request.Id);
+                var location = AdventureLocationRepository.GetAdventureLocation(request.Id);
+                response.AdventureLocations.Add(location);
             }
-            return AdventureLocationRepository.GetAdventureLocations();
+            else
+            {
+                response.AdventureLocations = AdventureLocationRepository.GetAdventureLocations();
+            }
+            return response;
         }
 
-        public override object OnPost(Location request)
+        public override object OnPost(AdventureLocation request)
         {
-            var response = new AdventureLocationResponse(request);
+            var response = new AdventureLocationSaveResponse(request);
             //response.ResponseStatus = new ResponseStatus() { ErrorCode = "NULL" };
 
             using (var locationBusiness = new LocationBusiness())
@@ -43,21 +41,7 @@ namespace HTA.Adventures.API.ServiceInterface
                 IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
                 if (locationBusiness.Validate(request, validationErrorResults))
                 {
-                    if (string.IsNullOrEmpty(request.Region.Id))
-                    {
-                        response.Region =
-                            AdventureRegionRepository.SaveAdventureRegion(request.Region);
-                    }
-                    else
-                    {
-                        // attempt to get the right region based off Id, if none are found, create a new one.
-                        response.Region = AdventureRegionRepository.GetAdventureRegion(request.Region.Id) ??
-                                          AdventureRegionRepository.SaveAdventureRegion(request.Region);
-                    }
-
-                    request.Region = response.Region;
-
-                    response.Location = AdventureLocationRepository.SaveAdventureLocation(request).Location;
+                    response.AdventureLocation = AdventureLocationRepository.SaveAdventureLocation(request);
 
                     response.ResponseStatus = new ResponseStatus();
                 }
@@ -67,7 +51,7 @@ namespace HTA.Adventures.API.ServiceInterface
                                                                  string.Format(
                                                                      "'{0}' errors prevents this from valid.",
                                                                      validationErrorResults.Count));
-                    
+
                     ErrorUtility.TransformResponseErrors(response.ResponseStatus.Errors, validationErrorResults);
                 }
             }

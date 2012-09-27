@@ -1,36 +1,33 @@
 using System.Collections.Generic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using ServiceStack.ServiceClient.Web;
 
 namespace HTA.Website.MVC.Example.API
 {
-    internal class APIAdventureTypeProxy :APIProxyBase, IAdventureTypeRepository
+    internal class APIAdventureTypeProxy : APIProxyBase, IAdventureTypeRepository
     {
 
         #region Implementation of IAdventureTypeRepository
 
         public IList<AdventureType> GetAdventureTypes()
         {
-            var list = Client.Get<List<AdventureType>>("/Adventure/Types");
-            return list;
+            var response = Client.Get<AdventureTypeGetResponse>("/Adventure/Types");
+            return response.AdventureTypes;
         }
 
         public AdventureType GetAdventureType(string id)
         {
-            var adventureType = Client.Get<AdventureType>("/Adventure/Types/" + id);
-            return adventureType;
+            var response = Client.Get<AdventureTypeGetResponse>("/Adventure/Types/" + id);
+            return response.AdventureTypes[0];
         }
 
         public AdventureType SaveAdventureType(AdventureType adventuretype)
         {
-            //lock (this)
-            //{
-            //    adventuretype.Id = (_stuff.Count + 1).ToString();
-            //    _stuff.Add(adventuretype);
-            //}
-            adventuretype = Client.Post<AdventureType>("/Adventure/Types/", adventuretype);
-            return adventuretype;
+
+            var response = Client.Post<AdventureTypeSaveResponse>("/Adventure/Types/", adventuretype);
+            return response.AdventureType;
         }
 
         public IList<AdventureDataCard> GetTypeDataCards(string typeId)

@@ -17,5 +17,10 @@ namespace HTA.Adventures.Models.Types
         [DataMember]
         [DataType(DataType.MultilineText)]
         public string Body { get; set; }
+
+        [DataMember]
+        public AdventureReview AdventureReview { get; set; }
     }
+
+
 }
