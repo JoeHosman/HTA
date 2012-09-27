@@ -7,6 +7,6 @@ namespace HTA.Website.MVC.Example.Models
     {
         public Region Region { get; set; }
         public IEnumerable<string> SelectedLocations { get; set; }
-        public IList<Location> Locations { get; set; }
+        public IList<AdventureLocation> Locations { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using ServiceStack.ServiceInterface;
 using ServiceStack.ServiceInterface.ServiceModel;
 
@@ -15,14 +16,14 @@ namespace HTA.Adventures.API.ServiceInterface
 
         public override object OnPost(AdventureReview request)
         {
-            var response = new AdventureReviewResponse(request);
+            var response = new AdventureReviewSaveResponse(request);
 
-            using (var reviewBusiness = new ReviewBusiness())
+            using (var reviewBusiness = new AdventureReviewBusiness())
             {
                 IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
                 if (reviewBusiness.Validate(request, validationErrorResults))
                 {
-                    response.Review = AdventureReviewRepository.SaveAdventureReview(request);
+                    response.AdventureReview = AdventureReviewRepository.SaveAdventureReview(request);
 
                     response.ResponseStatus = new ResponseStatus();
                 }
@@ -30,7 +31,6 @@ namespace HTA.Adventures.API.ServiceInterface
                 {
                     response.ResponseStatus = new ResponseStatus("Invalid", string.Format("'{0}' errors prevents this from valid.", validationErrorResults.Count));
                     ErrorUtility.TransformResponseErrors(response.ResponseStatus.Errors, validationErrorResults);
-
                 }
             }
 
@@ -42,11 +42,15 @@ namespace HTA.Adventures.API.ServiceInterface
 
         public override object OnGet(AdventureReview request)
         {
+            var response = new AdventureReviewGetResponse(request);
+
             if (!string.IsNullOrEmpty(request.Id))
             {
-                return AdventureReviewRepository.GetAdventureReviewById(request.Id);
+                response.AdventureReviews.Add(AdventureReviewRepository.GetAdventureReviewById(request.Id));
             }
-            return AdventureReviewRepository.GetAdventureReviews();
+            else
+                response.AdventureReviews = AdventureReviewRepository.GetAdventureReviews();
+            return response;
         }
     }
 }

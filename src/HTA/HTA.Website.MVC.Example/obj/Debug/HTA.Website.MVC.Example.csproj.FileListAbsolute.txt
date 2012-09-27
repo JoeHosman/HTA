@@ -97,3 +97,5 @@ C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\H
 C:\HowtoAdventures\coding\coding\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.BusinessLogic.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.BusinessLogic.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.API.ServiceInterface.dll
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.API.ServiceInterface.pdb

@@ -1,36 +1,37 @@
 using System.Collections.Generic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 
 namespace HTA.Website.MVC.Example.API
 {
     internal class APIAdventureLocationProxy : APIProxyBase, IAdventureLocationRepository
     {
-        public IList<Location> GetAdventureLocations()
+        public IList<AdventureLocation> GetAdventureLocations()
         {
-            var list = Client.Get<List<Location>>("/Adventure/Locations");
+            var list = Client.Get<List<AdventureLocation>>("/Adventure/Locations");
             return list;
         }
 
-        public AdventureLocationResponse GetAdventureLocation(string id)
+        public AdventureLocation GetAdventureLocation(string id)
         {
 
-            var response = Client.Get<AdventureLocationResponse>("/Adventure/Locations/" + id);
+            var response = Client.Get<AdventureLocation>("/Adventure/Locations/" + id);
 
             return response;
         }
 
-        public AdventureLocationResponse SaveAdventureLocation(Location model)
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
         {
 
-            var response = Client.Post<AdventureLocationResponse>("/Adventure/Locations/" + model.Id, model);
+            var response = Client.Post<AdventureLocationSaveResponse>("/Adventure/Locations/" + model.Id, model);
 
-            return response;
+            return response.AdventureLocation;
         }
 
-        public IList<Location> GetRegionAdventureLocations(string regionId)
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
         {
-            var locations = Client.Get<List<Location>>("/Adventure/Region/Locations/" + regionId);
+            var locations = Client.Get<List<AdventureLocation>>("/Adventure/Region/Locations/" + regionId);
             return locations;
         }
     }

@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
+using System.Web.Mvc;
 using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
-    class ErrorUtility
+    public class ErrorUtility
     {
         public static void TransformResponseErrors(IList<ResponseError> responseErrors, IList<ValidationResult> validationErrorResults)
         {
@@ -19,7 +18,7 @@ namespace HTA.Adventures.API.ServiceInterface
             {
                 var member = validationResult.MemberNames.GetEnumerator();
                 member.MoveNext();
-                ResponseError error = new ResponseError
+                var error = new ResponseError
                                           {
                                               Message = validationResult.ErrorMessage,
                                               ErrorCode = "FailedValidation"
@@ -34,6 +33,29 @@ namespace HTA.Adventures.API.ServiceInterface
                 }
 
                 responseErrors.Add(error);
+            }
+        }
+
+        public static void TransformResponseErrors(ModelStateDictionary responseErrors, IList<ValidationResult> validationErrorResults)
+        {
+            if (responseErrors == null)
+            {
+                responseErrors = new ModelStateDictionary();
+            }
+
+            foreach (var validationResult in validationErrorResults)
+            {
+                var member = validationResult.MemberNames.GetEnumerator();
+                member.MoveNext();
+
+                try
+                {
+                    responseErrors.AddModelError(member.Current, validationResult.ErrorMessage);
+                }
+                catch (Exception)
+                {
+                    responseErrors.AddModelError("null_name", validationResult.ErrorMessage);
+                }
             }
         }
     }

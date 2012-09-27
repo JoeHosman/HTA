@@ -11,7 +11,7 @@ namespace HTA.Website.MVC.Example.Models
     public class AdventureLocationModel
     {
         [DataMember]
-        public Location Location { get; set; }
+        public AdventureLocation AdventureLocation { get; set; }
 
         [DataMember]
         public IList<Region> SelectableAdventureRegions { get; set; }
