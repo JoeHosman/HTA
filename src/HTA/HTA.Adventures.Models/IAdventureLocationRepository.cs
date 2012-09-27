@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using HTA.Adventures.Models.Types;
-using HTA.Adventures.Models.Types.Responses;
 
 namespace HTA.Adventures.Models
 {

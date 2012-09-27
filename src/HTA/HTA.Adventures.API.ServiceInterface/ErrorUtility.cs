@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
 using System.Web.Mvc;
 using ServiceStack.ServiceInterface.ServiceModel;
 
@@ -20,7 +18,7 @@ namespace HTA.Adventures.API.ServiceInterface
             {
                 var member = validationResult.MemberNames.GetEnumerator();
                 member.MoveNext();
-                ResponseError error = new ResponseError
+                var error = new ResponseError
                                           {
                                               Message = validationResult.ErrorMessage,
                                               ErrorCode = "FailedValidation"

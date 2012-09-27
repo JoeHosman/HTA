@@ -79,9 +79,8 @@
     <Compile Include="AdventureTypeService.cs" />
     <Compile Include="AdventureTypeTemplateService.cs" />
     <Compile Include="ErrorUtility.cs" />
-    <Compile Include="NearByLocationSearch.cs" />
+    <Compile Include="NearByLocationSearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HTA.Adventures.BusinessLogic\HTA.Adventures.BusinessLogic.csproj">

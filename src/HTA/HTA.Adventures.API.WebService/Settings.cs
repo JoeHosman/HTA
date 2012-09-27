@@ -1,6 +1,6 @@
 ﻿using System.Configuration;
 
-namespace HTA.Adventures.API.ServiceInterface
+namespace HTA.Adventures.API.WebService
 {
     public class Settings
     {
