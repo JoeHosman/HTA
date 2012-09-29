@@ -31,6 +31,12 @@ namespace HTA.Adventures.Models.Types
         public string LatLon
         {
             get { return string.Format("{0}, {1}", Lat, Lon); }
+            set
+            {
+                var values = value.Split(new[] { ',' }, 2);
+                Lat = double.Parse(values[0]);
+                Lon = double.Parse(values[1]);
+            }
         }
     }
 }

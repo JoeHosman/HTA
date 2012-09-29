@@ -27,7 +27,7 @@ namespace HTA.Adventures.API.WebService.App_Start
         : AppHostBase
     {
         public AppHost() //Tell ServiceStack the name and where to find your web services
-            : base("StarterTemplate ASP.NET Host", typeof(ServiceInterface.NearByLocationSearchService).Assembly) { }
+            : base("StarterTemplate ASP.NET Host", typeof(AdventureReviewService).Assembly) { }
 
         public override void Configure(Funq.Container container)
         {
@@ -35,11 +35,11 @@ namespace HTA.Adventures.API.WebService.App_Start
             ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
 
             //Configure User Defined REST Paths
-            Routes
-                .Add<Hello>("/hello")
-                .Add<Hello>("/hello/{Name*}")
-                .Add<Todo>("/todos")
-                .Add<Todo>("/todos/{Id}");
+            //Routes
+            //    .Add<Hello>("/hello")
+            //    .Add<Hello>("/hello/{Name*}")
+            //    .Add<Todo>("/todos")
+            //    .Add<Todo>("/todos/{Id}");
                 //.Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
 
 
@@ -53,12 +53,12 @@ namespace HTA.Adventures.API.WebService.App_Start
             //ConfigureAuth(container);
 
             //Register all your dependencies
-            container.Register(new TodoRepository());
+            //container.Register(new TodoRepository());
 
             // Add our mongo adventure type repo into the system
             container.Register(new MongoAdventureTypeRepository());
 
-            container.Register(new ElasticAdventureLocationSearchRepository(Settings.ElasticLocationServer, Settings.DefaultLocationSearchRange));
+            container.Register(new ElasticAdventureLocationSearchRepository(Settings.ElasticLocationServer));
 
             // Register our mongo adapter as the IAdventuretypeRepository to use :D
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();
