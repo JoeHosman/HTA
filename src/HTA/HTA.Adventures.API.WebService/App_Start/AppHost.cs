@@ -1,14 +1,6 @@
-using System.Linq;
-using System.Configuration;
 using HTA.Adventures.API.ServiceInterface;
 using HTA.Adventures.API.WebService.Data;
 using HTA.Adventures.Models;
-using ServiceStack.Configuration;
-using ServiceStack.OrmLite;
-using ServiceStack.OrmLite.SqlServer;
-using ServiceStack.ServiceInterface;
-using ServiceStack.ServiceInterface.Auth;
-using ServiceStack.ServiceInterface.ServiceModel;
 using ServiceStack.WebHost.Endpoints;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(HTA.Adventures.API.WebService.App_Start.AppHost), "Start")]
@@ -40,7 +32,7 @@ namespace HTA.Adventures.API.WebService.App_Start
             //    .Add<Hello>("/hello/{Name*}")
             //    .Add<Todo>("/todos")
             //    .Add<Todo>("/todos/{Id}");
-                //.Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
+            //.Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
 
 
 
@@ -58,7 +50,10 @@ namespace HTA.Adventures.API.WebService.App_Start
             // Add our mongo adventure type repo into the system
             container.Register(new MongoAdventureTypeRepository());
 
-            container.Register(new ElasticAdventureLocationSearchRepository(Settings.ElasticLocationServer));
+            var adventureLocationSearchRepository = new ElasticAdventureLocationSearchRepository
+                                                        {ElasticServer = Settings.ElasticLocationServer};
+
+            container.Register(adventureLocationSearchRepository);
 
             // Register our mongo adapter as the IAdventuretypeRepository to use :D
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();

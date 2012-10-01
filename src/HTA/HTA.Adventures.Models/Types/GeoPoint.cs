@@ -25,7 +25,7 @@ namespace HTA.Adventures.Models.Types
 
         public GeoPoint()
         {
-            Lat = Lon = double.MinValue;
+            LatLon = string.Empty;
         }
 
         public string LatLon
@@ -33,9 +33,17 @@ namespace HTA.Adventures.Models.Types
             get { return string.Format("{0}, {1}", Lat, Lon); }
             set
             {
-                var values = value.Split(new[] { ',' }, 2);
-                Lat = double.Parse(values[0]);
-                Lon = double.Parse(values[1]);
+                if (string.IsNullOrEmpty(value))
+                {
+                    Lat = double.MinValue;
+                    Lon = double.MinValue;
+                }
+                else
+                {
+                    var values = value.Split(new[] { ',' }, 2);
+                    Lat = double.Parse(values[0]);
+                    Lon = double.Parse(values[1]);
+                }
             }
         }
     }

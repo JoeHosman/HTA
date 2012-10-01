@@ -77,6 +77,7 @@
     <Compile Include="AdventureRegionServiceTest.cs" />
     <Compile Include="AdventureReviewServiceTest.cs" />
     <Compile Include="AdventureTypeServiceTest.cs" />
+    <Compile Include="NearByAdventureLocationSearchServiceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
