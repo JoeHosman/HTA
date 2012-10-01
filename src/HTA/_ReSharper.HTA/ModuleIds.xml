@@ -16,4 +16,5 @@
   <Module PersistentId="9843E129-E60D-49E8-AF71-2F4F45A7F209" ModuleId="HTA.Adventures.BusinessLogic" />
   <Module PersistentId="5E601570-2A8B-4CD1-B222-6FAE348815BF" ModuleId="HTA.Adventures.Busness.Tests" />
   <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib" />
+  <Module PersistentId="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="mscorlib_1" />
 </Modules>

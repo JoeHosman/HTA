@@ -79,6 +79,7 @@
     <Compile Include="AdventureTypeService.cs" />
     <Compile Include="AdventureTypeTemplateService.cs" />
     <Compile Include="ErrorUtility.cs" />
+    <Compile Include="NearByAdventureLocationSearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

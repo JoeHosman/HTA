@@ -5,6 +5,6 @@ namespace HTA.Adventures.Models
 {
     public interface IAdventureLocationSearchRepository
     {
-        List<Spot> GetNearByAdventureLocations(GeoPoint point, GeoRange range);
+        List<AdventureLocation> GetNearByAdventureLocations(GeoPoint point, GeoRange range);
     }
 }

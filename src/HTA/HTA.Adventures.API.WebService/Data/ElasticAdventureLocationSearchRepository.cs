@@ -8,16 +8,28 @@ namespace HTA.Adventures.API.WebService.Data
 {
     internal class ElasticAdventureLocationSearchRepository : IAdventureLocationSearchRepository
     {
-        private readonly string _elasticServer;
+        public string ElasticServer { get; set; }
 
-        public ElasticAdventureLocationSearchRepository(string elasticLocationServer)
+        public List<AdventureLocation> GetNearByAdventureLocations(GeoPoint point, GeoRange range)
         {
-            _elasticServer = elasticLocationServer;
-        }
 
-        public List<Spot> GetNearByAdventureLocations(GeoPoint point, GeoRange range)
-        {
-            var setting = new ConnectionSettings(_elasticServer, 9200);
+            var locations = new List<AdventureLocation>
+                                {
+                                    new AdventureLocation(point, "test00"),
+                                    new AdventureLocation(point, "test01"),
+                                    new AdventureLocation(point, "test02"),
+                                    new AdventureLocation(point, "test03"),
+                                    new AdventureLocation(point, "test04"),
+                                    new AdventureLocation(point, "test05"),
+                                    new AdventureLocation(point, "test06"),
+                                    new AdventureLocation(point, "test07"),
+                                    new AdventureLocation(point, "test08")
+                                };
+
+            return locations;
+
+/*
+            var setting = new ConnectionSettings(ElasticServer, 9200);
             setting.SetDefaultIndex("pins");
 
             //request.ValidateRange(_defaultRangeSetting);
@@ -34,11 +46,12 @@ namespace HTA.Adventures.API.WebService.Data
                             .Location(point.Lat, point.Lon)
                             .Distance(range.ToString())))
                 .Index("pins") // which index
-                .Type("region") // what type in the index
+                .Type("location") // what type in the index
                 );
 
 
             return results.Documents.ToList();
+*/
         }
     }
 }
