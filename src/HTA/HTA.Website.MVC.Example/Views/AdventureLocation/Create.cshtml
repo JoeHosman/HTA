@@ -1,20 +1,19 @@
 ﻿@model HTA.Website.MVC.Example.Models.AdventureLocationModel
-
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Create</h2>
-
+<h2>
+    Create</h2>
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
-
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="/Content/chosen.css" rel="stylesheet" type="text/css" />
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(false)
     <fieldset>
         <legend>AdventureLocation</legend>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.AdventureLocation.Name)
         </div>
@@ -22,7 +21,6 @@
             @Html.EditorFor(model => model.AdventureLocation.Name)
             @Html.ValidationMessageFor(model => model.AdventureLocation.Name)
         </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.AdventureLocation.Address)
         </div>
@@ -30,7 +28,6 @@
             @Html.EditorFor(model => model.AdventureLocation.Address)
             @Html.ValidationMessageFor(model => model.AdventureLocation.Address)
         </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.AdventureLocation.Picture)
         </div>
@@ -38,30 +35,33 @@
             @Html.EditorFor(model => model.AdventureLocation.Picture)
             @Html.ValidationMessageFor(model => model.AdventureLocation.Picture)
         </div>
-         <div class="editor-label">
-            @Html.LabelFor(model => model.AdventureLocation.LocationPoint.Lat)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.AdventureLocation.LocationPoint.Lat)
-            @Html.ValidationMessageFor(model => model.AdventureLocation.LocationPoint.Lat)
-        </div>
-        
         <div class="editor-label">
-            @Html.LabelFor(model => model.AdventureLocation.LocationPoint.Lon)
+            @Html.LabelFor(model => model.AdventureLocation.Point.Lat)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.AdventureLocation.LocationPoint.Lon)
-            @Html.ValidationMessageFor(model => model.AdventureLocation.LocationPoint.Lon)
+            @Html.EditorFor(model => model.AdventureLocation.Point.Lat)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Point.Lat)
         </div>
-                <div>
-            @Html.DropDownListFor(m => m.AdventureLocation.AdventureRegion.Id, Model.SelectableAdventureRegions.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureRegion" })
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AdventureLocation.Point.Lon)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AdventureLocation.Point.Lon)
+            @Html.ValidationMessageFor(model => model.AdventureLocation.Point.Lon)
+        </div>
+        <div>
+            @Html.DropDownListFor(m => m.AdventureLocation.Region.Id, Model.SelectableAdventureRegions.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureRegion", Class = "chzn-select" })
         </div>
         <p>
             <input type="submit" value="Create" />
         </p>
     </fieldset>
 }
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+<script type="text/javascript">
+    $(".chzn-select").chosen();
+
+    //        $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+</script>

@@ -1,13 +1,6 @@
-using System.Linq;
-using System.Configuration;
+using HTA.Adventures.API.ServiceInterface;
 using HTA.Adventures.API.WebService.Data;
 using HTA.Adventures.Models;
-using ServiceStack.Configuration;
-using ServiceStack.OrmLite;
-using ServiceStack.OrmLite.SqlServer;
-using ServiceStack.ServiceInterface;
-using ServiceStack.ServiceInterface.Auth;
-using ServiceStack.ServiceInterface.ServiceModel;
 using ServiceStack.WebHost.Endpoints;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(HTA.Adventures.API.WebService.App_Start.AppHost), "Start")]
@@ -26,7 +19,7 @@ namespace HTA.Adventures.API.WebService.App_Start
         : AppHostBase
     {
         public AppHost() //Tell ServiceStack the name and where to find your web services
-            : base("StarterTemplate ASP.NET Host", typeof(ServiceInterface.NearByLocationSearch).Assembly) { }
+            : base("StarterTemplate ASP.NET Host", typeof(AdventureReviewService).Assembly) { }
 
         public override void Configure(Funq.Container container)
         {
@@ -34,12 +27,12 @@ namespace HTA.Adventures.API.WebService.App_Start
             ServiceStack.Text.JsConfig.EmitCamelCaseNames = true;
 
             //Configure User Defined REST Paths
-            Routes
-                .Add<Hello>("/hello")
-                .Add<Hello>("/hello/{Name*}")
-                .Add<Todo>("/todos")
-                .Add<Todo>("/todos/{Id}")
-                .Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
+            //Routes
+            //    .Add<Hello>("/hello")
+            //    .Add<Hello>("/hello/{Name*}")
+            //    .Add<Todo>("/todos")
+            //    .Add<Todo>("/todos/{Id}");
+            //.Add<NearByAdventureLocations>("/adventure/locations/{LatLon}");
 
 
 
@@ -52,10 +45,15 @@ namespace HTA.Adventures.API.WebService.App_Start
             //ConfigureAuth(container);
 
             //Register all your dependencies
-            container.Register(new TodoRepository());
+            //container.Register(new TodoRepository());
 
             // Add our mongo adventure type repo into the system
             container.Register(new MongoAdventureTypeRepository());
+
+            var adventureLocationSearchRepository = new ElasticAdventureLocationSearchRepository
+                                                        {ElasticServer = Settings.ElasticLocationServer};
+
+            container.Register(adventureLocationSearchRepository);
 
             // Register our mongo adapter as the IAdventuretypeRepository to use :D
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();
@@ -63,6 +61,8 @@ namespace HTA.Adventures.API.WebService.App_Start
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeTemplateRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureRegionRepository>();
             container.RegisterAs<MongoAdventureTypeRepository, IAdventureLocationRepository>();
+
+            container.RegisterAs<ElasticAdventureLocationSearchRepository, IAdventureLocationSearchRepository>();
         }
 
         /* Uncomment to enable ServiceStack Authentication and CustomUserSession

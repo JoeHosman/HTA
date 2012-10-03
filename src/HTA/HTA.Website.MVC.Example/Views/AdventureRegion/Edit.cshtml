@@ -1,0 +1,61 @@
+﻿@model HTA.Website.MVC.Example.Models.AdventureRegionAdventureLocationsModel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Edit</h2>
+<script src="@Url.Content("~/Scripts/chosen.jquery.js")" type="text/javascript"></script>
+<link href="/Content/chosen.css" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Edit Adventure Region</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Region.Id) :
+            @Html.DisplayFor(model => model.Region.Id)
+            @*@Html.ValidationMessageFor(model => model.AdventureType.Name)*@
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Region.Name) :
+            @Html.EditorFor(model => model.Region.Name)
+            @Html.ValidationMessageFor(model => model.Region.Name)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Region.Point.Lat) :
+            @Html.EditorFor(model => model.Region.Point.Lat)
+            @Html.ValidationMessageFor(model => model.Region.Point.Lat)
+        </div>
+                <div class="editor-label">
+            @Html.LabelFor(model => model.Region.Point.Lon) :
+            @Html.EditorFor(model => model.Region.Point.Lon)
+            @Html.ValidationMessageFor(model => model.Region.Point.Lon)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedLocations) :
+            @Html.ListBoxFor(model => model.SelectedLocations, Model.Locations.Select(fl => new SelectListItem()
+                                                                                          {
+                                                                                              Text = ((fl.Point.Lat != double.MaxValue) ?
+                                                                                                        string.Format("{0} @ {1}", fl.Name, fl.Point.LatLon) :
+                                                                                                        fl.Name),
+                                                                                              Value = fl.Id
+                                                                                          }), new { Multiple = "multiple", Class = "chzn-select" })
+            @Html.ValidationMessageFor(model => model.SelectedLocations)
+        </div>
+        <p>
+            @Html.HiddenFor(model => model.Region.Id)
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<script type="text/javascript">
+    $(".chzn-select").chosen();
+
+    //        $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+</script>

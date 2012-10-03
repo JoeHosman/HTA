@@ -59,8 +59,10 @@
       <HintPath>..\packages\ServiceStack.3.9.3\lib\net40\ServiceStack.ServiceInterface.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,16 +70,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdventureDataCardService.cs" />
+    <Compile Include="AdventureLocationService.cs" />
+    <Compile Include="AdventureRegionAdventureLocationsService.cs" />
     <Compile Include="AdventureRegionService.cs" />
     <Compile Include="AdventureReviewService.cs" />
     <Compile Include="AdventureTypeDataCardService.cs" />
     <Compile Include="AdventureTypeService.cs" />
     <Compile Include="AdventureTypeTemplateService.cs" />
-    <Compile Include="NearByLocationSearch.cs" />
+    <Compile Include="ErrorUtility.cs" />
+    <Compile Include="NearByAdventureLocationSearchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HTA.Adventures.BusinessLogic\HTA.Adventures.BusinessLogic.csproj">
+      <Project>{9843E129-E60D-49E8-AF71-2F4F45A7F209}</Project>
+      <Name>HTA.Adventures.BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HTA.Adventures.Models\HTA.Adventures.Models.csproj">
       <Project>{DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE}</Project>
       <Name>HTA.Adventures.Models</Name>

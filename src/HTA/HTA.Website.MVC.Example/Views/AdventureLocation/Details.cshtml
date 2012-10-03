@@ -1,31 +1,32 @@
 ﻿@model HTA.Adventures.Models.Types.AdventureLocation
-
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Details</h2>
-
+<h2>
+    Details</h2>
 <fieldset>
     <legend>AdventureLocation</legend>
-
-    <div class="display-label">Name</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Name)
+    <div class="display-label">
+        Name : @Html.DisplayFor(model => model.Name)
     </div>
-
-    <div class="display-label">Address</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address)
+    <div class="display-label">
+        Address : @Html.DisplayFor(model => model.Address)
     </div>
-
-    <div class="display-label">Picture</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Picture)
+    <div class="display-label">
+        Picture : @Html.DisplayFor(model => model.Picture)
+    </div>
+    <div class="display-label">
+        Lat : @Html.DisplayFor(model => model.Point.Lat)
+    </div>
+    <div class="display-label">
+        Lon : @Html.DisplayFor(model => model.Point.Lon)
+    </div>
+    <div class="display-label">
+        Adventure Region : @Html.DisplayFor(model => model.Region.Name) [<i>@Html.DisplayFor(model => model.Region.Id)</i>]
     </div>
 </fieldset>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DreamSongs.MongoRepository;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using MongoDB.Bson;
 
 namespace HTA.Adventures.API.WebService.Data
@@ -14,7 +15,7 @@ namespace HTA.Adventures.API.WebService.Data
                                                 IAdventureRegionRepository,
                                                 IAdventureLocationRepository
     {
-        private static readonly MongoRepository<AdventureRegion> AdventureRegionRepository = new MongoRepository<AdventureRegion>();
+        private static readonly MongoRepository<Region> AdventureRegionRepository = new MongoRepository<Region>();
         private static readonly MongoRepository<AdventureReview> AdventureReviewRepository = new MongoRepository<AdventureReview>();
         private static readonly MongoRepository<AdventureType> AdventureTypeRepository = new MongoRepository<AdventureType>();
         private static readonly MongoRepository<AdventureTypeTemplate> AdventureTypeTemplateRepository = new MongoRepository<AdventureTypeTemplate>();
@@ -114,21 +115,21 @@ namespace HTA.Adventures.API.WebService.Data
 
         #region Implementation of IAdventureRegionRepository
 
-        public IList<AdventureRegion> GetAdventureRegions()
+        public IList<Region> GetAdventureRegions()
         {
             return AdventureRegionRepository.All().ToList();
         }
 
-        public AdventureRegion GetAdventureRegion(string id)
+        public Region GetAdventureRegion(string id)
         {
             return AdventureRegionRepository.GetById(id);
         }
 
-        public AdventureRegion SaveAdventureRegion(AdventureRegion adventureRegion)
+        public Region SaveAdventureRegion(Region region)
         {
-            return (string.IsNullOrEmpty(adventureRegion.Id)) ?
-                AdventureRegionRepository.Add((AdventureRegion)adventureRegion) :
-            AdventureRegionRepository.Update((AdventureRegion)adventureRegion);
+            return (string.IsNullOrEmpty(region.Id)) ?
+                AdventureRegionRepository.Add((Region)region) :
+            AdventureRegionRepository.Update((Region)region);
         }
 
         #endregion
@@ -142,14 +143,25 @@ namespace HTA.Adventures.API.WebService.Data
 
         public AdventureLocation GetAdventureLocation(string id)
         {
-            return AdventureLocationRepository.GetById(id);
+            var response  = AdventureLocationRepository.GetById(id);
+
+            return response;
         }
 
-        public AdventureLocation SaveAdventureReview(AdventureLocation model)
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
         {
-            return (string.IsNullOrEmpty(model.Id))
+            var response = new AdventureLocationSaveResponse(model);
+
+            response.AdventureLocation = (string.IsNullOrEmpty(model.Id))
                        ? AdventureLocationRepository.Add(model)
                        : AdventureLocationRepository.Update(model);
+
+            return response.AdventureLocation;
+        }
+
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        {
+            return AdventureLocationRepository.All(l => l.Region.Id == regionId).ToList();
         }
 
         #endregion

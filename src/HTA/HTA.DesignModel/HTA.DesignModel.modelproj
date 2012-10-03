@@ -24,6 +24,20 @@
       <SubType>Content</SubType>
       <DependentUpon>Dynamic View\Uc02 - Adventure Locations\Basic Flow.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Review.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Review.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Review.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="Spot.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Spot.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Spot.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Static View\IAdventureTypeRepository.classdiagram">
       <SubType>Content</SubType>
     </Content>

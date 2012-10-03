@@ -1,0 +1,20 @@
+﻿@model HTA.Website.MVC.Example.Models.AdventureRegionAdventureLocationsModel
+@{
+    ViewBag.Title = "Locations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Locations</h2>
+<fieldset>
+    <legend>Adventure Region's Adventure Locations</legend>
+    @Html.DisplayFor(model => model.Region.Name) @@ @Html.DisplayFor(model => model.Region.Point.LatLon)
+    <br />
+    @foreach (var item in Model.Locations)
+    {
+        <p>@Html.DisplayFor(model => item.Name) [@Html.DisplayFor(model => item.Id)] @@ @Html.DisplayFor(model => item.Point.LatLon)</p>
+    }
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id=Model.Region.Id  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

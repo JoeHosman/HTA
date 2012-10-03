@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 
 namespace HTA.Website.MVC.Example.API
 {
@@ -14,14 +15,24 @@ namespace HTA.Website.MVC.Example.API
 
         public AdventureLocation GetAdventureLocation(string id)
         {
-            var adventureLocation = Client.Get<AdventureLocation>("/Adventure/Locations/"+ id);
-            return adventureLocation;
+
+            var response = Client.Get<AdventureLocation>("/Adventure/Locations/" + id);
+
+            return response;
         }
 
-        public AdventureLocation SaveAdventureReview(AdventureLocation model)
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
         {
-            var Location = Client.Post<AdventureLocation>("/Adventure/Locations/" + model.Id, model);
-            return Location;
+
+            var response = Client.Post<AdventureLocationSaveResponse>("/Adventure/Locations/" + model.Id, model);
+
+            return response.AdventureLocation;
+        }
+
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        {
+            var locations = Client.Get<List<AdventureLocation>>("/Adventure/Region/Locations/" + regionId);
+            return locations;
         }
     }
 }

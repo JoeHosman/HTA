@@ -77,6 +77,7 @@
       <HintPath>..\packages\ServiceStack.Text.3.9.4\lib\net35\ServiceStack.Text.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
@@ -114,6 +115,7 @@
     <Compile Include="Controllers\AdventureTypeTemplateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\AdventureLocationModel.cs" />
+    <Compile Include="Models\AdventureRegionAdventureLocationsModel.cs" />
     <Compile Include="Models\AdventureReviewModel.cs" />
     <Compile Include="Models\AdventureTypeModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -210,6 +212,14 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HTA.Adventures.API.ServiceInterface\HTA.Adventures.API.ServiceInterface.csproj">
+      <Project>{1EEDEE88-3BC8-4344-95DE-148CBB7677FA}</Project>
+      <Name>HTA.Adventures.API.ServiceInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HTA.Adventures.BusinessLogic\HTA.Adventures.BusinessLogic.csproj">
+      <Project>{9843E129-E60D-49E8-AF71-2F4F45A7F209}</Project>
+      <Name>HTA.Adventures.BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HTA.Adventures.Models\HTA.Adventures.Models.csproj">
       <Project>{DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE}</Project>
       <Name>HTA.Adventures.Models</Name>
@@ -279,6 +289,10 @@
     <Content Include="Views\AdventureLocation\Index.cshtml" />
     <Content Include="Views\AdventureLocation\Create.cshtml" />
     <Content Include="Views\AdventureLocation\Details.cshtml" />
+    <Content Include="Views\AdventureRegion\Locations.cshtml" />
+    <Content Include="Views\AdventureRegion\Edit.cshtml" />
+    <Content Include="Views\AdventureLocation\Edit.cshtml" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

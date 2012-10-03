@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="820e526e-0ff7-4d13-b9e2-1e855e0edbc7" name="Spot" linkedPackageId="c5828b20-9ca4-4154-b175-27d721946cdb" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="4536d7a2-27b6-461c-9e83-3a601bf85b91">
+      <profileInstance Id="3ff476b6-a95f-4110-a16d-5b57b19102f9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a00779a1-ec6b-4d02-904e-5a774d1b6217">
+      <profileInstance Id="83f3b060-af56-4f79-b24c-a1b8f3476c60" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="fbfc7cbf-9be2-446a-a243-2c6cf41c4793" name="Spot" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cf6d4f08-750f-4dfc-bfe0-c0cbcaf13382" />
+        <generalsInternal>
+          <generalization Id="c057c86e-a2f1-47cb-943d-51e74d4f959f" isSubstitutable="false">
+            <classMoniker Id="e48c04b6-fffa-4b14-9db1-e1d6dbe37374" LastKnownName="Location" />
+            <elementDefinition Id="3b6c725f-23e6-468e-8356-62574104c2e1" />
+          </generalization>
+          <generalization Id="ee354c25-ff16-4552-89dd-b733e7d73b4f" isSubstitutable="false">
+            <classMoniker Id="782efd48-7339-4852-b079-22befdd3a1b1" LastKnownName="Region" />
+            <elementDefinition Id="8c2d6d6a-e61e-49f0-aaec-3618063f48d4" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="8e96c704-7e6c-4c6e-8100-d64143d5af6f" isDerived="false" sourceEndRoleName="" targetEndRoleName="Point" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dd154329-3eb7-454f-9e06-6d9b304ec9f3" LastKnownName="Point" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f61df53b-a162-42bf-a267-2f007f6ab5cd" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="a899bee6-c5a4-4e87-bcdb-20d58d5325b4" name="Lower" value="0">
+                      <elementDefinition Id="a12abd52-a267-4349-9eb0-a5883be9e292" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="cddc8963-05ef-4830-a2d0-bfe9960a6cdb" name="Upper" value="1">
+                      <elementDefinition Id="1f254af6-c751-469e-86e4-4f77891add29" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="da0ead45-e4d1-4268-ba05-8133b928e358" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="812e987e-fec5-4af1-944b-253b73e18efb" name="Point" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="37f04d30-8a5d-41b6-9cc6-fb16bb13141c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8e281736-0d0e-4b94-b766-e3674f61292f" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="530a8577-95e3-4564-8acf-df8a75d8f798" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aa8ce270-a679-406c-b401-dbc2fd33c30c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5c9e13d0-f575-4304-821f-b87b537aaa23" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e48c04b6-fffa-4b14-9db1-e1d6dbe37374" name="Location" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b08d2ea6-4654-4f8f-b99e-ed806d723b6b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="782efd48-7339-4852-b079-22befdd3a1b1" name="Region" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="58b70d5f-9ddb-4a2a-9fb3-314162a93386" />
+        <targetEnds>
+          <association Id="d319e621-4514-4736-a615-b22082ba264a" isDerived="false" sourceEndRoleName="Region" targetEndRoleName="Locations" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e48c04b6-fffa-4b14-9db1-e1d6dbe37374" LastKnownName="Location" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fa343471-ed7e-4b85-853f-3a4b6680454c" name="Region" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="5b121286-16e1-4bef-a744-d8441f164db1" name="Lower" value="0">
+                      <elementDefinition Id="d3880192-e0f6-401d-b17b-b7d8b9d52026" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="f1565848-952c-473f-b7a9-0846b4853976" name="Upper" value="1">
+                      <elementDefinition Id="17c7ca65-d930-4367-b64f-9c49abd93988" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="c8db4a50-b0c6-41fb-965e-f4e17434f567" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb38e8de-9990-4340-bd4f-85bf6a1d3b47" name="Locations" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="e46d8785-76d0-409b-b7f2-1b3299d6efd3" name="Lower" value="1">
+                      <elementDefinition Id="d845ca6b-2da5-42c7-af24-bc7fc5ee39a1" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="1a338a3d-c123-4c45-a6ad-39fa7bc8402d" name="Upper" value="*">
+                      <elementDefinition Id="829c4805-4dde-4d93-81b6-d796054162f9" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="13127db2-fc49-42a0-8c45-a01a68f90c55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ff4871ca-05d9-4f5d-be65-ed7c525cb608" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd154329-3eb7-454f-9e06-6d9b304ec9f3" name="Point" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="11cf31c7-8509-41db-896e-9d2182507c06" />
+        <ownedAttributesInternal>
+          <property Id="710de855-6413-44fa-8ec0-7020b9a89f99" name="Lat" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="42e81c52-6945-48c8-a13e-0cceba95c83f" />
+          </property>
+          <property Id="9434cf4d-3822-4aab-9665-999da7c067f7" name="Lon" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28454c90-cdb3-4351-baf7-dd5979424505" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="5c9e13d0-f575-4304-821f-b87b537aaa23" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c5828b20-9ca4-4154-b175-27d721946cdb" name="HTA.DesignModel">
+    <elementDefinition Id="8e8701da-f83b-4683-a2da-c7012e4d4903" />
+  </package>
+</logicalClassDesignerModel>

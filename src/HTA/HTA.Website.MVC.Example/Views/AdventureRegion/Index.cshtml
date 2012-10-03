@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HTA.Adventures.Models.Types.AdventureRegion>
+﻿@model IEnumerable<HTA.Adventures.Models.Types.Region>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -38,7 +38,7 @@
                 @Html.DisplayFor(modelItem => item.Picture)
             </td>
             <td>
-                @Html.DisplayFor(model => item.LocationPoint.LatLon)
+                @Html.DisplayFor(model => item.Point.LatLon)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |

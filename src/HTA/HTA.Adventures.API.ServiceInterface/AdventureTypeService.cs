@@ -1,6 +1,11 @@
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using HTA.Adventures.BusinessLogic;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
+using HTA.Adventures.Models.Types.Responses;
 using ServiceStack.ServiceInterface;
+using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
@@ -8,38 +13,54 @@ namespace HTA.Adventures.API.ServiceInterface
     {
         public IAdventureTypeRepository AdventureTypeRepository { get; set; }
 
-        //private static List<AdventureType> _stuff = new List<AdventureType>();
         public override object OnPost(AdventureType request)
         {
-            //if (string.IsNullOrEmpty(request.Id))
-            //{
-            //    lock (_stuff)
-            //    {
-            //        request.Id = (_stuff.Count + 1).ToString();
-            //        _stuff.Add(request);
-            //    }
-            //    return request;
-            //}
+            var response = new AdventureTypeSaveResponse(request);
 
-            //_stuff.Remove(GetAdventureType(request.Id));
-            //_stuff.Add(request);
-            return AdventureTypeRepository.SaveAdventureType(request);
+            using (var business = new AdventureTypeBusiness())
+            {
+                IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
+
+                if (business.Validate(request, validationErrorResults))
+                {
+                    response.AdventureType = AdventureTypeRepository.SaveAdventureType(request);
+                }
+                else
+                {
+                    response.ResponseStatus = new ResponseStatus("Invalid",
+                                                                    string.Format(
+                                                                        "'{0}' errors prevents this from valid.",
+                                                                        validationErrorResults.Count));
+
+                    ErrorUtility.TransformResponseErrors(response.ResponseStatus.Errors, validationErrorResults);
+
+                }
+            }
+            return response;
         }
 
-        private AdventureType GetAdventureType(string id)
-        {
-            return AdventureTypeRepository.GetAdventureType(id);
-            //return _stuff.FirstOrDefault(t => t.Id == id || string.Compare(t.Name, id, true) == 0);
-        }
 
         public override object OnGet(AdventureType request)
         {
-            if (!string.IsNullOrEmpty(request.Id))
-            {
-                return GetAdventureType(request.Id);
-            }
-            return AdventureTypeRepository.GetAdventureTypes();
+            var response = new AdventureTypeGetResponse(request);
 
+            if (string.IsNullOrEmpty(request.Id))
+            {
+                response.AdventureTypes = AdventureTypeRepository.GetAdventureTypes();
+            }
+            else
+            {
+                var result = AdventureTypeRepository.GetAdventureType(request.Id);
+                response.AdventureTypes.Add(result);
+            }
+            return response;
+        }
+
+        public override object OnDelete(AdventureType request)
+        {
+            var response = new AdventureTypeDeleteResponse(request);
+
+            return response;
         }
     }
 }
