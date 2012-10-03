@@ -6,9 +6,176 @@ using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
 using HTA.Adventures.Models.Types.Responses;
 using MongoDB.Bson;
+using Nest;
 
 namespace HTA.Adventures.API.WebService.Data
 {
+    public class ElasticAdventureLocationRepository : IAdventureLocationRepository
+    {
+        public static string ElasticServer { get; set; }
+        #region Implementation of IAdventureLocationRepository
+
+        public IList<AdventureLocation> GetAdventureLocations()
+        {
+            throw new NotImplementedException();
+        }
+
+        public AdventureLocation GetAdventureLocation(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
+        {
+            var setting = new ConnectionSettings(ElasticServer, 9200);
+            setting.SetDefaultIndex("adventure");
+
+
+            var client = new ElasticClient(setting);
+
+            var t = client.Index(model, "adventure", "location", model.Id);
+
+            return null;
+        }
+
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
+    }
+
+
+    public class SuperAdventureTypeRepository : IAdventureTypeRepository,
+                                                IAdventureTypeTemplateRepository,
+                                                IAdventureReviewRepository,
+                                                IAdventureRegionRepository,
+                                                IAdventureLocationRepository
+    {
+
+        private static readonly MongoAdventureTypeRepository MongoRepository = new MongoAdventureTypeRepository();
+        private static readonly ElasticAdventureLocationRepository ElasticRepository = new ElasticAdventureLocationRepository();
+
+
+        #region Implementation of IAdventureTypeRepository
+
+        public IList<AdventureType> GetAdventureTypes()
+        {
+            return MongoRepository.GetAdventureTypes();
+        }
+
+        public AdventureType GetAdventureType(string id)
+        {
+            return MongoRepository.GetAdventureType(id);
+        }
+
+        public AdventureType SaveAdventureType(AdventureType adventuretype)
+        {
+            return MongoRepository.SaveAdventureType(adventuretype);
+        }
+
+        public IList<AdventureDataCard> GetTypeDataCards(string typeId)
+        {
+            return MongoRepository.GetTypeDataCards(typeId);
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureTypeTemplateRepository
+
+        public IList<AdventureTypeTemplate> GetTypeTemplateList()
+        {
+            return MongoRepository.GetTypeTemplateList();
+        }
+
+        public AdventureTypeTemplate GetTypeTemplate(string id)
+        {
+            return MongoRepository.GetTypeTemplate(id);
+        }
+
+        public AdventureTypeTemplate SaveTypeTemplate(AdventureTypeTemplate template)
+        {
+            return MongoRepository.SaveTypeTemplate(template);
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureReviewRepository
+
+        public IList<AdventureReview> GetAdventureReviews()
+        {
+            return MongoRepository.GetAdventureReviews();
+        }
+
+        public AdventureReview GetAdventureReviewById(string id)
+        {
+            return MongoRepository.GetAdventureReviewById(id);
+        }
+
+        public AdventureReview SaveAdventureReview(AdventureReview adventureReview)
+        {
+            return MongoRepository.SaveAdventureReview(adventureReview);
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureRegionRepository
+
+        public IList<Region> GetAdventureRegions()
+        {
+            return GetAdventureRegions();
+        }
+
+        public Region GetAdventureRegion(string id)
+        {
+            return GetAdventureRegion(id);
+        }
+
+        public Region SaveAdventureRegion(Region region)
+        {
+            return SaveAdventureRegion(region);
+        }
+
+        #endregion
+
+        #region Implementation of IAdventureLocationRepository
+
+        public IList<AdventureLocation> GetAdventureLocations()
+        {
+            return MongoRepository.GetAdventureLocations();
+        }
+
+        public AdventureLocation GetAdventureLocation(string id)
+        {
+            return MongoRepository.GetAdventureLocation(id);
+        }
+
+        public AdventureLocation SaveAdventureLocation(AdventureLocation model)
+        {
+            try
+            {
+                var location = MongoRepository.SaveAdventureLocation(model);
+                ElasticRepository.SaveAdventureLocation(location);
+
+                return location;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public IList<AdventureLocation> GetRegionAdventureLocations(string regionId)
+        {
+            return GetRegionAdventureLocations(regionId);
+        }
+
+        #endregion
+    }
+
+
     public class MongoAdventureTypeRepository : IAdventureTypeRepository,
                                                 IAdventureTypeTemplateRepository,
                                                 IAdventureReviewRepository,
@@ -143,7 +310,7 @@ namespace HTA.Adventures.API.WebService.Data
 
         public AdventureLocation GetAdventureLocation(string id)
         {
-            var response  = AdventureLocationRepository.GetById(id);
+            var response = AdventureLocationRepository.GetById(id);
 
             return response;
         }

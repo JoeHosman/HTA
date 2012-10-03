@@ -48,19 +48,20 @@ namespace HTA.Adventures.API.WebService.App_Start
             //container.Register(new TodoRepository());
 
             // Add our mongo adventure type repo into the system
-            container.Register(new MongoAdventureTypeRepository());
+            container.Register(new SuperAdventureTypeRepository());
 
-            var adventureLocationSearchRepository = new ElasticAdventureLocationSearchRepository
-                                                        {ElasticServer = Settings.ElasticLocationServer};
+            ElasticAdventureLocationRepository.ElasticServer = Settings.ElasticLocationServer;
 
+            var adventureLocationSearchRepository = new ElasticAdventureLocationSearchRepository();
+            
             container.Register(adventureLocationSearchRepository);
 
             // Register our mongo adapter as the IAdventuretypeRepository to use :D
-            container.RegisterAs<MongoAdventureTypeRepository, IAdventureReviewRepository>();
-            container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeRepository>();
-            container.RegisterAs<MongoAdventureTypeRepository, IAdventureTypeTemplateRepository>();
-            container.RegisterAs<MongoAdventureTypeRepository, IAdventureRegionRepository>();
-            container.RegisterAs<MongoAdventureTypeRepository, IAdventureLocationRepository>();
+            container.RegisterAs<SuperAdventureTypeRepository, IAdventureReviewRepository>();
+            container.RegisterAs<SuperAdventureTypeRepository, IAdventureTypeRepository>();
+            container.RegisterAs<SuperAdventureTypeRepository, IAdventureTypeTemplateRepository>();
+            container.RegisterAs<SuperAdventureTypeRepository, IAdventureRegionRepository>();
+            container.RegisterAs<SuperAdventureTypeRepository, IAdventureLocationRepository>();
 
             container.RegisterAs<ElasticAdventureLocationSearchRepository, IAdventureLocationSearchRepository>();
         }

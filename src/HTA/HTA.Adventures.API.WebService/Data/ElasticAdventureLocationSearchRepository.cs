@@ -8,36 +8,20 @@ namespace HTA.Adventures.API.WebService.Data
 {
     internal class ElasticAdventureLocationSearchRepository : IAdventureLocationSearchRepository
     {
-        public string ElasticServer { get; set; }
+        public static string ElasticServer { get; set; }
 
         public List<AdventureLocation> GetNearByAdventureLocations(GeoPoint point, GeoRange range)
         {
 
-            var locations = new List<AdventureLocation>
-                                {
-                                    new AdventureLocation(point, "test00"),
-                                    new AdventureLocation(point, "test01"),
-                                    new AdventureLocation(point, "test02"),
-                                    new AdventureLocation(point, "test03"),
-                                    new AdventureLocation(point, "test04"),
-                                    new AdventureLocation(point, "test05"),
-                                    new AdventureLocation(point, "test06"),
-                                    new AdventureLocation(point, "test07"),
-                                    new AdventureLocation(point, "test08")
-                                };
+            var locations = new List<AdventureLocation>();
 
-            return locations;
-
-/*
             var setting = new ConnectionSettings(ElasticServer, 9200);
-            setting.SetDefaultIndex("pins");
-
-            //request.ValidateRange(_defaultRangeSetting);
+            setting.SetDefaultIndex("adventure");
 
 
             var client = new ElasticClient(setting);
 
-            var results = client.Search<Spot>(s => s
+            var results = client.Search<AdventureLocation>(s => s
                 .From(0) // skip
                 .Size(10) // limit
                 .Filter(f => f
@@ -51,7 +35,9 @@ namespace HTA.Adventures.API.WebService.Data
 
 
             return results.Documents.ToList();
-*/
+
+            return locations;
+
         }
     }
 }

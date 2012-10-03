@@ -49,9 +49,9 @@
             @Html.EditorFor(model => model.AdventureLocation.Point.Lon)
             @Html.ValidationMessageFor(model => model.AdventureLocation.Point.Lon)
         </div>
-        <div>
+@*        <div>
             @Html.DropDownListFor(m => m.AdventureLocation.Region.Id, Model.SelectableAdventureRegions.Select(s => new SelectListItem { Text = s.Name, Value = s.Id }), new { id = "selectAdventureRegion", Class = "chzn-select" })
-        </div>
+        </div>*@
         <p>
             <input type="submit" value="Create" />
         </p>

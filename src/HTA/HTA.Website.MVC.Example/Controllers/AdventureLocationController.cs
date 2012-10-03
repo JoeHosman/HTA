@@ -16,7 +16,8 @@ namespace HTA.Website.MVC.Example.Controllers
         private readonly IAdventureRegionRepository _adventureRegionRepository = new APIAdventureRegionProxy();
         public ActionResult Index()
         {
-            var locations = _adventureLocationRepository.GetAdventureLocations();
+            IList<AdventureLocation> locations = new List<AdventureLocation>();
+            //locations = _adventureLocationRepository.GetAdventureLocations();
             return View(locations);
         }
 
@@ -24,8 +25,8 @@ namespace HTA.Website.MVC.Example.Controllers
         {
             var model = new AdventureLocationModel();
 
-            model.SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions();
-            model.SelectableAdventureRegions.Insert(0, Region.CreateNewRegion);
+            //model.SelectableAdventureRegions = _adventureRegionRepository.GetAdventureRegions();
+            //model.SelectableAdventureRegions.Insert(0, Region.CreateNewRegion);
             //model.SelectableAdventureRegions.Insert(0, new AdventureRegion(new LocationPoint() { Lat = double.MaxValue }, "** Create New Region **", "", ""));
             return View(model);
         }
