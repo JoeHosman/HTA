@@ -31,5 +31,13 @@ namespace HTA.Adventures.Models.Types
         {
             return new AdventureLocation(this);
         }
+
+        public static Region CreateRegionFromLocation(AdventureLocation adventureLocation)
+        {
+            var region = new Region(adventureLocation.Point, adventureLocation.Name)
+                             {Address = adventureLocation.Address, Picture = adventureLocation.Picture};
+
+            return region;
+        }
     }
 }

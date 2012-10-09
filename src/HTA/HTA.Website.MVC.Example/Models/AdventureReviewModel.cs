@@ -13,6 +13,8 @@ namespace HTA.Website.MVC.Example.Models
 
         public string AdventureAddress { get; set; }
         public string AdventureLat { get; set; }
-        public string AdventureLog { get; set; }
+        public string AdventureLon { get; set; }
+
+        
     }
 }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using HTA.Adventures.BusinessLogic;
@@ -41,6 +40,20 @@ namespace HTA.Adventures.API.ServiceInterface
                 IList<ValidationResult> validationErrorResults = new List<ValidationResult>();
                 if (locationBusiness.Validate(request, validationErrorResults))
                 {
+                    using (var regionBusiness = new RegionBusiness())
+                    {
+                        // check if we already have a valid region
+                        if (!regionBusiness.Validate(request.Region, null))
+                        {
+                            request.Region = Region.CreateRegionFromLocation(request);
+                        }
+
+                        if (string.IsNullOrEmpty(request.Region.Id))
+                        {
+                            request.Region = AdventureRegionRepository.SaveAdventureRegion(request.Region);
+                        }
+                    }
+
                     response.AdventureLocation = AdventureLocationRepository.SaveAdventureLocation(request);
 
                     response.ResponseStatus = new ResponseStatus();

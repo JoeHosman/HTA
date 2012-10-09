@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
@@ -9,6 +10,7 @@ namespace HTA.Website.MVC.Example.Controllers
 {
     public class AdventureReviewController : Controller
     {
+        private static readonly IAdventureLocationRepository AdventureLocationRepository = new APIAdventureLocationProxy();
         private static readonly IAdventureTypeRepository AdventureTypeRepository = new APIAdventureTypeProxy();
         private static readonly IAdventureReviewRepository AdventureReviewRepository = new APIAdventureReviewProxy();
         //
@@ -48,21 +50,38 @@ namespace HTA.Website.MVC.Example.Controllers
         [HttpPost]
         public ActionResult Create(AdventureReviewModel adventurereview, FormCollection formCollection)
         {
-
             var adventureTypeList = AdventureTypeRepository.GetAdventureTypes();
+
             var adventureType = adventureTypeList.FirstOrDefault(t => t.Id == adventurereview.AdventureTypeId);
 
             adventurereview.Review.AdventureType = adventureType;
 
-            if (ModelState.IsValid)
+            adventurereview.Review.AdventureDate = DateTime.UtcNow;
+            adventurereview.Review.AdventureDuration = new TimeSpan(1, 0, 0);
+
+            //if (ModelState.IsValid)
             {
                 GetDataCardsFromFormCollection(adventurereview, formCollection);
 
-
+                AdventureLocation location = adventurereview.Review.AdventureLocation;
+                var geoPoint = new GeoPoint() { Lat = 39.1042, Lon = -94.5745 };
+                if (null == location || string.IsNullOrEmpty(location.Id))
+                {
+                    //var adventureLat = Convert.ToDouble(adventurereview.AdventureLat);
+                    //var adventureLon = Convert.ToDouble(adventurereview.AdventureLon);
+                    location = new AdventureLocation(geoPoint, "LOCATION_NAME");
+                    adventurereview.Review.AdventureLocation =
+                        AdventureLocationRepository.SaveAdventureLocation(location);
+                }
+                else
+                {
+                    adventurereview.Review.AdventureLocation =
+                        AdventureLocationRepository.GetAdventureLocation(location.Id);
+                }
 
                 var review = AdventureReviewRepository.SaveAdventureReview(adventurereview.Review);
 
-                return RedirectToAction("Details",new {review.Id});
+                return RedirectToAction("Details", new { review.Id });
             }
 
             return View(adventurereview);
@@ -123,7 +142,6 @@ namespace HTA.Website.MVC.Example.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(string id)
         {
-            AdventureReview adventurereview = null;
             return RedirectToAction("Index");
         }
     }

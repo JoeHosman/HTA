@@ -1,0 +1,34 @@
+[2012-10-02 20:35:45,636][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2012-10-02 20:35:45,645][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: initializing ...
+[2012-10-02 20:35:45,662][INFO ][plugins                  ] [Mother Superior] loaded [], sites []
+[2012-10-02 20:35:48,674][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: initialized
+[2012-10-02 20:35:48,674][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: starting ...
+[2012-10-02 20:35:48,818][INFO ][transport                ] [Mother Superior] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.8.1.105:9300]}
+[2012-10-02 20:35:51,996][INFO ][cluster.service          ] [Mother Superior] new_master [Mother Superior][zr51okzvQJWozOkUJQthnw][inet[/10.8.1.105:9300]], reason: zen-disco-join (elected_as_master)
+[2012-10-02 20:35:52,013][INFO ][discovery                ] [Mother Superior] elasticsearch/zr51okzvQJWozOkUJQthnw
+[2012-10-02 20:35:52,051][INFO ][gateway                  ] [Mother Superior] recovered [0] indices into cluster_state
+[2012-10-02 20:35:52,094][INFO ][http                     ] [Mother Superior] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.8.1.105:9200]}
+[2012-10-02 20:35:52,094][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: started
+[2012-10-02 20:36:00,647][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: stopping ...
+[2012-10-02 20:36:00,654][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: stopped
+[2012-10-02 20:36:00,655][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: closing ...
+[2012-10-02 20:36:00,676][INFO ][node                     ] [Mother Superior] {0.19.8}[6096]: closed
+[2012-10-02 20:36:04,363][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2012-10-02 20:36:04,367][INFO ][node                     ] [Odin] {0.19.8}[1292]: initializing ...
+[2012-10-02 20:36:04,370][INFO ][plugins                  ] [Odin] loaded [], sites []
+[2012-10-02 20:36:06,728][INFO ][node                     ] [Odin] {0.19.8}[1292]: initialized
+[2012-10-02 20:36:06,728][INFO ][node                     ] [Odin] {0.19.8}[1292]: starting ...
+[2012-10-02 20:36:06,849][INFO ][transport                ] [Odin] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.8.1.105:9300]}
+[2012-10-02 20:36:10,024][INFO ][cluster.service          ] [Odin] new_master [Odin][5N0RMnMfTpGw9u-JFSS1Ew][inet[/10.8.1.105:9300]], reason: zen-disco-join (elected_as_master)
+[2012-10-02 20:36:10,046][INFO ][discovery                ] [Odin] elasticsearch/5N0RMnMfTpGw9u-JFSS1Ew
+[2012-10-02 20:36:10,081][INFO ][gateway                  ] [Odin] recovered [0] indices into cluster_state
+[2012-10-02 20:36:10,128][INFO ][http                     ] [Odin] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.8.1.105:9200]}
+[2012-10-02 20:36:10,129][INFO ][node                     ] [Odin] {0.19.8}[1292]: started
+[2012-10-02 21:07:18,229][INFO ][cluster.metadata         ] [Odin] [adventure] creating index, cause [api], shards [5]/[1], mappings []
+[2012-10-02 21:11:27,700][INFO ][cluster.metadata         ] [Odin] [adventure] create_mapping [location]
+[2012-10-02 21:18:08,071][INFO ][cluster.metadata         ] [Odin] [adventure] create_mapping [region]
+[2012-10-02 22:47:55,990][INFO ][cluster.metadata         ] [Odin] [adventure] update_mapping [location] (dynamic)
+[2012-10-02 22:52:35,772][INFO ][node                     ] [Odin] {0.19.8}[1292]: stopping ...
+[2012-10-02 22:52:35,792][INFO ][node                     ] [Odin] {0.19.8}[1292]: stopped
+[2012-10-02 22:52:35,792][INFO ][node                     ] [Odin] {0.19.8}[1292]: closing ...
+[2012-10-02 22:52:35,796][INFO ][node                     ] [Odin] {0.19.8}[1292]: closed

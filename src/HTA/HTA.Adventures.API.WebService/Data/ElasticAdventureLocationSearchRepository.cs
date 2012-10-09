@@ -25,18 +25,16 @@ namespace HTA.Adventures.API.WebService.Data
                 .From(0) // skip
                 .Size(10) // limit
                 .Filter(f => f
-                        .GeoDistance("geo.location", filter =>
+                        .GeoDistance("geo_location", filter =>
                             filter
                             .Location(point.Lat, point.Lon)
                             .Distance(range.ToString())))
-                .Index("pins") // which index
+                .Index("adventure") // which index
                 .Type("location") // what type in the index
                 );
 
 
             return results.Documents.ToList();
-
-            return locations;
 
         }
     }

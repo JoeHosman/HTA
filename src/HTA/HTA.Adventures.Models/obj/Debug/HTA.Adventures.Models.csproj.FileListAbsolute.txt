@@ -55,6 +55,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\MongoDB.Driver.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\Newtonsoft.Json.xml
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\bin\Debug\ServiceStack.Interfaces.xml
-E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\ResolveAssemblyReference.cache
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.dll
 E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Adventures.Models\obj\Debug\HTA.Adventures.Models.csprojResolveAssemblyReference.cache

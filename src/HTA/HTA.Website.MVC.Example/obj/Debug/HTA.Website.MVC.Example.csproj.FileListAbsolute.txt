@@ -17,7 +17,6 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\MongoDB.Driver.xml
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\MongoDB.Bson.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\MongoDB.Bson.xml
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\Newtonsoft.Json.xml
-E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\ResolveAssemblyReference.cache
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\ServiceStack.Common.dll
@@ -99,3 +98,4 @@ E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.BusinessLogic.
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.BusinessLogic.pdb
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.API.ServiceInterface.dll
 E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\bin\HTA.Adventures.API.ServiceInterface.pdb
+E:\Dev\git\HTA\src\HTA\HTA.Website.MVC.Example\obj\Debug\HTA.Website.MVC.Example.csprojResolveAssemblyReference.cache
