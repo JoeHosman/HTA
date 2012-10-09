@@ -49,10 +49,8 @@ namespace HTA.Adventures.API.WebService.App_Start
 
             // Add our mongo adventure type repo into the system
             container.Register(new SuperAdventureTypeRepository());
-
-            ElasticAdventureLocationRepository.ElasticServer = Settings.ElasticLocationServer;
-
             var adventureLocationSearchRepository = new ElasticAdventureLocationSearchRepository();
+
             
             container.Register(adventureLocationSearchRepository);
 

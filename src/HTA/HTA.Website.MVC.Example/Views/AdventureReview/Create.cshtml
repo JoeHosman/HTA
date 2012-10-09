@@ -67,26 +67,35 @@
             
         </script>
         <script type="text/javascript">
+            public class 
+        </script>
+        <script type="text/javascript">
             $("#selectAdventureType").unbind('change');
 
             $("#AdventureAddress").unbind('change');
 
             $("#findNearByBtn").click(function(){
-                
+                alert('hello');
                 var lat = document.getElementById('Location_Lat').value;
                 var lon = document.getElementById('Location_Lon').value;
 
                 var latLon = lat + "," + lon;
+                alert(latLon);
+                
+//                 var gateway = new servicestack.ClientGateway( location.protocol + "//" + location.host + '/ServiceStack.Examples.Host.Web/ServiceStack/');
+                var gateway =new servicestack.ClientGateway( "http://localhost:10768/adventure/locations/nearby/" + latLon + "?format=json");
+                
+
 //                alert(latLon);
                 $.ajax({
-                    url:"http://localhost:10768/Adventure/Locations/" + latLon + "?format=json",
-                    dataType: 'jsonp', 
+                    url:"http://localhost:10768/adventure/locations/nearby/" + latLon + "?format=json",
+                    dataType: 'json', 
                     
                     success:function(json){
-                        
+                        alert(json.nearByAdventureLocations);
 
-                        setSelectOptions($('#nearBy'), json.result, 'id', 'name');
-                         $("#nearBy").trigger("liszt:updated");
+                        setSelectOptions($('#nearBy'), json.nearByAdventureLocations, 'id', 'name');
+                        $("#nearBy").trigger("liszt:updated");
                         $("#regionSelectionDiv").show();
                     },
                     error:function(){
@@ -165,5 +174,5 @@
 <script type="text/javascript">
     $(".chzn-select").chosen();
 
-    //        $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+//        $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
 </script>

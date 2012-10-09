@@ -2,6 +2,7 @@ using HTA.Adventures.Models;
 using HTA.Adventures.Models.Types;
 using HTA.Adventures.Models.Types.Responses;
 using ServiceStack.ServiceInterface;
+using ServiceStack.ServiceInterface.ServiceModel;
 
 namespace HTA.Adventures.API.ServiceInterface
 {
@@ -14,6 +15,7 @@ namespace HTA.Adventures.API.ServiceInterface
             var response = new NearByAdventureLocationSearchResponse(request);
 
             response.NearByAdventureLocations = AdventureLocationSearchRepository.GetNearByAdventureLocations(request.Point, request.Range);
+            response.ResponseStatus = new ResponseStatus();
 
             return response;
         }

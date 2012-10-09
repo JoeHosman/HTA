@@ -10,6 +10,11 @@ namespace HTA.Adventures.API.WebService.Data
     {
         public static string ElasticServer { get; set; }
 
+        public ElasticAdventureLocationSearchRepository()
+        {
+            ElasticServer = Settings.ElasticLocationServer;
+        }
+
         public List<AdventureLocation> GetNearByAdventureLocations(GeoPoint point, GeoRange range)
         {
 
