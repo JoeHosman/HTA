@@ -15,7 +15,7 @@ namespace HTA.Adventures.Models.Types
         public AdventureReview()
         {
             DataCards = new List<AdventureDataCard>();
-
+            AdventureLocation = new AdventureLocation();
         }
 
         [DataMember]

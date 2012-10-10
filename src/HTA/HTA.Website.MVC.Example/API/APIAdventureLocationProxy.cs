@@ -16,9 +16,9 @@ namespace HTA.Website.MVC.Example.API
         public AdventureLocation GetAdventureLocation(string id)
         {
 
-            var response = Client.Get<AdventureLocation>("/Adventure/Locations/" + id);
+            var response = Client.Get<AdventureLocationGetResponse>("/Adventure/Locations/" + id);
 
-            return response;
+            return response.AdventureLocations[0];
         }
 
         public AdventureLocation SaveAdventureLocation(AdventureLocation model)

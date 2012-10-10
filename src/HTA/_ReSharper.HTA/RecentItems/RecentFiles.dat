@@ -1,6 +1,5 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="850D11D4-2A8B-4B19-830B-9E88B0361E18/f:NearByAdventureLocationSearchServiceTest.cs" caret="2371" fromTop="11" />
     <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:LocationBusiness.cs" caret="484" fromTop="14" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureTypeProxy.cs" caret="464" fromTop="14" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:Web.config" caret="611" fromTop="15" />
@@ -11,25 +10,26 @@
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/f:IAdventureReviewRepository.cs" caret="304" fromTop="9" />
     <File id="9843E129-E60D-49E8-AF71-2F4F45A7F209/f:AdventureReviewBusiness.cs" caret="260" fromTop="0" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureLocationController.cs" caret="1517" fromTop="6" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="0" fromTop="0" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureRegionController.cs" caret="0" fromTop="0" />
     <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureLocation/f:Create.cshtml" caret="1137" fromTop="26" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:SuperAdventureTypeRepository.cs" caret="3651" fromTop="14" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:MongoAdventureTypeRepository.cs" caret="972" fromTop="14" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureType.cs" caret="500" fromTop="16" />
-    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="369" fromTop="12" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureLocationService.cs" caret="1280" fromTop="14" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Models/f:AdventureReviewModel.cs" caret="193" fromTop="7" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureReviewController.cs" caret="3245" fromTop="14" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureReviewProxy.cs" caret="917" fromTop="20" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Spot.cs" caret="1288" fromTop="17" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureLocation.cs" caret="411" fromTop="12" />
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/d:Responses/f:NearByAdventureLocationSearchResponse.cs" caret="506" fromTop="14" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1583" fromTop="25" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1952" fromTop="10" />
-    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:ElasticAdventureLocationSearchRepository.cs" caret="1436" fromTop="16" />
-    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByAdventureLocationSearchService.cs" caret="680" fromTop="16" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureReview/f:Create.cshtml" caret="3863" fromTop="13" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureReviewProxy.cs" caret="917" fromTop="20" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="1583" fromTop="25" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="614" fromTop="15" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Models/f:AdventureReviewModel.cs" caret="191" fromTop="7" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureReviewController.cs" caret="3013" fromTop="15" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Scripts/f:MapsHelper.js" caret="1628" fromTop="0" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="730" fromTop="19" />
+    <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:ElasticAdventureLocationSearchRepository.cs" caret="619" fromTop="14" />
+    <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByAdventureLocationSearchService.cs" caret="565" fromTop="14" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureReview/f:Create.cshtml" caret="5592" fromTop="75" />
   </RecentFiles>
   <RecentEdits>
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/f:Web.config" caret="611" fromTop="15" />
@@ -39,12 +39,15 @@
     <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:Region.cs" caret="986" fromTop="16" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:SuperAdventureTypeRepository.cs" caret="2974" fromTop="7" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureReviewService.cs" caret="711" fromTop="7" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Models/f:AdventureReviewModel.cs" caret="215" fromTop="7" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:AdventureLocationService.cs" caret="2102" fromTop="12" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureReviewController.cs" caret="2097" fromTop="10" />
     <File id="1EEDEE88-3BC8-4344-95DE-148CBB7677FA/f:NearByAdventureLocationSearchService.cs" caret="834" fromTop="17" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:Data/f:ElasticAdventureLocationSearchRepository.cs" caret="479" fromTop="14" />
     <File id="6845016B-4A50-4FBB-89E3-6D4BF32A7346/d:App_Start/f:AppHost.cs" caret="1952" fromTop="10" />
-    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureReview/f:Create.cshtml" caret="3530" fromTop="4" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Models/f:AdventureReviewModel.cs" caret="559" fromTop="17" />
+    <File id="DD3C4165-8BE4-4A24-A30B-0673DAEBCFCE/d:Types/f:AdventureReview.cs" caret="557" fromTop="11" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:API/f:APIAdventureLocationProxy.cs" caret="718" fromTop="18" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Controllers/f:AdventureReviewController.cs" caret="3210" fromTop="18" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Scripts/f:MapsHelper.js" caret="1628" fromTop="23" />
+    <File id="08E32832-A73A-4033-AD06-0D53A8631399/d:Views/d:AdventureReview/f:Create.cshtml" caret="5766" fromTop="19" />
   </RecentEdits>
 </RecentFiles>

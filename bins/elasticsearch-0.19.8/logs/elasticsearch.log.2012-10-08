@@ -1,0 +1,17 @@
+[2012-10-08 20:09:17,576][WARN ][bootstrap                ] jvm uses the client vm, make sure to run `java` with the server vm for best performance by adding `-server` to the command line
+[2012-10-08 20:09:17,583][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: initializing ...
+[2012-10-08 20:09:17,588][INFO ][plugins                  ] [Count Abyss] loaded [], sites []
+[2012-10-08 20:09:20,887][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: initialized
+[2012-10-08 20:09:20,887][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: starting ...
+[2012-10-08 20:09:21,023][INFO ][transport                ] [Count Abyss] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.8.1.105:9300]}
+[2012-10-08 20:09:24,166][INFO ][cluster.service          ] [Count Abyss] new_master [Count Abyss][NTP2Y4t6RfOplSIJezjj_g][inet[/10.8.1.105:9300]], reason: zen-disco-join (elected_as_master)
+[2012-10-08 20:09:24,186][INFO ][discovery                ] [Count Abyss] elasticsearch/NTP2Y4t6RfOplSIJezjj_g
+[2012-10-08 20:09:24,251][INFO ][http                     ] [Count Abyss] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.8.1.105:9200]}
+[2012-10-08 20:09:24,252][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: started
+[2012-10-08 20:09:24,625][INFO ][gateway                  ] [Count Abyss] recovered [1] indices into cluster_state
+[2012-10-08 21:08:41,894][INFO ][cluster.metadata         ] [Count Abyss] [adventure] update_mapping [location] (dynamic)
+[2012-10-08 21:13:08,717][INFO ][cluster.metadata         ] [Count Abyss] [adventure] update_mapping [location] (dynamic)
+[2012-10-08 23:28:55,675][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: stopping ...
+[2012-10-08 23:28:55,694][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: stopped
+[2012-10-08 23:28:55,694][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: closing ...
+[2012-10-08 23:28:55,706][INFO ][node                     ] [Count Abyss] {0.19.8}[3620]: closed

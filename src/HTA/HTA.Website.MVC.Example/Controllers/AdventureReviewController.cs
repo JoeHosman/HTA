@@ -77,7 +77,11 @@ namespace HTA.Website.MVC.Example.Controllers
                 {
                     adventurereview.Review.AdventureLocation =
                         AdventureLocationRepository.GetAdventureLocation(location.Id);
+
+
                 }
+
+
 
                 var review = AdventureReviewRepository.SaveAdventureReview(adventurereview.Review);
 
@@ -89,6 +93,21 @@ namespace HTA.Website.MVC.Example.Controllers
 
         private static void GetDataCardsFromFormCollection(AdventureReviewModel adventurereview, FormCollection formCollection)
         {
+            var regionId =
+                    formCollection.GetValue("nearByRegionDD").AttemptedValue;
+            
+            if (!string.IsNullOrEmpty(regionId))
+            {
+                adventurereview.Review.AdventureLocation.Region.Id = regionId;
+            }
+
+            var locationId =
+                    formCollection.GetValue("nearByLocationDD").AttemptedValue;
+
+            if (!string.IsNullOrEmpty(locationId))
+            {
+                adventurereview.Review.AdventureLocation.Id = locationId;
+            }
 
             for (int i = 0; i < adventurereview.DataCardCount; i++)
             {

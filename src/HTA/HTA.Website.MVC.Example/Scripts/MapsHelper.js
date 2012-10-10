@@ -48,7 +48,7 @@ function getMarkerFromAddress(icon) {
 }
 function getMarkerFromAddress(icon, address) {
 
-    alert("address: " + address);
+//    alert("address: " + address);
     var geocoder = new google.maps.Geocoder();
 
     geocoder.geocode({ 'address': address }, function (results, status) {

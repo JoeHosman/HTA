@@ -47,10 +47,24 @@
             <input id="findNearByBtn" type="button" value="Find Your Adventure Location or Create an New Adventure Location" />
             <div class="editor-field">
                 <div id="regionSelectionDiv" style="display: none">
-                    <select id="nearBy" data-placeholder="Choose a Country..." class="chzn-select" style="width: 350px;"
-                        tabindex="2">
+                    Regions:
+                    <select id="nearByRegionDD" name="nearByRegionDD" data-placeholder="Choose a Region..."
+                        class="chzn-select" style="width: 350px;" tabindex="2">
+                        <option value=""></option>
+                    </select><br />
+                    Locations:
+                    <select id="nearByLocationDD" name="nearByLocationDD" data-placeholder="Choose a Location..."
+                        class="chzn-select" style="width: 350px;" tabindex="2">
                         <option value=""></option>
                     </select>
+                    <br />
+                    <div id="locationInfoDiv">
+                        <div class="editor-label">
+                            Adventure Address</div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.AdventureLat, new { id = "lat" })
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,41 +81,97 @@
             
         </script>
         <script type="text/javascript">
-            public class 
-        </script>
-        <script type="text/javascript">
             $("#selectAdventureType").unbind('change');
 
             $("#AdventureAddress").unbind('change');
 
+            var nearbyLocations = { };
+
+            $("#nearByRegionDD").change(function() {
+                var id = document.getElementById('nearByRegionDD').value;
+
+                var locations = [];
+
+                var createNewLocationChoice = Object();
+                createNewLocationChoice.id = '';
+                createNewLocationChoice.name = 'Create New Location';
+
+                locations.push(createNewLocationChoice);
+
+                if(null != id) {
+
+                    for (var i in nearbyLocations) {
+                        var l = nearbyLocations[i];
+
+//                        alert(id + ' = ' + l.region.id);
+
+                        if(id == l.region.id) {
+                            locations.push(l);
+                        }
+                    }
+                }
+                
+                setSelectOptions($('#nearByLocationDD'), locations, 'id', 'name');
+                $("#nearByLocationDD").trigger("liszt:updated");
+            });
+            
+              $("#nearByLocationDD").change(function() {
+                var id = document.getElementById('nearByLocationDD').value;
+
+                for( var i in nearbyLocations) {
+
+                    var loc = nearbyLocations[i];
+
+                    if(id == loc.id) {
+                        alert(id + '\n' + loc.point.lat + "," + loc.point.lon );
+                    }
+                    
+                }
+              });
+            
             $("#findNearByBtn").click(function(){
-                alert('hello');
                 var lat = document.getElementById('Location_Lat').value;
                 var lon = document.getElementById('Location_Lon').value;
 
                 var latLon = lat + "," + lon;
-                alert(latLon);
                 
-//                 var gateway = new servicestack.ClientGateway( location.protocol + "//" + location.host + '/ServiceStack.Examples.Host.Web/ServiceStack/');
-                var gateway =new servicestack.ClientGateway( "http://localhost:10768/adventure/locations/nearby/" + latLon + "?format=json");
-                
-
-//                alert(latLon);
+                var u = "http://localhost:10768/adventure/locations/nearby/" + latLon + "?format=json";
+  
                 $.ajax({
-                    url:"http://localhost:10768/adventure/locations/nearby/" + latLon + "?format=json",
-                    dataType: 'json', 
+                    url:u,
+                    dataType: 'jsonp',
                     
                     success:function(json){
-                        alert(json.nearByAdventureLocations);
+                        nearbyLocations = json.nearByAdventureLocations;
+                        var nearbyRegions = {};
+                        var regions = [];
 
-                        setSelectOptions($('#nearBy'), json.nearByAdventureLocations, 'id', 'name');
-                        $("#nearBy").trigger("liszt:updated");
+                        var blankRegion = Object();
+                        blankRegion.id = '';
+                        blankRegion.name = 'Create New Region';
+                        regions.push(blankRegion);
+
+                        for ( var i in nearbyLocations) {
+                            var region = nearbyLocations[i].region;
+                            
+                            if(null != region.id && (nearbyRegions.length == 0 || !nearbyRegions.hasOwnProperty(region.id))) {
+//                                alert('new region: ' + region.id);
+                                nearbyRegions[region.id] = region;
+                                regions.push(region);
+                            } else {
+//                                alert('existing region: ' + region.id);
+                            }
+                        }
+                        setSelectOptions($('#nearByRegionDD'), regions, 'id', 'name');
+                        setSelectOptions($('#nearByLocationDD'), nearbyLocations, 'id', 'name');
+                        $("#nearByLocationDD").trigger("liszt:updated");
+                        $("#nearByRegionDD").trigger("liszt:updated");
                         $("#regionSelectionDiv").show();
                     },
-                    error:function(){
-                        alert("Error");
-                
-                    },  
+                    error: function(){
+                alert('error');
+            },
+
                 });
             });
 
@@ -174,5 +244,5 @@
 <script type="text/javascript">
     $(".chzn-select").chosen();
 
-//        $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
+    //        $(".chzn-select-deselect").chosen({ allow_single_deselect: true });
 </script>
