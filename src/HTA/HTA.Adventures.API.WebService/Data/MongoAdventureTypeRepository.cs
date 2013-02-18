@@ -90,6 +90,12 @@ namespace HTA.Adventures.API.WebService.Data
                AdventureTypeTemplateRepository.Update(template); // update existing one
         }
 
+        public void DeleteTypeTemplate(string id)
+        {
+            AdventureTypeTemplate template = AdventureTypeTemplateRepository.GetById(id);
+            AdventureTypeTemplateRepository.Delete(template);
+        }
+
         #endregion
 
         #region Implementation of IAdventureReviewRepository

@@ -8,5 +8,6 @@ namespace HTA.Adventures.Models
         IList<AdventureTypeTemplate> GetTypeTemplateList();
         AdventureTypeTemplate GetTypeTemplate(string id);
         AdventureTypeTemplate SaveTypeTemplate(AdventureTypeTemplate template);
+        void DeleteTypeTemplate(string id);
     }
 }

@@ -25,5 +25,10 @@ namespace HTA.Website.MVC.Example.API
             template = Client.Post<AdventureTypeTemplate>("/Adventure/TypeTemplates/", template);
             return template;
         }
+
+        public void DeleteTypeTemplate(string id)
+        {
+            Client.DeleteAsync<AdventureTypeTemplate>("/Adventure/TypeTemplates/" + id, null, null);
+        }
     }
 }

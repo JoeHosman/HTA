@@ -32,5 +32,10 @@ namespace HTA.Websites.MVC.FrontEnd.API
             template = _client.Post<AdventureTypeTemplate>("/Adventure/TypeTemplates/", template);
             return template;
         }
+
+        public void DeleteTypeTemplate(string id)
+        {
+            _client.Delete<AdventureTypeTemplate>("Adventure/TypeTemplates/" + id);
+        }
     }
 }

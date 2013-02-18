@@ -108,7 +108,7 @@ namespace HTA.Website.MVC.Example.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(string id)
         {
-
+            TypeTemplateRepository.DeleteTypeTemplate(id);
             return RedirectToAction("Index");
         }
     }
